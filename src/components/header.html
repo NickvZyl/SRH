@@ -1,0 +1,71 @@
+<!-- Global Header Component -->
+<header class="bg-white border-b border-warm-stone sticky top-0 z-40">
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+  
+  <nav class="container-custom py-4 md:py-6" aria-label="Main navigation">
+    <div class="flex items-center justify-between">
+      <!-- Logo -->
+      <a href="/" class="flex items-center" aria-label="St Raphael Health - Home">
+        <img src="/assets/logos/SRH Logo Light Background.svg" alt="St Raphael Health" class="h-10 md:h-12" width="200" height="48">
+      </a>
+      
+      <!-- Desktop Navigation -->
+      <ul class="hidden lg:flex items-center gap-8">
+        <li><a href="/hospital-advisory" class="text-black hover:text-gold-ochre transition-colors duration-fast font-montserrat">Hospital Advisory</a></li>
+        <li><a href="/our-approach" class="text-black hover:text-gold-ochre transition-colors duration-fast font-montserrat">Our Approach</a></li>
+        <li><a href="/case-studies" class="text-black hover:text-gold-ochre transition-colors duration-fast font-montserrat">Case Studies</a></li>
+        <li><a href="/team" class="text-black hover:text-gold-ochre transition-colors duration-fast font-montserrat">Team</a></li>
+        <li><a href="/why-profit-matters" class="text-black hover:text-gold-ochre transition-colors duration-fast font-montserrat">Why Profit Matters</a></li>
+        <li><a href="/physicians" class="text-black hover:text-gold-ochre transition-colors duration-fast font-montserrat">Physicians</a></li>
+        <li><a href="/contact" class="btn btn-primary text-sm">Contact</a></li>
+      </ul>
+      
+      <!-- Mobile Menu Toggle -->
+      <button 
+        id="menu-toggle" 
+        class="lg:hidden p-2 text-black hover:text-gold-ochre transition-colors"
+        aria-expanded="false"
+        aria-controls="mobile-menu"
+        aria-label="Toggle navigation menu"
+      >
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+        </svg>
+      </button>
+    </div>
+  </nav>
+  
+  <!-- Mobile Menu -->
+  <div 
+    id="mobile-menu" 
+    class="hidden fixed inset-0 bg-white z-50 lg:hidden"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Mobile navigation"
+  >
+    <div class="container-custom py-6">
+      <div class="flex items-center justify-between mb-8">
+        <img src="/assets/logos/SRH Logo Light Background.svg" alt="St Raphael Health" class="h-10" width="200" height="48">
+        <button 
+          id="menu-close" 
+          class="p-2 text-black hover:text-gold-ochre transition-colors"
+          aria-label="Close navigation menu"
+        >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+      
+      <ul class="flex flex-col gap-6">
+        <li><a href="/hospital-advisory" class="text-2xl text-black hover:text-gold-ochre transition-colors font-montserrat">Hospital Advisory</a></li>
+        <li><a href="/our-approach" class="text-2xl text-black hover:text-gold-ochre transition-colors font-montserrat">Our Approach</a></li>
+        <li><a href="/case-studies" class="text-2xl text-black hover:text-gold-ochre transition-colors font-montserrat">Case Studies</a></li>
+        <li><a href="/team" class="text-2xl text-black hover:text-gold-ochre transition-colors font-montserrat">Team</a></li>
+        <li><a href="/why-profit-matters" class="text-2xl text-black hover:text-gold-ochre transition-colors font-montserrat">Why Profit Matters</a></li>
+        <li><a href="/physicians" class="text-2xl text-black hover:text-gold-ochre transition-colors font-montserrat">Physicians</a></li>
+        <li class="pt-4"><a href="/contact" class="btn btn-primary inline-block">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Hospital Advisory - St Raphael Health</title>
+  <meta name="description" content="Hands-on turnaround advisory for distressed hospitals. Our operating team with 200+ years of experience restores profitability in under six months.">
+  <link rel="canonical" href="https://saintraphaelhealth.com/hospital-advisory">
+  
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://saintraphaelhealth.com/hospital-advisory">
+  <meta property="og:title" content="Hospital Advisory - St Raphael Health">
+  <meta property="og:description" content="Hands-on turnaround advisory for distressed hospitals. Restore profitability in under six months.">
+  <meta property="og:image" content="https://saintraphaelhealth.com/assets/logos/SRH Logo Light Background.png">
+  
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://saintraphaelhealth.com/hospital-advisory">
+  <meta property="twitter:title" content="Hospital Advisory - St Raphael Health">
+  <meta property="twitter:description" content="Hands-on turnaround advisory for distressed hospitals.">
+  <meta property="twitter:image" content="https://saintraphaelhealth.com/assets/logos/SRH Logo Light Background.png">
+  
+  <link rel="icon" type="image/svg+xml" href="/assets/logos/Icon.svg">
+  <link rel="icon" type="image/png" href="/assets/logos/Icon.png">
+  <link rel="apple-touch-icon" href="/assets/logos/Icon.png">
+  
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/styles/animations.css">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+  
+  <!-- Header -->
+  <header class="bg-white border-b border-warm-stone sticky top-0 z-40">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <nav class="container-custom py-4 md:py-6" aria-label="Main navigation">
+      <div class="flex items-center justify-between">
+        <a href="/" class="flex items-center" aria-label="St Raphael Health - Home">
+          <img src="/assets/logos/SRH Logo Light Background.svg" alt="St Raphael Health" class="h-10 md:h-12" width="200" height="48">
+        </a>
+        
+        <ul class="hidden lg:flex items-center gap-8">
+          <li><a href="/hospital-advisory" class="text-black hover:text-gold-ochre transition-colors duration-fast font-montserrat">Hospital Advisory</a></li>
+          <li><a href="/our-approach" class="text-black hover:text-gold-ochre transition-colors duration-fast font-montserrat">Our Approach</a></li>
+          <li><a href="/case-studies" class="text-black hover:text-gold-ochre transition-colors duration-fast font-montserrat">Case Studies</a></li>
+          <li><a href="/team" class="text-black hover:text-gold-ochre transition-colors duration-fast font-montserrat">Team</a></li>
+          <li><a href="/why-profit-matters" class="text-black hover:text-gold-ochre transition-colors duration-fast font-montserrat">Why Profit Matters</a></li>
+          <li><a href="/physicians" class="text-black hover:text-gold-ochre transition-colors duration-fast font-montserrat">Physicians</a></li>
+          <li><a href="/contact" class="btn btn-primary text-sm">Contact</a></li>
+        </ul>
+        
+        <button 
+          id="menu-toggle" 
+          class="lg:hidden p-2 text-black hover:text-gold-ochre transition-colors"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Toggle navigation menu"
+        >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </nav>
+    
+    <div 
+      id="mobile-menu" 
+      class="hidden fixed inset-0 bg-white z-50 lg:hidden"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Mobile navigation"
+    >
+      <div class="container-custom py-6">
+        <div class="flex items-center justify-between mb-8">
+          <img src="/assets/logos/SRH Logo Light Background.svg" alt="St Raphael Health" class="h-10" width="200" height="48">
+          <button 
+            id="menu-close" 
+            class="p-2 text-black hover:text-gold-ochre transition-colors"
+            aria-label="Close navigation menu"
+          >
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+        
+        <ul class="flex flex-col gap-6">
+          <li><a href="/hospital-advisory" class="text-2xl text-black hover:text-gold-ochre transition-colors font-montserrat">Hospital Advisory</a></li>
+          <li><a href="/our-approach" class="text-2xl text-black hover:text-gold-ochre transition-colors font-montserrat">Our Approach</a></li>
+          <li><a href="/case-studies" class="text-2xl text-black hover:text-gold-ochre transition-colors font-montserrat">Case Studies</a></li>
+          <li><a href="/team" class="text-2xl text-black hover:text-gold-ochre transition-colors font-montserrat">Team</a></li>
+          <li><a href="/why-profit-matters" class="text-2xl text-black hover:text-gold-ochre transition-colors font-montserrat">Why Profit Matters</a></li>
+          <li><a href="/physicians" class="text-2xl text-black hover:text-gold-ochre transition-colors font-montserrat">Physicians</a></li>
+          <li class="pt-4"><a href="/contact" class="btn btn-primary inline-block">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  
+  <main id="main-content">
+    
+    <!-- Section 1: Hero - Authority + Immediate Proof -->
+    <section class="relative py-xxl bg-white overflow-hidden">
+      <!-- Hero Background Image -->
+      <div class="absolute inset-0 z-0">
+        <img src="/assets/images/hospital-advisory/hospital-advisory-leadership.jpg" alt="" class="w-full h-full object-cover opacity-10" loading="eager">
+      </div>
+      
+      <div class="container-custom relative z-10">
+        <div class="max-w-5xl mx-auto text-center" data-animate>
+          <h1 class="text-5xl md:text-6xl mb-8">
+            We help distressed hospitals become profitable in months, not years.
+          </h1>
+          
+          <p class="text-2xl md:text-3xl mb-6 font-montserrat font-light text-black text-opacity-80">
+            We transform distressed Texas hospitals into profitable regional healthcare leaders, delivering exceptional patient care within their communities.
+          </p>
+          
+          <p class="text-lg md:text-xl mb-12 leading-relaxed max-w-4xl mx-auto">
+            Our operating team with 200+ years of experience partners hands-on with Texas hospitals to restore profitability in under six months while delivering exceptional patient outcomes.
+          </p>
+          
+          <!-- Proof Strip -->
+          <div class="grid md:grid-cols-3 gap-8 mb-12" data-animate>
+            <div class="metric">
+              <div class="metric-number">$85M → $290M</div>
+              <div class="metric-label">Gross revenue, 19% profit margin</div>
+            </div>
+            <div class="metric">
+              <div class="metric-number">$18M → $190M</div>
+              <div class="metric-label">Gross revenue, 12% profit margin</div>
+            </div>
+            <div class="metric">
+              <div class="metric-number">$10M → $56M</div>
+              <div class="metric-label">Gross revenue, 32% profit margin</div>
+            </div>
+          </div>
+          
+          <p class="text-sm text-black text-opacity-60 mb-8">Documented hospital turnaround outcomes</p>
+          
+          <a href="/contact" class="btn btn-primary inline-flex items-center gap-2">
+            Speak With Our Operating Team
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Section 2: Who We Serve -->
+    <section class="py-xxl bg-warm-stone">
+      <div class="container-custom">
+        <h2 class="text-4xl md:text-5xl text-center mb-16" data-animate>
+          Built for hospital environments under pressure.
+        </h2>
+        
+        <div class="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto">
+          <div class="text-center" data-animate>
+            <h3 class="text-2xl mb-4">Hospitals & Operators</h3>
+            <p class="mb-4 leading-relaxed">
+              Hands-on operational leadership to stabilize performance and restore profitability.
+            </p>
+            <p class="text-sm font-semibold text-gold-ochre">
+              Outcome: Daily patient census increased 75%.
+            </p>
+          </div>
+          
+          <div class="text-center" data-animate>
+            <h3 class="text-2xl mb-4">Municipalities & Hospital Boards</h3>
+            <p class="mb-4 leading-relaxed">
+              Preserve community access to care while restoring financial health.
+            </p>
+            <p class="text-sm font-semibold text-gold-ochre">
+              Outcome: Reserves expanded by 150%.
+            </p>
+          </div>
+          
+          <div class="text-center" data-animate>
+            <h3 class="text-2xl mb-4">Investors & Lenders</h3>
+            <p class="mb-4 leading-relaxed">
+              Stabilized assets with improved margins and exit optionality.
+            </p>
+            <p class="text-sm font-semibold text-gold-ochre">
+              Outcome: Negative margins converted to double-digit profitability.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Section 3: Our Approach (High-Level) -->
+    <section class="py-xxl bg-white">
+      <div class="container-custom max-w-4xl">
+        <h2 class="text-4xl md:text-5xl text-center mb-12" data-animate>
+          This is not consulting. This is execution.
+        </h2>
+        
+        <div class="prose-custom mx-auto" data-animate>
+          <p>
+            St Raphael Health embeds directly with hospital leadership teams to diagnose issues, drive operations, and deliver measurable results. We do not deliver reports and walk away. We stay accountable to outcomes.
+          </p>
+        </div>
+        
+        <div class="bg-warm-stone p-8 md:p-12 rounded-lg mt-12 text-center" data-animate>
+          <blockquote class="text-xl md:text-2xl italic">
+            "In only two years, emergency room visits increased 380%, surgical volume grew 300%, and inpatient census increased 14x."
+          </blockquote>
+        </div>
+        
+        <div class="text-center mt-8">
+          <a href="/our-approach" class="text-gold-ochre hover:underline font-montserrat font-semibold">
+            Learn more about our approach →
+          </a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Section 4: Why St Raphael Health Was Formed -->
+    <section class="py-xxl bg-warm-stone">
+      <div class="container-custom max-w-4xl">
+        <h2 class="text-4xl md:text-5xl text-center mb-12" data-animate>
+          Why St Raphael Health Was Formed
+        </h2>
+        
+        <div class="prose-custom mx-auto space-y-6" data-animate>
+          <p>
+            St Raphael Health was formed when a group of hospital operators and M&A professionals partnered with a Houston-based hospital CEO to help save a 270+ bed hospital operating under Chapter 11.
+          </p>
+          
+          <p>
+            During that engagement, they uncovered a broader and deeply concerning reality. More than 60% of hospitals were operating in some level of distress, yet many could be stabilized quickly using a repeatable, operator-led framework focused on execution rather than theory.
+          </p>
+          
+          <p>
+            They also discovered that many hospital owners wanted to sell or partner, but could not. Distressed operations meant little to no enterprise value, leaving communities, boards, and stakeholders with limited options.
+          </p>
+          
+          <p>
+            St Raphael Health was created to address this gap—to restore hospitals to sustainable profitability first, protect patient care, and, where appropriate, help hospitals pursue strategic outcomes from a position of strength rather than distress.
+          </p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Section 5: Our Operating Pillars -->
+    <section class="py-xxl bg-white">
+      <div class="container-custom">
+        <h2 class="text-4xl md:text-5xl text-center mb-16" data-animate>
+          Our Operating Pillars
+        </h2>
+        
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+          <div class="card" data-animate>
+            <div class="text-gold-ochre text-4xl mb-4">01</div>
+            <h3 class="text-xl font-semibold mb-3">Cash Flow Acceleration</h3>
+            <p class="text-black text-opacity-70">
+              Turn revenue into predictable, reliable cash.
+            </p>
+          </div>
+          
+          <div class="card" data-animate>
+            <div class="text-gold-ochre text-4xl mb-4">02</div>
+            <h3 class="text-xl font-semibold mb-3">Cost Efficiency & Margin Improvement</h3>
+            <p class="text-black text-opacity-70">
+              Create durable margin expansion across operations.
+            </p>
+          </div>
+          
+          <div class="card" data-animate>
+            <div class="text-gold-ochre text-4xl mb-4">03</div>
+            <h3 class="text-xl font-semibold mb-3">Revenue Expansion</h3>
+            <p class="text-black text-opacity-70">
+              Grow top-line revenue through smarter operations.
+            </p>
+          </div>
+          
+          <div class="card" data-animate>
+            <div class="text-gold-ochre text-4xl mb-4">04</div>
+            <h3 class="text-xl font-semibold mb-3">Capital Structure Optimization</h3>
+            <p class="text-black text-opacity-70">
+              Strengthen the financial foundation for resilience.
+            </p>
+          </div>
+          
+          <div class="card" data-animate>
+            <div class="text-gold-ochre text-4xl mb-4">05</div>
+            <h3 class="text-xl font-semibold mb-3">Regulatory Compliance & Operational Integrity</h3>
+            <p class="text-black text-opacity-70">
+              Reduce risk and ensure operational stability.
+            </p>
+          </div>
+          
+          <div class="card" data-animate>
+            <div class="text-gold-ochre text-4xl mb-4">06</div>
+            <h3 class="text-xl font-semibold mb-3">Sale or Partnership (If Applicable)</h3>
+            <p class="text-black text-opacity-70">
+              Position stabilized hospitals for strategic outcomes.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Section 6: Case Studies Preview -->
+    <section class="py-xxl bg-warm-stone">
+      <div class="container-custom">
+        <div class="text-center mb-12" data-animate>
+          <h2 class="text-4xl md:text-5xl mb-4">Proven Hospital Turnarounds</h2>
+          <p class="text-xl text-black text-opacity-70">
+            Real-world outcomes achieved through hands-on operational leadership, not theory.
+          </p>
+        </div>
+        
+        <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12">
+          <div class="card" data-animate>
+            <h3 class="text-xl font-semibold mb-2">BMC Hospitals</h3>
+            <p class="text-sm text-black text-opacity-60 mb-4">Greater Houston</p>
+            <div class="space-y-2 text-sm">
+              <p>$85M → $290M revenue</p>
+              <p>19% margin</p>
+              <p>ER +380%</p>
+              <p>Surgical +300%</p>
+            </div>
+          </div>
+          
+          <div class="card" data-animate>
+            <h3 class="text-xl font-semibold mb-2">Emergency Hospital Systems</h3>
+            <p class="text-sm text-black text-opacity-60 mb-4">Northeast Houston</p>
+            <div class="space-y-2 text-sm">
+              <p>$18M → $190M revenue</p>
+              <p>12% margin</p>
+              <p>Profitability in 6 months</p>
+            </div>
+          </div>
+          
+          <div class="card" data-animate>
+            <h3 class="text-xl font-semibold mb-2">Doctors Diagnostic Hospital</h3>
+            <p class="text-sm text-black text-opacity-60 mb-4">Cleveland, TX</p>
+            <div class="space-y-2 text-sm">
+              <p>$10M → $56M revenue</p>
+              <p>32% margin</p>
+              <p>$18M profit achieved</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="text-center">
+          <a href="/case-studies" class="btn btn-secondary">View Full Case Studies</a>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Section 7: Mission & Vision -->
+    <section class="py-xxl bg-white">
+      <div class="container-custom max-w-4xl">
+        <div class="grid md:grid-cols-2 gap-12" data-animate>
+          <div>
+            <h2 class="text-3xl mb-4">Our Mission</h2>
+            <p class="text-lg leading-relaxed">
+              Restoring hospital profitability to protect patient care and strengthen the communities they serve.
+            </p>
+          </div>
+          
+          <div>
+            <h2 class="text-3xl mb-4">Our Vision</h2>
+            <p class="text-lg leading-relaxed">
+              A resilient, profitable network of exceptionally run hospitals delivering long-term value to patients, operators, and communities.
+            </p>
+          </div>
+        </div>
+        
+        <div class="text-center mt-12">
+          <p class="text-xl italic text-gold-ochre">
+            Profit enables care, stability, and choice.
+          </p>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Section 8: Why Profit Matters Teaser -->
+    <section class="py-xxl bg-warm-stone">
+      <div class="container-custom max-w-3xl text-center">
+        <h2 class="text-4xl md:text-5xl mb-6" data-animate>
+          Why profitability is the foundation of every successful hospital.
+        </h2>
+        
+        <p class="text-xl mb-8 leading-relaxed" data-animate>
+          Profit is not the objective. It is the enabler of value, care, and operational stability.
+        </p>
+        
+        <a href="/why-profit-matters" class="text-gold-ochre hover:underline font-montserrat font-semibold text-lg">
+          Explore Why Profit Matters →
+        </a>
+      </div>
+    </section>
+    
+    <!-- Section 9: Primary CTA -->
+    <section class="py-xxl bg-white">
+      <div class="container-custom max-w-3xl text-center">
+        <h2 class="text-4xl md:text-5xl mb-6" data-animate>
+          If your hospital is under pressure, speed matters.
+        </h2>
+        
+        <p class="text-xl mb-8 text-black text-opacity-70" data-animate>
+          Every month of delay reduces options. Early action creates leverage.
+        </p>
+        
+        <a href="/contact" class="btn btn-primary inline-flex items-center gap-2">
+          Speak With Our Operating Team
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </a>
+      </div>
+    </section>
+    
+    <!-- Section 10: Contact Preview -->
+    <section class="py-xl bg-warm-stone">
+      <div class="container-custom max-w-3xl text-center">
+        <p class="text-xl mb-6" data-animate>
+          Have a confidential conversation with our operating team.
+        </p>
+        
+        <a href="/contact" class="btn btn-secondary">Contact Us</a>
+      </div>
+    </section>
+    
+  </main>
+  
+  <!-- Footer -->
+  <footer class="bg-warm-stone py-12 md:py-16 border-t border-black border-opacity-10">
+    <div class="container-custom">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+        <nav aria-label="Legal navigation" class="flex flex-wrap items-center gap-4 text-sm">
+          <a href="/privacy-policy" class="text-black hover:text-gold-ochre transition-colors font-montserrat">Privacy Policy</a>
+          <span class="text-black" aria-hidden="true">·</span>
+          <a href="/terms" class="text-black hover:text-gold-ochre transition-colors font-montserrat">Terms & Conditions</a>
+          <span class="text-black" aria-hidden="true">·</span>
+          <a href="/compliance" class="text-black hover:text-gold-ochre transition-colors font-montserrat">Compliance</a>
+        </nav>
+        
+        <div class="text-sm">
+          <a href="mailto:info@saintraphaelhealth.com" class="text-black hover:text-gold-ochre transition-colors font-montserrat">
+            info@saintraphaelhealth.com
+          </a>
+        </div>
+      </div>
+      
+      <div class="mt-8 pt-8 border-t border-black border-opacity-10 text-sm text-black text-opacity-60">
+        <p>&copy; <span id="current-year">2026</span> St Raphael Health. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="/js/site.js"></script>
+  <script src="/js/animations.js"></script>
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+  
+</body>
+</html>

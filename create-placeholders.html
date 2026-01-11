@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Generate Placeholder Images</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f5f5f5;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    h1 {
+      color: #CBA85C;
+    }
+    .instructions {
+      background: white;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    .image-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+    }
+    .image-item {
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    canvas {
+      width: 100%;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      margin-bottom: 10px;
+    }
+    button {
+      background: #CBA85C;
+      color: white;
+      border: none;
+      padding: 8px 16px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    button:hover {
+      background: #B39750;
+    }
+    .filename {
+      font-size: 12px;
+      color: #666;
+      margin-bottom: 5px;
+      font-family: monospace;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>St Raphael Health - Placeholder Image Generator</h1>
+    
+    <div class="instructions">
+      <h2>Instructions</h2>
+      <p>These are temporary placeholder images for development. Click "Download" on each image to save it to the correct folder.</p>
+      <p><strong>Next Step:</strong> Use the <code>IMAGE_GENERATION_PROMPTS.md</code> file to generate professional images with Nano Banana, then replace these placeholders.</p>
+    </div>
+    
+    <div class="image-list" id="imageList"></div>
+  </div>
+
+  <script>
+    const images = [
+      { name: 'hero-hospitals.jpg', folder: 'hero', width: 1920, height: 1080, text: 'Hospital Advisory\nProfessional Healthcare' },
+      { name: 'hero-physicians.jpg', folder: 'hero', width: 1920, height: 1080, text: 'Physician Support\nClinical Leadership' },
+      { name: 'hospital-advisory-leadership.jpg', folder: 'hospital-advisory', width: 1920, height: 1080, text: 'Leadership Team\nExecutive Strategy' },
+      { name: 'hospital-operations.jpg', folder: 'hospital-advisory', width: 1200, height: 800, text: 'Hospital Operations\nPatient Care Excellence' },
+      { name: 'financial-recovery.jpg', folder: 'hospital-advisory', width: 1200, height: 800, text: 'Financial Recovery\nGrowth & Stability' },
+      { name: 'community-care.jpg', folder: 'hospital-advisory', width: 1200, height: 800, text: 'Community Care\nPatient Experience' },
+      { name: 'case-study-bmc.jpg', folder: 'case-studies', width: 1200, height: 800, text: 'BMC Hospitals\nGreater Houston' },
+      { name: 'case-study-ehs.jpg', folder: 'case-studies', width: 1200, height: 800, text: 'Emergency Hospital Systems\nNortheast Houston' },
+      { name: 'case-study-ddc.jpg', folder: 'case-studies', width: 1200, height: 800, text: 'Doctors Diagnostic Hospital\nCleveland, Texas' },
+      { name: 'results-growth.jpg', folder: 'case-studies', width: 1200, height: 800, text: 'Results Dashboard\nRevenue Growth' },
+      { name: 'approach-execution.jpg', folder: 'approach', width: 1200, height: 800, text: 'Hands-On Execution\nOperational Leadership' },
+      { name: 'approach-operations.jpg', folder: 'approach', width: 1200, height: 800, text: 'Operational Excellence\nHealthcare Technology' },
+      { name: 'approach-strategy.jpg', folder: 'approach', width: 1200, height: 800, text: 'Strategic Planning\nBusiness Strategy' },
+      { name: 'profit-sustainability.jpg', folder: 'profit', width: 1200, height: 800, text: 'Sustainable Healthcare\nLong-term Viability' },
+      { name: 'profit-foundation.jpg', folder: 'profit', width: 1200, height: 800, text: 'Financial Foundation\nStability & Growth' },
+      { name: 'profit-growth.jpg', folder: 'profit', width: 1200, height: 800, text: 'Investment & Growth\nModern Equipment' },
+      { name: 'contact-hero.jpg', folder: 'contact', width: 1920, height: 1080, text: 'Contact Our Team\nLet\'s Talk' },
+      { name: 'contact-collaboration.jpg', folder: 'contact', width: 1200, height: 800, text: 'Partnership\nCollaboration' }
+    ];
+
+    function createPlaceholder(config) {
+      const canvas = document.createElement('canvas');
+      canvas.width = config.width;
+      canvas.height = config.height;
+      const ctx = canvas.getContext('2d');
+
+      // Background gradient
+      const gradient = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+      gradient.addColorStop(0, '#DBD5CA');
+      gradient.addColorStop(1, '#CBA85C');
+      ctx.fillStyle = gradient;
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      // Overlay
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.3)';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+      // Text
+      ctx.fillStyle = '#FFFFFF';
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      
+      const lines = config.text.split('\n');
+      const lineHeight = canvas.height * 0.1;
+      const startY = (canvas.height - (lines.length * lineHeight)) / 2;
+      
+      lines.forEach((line, index) => {
+        const fontSize = index === 0 ? canvas.height * 0.08 : canvas.height * 0.05;
+        ctx.font = `${fontSize}px Arial, sans-serif`;
+        ctx.fillText(line, canvas.width / 2, startY + (index * lineHeight) + lineHeight / 2);
+      });
+
+      // Watermark
+      ctx.fillStyle = 'rgba(255, 255, 255, 0.3)';
+      ctx.font = `${canvas.height * 0.03}px Arial`;
+      ctx.fillText('PLACEHOLDER - Replace with Nano Banana', canvas.width / 2, canvas.height - 30);
+
+      return canvas;
+    }
+
+    function downloadCanvas(canvas, filename, folder) {
+      canvas.toBlob((blob) => {
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = filename;
+        a.click();
+        URL.revokeObjectURL(url);
+      }, 'image/jpeg', 0.9);
+    }
+
+    // Generate all images
+    const imageList = document.getElementById('imageList');
+    images.forEach(config => {
+      const item = document.createElement('div');
+      item.className = 'image-item';
+      
+      const filename = document.createElement('div');
+      filename.className = 'filename';
+      filename.textContent = `${config.folder}/${config.name}`;
+      
+      const canvas = createPlaceholder(config);
+      
+      const button = document.createElement('button');
+      button.textContent = 'Download';
+      button.onclick = () => downloadCanvas(canvas, config.name, config.folder);
+      
+      item.appendChild(filename);
+      item.appendChild(canvas);
+      item.appendChild(button);
+      imageList.appendChild(item);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,540 @@
+/**
+ * St Raphael Health - Animation System
+ * Conformant to Style Guide Requirements
+ * 
+ * Requirements:
+ * - Fade in: 400-600ms ease
+ * - Hover lift: translateY(-4px), 200ms ease
+ * - Gentle parallax: slow, subtle
+ * - Color transitions: 200-300ms ease
+ * 
+ * Prohibited:
+ * - Aggressive movements
+ * - Spinning/rotating
+ * - Bouncing effects
+ * - Rapid transitions
+ */
+
+/* ============================================
+   FADE-IN ANIMATIONS (Style Guide: 400-600ms)
+   ============================================ */
+
+/* Base fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Fade in from left */
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Fade in from right */
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Apply fade-in to elements with data-animate */
+[data-animate] {
+  opacity: 0;
+  animation: fadeIn 500ms ease-out forwards;
+}
+
+/* Stagger animations for multiple elements */
+[data-animate]:nth-child(1) { animation-delay: 0ms; }
+[data-animate]:nth-child(2) { animation-delay: 100ms; }
+[data-animate]:nth-child(3) { animation-delay: 200ms; }
+[data-animate]:nth-child(4) { animation-delay: 300ms; }
+[data-animate]:nth-child(5) { animation-delay: 400ms; }
+[data-animate]:nth-child(6) { animation-delay: 500ms; }
+
+/* Scroll-triggered animations (applied by JS) */
+.animate-in {
+  animation: fadeIn 500ms ease-out forwards;
+}
+
+/* Hero content animation */
+.hero-content {
+  animation: fadeIn 600ms ease-out 300ms forwards;
+  opacity: 0;
+}
+
+/* ============================================
+   HOVER EFFECTS (Style Guide: 200ms ease)
+   ============================================ */
+
+/* Button hover lift (Style Guide: translateY(-4px), 200ms) */
+.btn,
+.btn-primary,
+.btn-secondary,
+button[type="submit"],
+a.btn {
+  transition: all 200ms ease;
+  position: relative;
+}
+
+.btn:hover,
+.btn-primary:hover,
+.btn-secondary:hover,
+button[type="submit"]:hover,
+a.btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(203, 168, 92, 0.25);
+}
+
+.btn:active,
+.btn-primary:active,
+.btn-secondary:active,
+button[type="submit"]:active {
+  transform: translateY(-2px);
+}
+
+/* Arrow animation on button hover */
+.btn svg,
+.btn-primary svg,
+.btn-secondary svg {
+  transition: transform 200ms ease;
+}
+
+.btn:hover svg,
+.btn-primary:hover svg,
+.btn-secondary:hover svg {
+  transform: translateX(4px);
+}
+
+/* ============================================
+   NAVIGATION (Style Guide: subtle color shift)
+   ============================================ */
+
+/* Navigation links */
+.nav-link,
+nav a {
+  transition: color 200ms ease, transform 200ms ease;
+  position: relative;
+}
+
+.nav-link:hover,
+nav a:hover {
+  color: var(--color-gold-ochre);
+  transform: translateY(-1px);
+}
+
+/* Active page indicator */
+.nav-link.active,
+nav a.active {
+  color: var(--color-gold-ochre);
+  font-weight: 600;
+}
+
+.nav-link.active::after,
+nav a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--color-gold-ochre);
+  animation: slideIn 300ms ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    width: 0;
+    left: 50%;
+  }
+  to {
+    width: 100%;
+    left: 0;
+  }
+}
+
+/* ============================================
+   CARD HOVER EFFECTS
+   ============================================ */
+
+/* Team cards, case study cards */
+.card,
+.team-card,
+.case-study-card {
+  transition: all 300ms ease;
+}
+
+.card:hover,
+.team-card:hover,
+.case-study-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Profile image zoom */
+.card img,
+.team-card img {
+  transition: transform 400ms ease;
+  overflow: hidden;
+}
+
+.card:hover img,
+.team-card:hover img {
+  transform: scale(1.05);
+}
+
+/* ============================================
+   IMAGE EFFECTS
+   ============================================ */
+
+/* Case study image zoom */
+.case-study-image {
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.case-study-image img {
+  transition: transform 500ms ease;
+  display: block;
+  width: 100%;
+}
+
+.case-study-image:hover img {
+  transform: scale(1.08);
+}
+
+/* Hero image parallax (gentle) */
+.hero-image {
+  transition: transform 8s ease-out;
+}
+
+.hero-image.loaded {
+  transform: scale(1.05);
+}
+
+/* ============================================
+   FORM ANIMATIONS (Style Guide: 200-300ms)
+   ============================================ */
+
+/* Input focus state (Style Guide: border shifts to gold) */
+input,
+textarea,
+select {
+  transition: border-color 250ms ease, box-shadow 250ms ease;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  border-color: var(--color-gold-ochre);
+  box-shadow: 0 0 0 3px rgba(203, 168, 92, 0.1);
+  outline: none;
+}
+
+/* Form field error animation */
+.form-field.error input,
+.form-field.error textarea {
+  border-color: var(--color-deep-red);
+  animation: shake 300ms ease;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-8px); }
+  75% { transform: translateX(8px); }
+}
+
+/* Success message fade in */
+.success-message {
+  animation: fadeIn 400ms ease-out;
+}
+
+/* ============================================
+   LOADING STATES
+   ============================================ */
+
+/* Button loading spinner */
+.btn.loading,
+.btn-primary.loading,
+button.loading {
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-top-color: var(--color-black);
+  border-radius: 50%;
+  animation: spin 600ms linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* ============================================
+   MOBILE MENU ANIMATION
+   ============================================ */
+
+/* Mobile menu slide-in */
+.mobile-menu {
+  transform: translateX(100%);
+  transition: transform 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mobile-menu.open {
+  transform: translateX(0);
+}
+
+/* Mobile menu backdrop */
+.mobile-menu-backdrop {
+  opacity: 0;
+  transition: opacity 300ms ease;
+  pointer-events: none;
+}
+
+.mobile-menu-backdrop.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Mobile menu items stagger */
+.mobile-menu a {
+  opacity: 0;
+  transform: translateX(20px);
+  transition: opacity 300ms ease, transform 300ms ease;
+}
+
+.mobile-menu.open a:nth-child(1) { transition-delay: 100ms; opacity: 1; transform: translateX(0); }
+.mobile-menu.open a:nth-child(2) { transition-delay: 150ms; opacity: 1; transform: translateX(0); }
+.mobile-menu.open a:nth-child(3) { transition-delay: 200ms; opacity: 1; transform: translateX(0); }
+.mobile-menu.open a:nth-child(4) { transition-delay: 250ms; opacity: 1; transform: translateX(0); }
+.mobile-menu.open a:nth-child(5) { transition-delay: 300ms; opacity: 1; transform: translateX(0); }
+.mobile-menu.open a:nth-child(6) { transition-delay: 350ms; opacity: 1; transform: translateX(0); }
+.mobile-menu.open a:nth-child(7) { transition-delay: 400ms; opacity: 1; transform: translateX(0); }
+
+/* ============================================
+   STATS COUNTER ANIMATION
+   ============================================ */
+
+/* Stats appear and count up */
+.metric {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 500ms ease, transform 500ms ease;
+}
+
+.metric.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.metric-number {
+  transition: color 200ms ease;
+}
+
+.metric:hover .metric-number {
+  color: var(--color-gold-ochre);
+}
+
+/* ============================================
+   PAGE LOAD ANIMATION
+   ============================================ */
+
+/* Smooth page load */
+body {
+  animation: pageLoad 500ms ease-out;
+}
+
+@keyframes pageLoad {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* ============================================
+   SCROLL PROGRESS INDICATOR (Optional)
+   ============================================ */
+
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--color-gold-ochre);
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 100ms ease;
+  z-index: 9999;
+}
+
+/* ============================================
+   SECTION DIVIDERS
+   ============================================ */
+
+/* Animated section divider */
+.section-divider {
+  width: 0;
+  height: 1px;
+  background: var(--color-gold-ochre);
+  margin: var(--spacing-xl) auto;
+  animation: expandWidth 800ms ease-out forwards;
+}
+
+@keyframes expandWidth {
+  to {
+    width: 100px;
+  }
+}
+
+/* ============================================
+   ACCESSIBILITY
+   ============================================ */
+
+/* Respect user preferences for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ============================================
+   HERO SECTION HOVER EFFECTS (Homepage)
+   ============================================ */
+
+/* Hero panels - make entire section interactive */
+.hero-panel {
+  cursor: pointer;
+  transition: all 500ms ease;
+  position: relative;
+}
+
+/* Overlay transition on hover */
+.hero-panel .hero-overlay {
+  transition: opacity 400ms ease;
+}
+
+/* On hover: reduce overlay opacity to reveal more of the image */
+.hero-panel:hover .hero-overlay {
+  opacity: 0.35 !important; /* More dramatic reduction */
+}
+
+/* Scale up the background image slightly */
+.hero-panel:hover .hero-image img {
+  transform: scale(1.03);
+  transition: transform 800ms ease-out;
+}
+
+.hero-image img {
+  transition: transform 800ms ease-out;
+}
+
+/* Lift and brighten the content */
+.hero-panel:hover .hero-content {
+  transform: translateY(-8px);
+  transition: transform 300ms ease;
+}
+
+.hero-content {
+  transition: transform 300ms ease;
+}
+
+/* Add glow effect to button on panel hover */
+.hero-panel:hover .btn-primary {
+  box-shadow: 0 8px 20px rgba(203, 168, 92, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Animate the arrow on hover */
+.hero-panel:hover .btn-primary svg {
+  transform: translateX(6px);
+  transition: transform 250ms ease;
+}
+
+/* Add a subtle shine effect on hover */
+.hero-panel::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, transparent 0%, rgba(203, 168, 92, 0.1) 50%, transparent 100%);
+  opacity: 0;
+  transition: opacity 500ms ease;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.hero-panel:hover::after {
+  opacity: 1;
+}
+
+/* Add border accent on hover */
+.hero-panel {
+  border: 3px solid transparent;
+  transition: border-color 400ms ease;
+}
+
+.hero-panel:hover {
+  border-color: rgba(203, 168, 92, 0.3);
+}
+
+/* ============================================
+   UTILITY CLASSES
+   ============================================ */
+
+/* Delay utilities */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+
+/* Duration utilities */
+.duration-fast { transition-duration: 200ms; }
+.duration-normal { transition-duration: 300ms; }
+.duration-slow { transition-duration: 500ms; }
+
+/* Hover lift utility */
+.hover-lift {
+  transition: transform 200ms ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+}
+
+/* Fade in utility */
+.fade-in {
+  animation: fadeIn 500ms ease-out;
+}

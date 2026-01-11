@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>St Raphael Health - Advising Healthcare Organizations Through Challenge to Strength</title>
+  <meta name="description" content="St Raphael Health provides hands-on turnaround advisory for distressed hospitals and strategic support for physician groups. 200+ years of hospital operating experience.">
+  <link rel="canonical" href="https://saintraphaelhealth.com/">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://saintraphaelhealth.com/">
+  <meta property="og:title" content="St Raphael Health - Advising Healthcare Organizations">
+  <meta property="og:description" content="Hands-on turnaround advisory for distressed hospitals and strategic support for physician groups.">
+  <meta property="og:image" content="https://saintraphaelhealth.com/assets/logos/SRH Logo Light Background.png">
+  
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://saintraphaelhealth.com/">
+  <meta property="twitter:title" content="St Raphael Health - Advising Healthcare Organizations">
+  <meta property="twitter:description" content="Hands-on turnaround advisory for distressed hospitals and strategic support for physician groups.">
+  <meta property="twitter:image" content="https://saintraphaelhealth.com/assets/logos/SRH Logo Light Background.png">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/assets/logos/Icon.svg">
+  <link rel="icon" type="image/png" href="/assets/logos/Icon.png">
+  <link rel="apple-touch-icon" href="/assets/logos/Icon.png">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/styles/animations.css">
+  
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+  
+  <!-- Header -->
+  <header class="bg-white border-b border-warm-stone sticky top-0 z-40">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
+    <nav class="container-custom py-4 md:py-6" aria-label="Main navigation">
+      <div class="flex items-center justify-between">
+        <a href="/" class="flex items-center" aria-label="St Raphael Health - Home">
+          <img src="/assets/logos/SRH Logo Light Background.svg" alt="St Raphael Health" class="h-10 md:h-12" width="200" height="48">
+        </a>
+        
+        <ul class="hidden lg:flex items-center gap-8">
+          <li><a href="/hospital-advisory" class="nav-link text-black hover:text-gold-ochre transition-colors duration-fast font-montserrat">Hospital Advisory</a></li>
+          <li><a href="/our-approach" class="nav-link text-black hover:text-gold-ochre transition-colors duration-fast font-montserrat">Our Approach</a></li>
+          <li><a href="/case-studies" class="nav-link text-black hover:text-gold-ochre transition-colors duration-fast font-montserrat">Case Studies</a></li>
+          <li><a href="/team" class="nav-link text-black hover:text-gold-ochre transition-colors duration-fast font-montserrat">Team</a></li>
+          <li><a href="/why-profit-matters" class="nav-link text-black hover:text-gold-ochre transition-colors duration-fast font-montserrat">Why Profit Matters</a></li>
+          <li><a href="/physicians" class="nav-link text-black hover:text-gold-ochre transition-colors duration-fast font-montserrat">Physicians</a></li>
+          <li><a href="/contact" class="btn btn-primary text-sm">Contact</a></li>
+        </ul>
+        
+        <button 
+          id="menu-toggle" 
+          class="lg:hidden p-2 text-black hover:text-gold-ochre transition-colors"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Toggle navigation menu"
+          data-mobile-menu-button
+        >
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </nav>
+    
+    <div 
+      id="mobile-menu" 
+      class="hidden fixed inset-0 bg-white z-50 lg:hidden mobile-menu"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Mobile navigation"
+      data-mobile-menu
+    >
+      <div class="container-custom py-6">
+        <div class="flex items-center justify-between mb-8">
+          <img src="/assets/logos/SRH Logo Light Background.svg" alt="St Raphael Health" class="h-10" width="200" height="48">
+          <button 
+            id="menu-close" 
+            class="p-2 text-black hover:text-gold-ochre transition-colors"
+            aria-label="Close navigation menu"
+          >
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+            </svg>
+          </button>
+        </div>
+        
+        <ul class="flex flex-col gap-6">
+          <li><a href="/hospital-advisory" class="text-2xl text-black hover:text-gold-ochre transition-colors font-montserrat">Hospital Advisory</a></li>
+          <li><a href="/our-approach" class="text-2xl text-black hover:text-gold-ochre transition-colors font-montserrat">Our Approach</a></li>
+          <li><a href="/case-studies" class="text-2xl text-black hover:text-gold-ochre transition-colors font-montserrat">Case Studies</a></li>
+          <li><a href="/team" class="text-2xl text-black hover:text-gold-ochre transition-colors font-montserrat">Team</a></li>
+          <li><a href="/why-profit-matters" class="text-2xl text-black hover:text-gold-ochre transition-colors font-montserrat">Why Profit Matters</a></li>
+          <li><a href="/physicians" class="text-2xl text-black hover:text-gold-ochre transition-colors font-montserrat">Physicians</a></li>
+          <li class="pt-4"><a href="/contact" class="btn btn-primary inline-block">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  
+  <!-- Main Content -->
+  <main id="main-content">
+    
+    <!-- Hero: 50/50 Split -->
+    <section class="min-h-screen flex flex-col lg:flex-row">
+      
+      <!-- Brand Overlay (Mobile) -->
+      <div class="lg:hidden text-center py-12 px-6 bg-warm-stone">
+        <h1 class="text-3xl mb-4">St Raphael Health</h1>
+        <p class="text-lg">Advising healthcare organizations through challenge to strength.</p>
+      </div>
+      
+      <!-- Left Panel - Hospitals -->
+      <div class="hero-panel flex-1 relative flex items-center justify-center bg-warm-stone lg:bg-transparent overflow-hidden group">
+        <!-- Background Image -->
+        <div class="absolute inset-0 hero-image" data-parallax data-parallax-speed="0.3">
+          <img src="/assets/images/hero/hero-hospitals.jpg" alt="" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+        </div>
+        <div class="hero-overlay absolute inset-0 bg-gradient-to-br from-warm-stone to-white opacity-75"></div>
+        
+        <div class="relative z-10 p-8 md:p-12 lg:p-16 max-w-2xl text-center lg:text-left hero-content">
+          <h2 class="text-4xl md:text-5xl mb-6">For Hospitals</h2>
+          
+          <p class="text-xl md:text-2xl mb-4 font-montserrat font-light">
+            Hands-on turnaround advisory for distressed hospitals.
+          </p>
+          
+          <p class="text-lg mb-6 leading-relaxed">
+            Operators working alongside operators to restore profitability in months, not years, while strengthening patient care and community outcomes.
+          </p>
+          
+          <p class="text-sm text-black text-opacity-70 mb-8">
+            200+ years of hospital operating and turnaround experience.
+          </p>
+          
+          <a href="/hospital-advisory" class="btn btn-primary inline-flex items-center gap-2">
+            Enter Hospital Advisory
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+      
+      <!-- Center Divider (Desktop) -->
+      <div class="hidden lg:block w-px bg-gold-ochre opacity-30 relative" style="z-index: 30;">
+      </div>
+      
+      <!-- Right Panel - Physicians -->
+      <div class="hero-panel flex-1 relative flex items-center justify-center bg-white overflow-hidden group">
+        <!-- Background Image -->
+        <div class="absolute inset-0 hero-image" data-parallax data-parallax-speed="0.3">
+          <img src="/assets/images/hero/hero-physicians.jpg" alt="" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
+        </div>
+        <div class="hero-overlay absolute inset-0 bg-gradient-to-bl from-white to-warm-stone opacity-70"></div>
+        
+        <div class="relative z-10 p-8 md:p-12 lg:p-16 max-w-2xl text-center lg:text-left hero-content">
+          <h2 class="text-4xl md:text-5xl mb-6">For Physicians</h2>
+          
+          <p class="text-xl md:text-2xl mb-4 font-montserrat font-light">
+            Strategic support for physician groups and clinical leaders.
+          </p>
+          
+          <p class="text-lg mb-6 leading-relaxed">
+            Operational alignment, growth strategy, and systems support designed to let physicians focus on care while strengthening long-term sustainability.
+          </p>
+          
+          <p class="text-sm text-black text-opacity-70 mb-8">
+            Built by operators with deep healthcare and systems expertise.
+          </p>
+          
+          <a href="/physicians" class="btn btn-secondary inline-flex items-center gap-2">
+            Enter Physician Advisory
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+          </a>
+        </div>
+      </div>
+      
+    </section>
+    
+    <!-- Contact Form Section -->
+    <section class="py-xxl bg-white">
+      <div class="container-custom max-w-4xl">
+        <div class="text-center mb-12" data-animate>
+          <h2 class="text-4xl md:text-5xl mb-4">Not sure where you fit?</h2>
+          <p class="text-xl text-black text-opacity-70">
+            Tell us a bit about your organization and we'll guide you to the right place.
+          </p>
+        </div>
+        
+        <form data-contact-form class="max-w-2xl mx-auto" data-animate>
+          <div class="grid md:grid-cols-2 gap-6 mb-6">
+            <div>
+              <label for="fullName" class="form-label">Full Name <span class="text-deep-red">*</span></label>
+              <input type="text" id="fullName" name="fullName" class="form-input" required>
+            </div>
+            
+            <div>
+              <label for="email" class="form-label">Email <span class="text-deep-red">*</span></label>
+              <input type="email" id="email" name="email" class="form-input" required>
+            </div>
+          </div>
+          
+          <div class="grid md:grid-cols-2 gap-6 mb-6">
+            <div>
+              <label for="phone" class="form-label">Phone <span class="text-deep-red">*</span></label>
+              <input type="tel" id="phone" name="phone" class="form-input" required>
+            </div>
+            
+            <div>
+              <label for="organization" class="form-label">Organization / Hospital Name <span class="text-deep-red">*</span></label>
+              <input type="text" id="organization" name="organization" class="form-input" required>
+            </div>
+          </div>
+          
+          <div class="grid md:grid-cols-2 gap-6 mb-6">
+            <div>
+              <label for="cityState" class="form-label">City / State <span class="text-deep-red">*</span></label>
+              <input type="text" id="cityState" name="cityState" class="form-input" required>
+            </div>
+            
+            <div>
+              <label for="reason" class="form-label">Reason for Contact</label>
+              <select id="reason" name="reason" class="form-input">
+                <option value="">Select an option</option>
+                <option value="Advisory Services">Advisory Services</option>
+                <option value="Hospital Partnership">Hospital Partnership</option>
+                <option value="Investor Inquiry">Investor Inquiry</option>
+                <option value="Municipality / Board Inquiry">Municipality / Board Inquiry</option>
+                <option value="Media / Press">Media / Press</option>
+                <option value="Other">Other</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="mb-6">
+            <label for="message" class="form-label">Message <span class="text-deep-red">*</span></label>
+            <textarea id="message" name="message" rows="5" class="form-input" required></textarea>
+          </div>
+          
+          <!-- Honeypot field (hidden from users) -->
+          <input type="text" name="website" style="position: absolute; left: -9999px;" tabindex="-1" autocomplete="off">
+          
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary">Contact Our Team</button>
+          </div>
+        </form>
+      </div>
+    </section>
+    
+  </main>
+  
+  <!-- Footer -->
+  <footer class="bg-warm-stone py-12 md:py-16">
+    <div class="container-custom">
+      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+        <nav aria-label="Legal navigation" class="flex flex-wrap items-center gap-4 text-sm">
+          <a href="/privacy-policy" class="text-black hover:text-gold-ochre transition-colors font-montserrat">Privacy Policy</a>
+          <span class="text-black" aria-hidden="true">·</span>
+          <a href="/terms" class="text-black hover:text-gold-ochre transition-colors font-montserrat">Terms & Conditions</a>
+          <span class="text-black" aria-hidden="true">·</span>
+          <a href="/compliance" class="text-black hover:text-gold-ochre transition-colors font-montserrat">Compliance</a>
+        </nav>
+        
+        <div class="text-sm">
+          <a href="mailto:info@saintraphaelhealth.com" class="text-black hover:text-gold-ochre transition-colors font-montserrat">
+            info@saintraphaelhealth.com
+          </a>
+        </div>
+      </div>
+      
+      <div class="mt-8 pt-8 border-t border-black border-opacity-10 text-sm text-black text-opacity-60">
+        <p>&copy; <span id="current-year">2026</span> St Raphael Health. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Scripts -->
+  <script src="/js/site.js"></script>
+  <script src="/js/forms.js"></script>
+  <script src="/js/animations.js"></script>
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+  </script>
+  
+</body>
+</html>

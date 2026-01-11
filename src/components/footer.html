@@ -1,0 +1,32 @@
+<!-- Global Footer Component -->
+<footer class="bg-warm-stone py-12 md:py-16">
+  <div class="container-custom">
+    <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+      <!-- Legal Links -->
+      <nav aria-label="Legal navigation" class="flex flex-wrap items-center gap-4 text-sm">
+        <a href="/privacy-policy" class="text-black hover:text-gold-ochre transition-colors font-montserrat">Privacy Policy</a>
+        <span class="text-black" aria-hidden="true">·</span>
+        <a href="/terms" class="text-black hover:text-gold-ochre transition-colors font-montserrat">Terms & Conditions</a>
+        <span class="text-black" aria-hidden="true">·</span>
+        <a href="/compliance" class="text-black hover:text-gold-ochre transition-colors font-montserrat">Compliance</a>
+      </nav>
+      
+      <!-- Contact Email -->
+      <div class="text-sm">
+        <a href="mailto:info@saintraphaelhealth.com" class="text-black hover:text-gold-ochre transition-colors font-montserrat">
+          info@saintraphaelhealth.com
+        </a>
+      </div>
+    </div>
+    
+    <!-- Copyright -->
+    <div class="mt-8 pt-8 border-t border-black border-opacity-10 text-sm text-black text-opacity-60">
+      <p>&copy; <span id="current-year">2026</span> St Raphael Health. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Update copyright year
+  document.getElementById('current-year').textContent = new Date().getFullYear();
+</script>

@@ -1,10 +1,94 @@
 /**
  * St Raphael Health - Animation Controller
  * Implements style guide-compliant animations
+ * 2026 MODERNIZATION UPGRADE
  */
 
 // Check if user prefers reduced motion
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/**
+ * 2026 MODERNIZATION - Scroll Progress Indicator
+ */
+function initScrollProgress() {
+  const scrollProgress = document.createElement('div');
+  scrollProgress.className = 'scroll-progress';
+  document.body.insertBefore(scrollProgress, document.body.firstChild);
+
+  const updateScrollProgress = () => {
+    const windowHeight = window.innerHeight;
+    const documentHeight = document.documentElement.scrollHeight - windowHeight;
+    const scrolled = window.pageYOffset;
+    const progress = (scrolled / documentHeight) * 100;
+    scrollProgress.style.width = `${Math.min(progress, 100)}%`;
+  };
+
+  window.addEventListener('scroll', updateScrollProgress, { passive: true });
+  updateScrollProgress();
+}
+
+/**
+ * 2026 MODERNIZATION - Glassmorphism Navigation
+ */
+function initGlassmorphism() {
+  const header = document.querySelector('header');
+  if (!header) return;
+
+  const handleScroll = () => {
+    if (window.pageYOffset > 50) {
+      header.classList.add('scrolled');
+    } else {
+      header.classList.remove('scrolled');
+    }
+  };
+
+  window.addEventListener('scroll', handleScroll, { passive: true });
+  handleScroll();
+}
+
+/**
+ * 2026 MODERNIZATION - Back to Top Button with Progress Ring
+ */
+function initBackToTop() {
+  // Create back to top button
+  const backToTop = document.createElement('button');
+  backToTop.className = 'back-to-top';
+  backToTop.setAttribute('aria-label', 'Back to top');
+  backToTop.innerHTML = `
+    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"></path>
+    </svg>
+  `;
+  document.body.appendChild(backToTop);
+
+  // Show/hide button and update progress ring
+  const handleScroll = () => {
+    const scrolled = window.pageYOffset;
+    const windowHeight = window.innerHeight;
+    const documentHeight = document.documentElement.scrollHeight - windowHeight;
+    const scrollPercent = (scrolled / documentHeight) * 100;
+    const rotation = (scrollPercent / 100) * 360;
+
+    if (scrolled > 300) {
+      backToTop.classList.add('visible');
+    } else {
+      backToTop.classList.remove('visible');
+    }
+
+    backToTop.style.setProperty('--scroll-rotation', `${rotation}deg`);
+  };
+
+  // Scroll to top on click
+  backToTop.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+
+  window.addEventListener('scroll', handleScroll, { passive: true });
+  handleScroll();
+}
 
 /**
  * Scroll-triggered fade-in animations
@@ -334,6 +418,8 @@ function init() {
   initFormEnhancements();
   initHeroAnimation();
   initScrollProgress();
+  initGlassmorphism();
+  initBackToTop();
   initCardEffects();
 
   console.log('✨ SRH Animations initialized');

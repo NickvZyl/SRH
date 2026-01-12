@@ -103,8 +103,13 @@
   <main id="main-content">
     
     <!-- Page Header -->
-    <section class="py-xl bg-white">
-      <div class="container-custom max-w-4xl text-center">
+    <section class="relative py-xl bg-white overflow-hidden">
+      <!-- Hero Background Image -->
+      <div class="absolute inset-0 z-0">
+        <img src="/assets/images/contact/hero-contact.jpg" alt="" class="w-full h-full object-cover opacity-10" loading="eager">
+      </div>
+      
+      <div class="container-custom max-w-4xl text-center relative z-10">
         <h1 class="text-5xl md:text-6xl mb-8" data-animate>Start the conversation.</h1>
         
         <div class="prose-custom mx-auto" data-animate>

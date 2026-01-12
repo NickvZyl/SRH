@@ -16,6 +16,144 @@
  */
 
 /* ============================================
+   PROFIT ENABLER DIAGRAM - MODERN DESIGN
+   ============================================ */
+
+/* Container */
+.profit-enabler-diagram {
+  position: relative;
+  min-height: 600px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 3rem 1rem;
+}
+
+/* Center Circle - PROFIT */
+.profit-circle {
+  position: relative;
+  z-index: 10;
+  margin-bottom: 6rem;
+}
+
+.profit-circle-inner {
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #CBA85C 0%, #EDBD56 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2.5rem;
+  color: #000;
+  box-shadow: 
+    0 20px 60px rgba(203, 168, 92, 0.4),
+    0 8px 24px rgba(203, 168, 92, 0.3),
+    0 0 0 12px rgba(203, 168, 92, 0.15);
+  transition: all 600ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  animation: float 6s ease-in-out infinite;
+}
+
+.profit-circle-inner:hover {
+  transform: scale(1.05);
+  box-shadow: 
+    0 24px 80px rgba(203, 168, 92, 0.5),
+    0 12px 32px rgba(203, 168, 92, 0.4),
+    0 0 0 16px rgba(203, 168, 92, 0.2);
+}
+
+/* Floating animation for center circle */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Three Enablers Grid */
+.profit-enablers {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 2rem;
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+  z-index: 5;
+}
+
+@media (min-width: 768px) {
+  .profit-enablers {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 3rem;
+  }
+}
+
+/* Individual Enabler Cards */
+.profit-enabler-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  text-align: center;
+  box-shadow: 
+    0 8px 24px rgba(0, 0, 0, 0.08),
+    0 4px 12px rgba(0, 0, 0, 0.04);
+  transition: all 400ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  border: 2px solid transparent;
+}
+
+.profit-enabler-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 
+    0 20px 48px rgba(0, 0, 0, 0.15),
+    0 8px 24px rgba(0, 0, 0, 0.1),
+    0 0 0 3px rgba(203, 168, 92, 0.4);
+  border-color: rgba(203, 168, 92, 0.6);
+}
+
+/* Icon Container */
+.profit-enabler-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1.5rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, rgba(203, 168, 92, 0.15), rgba(237, 189, 86, 0.15));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #CBA85C;
+  transition: all 400ms ease;
+}
+
+.profit-enabler-card:hover .profit-enabler-icon {
+  background: linear-gradient(135deg, #CBA85C, #EDBD56);
+  color: #000;
+  transform: rotate(10deg) scale(1.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 1023px) {
+  .profit-enabler-diagram {
+    min-height: auto;
+  }
+  
+  .profit-circle {
+    margin-bottom: 3rem;
+  }
+  
+  .profit-circle-inner {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+/* ============================================
    FADE-IN ANIMATIONS (Style Guide: 400-600ms)
    ============================================ */
 
@@ -357,6 +495,43 @@ button.loading {
   color: var(--color-gold-ochre);
 }
 
+/* Metric Cards */
+/* Hospital Advisory Metrics Redesign */
+.metric-card {
+  @apply bg-white bg-opacity-85 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-xl flex flex-col items-center text-center border-2 border-transparent;
+  transition: all 400ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.metric-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 
+    0 10px 20px rgba(0, 0, 0, 0.15),
+    0 0 0 4px rgba(203, 168, 92, 0.5);
+  border-color: var(--color-gold-ochre);
+}
+
+.metric-value-group {
+  @apply flex items-center justify-center gap-3 mb-3;
+}
+
+.metric-value {
+  @apply text-4xl md:text-5xl font-bold text-gold-ochre;
+  font-family: var(--font-headline);
+}
+
+.metric-arrow-icon {
+  @apply w-8 h-8 text-gold-ochre;
+  transition: transform 300ms ease;
+}
+
+.metric-card:hover .metric-arrow-icon {
+  transform: translateX(5px);
+}
+
+.metric-description {
+  @apply text-sm text-black text-opacity-70 leading-tight;
+}
+
 /* ============================================
    PAGE LOAD ANIMATION
    ============================================ */
@@ -438,18 +613,63 @@ body {
   position: relative;
 }
 
+/* Hero content - ensure readability */
+.hero-content {
+  transition: transform 300ms ease;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 500px; /* Ensure consistent height */
+  background: rgba(255, 255, 255, 0.75) !important; /* Solid white background */
+  backdrop-filter: blur(12px) saturate(180%);
+  -webkit-backdrop-filter: blur(12px) saturate(180%);
+  border-radius: 16px;
+  padding: 2.5rem !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Keep text readable even when panel is hovered */
+.hero-panel:hover .hero-content {
+  background: rgba(255, 255, 255, 0.85) !important; /* More opaque on hover */
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+}
+
+/* Add text shadow for better readability */
+.hero-content h2,
+.hero-content h1 {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+  margin-bottom: 1.5rem;
+  color: #000 !important;
+}
+
+.hero-content p {
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  color: #000 !important;
+}
+
+/* Ensure hero panels are same height and aligned */
+.hero-panel {
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+
 /* Overlay transition on hover */
 .hero-panel .hero-overlay {
   transition: opacity 400ms ease;
 }
 
-/* On hover: reduce overlay opacity to reveal more of the image */
-.hero-panel:hover .hero-overlay {
+/* On hover or highlighted: reduce overlay opacity to reveal more of the image */
+.hero-panel:hover .hero-overlay,
+.hero-panel.hero-highlighted .hero-overlay {
   opacity: 0.35 !important; /* More dramatic reduction */
 }
 
-/* Scale up the background image slightly */
-.hero-panel:hover .hero-image img {
+/* Scale up the background image slightly on hover or highlighted */
+.hero-panel:hover .hero-image img,
+.hero-panel.hero-highlighted .hero-image img {
   transform: scale(1.03);
   transition: transform 800ms ease-out;
 }
@@ -458,8 +678,9 @@ body {
   transition: transform 800ms ease-out;
 }
 
-/* Lift and brighten the content */
-.hero-panel:hover .hero-content {
+/* Lift and brighten the content on hover or highlighted */
+.hero-panel:hover .hero-content,
+.hero-panel.hero-highlighted .hero-content {
   transform: translateY(-8px);
   transition: transform 300ms ease;
 }
@@ -468,14 +689,16 @@ body {
   transition: transform 300ms ease;
 }
 
-/* Add glow effect to button on panel hover */
-.hero-panel:hover .btn-primary {
+/* Add glow effect to button on panel hover or highlighted */
+.hero-panel:hover .btn-primary,
+.hero-panel.hero-highlighted .btn-primary {
   box-shadow: 0 8px 20px rgba(203, 168, 92, 0.4);
   transform: translateY(-2px);
 }
 
-/* Animate the arrow on hover */
-.hero-panel:hover .btn-primary svg {
+/* Animate the arrow on hover or highlighted */
+.hero-panel:hover .btn-primary svg,
+.hero-panel.hero-highlighted .btn-primary svg {
   transform: translateX(6px);
   transition: transform 250ms ease;
 }
@@ -495,17 +718,19 @@ body {
   z-index: 5;
 }
 
-.hero-panel:hover::after {
+.hero-panel:hover::after,
+.hero-panel.hero-highlighted::after {
   opacity: 1;
 }
 
-/* Add border accent on hover */
+/* Add border accent on hover or highlighted */
 .hero-panel {
   border: 3px solid transparent;
   transition: border-color 400ms ease;
 }
 
-.hero-panel:hover {
+.hero-panel:hover,
+.hero-panel.hero-highlighted {
   border-color: rgba(203, 168, 92, 0.3);
 }
 
@@ -584,8 +809,34 @@ nav {
   box-shadow: 
     0 2px 4px rgba(203, 168, 92, 0.08),
     0 8px 16px rgba(203, 168, 92, 0.12),
-    0 24px 48px rgba(203, 168, 92, 0.16);
-  transform: translateY(-6px) scale(1.02);
+    0 24px 48px rgba(203, 168, 92, 0.16),
+    0 0 0 3px rgba(203, 168, 92, 0.3); /* Gold accent border */
+  transform: translateY(-12px) scale(1.03);
+}
+
+/* Extra highlight for team cards specifically */
+.team-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.team-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(203, 168, 92, 0.15), transparent);
+  transition: left 600ms ease;
+}
+
+.team-card:hover::before {
+  left: 100%;
+}
+
+.team-card:hover {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 1) 0%, rgba(203, 168, 92, 0.05) 100%);
 }
 
 /* Button shadows */
@@ -644,6 +895,23 @@ h1 {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-shadow: none;
+}
+
+/* Fix selection/highlight readability */
+.hero-content h1::selection,
+.hero-content h2::selection,
+h1::selection {
+  background: rgba(203, 168, 92, 0.3);
+  -webkit-text-fill-color: #000;
+  color: #000;
+}
+
+.hero-content h1::-moz-selection,
+.hero-content h2::-moz-selection,
+h1::-moz-selection {
+  background: rgba(203, 168, 92, 0.3);
+  -webkit-text-fill-color: #000;
+  color: #000;
 }
 
 /* Section headlines */
@@ -751,4 +1019,140 @@ section > h2,
 /* Fade in utility */
 .fade-in {
   animation: fadeIn 500ms ease-out;
+}
+
+/* ============================================
+   PREMIUM PROFIT ENABLER CARDS
+   ============================================ */
+
+.profit-enabler-premium-card {
+  @apply bg-white rounded-3xl p-8 lg:p-10 relative;
+  box-shadow: 
+    0 2px 4px rgba(0, 0, 0, 0.04),
+    0 8px 16px rgba(0, 0, 0, 0.06),
+    0 20px 40px rgba(0, 0, 0, 0.08);
+  transition: all 500ms cubic-bezier(0.34, 1.56, 0.64, 1);
+  overflow: hidden;
+  border: 2px solid transparent;
+}
+
+/* Animated gradient border on hover */
+.profit-enabler-premium-card::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(135deg, var(--color-gold-ochre), var(--color-gold-ochre-light), var(--color-gold-ochre));
+  border-radius: 24px;
+  opacity: 0;
+  transition: opacity 400ms ease;
+  z-index: -1;
+}
+
+.profit-enabler-premium-card:hover::before {
+  opacity: 1;
+}
+
+/* Shine effect */
+.profit-enabler-premium-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(203, 168, 92, 0.1), transparent);
+  transition: left 800ms ease;
+}
+
+.profit-enabler-premium-card:hover::after {
+  left: 100%;
+}
+
+.profit-enabler-premium-card:hover {
+  transform: translateY(-16px) scale(1.02);
+  box-shadow: 
+    0 4px 8px rgba(203, 168, 92, 0.1),
+    0 12px 24px rgba(203, 168, 92, 0.15),
+    0 28px 56px rgba(203, 168, 92, 0.2);
+}
+
+/* Number badge */
+.profit-enabler-badge {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, var(--color-gold-ochre), var(--color-gold-ochre-light));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-headline);
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: var(--color-black);
+  box-shadow: 
+    0 4px 12px rgba(203, 168, 92, 0.3),
+    0 0 0 3px rgba(203, 168, 92, 0.1);
+  transition: all 400ms cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.profit-enabler-premium-card:hover .profit-enabler-badge {
+  transform: rotate(360deg) scale(1.1);
+  box-shadow: 
+    0 6px 18px rgba(203, 168, 92, 0.5),
+    0 0 0 4px rgba(203, 168, 92, 0.2);
+}
+
+/* Icon container */
+.profit-enabler-icon-premium {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(135deg, rgba(203, 168, 92, 0.1), rgba(237, 189, 86, 0.1));
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gold-ochre);
+  transition: all 400ms ease;
+}
+
+.profit-enabler-premium-card:hover .profit-enabler-icon-premium {
+  background: linear-gradient(135deg, var(--color-gold-ochre), var(--color-gold-ochre-light));
+  color: var(--color-black);
+  transform: rotateY(180deg) scale(1.05);
+  box-shadow: 0 8px 20px rgba(203, 168, 92, 0.4);
+}
+
+/* Footer with gradient text */
+.profit-enabler-footer {
+  margin-top: auto;
+  padding-top: 1.5rem;
+  border-top: 2px solid rgba(203, 168, 92, 0.2);
+  transition: border-color 300ms ease;
+}
+
+.profit-enabler-premium-card:hover .profit-enabler-footer {
+  border-color: rgba(203, 168, 92, 0.5);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .profit-enabler-premium-card {
+    padding: 2rem;
+  }
+  
+  .profit-enabler-badge {
+    width: 48px;
+    height: 48px;
+    font-size: 1.25rem;
+    top: 16px;
+    right: 16px;
+  }
+  
+  .profit-enabler-icon-premium {
+    width: 64px;
+    height: 64px;
+  }
 }

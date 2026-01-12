@@ -102,35 +102,49 @@
   <main id="main-content">
     
     <!-- Hero Section -->
-    <section class="py-xxl bg-white min-h-[60vh] flex items-center">
-      <div class="container-custom max-w-4xl text-center">
-        <h1 class="text-5xl md:text-6xl mb-8" data-animate>
-          For Physicians
-        </h1>
-        
-        <p class="text-2xl md:text-3xl mb-6 font-montserrat font-light text-black text-opacity-80" data-animate>
-          Strategic support for physician groups and clinical leaders.
-        </p>
-        
-        <p class="text-lg md:text-xl mb-12 leading-relaxed max-w-3xl mx-auto" data-animate>
-          Operational alignment, growth strategy, and systems support designed to let physicians focus on care while strengthening long-term sustainability.
-        </p>
-        
-        <div class="bg-warm-stone p-8 md:p-12 rounded-lg mb-12" data-animate>
-          <p class="text-xl mb-6">
-            Content for this section is currently being developed. Our physician advisory services are designed by operators with deep healthcare and systems expertise.
+    <section class="min-h-screen relative flex items-center justify-center overflow-hidden">
+      <!-- Background Image -->
+      <div class="absolute inset-0">
+        <img src="/assets/images/hero/hero-physicians.jpg" alt="" class="absolute inset-0 w-full h-full object-cover" loading="eager">
+      </div>
+      <!-- Subtle tint for readability (inline rgba so it actually applies) -->
+      <div class="absolute inset-0 pointer-events-none" style="background: rgba(255, 255, 255, 0.18);"></div>
+      
+      <div class="relative z-10 container-custom max-w-4xl text-center py-16 md:py-20">
+        <!-- Glass panel to keep text readable while still showing the photo -->
+        <div class="bg-white bg-opacity-80 backdrop-blur-sm rounded-2xl shadow-xl p-8 md:p-10">
+          <h1 class="text-5xl md:text-6xl mb-6 text-black">
+            For Physicians
+          </h1>
+          
+          <p class="text-2xl md:text-3xl mb-5 font-montserrat font-light text-black text-opacity-80">
+            Strategic support for physician groups and clinical leaders.
           </p>
-          <p class="text-sm text-black text-opacity-70">
-            For immediate inquiries, please contact our team directly.
+          
+          <p class="text-lg md:text-xl mb-6 leading-relaxed max-w-3xl mx-auto text-black text-opacity-75">
+            Operational alignment, growth strategy, and systems support designed to let physicians focus on care while strengthening long-term sustainability.
           </p>
+          
+          <p class="text-base mb-8 max-w-2xl mx-auto text-black text-opacity-70">
+            Built by operators with deep healthcare and systems expertise.
+          </p>
+          
+          <div class="bg-white bg-opacity-90 backdrop-blur-sm p-6 md:p-8 rounded-xl shadow-lg mb-8 max-w-2xl mx-auto">
+            <p class="text-lg md:text-xl mb-4">
+              Content for this section is currently being developed. Our physician advisory services are designed by operators with deep healthcare and systems expertise.
+            </p>
+            <p class="text-sm text-black text-opacity-70">
+              For immediate inquiries, please contact our team directly.
+            </p>
+          </div>
+          
+          <a href="/contact" class="btn btn-primary inline-flex items-center gap-2">
+            Contact Our Team
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+            </svg>
+          </a>
         </div>
-        
-        <a href="/contact" class="btn btn-primary inline-flex items-center gap-2">
-          Contact Our Team
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-          </svg>
-        </a>
       </div>
     </section>
     

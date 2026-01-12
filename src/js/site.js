@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initNavigation();
   initScrollAnimations();
   initActiveNavState();
+  initHomepageHeroHighlight();
 });
 
 // Mobile Navigation Toggle
@@ -83,6 +84,46 @@ function initActiveNavState() {
       link.classList.add('active');
       link.setAttribute('aria-current', 'page');
     }
+  });
+}
+
+// Homepage hero panel highlight on hover with default state
+function initHomepageHeroHighlight() {
+  // Only run on homepage
+  if (window.location.pathname !== '/' && window.location.pathname !== '/index.html') {
+    return;
+  }
+
+  const heroPanels = document.querySelectorAll('.hero-panel');
+  if (heroPanels.length !== 2) return;
+
+  const leftPanel = heroPanels[0]; // For Hospitals
+  const rightPanel = heroPanels[1]; // For Physicians
+
+  // Set default highlight on left panel (For Hospitals)
+  const setDefaultHighlight = () => {
+    leftPanel.classList.add('hero-highlighted');
+    rightPanel.classList.remove('hero-highlighted');
+  };
+
+  // Initialize with default
+  setDefaultHighlight();
+
+  // Handle hover states
+  leftPanel.addEventListener('mouseenter', () => {
+    leftPanel.classList.add('hero-highlighted');
+    rightPanel.classList.remove('hero-highlighted');
+  });
+
+  rightPanel.addEventListener('mouseenter', () => {
+    rightPanel.classList.add('hero-highlighted');
+    leftPanel.classList.remove('hero-highlighted');
+  });
+
+  // Revert to default when mouse leaves both panels
+  const heroPanelContainer = leftPanel.parentElement;
+  heroPanelContainer.addEventListener('mouseleave', () => {
+    setDefaultHighlight();
   });
 }
 

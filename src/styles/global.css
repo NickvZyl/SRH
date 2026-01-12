@@ -88,7 +88,7 @@
   }
   
   .metric-number {
-    @apply text-5xl md:text-6xl font-bold text-gold-ochre;
+    @apply text-3xl sm:text-4xl md:text-5xl font-bold text-gold-ochre;
     font-family: var(--font-headline);
   }
   

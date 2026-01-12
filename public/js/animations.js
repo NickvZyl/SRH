@@ -235,46 +235,13 @@ function initParallax() {
 
 /**
  * Mobile menu animation
+ * DISABLED - Mobile menu is now handled by site.js to prevent conflicts
  * Style Guide: 200-300ms transitions
  */
 function initMobileMenu() {
-  const menuButton = document.querySelector('[data-mobile-menu-button]');
-  const mobileMenu = document.querySelector('[data-mobile-menu]');
-  const backdrop = document.querySelector('[data-mobile-menu-backdrop]');
-  
-  if (!menuButton || !mobileMenu) return;
-
-  menuButton.addEventListener('click', () => {
-    const isOpen = mobileMenu.classList.contains('open');
-    
-    if (isOpen) {
-      mobileMenu.classList.remove('open');
-      if (backdrop) backdrop.classList.remove('show');
-      document.body.style.overflow = '';
-    } else {
-      mobileMenu.classList.add('open');
-      if (backdrop) backdrop.classList.add('show');
-      document.body.style.overflow = 'hidden';
-    }
-  });
-
-  // Close on backdrop click
-  if (backdrop) {
-    backdrop.addEventListener('click', () => {
-      mobileMenu.classList.remove('open');
-      backdrop.classList.remove('show');
-      document.body.style.overflow = '';
-    });
-  }
-
-  // Close on escape key
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
-      mobileMenu.classList.remove('open');
-      if (backdrop) backdrop.classList.remove('show');
-      document.body.style.overflow = '';
-    }
-  });
+  // Mobile menu functionality moved to site.js
+  // This prevents duplicate event handlers and body overflow conflicts
+  return;
 }
 
 /**

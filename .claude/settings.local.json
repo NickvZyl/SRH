@@ -1,0 +1,11 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx serve public -p 3000)",
+      "Bash(netstat:*)",
+      "Bash(findstr:*)",
+      "Skill(frontend-design)",
+      "Skill(frontend-design:*)"
+    ]
+  }
+}

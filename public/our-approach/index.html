@@ -103,405 +103,545 @@
   
   <main id="main-content">
     
-    <!-- Page Header with Hero Image and On-Page Navigation -->
-    <section class="relative py-xl bg-white border-b border-warm-stone overflow-hidden">
-      <!-- Hero Background Image -->
-      <div class="absolute inset-0 z-0">
-        <img src="/assets/images/approach/hero-approach.jpg" alt="" class="w-full h-full object-cover opacity-10" loading="eager">
+    <!-- Page Header - Asymmetric Split Hero -->
+    <section class="relative overflow-hidden">
+      <!-- Split background -->
+      <div class="absolute inset-0 lg:grid lg:grid-cols-2">
+        <div class="bg-white"></div>
+        <div class="bg-gradient-to-br from-burgundy via-deep-red to-gold-ochre"></div>
       </div>
+      
+      <div class="container-custom relative z-10 py-20 lg:py-32">
+        <div class="grid lg:grid-cols-2 gap-12 items-center">
+          
+          <!-- Left: Content on White -->
+          <div class="text-left" data-animate>
+            <div class="w-16 h-1 bg-gradient-to-r from-burgundy via-deep-red to-gold-ochre mb-8"></div>
+            
+            <h1 class="text-5xl md:text-6xl lg:text-7xl mb-8 leading-tight">
+              This is not consulting.<br/>
+              <span class="text-burgundy">This is execution.</span>
+            </h1>
+            
+            <p class="text-xl md:text-2xl text-black text-opacity-70 mb-6 leading-relaxed">
+              St Raphael Health works alongside hospital leadership teams to stabilize operations, restore profitability, and create durable long-term value.
+            </p>
+            
+            <div class="bg-burgundy-5 border-l-4 border-burgundy p-6 rounded-r-xl">
+              <p class="text-lg md:text-xl font-light text-black">
+                We do not advise from the sidelines. We embed directly, take responsibility for execution, and remain accountable for outcomes.
+              </p>
+            </div>
+          </div>
+          
+          <!-- Right: Stats/Navigation on Gradient -->
+          <div class="text-white" data-animate>
+            <div class="space-y-8">
+              
+              <!-- Badge -->
+              <div class="inline-block px-5 py-2 bg-white/20 rounded-full text-sm font-semibold uppercase tracking-wider backdrop-blur-sm">
+                Hospital Turnaround Specialists
+              </div>
+              
+              <!-- Key Stats -->
+              <div class="grid grid-cols-2 gap-6">
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                  <div class="text-4xl md:text-5xl font-light mb-2">200+</div>
+                  <div class="text-sm opacity-90">Years Combined Experience</div>
+                </div>
+                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                  <div class="text-4xl md:text-5xl font-light mb-2">100%</div>
+                  <div class="text-sm opacity-90">Accountable to Outcomes</div>
+                </div>
+              </div>
+              
+              <!-- Navigation -->
+              <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
+                <p class="text-sm uppercase tracking-wider font-semibold mb-4 opacity-90">Jump to Section</p>
+                <nav class="space-y-2" aria-label="Page sections">
+                  <a href="#how-we-work" class="block px-4 py-3 rounded-lg bg-white/10 hover:bg-white hover:text-burgundy transition-all duration-300 font-medium">How We Work</a>
+                  <a href="#operating-pillars" class="block px-4 py-3 rounded-lg bg-white/10 hover:bg-white hover:text-burgundy transition-all duration-300 font-medium">Operating Pillars</a>
+                  <a href="#execution-model" class="block px-4 py-3 rounded-lg bg-white/10 hover:bg-white hover:text-burgundy transition-all duration-300 font-medium">Execution Model</a>
+                  <a href="#what-makes-different" class="block px-4 py-3 rounded-lg bg-white/10 hover:bg-white hover:text-burgundy transition-all duration-300 font-medium">What Makes Us Different</a>
+                </nav>
+              </div>
+              
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+    
+    <!-- Section 1: How We Work - Card Grid Layout -->
+    <section id="how-we-work" class="py-24 bg-white">
+      <div class="container-custom">
+        <div class="text-center mb-16" data-animate>
+          <div class="w-16 h-1 bg-gradient-to-r from-deep-red via-gold-ochre to-soft-gold mx-auto mb-6"></div>
+          <h2 class="text-5xl md:text-6xl mb-4">How We Work</h2>
+          <p class="text-xl text-black text-opacity-70">A disciplined, operator-led framework</p>
+        </div>
+        
+        <!-- Modern Card Grid -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+          
+          <!-- Card 1: Rapid Diagnosis -->
+          <div class="relative group" data-animate>
+            <div class="absolute inset-0 bg-gradient-to-br from-burgundy to-deep-red rounded-2xl opacity-5 group-hover:opacity-10 transition-opacity"></div>
+            <div class="relative bg-white rounded-2xl shadow-lg p-8 border-t-4 border-burgundy h-full flex flex-col transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+              <div class="flex items-center gap-4 mb-6">
+                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-burgundy to-deep-red text-white flex items-center justify-center text-2xl font-light shadow-lg">
+                  1
+                </div>
+                <h3 class="text-2xl font-light text-burgundy">Rapid Diagnosis</h3>
+              </div>
+              
+              <p class="text-base text-black text-opacity-70 mb-4 flex-grow">
+                We begin by quickly identifying the operational and financial constraints preventing performance.
+              </p>
+              
+              <div class="pt-4 border-t border-warm-stone-15">
+                <p class="text-sm font-semibold text-gold-ochre italic">
+                  Our goal is clarity—fast.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Card 2: Hands-On Execution -->
+          <div class="relative group" data-animate>
+            <div class="absolute inset-0 bg-gradient-to-br from-deep-red to-gold-ochre rounded-2xl opacity-5 group-hover:opacity-10 transition-opacity"></div>
+            <div class="relative bg-white rounded-2xl shadow-lg p-8 border-t-4 border-deep-red h-full flex flex-col transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+              <div class="flex items-center gap-4 mb-6">
+                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-deep-red to-gold-ochre text-white flex items-center justify-center text-2xl font-light shadow-lg">
+                  2
+                </div>
+                <h3 class="text-2xl font-light text-deep-red">Hands-On Execution</h3>
+              </div>
+              
+              <p class="text-base text-black text-opacity-70 mb-4 flex-grow">
+                Once priorities are clear, we move immediately into execution. We work directly with hospital leadership and teams to drive operational decisions and implement changes on the ground.
+              </p>
+              
+              <div class="pt-4 border-t border-warm-stone-15">
+                <p class="text-sm font-semibold text-gold-ochre italic">
+                  We stay involved until change is real and measurable.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Card 3: Profitability First -->
+          <div class="relative group" data-animate>
+            <div class="absolute inset-0 bg-gradient-to-br from-gold-ochre to-soft-gold rounded-2xl opacity-5 group-hover:opacity-10 transition-opacity"></div>
+            <div class="relative bg-white rounded-2xl shadow-lg p-8 border-t-4 border-gold-ochre h-full flex flex-col transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+              <div class="flex items-center gap-4 mb-6">
+                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-gold-ochre to-soft-gold text-white flex items-center justify-center text-2xl font-light shadow-lg">
+                  3
+                </div>
+                <h3 class="text-2xl font-light text-gold-ochre">Profitability First</h3>
+              </div>
+              
+              <p class="text-base text-black text-opacity-70 mb-4 flex-grow">
+                Profitability is the foundation of every successful hospital outcome. By restoring predictable cash flow and sustainable margins early, we stabilize operations and create optionality for leadership.
+              </p>
+              
+              <div class="pt-4 border-t border-warm-stone-15">
+                <p class="text-sm font-semibold text-gold-ochre italic">
+                  Profit enables better care and long-term stability.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Card 4: Sustainability -->
+          <div class="relative group" data-animate>
+            <div class="absolute inset-0 bg-gradient-to-br from-burgundy to-deep-red rounded-2xl opacity-5 group-hover:opacity-10 transition-opacity"></div>
+            <div class="relative bg-white rounded-2xl shadow-lg p-8 border-t-4 border-burgundy h-full flex flex-col transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+              <div class="flex items-center gap-4 mb-6">
+                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-burgundy to-deep-red text-white flex items-center justify-center text-2xl font-light shadow-lg">
+                  4
+                </div>
+                <h3 class="text-2xl font-light text-burgundy">Build for Sustainability</h3>
+              </div>
+              
+              <p class="text-base text-black text-opacity-70 mb-4 flex-grow">
+                Stabilization is not the finish line. We ensure operational improvements are repeatable, teams are aligned and supported, and systems are institutionalized.
+              </p>
+              
+              <div class="pt-4 border-t border-warm-stone-15">
+                <p class="text-sm font-semibold text-gold-ochre italic">
+                  A hospital that performs without constant intervention.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Card 5: Strategic Options -->
+          <div class="relative group md:col-span-2 lg:col-span-1" data-animate>
+            <div class="absolute inset-0 bg-gradient-to-br from-deep-red to-gold-ochre rounded-2xl opacity-5 group-hover:opacity-10 transition-opacity"></div>
+            <div class="relative bg-white rounded-2xl shadow-lg p-8 border-t-4 border-deep-red h-full flex flex-col transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
+              <div class="flex items-center gap-4 mb-6">
+                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-deep-red to-gold-ochre text-white flex items-center justify-center text-2xl font-light shadow-lg">
+                  5
+                </div>
+                <h3 class="text-2xl font-light text-deep-red">Create Strategic Options</h3>
+              </div>
+              
+              <p class="text-base text-black text-opacity-70 mb-4 flex-grow">
+                Once operations are stable and profitability restored, leadership has choices. We support long-term independent operation, strategic partnerships, or improved valuations.
+              </p>
+              
+              <div class="pt-4 border-t border-warm-stone-15">
+                <p class="text-sm font-semibold text-gold-ochre italic">
+                  Options only exist when operations are healthy.
+                </p>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+    
+    <!-- Section 2: Our Operating Pillars - ASYMMETRIC LAYOUT -->
+    <section id="operating-pillars" class="relative py-32 overflow-hidden">
+      <!-- Diagonal background split -->
+      <div class="absolute inset-0 bg-gradient-to-br from-white via-warm-stone-5 to-white"></div>
+      <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-bl from-soft-gold-5 to-transparent opacity-60"></div>
       
       <div class="container-custom relative z-10">
-        <h1 class="text-5xl md:text-6xl text-center mb-8" data-animate>
-          This is not consulting. This is execution.
-        </h1>
-        
-        <div class="max-w-4xl mx-auto prose-custom text-center mb-12" data-animate>
-          <p>
-            St Raphael Health works alongside hospital leadership teams to stabilize operations, restore profitability, and create durable long-term value.
-          </p>
-          
-          <p>
-            We do not advise from the sidelines. We embed directly, take responsibility for execution, and remain accountable for outcomes.
-          </p>
-          
-          <p>
-            Our approach is built by operators, refined through real-world hospital turnarounds, and designed to move decisively in complex, high-pressure healthcare environments.
-          </p>
-        </div>
-        
-        <!-- On-Page Navigation -->
-        <nav class="flex flex-wrap justify-center gap-6 text-sm" aria-label="Page sections">
-          <a href="#how-we-work" class="text-gold-ochre hover:underline font-montserrat font-semibold">How We Work</a>
-          <a href="#operating-pillars" class="text-gold-ochre hover:underline font-montserrat font-semibold">Our Operating Pillars</a>
-          <a href="#execution-model" class="text-gold-ochre hover:underline font-montserrat font-semibold">Execution Model</a>
-          <a href="#what-makes-different" class="text-gold-ochre hover:underline font-montserrat font-semibold">What Makes Us Different</a>
-        </nav>
-      </div>
-    </section>
-    
-    <!-- Section 1: How We Work -->
-    <section id="how-we-work" class="py-xxl bg-warm-stone">
-      <div class="container-custom max-w-5xl">
-        <h2 class="text-4xl md:text-5xl text-center mb-4" data-animate>How We Work</h2>
-        <p class="text-xl text-center text-black text-opacity-70 mb-16" data-animate>A disciplined, operator-led framework</p>
-        
-        <div class="space-y-16">
-          <div class="card" data-animate>
-            <h3 class="text-2xl mb-4">1. Rapid Diagnosis</h3>
-            <p class="mb-4">
-              We begin by quickly identifying the operational and financial constraints preventing performance.
-            </p>
-            <p class="mb-4">This includes:</p>
-            <ul class="list-disc list-inside space-y-2 mb-4">
-              <li>Cash flow and revenue cycle stress points</li>
-              <li>Cost structures and margin leakage</li>
-              <li>Service line performance</li>
-              <li>Capital and balance sheet pressure</li>
-              <li>Regulatory and operational risks</li>
-            </ul>
-            <p class="font-semibold text-gold-ochre">Our goal is clarity—fast.</p>
-          </div>
-          
-          <div class="card" data-animate>
-            <h3 class="text-2xl mb-4">2. Hands-On Operational Execution</h3>
-            <p class="mb-4">
-              Once priorities are clear, we move immediately into execution.
-            </p>
-            <p class="mb-4">We work directly with hospital leadership and teams to:</p>
-            <ul class="list-disc list-inside space-y-2 mb-4">
-              <li>Drive operational decisions</li>
-              <li>Implement changes on the ground</li>
-              <li>Remove friction across people, process, and systems</li>
-            </ul>
-            <p class="font-semibold text-gold-ochre">We do not deliver reports and disappear. We stay involved until change is real and measurable.</p>
-          </div>
-          
-          <div class="card" data-animate>
-            <h3 class="text-2xl mb-4">3. Profitability First</h3>
-            <p class="mb-4">
-              Profitability is the foundation of every successful hospital outcome.
-            </p>
-            <p class="mb-4">By restoring predictable cash flow and sustainable margins early, we:</p>
-            <ul class="list-disc list-inside space-y-2 mb-4">
-              <li>Stabilize day-to-day operations</li>
-              <li>Reduce crisis management</li>
-              <li>Create optionality for leadership</li>
-            </ul>
-            <p class="font-semibold text-gold-ochre">Profit enables better care, stronger teams, and long-term stability.</p>
-          </div>
-          
-          <div class="card" data-animate>
-            <h3 class="text-2xl mb-4">4. Build for Sustainability</h3>
-            <p class="mb-4">
-              Stabilization is not the finish line.
-            </p>
-            <p class="mb-4">We ensure:</p>
-            <ul class="list-disc list-inside space-y-2 mb-4">
-              <li>Operational improvements are repeatable</li>
-              <li>Teams are aligned and supported</li>
-              <li>Systems and processes are institutionalized</li>
-            </ul>
-            <p class="font-semibold text-gold-ochre">The objective is a hospital that performs without constant intervention.</p>
-          </div>
-          
-          <div class="card" data-animate>
-            <h3 class="text-2xl mb-4">5. Create Strategic Options</h3>
-            <p class="mb-4">
-              Once operations are stable and profitability restored, leadership has choices.
-            </p>
-            <p class="mb-4">Depending on objectives, we support:</p>
-            <ul class="list-disc list-inside space-y-2 mb-4">
-              <li>Long-term independent operation</li>
-              <li>Strategic partnerships</li>
-              <li>Sale or transaction at a materially improved valuation</li>
-            </ul>
-            <p class="font-semibold text-gold-ochre">Options only exist when operations are healthy.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <!-- Section 2: Our Operating Pillars (Detailed) -->
-    <section id="operating-pillars" class="py-xxl bg-gradient-to-b from-white via-warm-stone-light to-white relative overflow-hidden">
-      <!-- Background decoration -->
-      <div class="absolute inset-0 opacity-5">
-        <div class="absolute top-20 right-10 w-96 h-96 bg-gold-ochre rounded-full blur-3xl"></div>
-        <div class="absolute bottom-20 left-10 w-96 h-96 bg-gold-ochre-light rounded-full blur-3xl"></div>
-      </div>
-      
-      <div class="container-custom max-w-6xl relative z-10">
-        <div class="text-center mb-20" data-animate>
-          <h2 class="text-4xl md:text-6xl mb-6">Our Operating Pillars</h2>
-          <p class="text-xl text-black text-opacity-70 max-w-3xl mx-auto mb-4">
+        <!-- Header - Left Aligned -->
+        <div class="max-w-3xl mb-20" data-animate>
+          <div class="w-16 h-1 bg-gradient-to-r from-deep-red via-gold-ochre to-soft-gold mb-6"></div>
+          <h2 class="text-5xl md:text-6xl lg:text-7xl mb-6">
+            Our Operating <span class="text-burgundy">Pillars</span>
+          </h2>
+          <p class="text-2xl font-light text-black mb-4">
             An integrated operating system, not standalone services
           </p>
-          <p class="text-lg text-black text-opacity-60 max-w-3xl mx-auto">
+          <p class="text-lg text-black text-opacity-70">
             Our approach is executed through a proven, repeatable operating framework. Each pillar reinforces the others and is applied based on urgency and context.
           </p>
         </div>
         
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <!-- Pillar 1: Cash Flow Acceleration -->
-          <div class="profit-enabler-premium-card group" data-animate>
-            <div class="profit-enabler-badge">01</div>
-            <div class="profit-enabler-icon-premium mb-6">
-              <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-              </svg>
+        <!-- Pillars - Asymmetric Cards with Visual Hierarchy -->
+        <div class="space-y-12">
+          <!-- Pillar 1: Cash Flow Acceleration - LEFT ALIGNED -->
+          <div class="grid lg:grid-cols-12 gap-8 items-center" data-animate>
+            <!-- Large Number -->
+            <div class="lg:col-span-2">
+              <div class="text-9xl font-light text-burgundy opacity-20">01</div>
             </div>
-            <h3 class="text-2xl md:text-2xl font-light mb-4">Cash Flow Acceleration</h3>
-            <p class="mb-6 text-black text-opacity-80">
-              Hospitals rarely fail due to lack of revenue. They fail because cash is delayed, trapped, or leaking through broken processes.
-            </p>
-            <p class="text-sm font-semibold mb-4 text-black text-opacity-70">We rapidly convert earned revenue into usable cash by:</p>
-            <ul class="space-y-3 mb-8 text-sm">
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-gold-ochre mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-                <span>Recovering aged receivables</span>
-              </li>
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-gold-ochre mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-                <span>Tightening billing, coding, and collections cycles</span>
-              </li>
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-gold-ochre mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-                <span>Improving payer responsiveness and escalation</span>
-              </li>
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-gold-ochre mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-                <span>Addressing breakdowns in patient access and PFS</span>
-              </li>
-            </ul>
-            <div class="profit-enabler-footer">
-              <p class="font-semibold text-gold-ochre text-sm">Cash flow is the fastest lever to restore control.</p>
-            </div>
-          </div>
-          
-          <!-- Pillar 2: Cost Efficiency -->
-          <div class="profit-enabler-premium-card group" data-animate>
-            <div class="profit-enabler-badge">02</div>
-            <div class="profit-enabler-icon-premium mb-6">
-              <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 7h6m0 10v-3m-3 3h.01M9 17h.01M9 14h.01M12 14h.01M15 11h.01M12 11h.01M9 11h.01M7 21h10a2 2 0 002-2V5a2 2 0 00-2-2H7a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
-              </svg>
-            </div>
-            <h3 class="text-2xl md:text-2xl font-light mb-4">Cost Efficiency & Margin Improvement</h3>
-            <p class="mb-6 text-black text-opacity-80">
-              Distressed hospitals often carry cost structures misaligned with actual operating volume.
-            </p>
-            <p class="text-sm font-semibold mb-4 text-black text-opacity-70">We create durable margin expansion by:</p>
-            <ul class="space-y-3 mb-8 text-sm">
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-gold-ochre mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-                <span>Eliminating unnecessary or misaligned spend</span>
-              </li>
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-gold-ochre mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-                <span>Optimizing purchasing and supply chain agreements</span>
-              </li>
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-gold-ochre mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-                <span>Renegotiating vendor and service contracts</span>
-              </li>
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-gold-ochre mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-                <span>Right-sizing overhead without compromising care</span>
-              </li>
-            </ul>
-            <div class="profit-enabler-footer">
-              <p class="font-semibold text-gold-ochre text-sm">This is about alignment, not indiscriminate cuts.</p>
+            
+            <!-- Content -->
+            <div class="lg:col-span-10">
+              <div class="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-burgundy">
+                <h3 class="text-3xl md:text-4xl font-light mb-4">
+                  Cash Flow <span class="text-burgundy">Acceleration</span>
+                </h3>
+                <p class="text-xl text-black text-opacity-70 mb-6 leading-relaxed">
+                  Hospitals rarely fail due to lack of revenue. They fail because cash is delayed, trapped, or leaking through broken processes.
+                </p>
+                
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                  <div class="flex items-start gap-3">
+                    <svg class="w-6 h-6 text-gold-ochre flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    <span class="text-lg">Recovering aged receivables</span>
+                  </div>
+                  <div class="flex items-start gap-3">
+                    <svg class="w-6 h-6 text-gold-ochre flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    <span class="text-lg">Tightening billing & collections cycles</span>
+                  </div>
+                  <div class="flex items-start gap-3">
+                    <svg class="w-6 h-6 text-gold-ochre flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    <span class="text-lg">Improving payer responsiveness</span>
+                  </div>
+                  <div class="flex items-start gap-3">
+                    <svg class="w-6 h-6 text-gold-ochre flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    <span class="text-lg">Fixing patient access breakdowns</span>
+                  </div>
+                </div>
+                
+                <div class="pt-6 border-t border-warm-stone-20">
+                  <p class="text-xl font-light text-burgundy italic">
+                    Cash flow is the fastest lever to restore control.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
           
-          <!-- Pillar 3: Revenue Expansion -->
-          <div class="profit-enabler-premium-card group" data-animate>
-            <div class="profit-enabler-badge">03</div>
-            <div class="profit-enabler-icon-premium mb-6">
-              <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
-              </svg>
+          <!-- Pillar 2: Cost Efficiency - RIGHT ALIGNED -->
+          <div class="grid lg:grid-cols-12 gap-8 items-center" data-animate>
+            <!-- Content -->
+            <div class="lg:col-span-10 order-2 lg:order-1">
+              <div class="bg-white rounded-2xl shadow-xl p-8 border-r-4 border-gold-ochre">
+                <h3 class="text-3xl md:text-4xl font-light mb-4">
+                  Cost Efficiency & <span class="text-gold-ochre">Margin Improvement</span>
+                </h3>
+                <p class="text-xl text-black text-opacity-70 mb-6 leading-relaxed">
+                  Distressed hospitals often carry cost structures misaligned with actual operating volume.
+                </p>
+                
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                  <div class="flex items-start gap-3">
+                    <svg class="w-6 h-6 text-deep-red flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    <span class="text-lg">Eliminating unnecessary spend</span>
+                  </div>
+                  <div class="flex items-start gap-3">
+                    <svg class="w-6 h-6 text-deep-red flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    <span class="text-lg">Optimizing supply chain</span>
+                  </div>
+                  <div class="flex items-start gap-3">
+                    <svg class="w-6 h-6 text-deep-red flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    <span class="text-lg">Renegotiating contracts</span>
+                  </div>
+                  <div class="flex items-start gap-3">
+                    <svg class="w-6 h-6 text-deep-red flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    <span class="text-lg">Aligning staffing models</span>
+                  </div>
+                </div>
+                
+                <div class="pt-6 border-t border-warm-stone-20">
+                  <p class="text-xl font-light text-gold-ochre italic">
+                    Sustainable margins create options and stability.
+                  </p>
+                </div>
+              </div>
             </div>
-            <h3 class="text-2xl md:text-2xl font-light mb-4">Revenue Expansion</h3>
-            <p class="mb-6 text-black text-opacity-80">
-              Underperformance is often driven by underutilized capacity, not lack of demand.
-            </p>
-            <p class="text-sm font-semibold mb-4 text-black text-opacity-70">We responsibly grow top-line revenue by:</p>
-            <ul class="space-y-3 mb-8 text-sm">
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-gold-ochre mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-                <span>Strengthening provider networks</span>
-              </li>
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-gold-ochre mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-                <span>Expanding or opening service lines aligned with community need</span>
-              </li>
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-gold-ochre mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-                <span>Optimizing licensing and facility structures</span>
-              </li>
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-gold-ochre mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-                <span>Ensuring full capture of services already delivered</span>
-              </li>
-            </ul>
-            <div class="profit-enabler-footer">
-              <p class="font-semibold text-gold-ochre text-sm">Revenue growth supports reinvestment and long-term stability.</p>
-            </div>
-          </div>
-          
-          <!-- Pillar 4: Capital Structure -->
-          <div class="profit-enabler-premium-card group" data-animate>
-            <div class="profit-enabler-badge">04</div>
-            <div class="profit-enabler-icon-premium mb-6">
-              <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
-              </svg>
-            </div>
-            <h3 class="text-2xl md:text-2xl font-light mb-4">Capital Structure Optimization</h3>
-            <p class="mb-6 text-black text-opacity-80">
-              Many hospitals are constrained by misaligned capital and restrictive financial structures.
-            </p>
-            <p class="text-sm font-semibold mb-4 text-black text-opacity-70">We strengthen the financial foundation by:</p>
-            <ul class="space-y-3 mb-8 text-sm">
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-gold-ochre mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-                <span>Right-sizing the balance sheet</span>
-              </li>
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-gold-ochre mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-                <span>Aligning lenders, investors, and stakeholders</span>
-              </li>
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-gold-ochre mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-                <span>Structuring capital to support recovery and growth</span>
-              </li>
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-gold-ochre mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-                <span>Creating flexibility for refinancing or future transactions</span>
-              </li>
-            </ul>
-            <div class="profit-enabler-footer">
-              <p class="font-semibold text-gold-ochre text-sm">Capital should support operations, not constrain them.</p>
+            
+            <!-- Large Number -->
+            <div class="lg:col-span-2 order-1 lg:order-2 lg:text-right">
+              <div class="text-9xl font-light text-gold-ochre opacity-20">02</div>
             </div>
           </div>
           
-          <!-- Pillar 5: Regulatory Compliance -->
-          <div class="profit-enabler-premium-card group" data-animate>
-            <div class="profit-enabler-badge">05</div>
-            <div class="profit-enabler-icon-premium mb-6">
-              <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-              </svg>
+          <!-- Pillar 3: Revenue Expansion - LEFT ALIGNED -->
+          <div class="grid lg:grid-cols-12 gap-8 items-center" data-animate>
+            <!-- Large Number -->
+            <div class="lg:col-span-2">
+              <div class="text-9xl font-light text-burgundy opacity-20">03</div>
             </div>
-            <h3 class="text-2xl md:text-2xl font-light mb-4">Regulatory Compliance & Operational Integrity</h3>
-            <p class="mb-6 text-black text-opacity-80">
-              Operational distress often increases regulatory risk.
-            </p>
-            <p class="text-sm font-semibold mb-4 text-black text-opacity-70">We ensure every clinical and administrative function meets required standards by:</p>
-            <ul class="space-y-3 mb-8 text-sm">
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-gold-ochre mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-                <span>Addressing licensing and accreditation gaps</span>
-              </li>
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-gold-ochre mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-                <span>Strengthening quality and safety frameworks</span>
-              </li>
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-gold-ochre mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-                <span>Supporting survey readiness and audits</span>
-              </li>
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-gold-ochre mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-                <span>Embedding compliance into daily operations</span>
-              </li>
-            </ul>
-            <div class="profit-enabler-footer">
-              <p class="font-semibold text-gold-ochre text-sm">Operational integrity protects patients, staff, and leadership.</p>
+            
+            <!-- Content -->
+            <div class="lg:col-span-10">
+              <div class="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-burgundy">
+                <h3 class="text-3xl md:text-4xl font-light mb-4">
+                  Revenue <span class="text-burgundy">Expansion</span>
+                </h3>
+                <p class="text-xl text-black text-opacity-70 mb-6 leading-relaxed">
+                  Underperformance is often driven by underutilized capacity, not lack of demand.
+                </p>
+                
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                  <div class="flex items-start gap-3">
+                    <svg class="w-6 h-6 text-gold-ochre flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    <span class="text-lg">Strengthening provider networks</span>
+                  </div>
+                  <div class="flex items-start gap-3">
+                    <svg class="w-6 h-6 text-gold-ochre flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    <span class="text-lg">Expanding service lines</span>
+                  </div>
+                  <div class="flex items-start gap-3">
+                    <svg class="w-6 h-6 text-gold-ochre flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    <span class="text-lg">Optimizing facility structures</span>
+                  </div>
+                  <div class="flex items-start gap-3">
+                    <svg class="w-6 h-6 text-gold-ochre flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    <span class="text-lg">Full service capture</span>
+                  </div>
+                </div>
+                
+                <div class="pt-6 border-t border-warm-stone-20">
+                  <p class="text-xl font-light text-burgundy italic">
+                    Revenue growth supports reinvestment and long-term stability.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
           
-          <!-- Pillar 6: Sale or Partnership -->
-          <div class="profit-enabler-premium-card group" data-animate>
-            <div class="profit-enabler-badge">06</div>
-            <div class="profit-enabler-icon-premium mb-6">
-              <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
-              </svg>
+          <!-- Pillar 4: Capital Structure - RIGHT ALIGNED -->
+          <div class="grid lg:grid-cols-12 gap-8 items-center" data-animate>
+            <!-- Content -->
+            <div class="lg:col-span-10 order-2 lg:order-1">
+              <div class="bg-white rounded-2xl shadow-xl p-8 border-r-4 border-gold-ochre">
+                <h3 class="text-3xl md:text-4xl font-light mb-4">
+                  Capital Structure <span class="text-gold-ochre">Optimization</span>
+                </h3>
+                <p class="text-xl text-black text-opacity-70 mb-6 leading-relaxed">
+                  Many hospitals are constrained by misaligned capital and restrictive financial structures.
+                </p>
+                
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                  <div class="flex items-start gap-3">
+                    <svg class="w-6 h-6 text-deep-red flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    <span class="text-lg">Right-sizing the balance sheet</span>
+                  </div>
+                  <div class="flex items-start gap-3">
+                    <svg class="w-6 h-6 text-deep-red flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    <span class="text-lg">Aligning stakeholders</span>
+                  </div>
+                  <div class="flex items-start gap-3">
+                    <svg class="w-6 h-6 text-deep-red flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    <span class="text-lg">Structuring for recovery</span>
+                  </div>
+                  <div class="flex items-start gap-3">
+                    <svg class="w-6 h-6 text-deep-red flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    <span class="text-lg">Creating refinancing flexibility</span>
+                  </div>
+                </div>
+                
+                <div class="pt-6 border-t border-warm-stone-20">
+                  <p class="text-xl font-light text-gold-ochre italic">
+                    Capital should support operations, not constrain them.
+                  </p>
+                </div>
+              </div>
             </div>
-            <h3 class="text-2xl md:text-2xl font-light mb-4">Sale or Partnership Strategy</h3>
-            <p class="mb-6 text-black text-opacity-80">
-              Strategic outcomes are pursued only once stability is restored.
-            </p>
-            <p class="text-sm font-semibold mb-4 text-black text-opacity-70">Where appropriate, we:</p>
-            <ul class="space-y-3 mb-8 text-sm">
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-gold-ochre mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-                <span>Evaluate strategic alternatives</span>
-              </li>
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-gold-ochre mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-                <span>Support partnership or sale discussions</span>
-              </li>
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-gold-ochre mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-                <span>Position hospitals for materially improved valuation</span>
-              </li>
-              <li class="flex items-start">
-                <svg class="w-5 h-5 text-gold-ochre mt-0.5 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
-                </svg>
-                <span>Help leadership pursue outcomes from a position of strength</span>
-              </li>
-            </ul>
-            <div class="profit-enabler-footer">
-              <p class="font-semibold text-gold-ochre text-sm">Optionality is created through execution, not assumption.</p>
+            
+            <!-- Large Number -->
+            <div class="lg:col-span-2 order-1 lg:order-2 lg:text-right">
+              <div class="text-9xl font-light text-gold-ochre opacity-20">04</div>
+            </div>
+          </div>
+          
+          <!-- Pillar 5: Regulatory Compliance - LEFT ALIGNED -->
+          <div class="grid lg:grid-cols-12 gap-8 items-center" data-animate>
+            <!-- Large Number -->
+            <div class="lg:col-span-2">
+              <div class="text-9xl font-light text-burgundy opacity-20">05</div>
+            </div>
+            
+            <!-- Content -->
+            <div class="lg:col-span-10">
+              <div class="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-burgundy">
+                <h3 class="text-3xl md:text-4xl font-light mb-4">
+                  Regulatory Compliance & <span class="text-burgundy">Operational Integrity</span>
+                </h3>
+                <p class="text-xl text-black text-opacity-70 mb-6 leading-relaxed">
+                  Operational distress often increases regulatory risk.
+                </p>
+                
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                  <div class="flex items-start gap-3">
+                    <svg class="w-6 h-6 text-gold-ochre flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    <span class="text-lg">Addressing accreditation gaps</span>
+                  </div>
+                  <div class="flex items-start gap-3">
+                    <svg class="w-6 h-6 text-gold-ochre flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    <span class="text-lg">Strengthening safety frameworks</span>
+                  </div>
+                  <div class="flex items-start gap-3">
+                    <svg class="w-6 h-6 text-gold-ochre flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    <span class="text-lg">Survey readiness & audits</span>
+                  </div>
+                  <div class="flex items-start gap-3">
+                    <svg class="w-6 h-6 text-gold-ochre flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    <span class="text-lg">Embedding daily compliance</span>
+                  </div>
+                </div>
+                
+                <div class="pt-6 border-t border-warm-stone-20">
+                  <p class="text-xl font-light text-burgundy italic">
+                    Operational integrity protects patients, staff, and leadership.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Pillar 6: Sale or Partnership - RIGHT ALIGNED -->
+          <div class="grid lg:grid-cols-12 gap-8 items-center" data-animate>
+            <!-- Content -->
+            <div class="lg:col-span-10 order-2 lg:order-1">
+              <div class="bg-white rounded-2xl shadow-xl p-8 border-r-4 border-gold-ochre">
+                <h3 class="text-3xl md:text-4xl font-light mb-4">
+                  Sale or Partnership <span class="text-gold-ochre">Strategy</span>
+                </h3>
+                <p class="text-xl text-black text-opacity-70 mb-6 leading-relaxed">
+                  Strategic outcomes are pursued only once stability is restored.
+                </p>
+                
+                <div class="grid md:grid-cols-2 gap-6 mb-6">
+                  <div class="flex items-start gap-3">
+                    <svg class="w-6 h-6 text-deep-red flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    <span class="text-lg">Evaluate strategic alternatives</span>
+                  </div>
+                  <div class="flex items-start gap-3">
+                    <svg class="w-6 h-6 text-deep-red flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    <span class="text-lg">Support partnership discussions</span>
+                  </div>
+                  <div class="flex items-start gap-3">
+                    <svg class="w-6 h-6 text-deep-red flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    <span class="text-lg">Improve valuation positioning</span>
+                  </div>
+                  <div class="flex items-start gap-3">
+                    <svg class="w-6 h-6 text-deep-red flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                    </svg>
+                    <span class="text-lg">Negotiate from strength</span>
+                  </div>
+                </div>
+                
+                <div class="pt-6 border-t border-warm-stone-20">
+                  <p class="text-xl font-light text-gold-ochre italic">
+                    Optionality is created through execution, not assumption.
+                  </p>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Large Number -->
+            <div class="lg:col-span-2 order-1 lg:order-2 lg:text-right">
+              <div class="text-9xl font-light text-gold-ochre opacity-20">06</div>
             </div>
           </div>
         </div>
@@ -509,9 +649,9 @@
     </section>
     
     <!-- Section 3: Execution Model -->
-    <section id="execution-model" class="py-xxl bg-warm-stone">
+    <section id="execution-model" class="section-flow surface">
       <div class="container-custom max-w-5xl">
-        <h2 class="text-4xl md:text-5xl text-center mb-4" data-animate>Execution Model</h2>
+        <h2 class="text-4xl md:text-5xl text-center mb-4 surface-accent pt-8" data-animate>Execution Model</h2>
         <p class="text-xl text-center text-black text-opacity-70 mb-8" data-animate>
           A disciplined operating model designed for speed and stability
         </p>
@@ -520,9 +660,13 @@
           St Raphael Health operates using a structured execution model designed to stabilize hospitals quickly while building toward sustainable, long-term performance. Every engagement follows the same core phases. The sequence may compress or overlap depending on urgency, but the discipline remains constant.
         </p>
         
-        <div class="space-y-12">
-          <div class="card" data-animate>
-            <h3 class="text-2xl mb-4">Phase 1: Immediate Stabilization (0-30 Days)</h3>
+        <div class="timeline-container" data-animate>
+          <div class="timeline-connector"></div>
+          
+          <div class="timeline-step">
+            <span class="timeline-number">1</span>
+            <span class="step-label">0-30 Days</span>
+            <h3>Phase 1: Immediate Stabilization</h3>
             <p class="font-semibold mb-4 text-gold-ochre">Objective: Stop financial and operational bleed. Restore control.</p>
             <p class="mb-4">Focus Areas:</p>
             <ul class="list-disc list-inside space-y-2 mb-4">
@@ -535,8 +679,10 @@
             <p class="font-semibold">Outcome: The hospital moves from reactive crisis management to controlled operations.</p>
           </div>
           
-          <div class="card" data-animate>
-            <h3 class="text-2xl mb-4">Phase 2: Performance Reset (30-90 Days)</h3>
+          <div class="timeline-step">
+            <span class="timeline-number">2</span>
+            <span class="step-label">30-90 Days</span>
+            <h3>Phase 2: Performance Reset</h3>
             <p class="font-semibold mb-4 text-gold-ochre">Objective: Restore predictable performance across core functions.</p>
             <p class="mb-4">Focus Areas:</p>
             <ul class="list-disc list-inside space-y-2 mb-4">
@@ -549,8 +695,10 @@
             <p class="font-semibold">Outcome: The hospital operates with predictable cash flow, stabilized margins, and measurable performance improvements.</p>
           </div>
           
-          <div class="card" data-animate>
-            <h3 class="text-2xl mb-4">Phase 3: Sustainable Operations (90-180 Days)</h3>
+          <div class="timeline-step">
+            <span class="timeline-number">3</span>
+            <span class="step-label">90-180 Days</span>
+            <h3>Phase 3: Sustainable Operations</h3>
             <p class="font-semibold mb-4 text-gold-ochre">Objective: Embed systems and teams that perform without constant intervention.</p>
             <p class="mb-4">Focus Areas:</p>
             <ul class="list-disc list-inside space-y-2 mb-4">
@@ -562,8 +710,10 @@
             <p class="font-semibold">Outcome: The hospital performs sustainably with reduced dependency on crisis intervention.</p>
           </div>
           
-          <div class="card" data-animate>
-            <h3 class="text-2xl mb-4">Phase 4: Strategic Optionality (Post-Stabilization)</h3>
+          <div class="timeline-step">
+            <span class="timeline-number">4</span>
+            <span class="step-label">Post-Stabilization</span>
+            <h3>Phase 4: Strategic Optionality</h3>
             <p class="font-semibold mb-4 text-gold-ochre">Objective: Create and evaluate long-term strategic choices.</p>
             <p class="mb-4">Focus Areas:</p>
             <ul class="list-disc list-inside space-y-2 mb-4">
@@ -578,63 +728,145 @@
       </div>
     </section>
     
-    <!-- Section 4: What Makes This Different -->
-    <section id="what-makes-different" class="py-xxl bg-white">
-      <div class="container-custom max-w-4xl">
-        <h2 class="text-4xl md:text-5xl text-center mb-16" data-animate>What Makes This Different</h2>
+    <!-- Section 4: What Makes This Different - REDESIGNED -->
+    <section id="what-makes-different" class="relative py-32 overflow-hidden">
+      <!-- Background -->
+      <div class="absolute inset-0 bg-gradient-to-br from-warm-stone-5 via-white to-soft-gold-5"></div>
+      
+      <div class="container-custom relative z-10">
+        <!-- Header -->
+        <div class="text-center mb-20" data-animate>
+          <div class="w-16 h-1 bg-gradient-to-r from-deep-red via-gold-ochre to-soft-gold mx-auto mb-6"></div>
+          <h2 class="text-5xl md:text-6xl mb-6">
+            What Makes This <span class="text-burgundy">Different</span>
+          </h2>
+          <p class="text-xl text-black text-opacity-70 max-w-3xl mx-auto">
+            This is not consulting as usual. It's a fundamentally different approach to hospital turnarounds.
+          </p>
+        </div>
         
-        <div class="grid md:grid-cols-3 gap-12 mb-16">
-          <div class="text-center" data-animate>
-            <h3 class="text-2xl mb-4">Operators, Not Advisors</h3>
-            <p>
-              Our team brings over 200 years of combined hospital operating, turnaround, and transaction experience. We have worked inside these environments and understand what works under pressure.
-            </p>
+        <!-- Three Key Differentiators - Large Cards -->
+        <div class="grid lg:grid-cols-3 gap-8 mb-24 max-w-7xl mx-auto">
+          
+          <!-- 1. Operators -->
+          <div class="relative group" data-animate>
+            <div class="absolute inset-0 bg-gradient-to-br from-burgundy to-deep-red rounded-2xl opacity-5 group-hover:opacity-10 transition-opacity"></div>
+            <div class="relative bg-white rounded-2xl shadow-xl p-10 h-full transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+              <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-burgundy to-deep-red text-white flex items-center justify-center mb-6 shadow-lg">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                </svg>
+              </div>
+              <h3 class="text-3xl font-light mb-4 text-burgundy">Operators, Not Advisors</h3>
+              <p class="text-lg text-black text-opacity-70 leading-relaxed">
+                Our team brings over 200 years of combined hospital operating, turnaround, and transaction experience. We have worked inside these environments and understand what works under pressure.
+              </p>
+            </div>
           </div>
           
-          <div class="text-center" data-animate>
-            <h3 class="text-2xl mb-4">Speed Without Chaos</h3>
-            <p>
-              We move quickly, but not recklessly. Our framework prioritizes actions that matter most and avoids unnecessary disruption.
-            </p>
+          <!-- 2. Speed -->
+          <div class="relative group" data-animate>
+            <div class="absolute inset-0 bg-gradient-to-br from-deep-red to-gold-ochre rounded-2xl opacity-5 group-hover:opacity-10 transition-opacity"></div>
+            <div class="relative bg-white rounded-2xl shadow-xl p-10 h-full transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+              <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-deep-red to-gold-ochre text-white flex items-center justify-center mb-6 shadow-lg">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                </svg>
+              </div>
+              <h3 class="text-3xl font-light mb-4 text-deep-red">Speed Without Chaos</h3>
+              <p class="text-lg text-black text-opacity-70 leading-relaxed">
+                We move quickly, but not recklessly. Our framework prioritizes actions that matter most and avoids unnecessary disruption.
+              </p>
+            </div>
           </div>
           
-          <div class="text-center" data-animate>
-            <h3 class="text-2xl mb-4">Accountability to Outcomes</h3>
-            <p>
-              We measure success by results, not recommendations. Performance improvement, margin restoration, and operational stability are the benchmarks.
-            </p>
+          <!-- 3. Accountability -->
+          <div class="relative group" data-animate>
+            <div class="absolute inset-0 bg-gradient-to-br from-gold-ochre to-soft-gold rounded-2xl opacity-5 group-hover:opacity-10 transition-opacity"></div>
+            <div class="relative bg-white rounded-2xl shadow-xl p-10 h-full transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+              <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-gold-ochre to-soft-gold text-white flex items-center justify-center mb-6 shadow-lg">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+              </div>
+              <h3 class="text-3xl font-light mb-4 text-gold-ochre">Accountability to Outcomes</h3>
+              <p class="text-lg text-black text-opacity-70 leading-relaxed">
+                We measure success by results, not recommendations. Performance improvement, margin restoration, and operational stability are the benchmarks.
+              </p>
+            </div>
+          </div>
+          
+        </div>
+        
+        <!-- Proof in Practice - Premium Stats Card -->
+        <div class="max-w-5xl mx-auto mb-24" data-animate>
+          <div class="relative overflow-hidden rounded-3xl shadow-2xl">
+            <div class="absolute inset-0 bg-gradient-to-br from-burgundy via-deep-red to-gold-ochre"></div>
+            <div class="relative p-12 md:p-16 text-center text-white">
+              <div class="inline-block px-4 py-2 bg-white/20 rounded-full text-sm font-semibold uppercase tracking-wider mb-6 backdrop-blur-sm">
+                Proof in Practice
+              </div>
+              <blockquote class="text-3xl md:text-4xl font-light italic mb-8 leading-relaxed">
+                "In only two years, emergency room visits increased <span class="font-semibold">380%</span>, surgical volume grew <span class="font-semibold">300%</span>, and inpatient census increased <span class="font-semibold">14x</span>."
+              </blockquote>
+              <p class="text-lg opacity-90">
+                These outcomes are the result of disciplined execution, not theory.
+              </p>
+            </div>
           </div>
         </div>
         
-        <!-- Proof in Practice -->
-        <div class="bg-warm-stone p-8 md:p-12 rounded-lg text-center mb-16" data-animate>
-          <h3 class="text-2xl mb-6">Proof in Practice</h3>
-          <blockquote class="text-xl md:text-2xl italic mb-4">
-            "In only two years, emergency room visits increased 380%, surgical volume grew 300%, and inpatient census increased 14x."
-          </blockquote>
-          <p class="text-sm text-black text-opacity-70">These outcomes are the result of disciplined execution, not theory.</p>
-        </div>
-        
-        <!-- Who This Is For -->
-        <div class="text-center mb-12" data-animate>
-          <h3 class="text-2xl mb-6">Who This Approach Is For</h3>
-          <ul class="space-y-3 max-w-2xl mx-auto text-left list-disc list-inside">
-            <li>Hospitals experiencing financial or operational distress</li>
-            <li>Boards and municipalities seeking stability and accountability</li>
-            <li>Investors and lenders requiring predictable performance</li>
-            <li>Leadership teams who want partners, not consultants</li>
-          </ul>
-        </div>
-        
-        <!-- Closing CTA -->
-        <div class="text-center" data-animate>
-          <h3 class="text-3xl mb-6">If speed, accountability, and outcomes matter, our approach is built for you.</h3>
-          <a href="/contact" class="btn btn-primary inline-flex items-center gap-2">
-            Speak With Our Operating Team
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-            </svg>
-          </a>
+        <!-- Two Column: Who This Is For + CTA -->
+        <div class="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto items-center">
+          
+          <!-- Who This Is For -->
+          <div data-animate>
+            <h3 class="text-4xl font-light mb-8">
+              Who This <span class="text-burgundy">Approach</span> Is For
+            </h3>
+            <ul class="space-y-4">
+              <li class="flex items-start gap-4">
+                <svg class="w-6 h-6 text-burgundy flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <span class="text-lg text-black text-opacity-80">Hospitals experiencing financial or operational distress</span>
+              </li>
+              <li class="flex items-start gap-4">
+                <svg class="w-6 h-6 text-burgundy flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <span class="text-lg text-black text-opacity-80">Boards and municipalities seeking stability and accountability</span>
+              </li>
+              <li class="flex items-start gap-4">
+                <svg class="w-6 h-6 text-burgundy flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <span class="text-lg text-black text-opacity-80">Investors and lenders requiring predictable performance</span>
+              </li>
+              <li class="flex items-start gap-4">
+                <svg class="w-6 h-6 text-burgundy flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <span class="text-lg text-black text-opacity-80">Leadership teams who want partners, not consultants</span>
+              </li>
+            </ul>
+          </div>
+          
+          <!-- CTA Card -->
+          <div data-animate>
+            <div class="bg-white rounded-2xl shadow-xl p-10 border-l-4 border-burgundy">
+              <h3 class="text-3xl font-light mb-6 leading-snug">
+                If speed, accountability, and outcomes matter, <span class="text-burgundy">our approach is built for you.</span>
+              </h3>
+              <a href="/contact" class="btn btn-primary inline-flex items-center gap-2 text-lg">
+                Speak With Our Operating Team
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+          
         </div>
       </div>
     </section>

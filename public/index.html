@@ -116,9 +116,10 @@
     <section class="min-h-screen flex flex-col lg:flex-row">
       
       <!-- Brand Overlay (Mobile) -->
-      <div class="lg:hidden text-center py-12 px-6 bg-warm-stone">
-        <h1 class="text-3xl mb-4">St Raphael Health</h1>
-        <p class="text-lg">Advising healthcare organizations through challenge to strength.</p>
+      <div class="lg:hidden text-center py-16 px-6 bg-gradient-to-br from-white via-warm-stone-5 to-white">
+        <div class="w-16 h-1 bg-gradient-to-r from-deep-red via-gold-ochre to-soft-gold mx-auto mb-6"></div>
+        <h1 class="text-5xl mb-6">St Raphael Health</h1>
+        <p class="text-xl text-black text-opacity-70 leading-relaxed">Advising healthcare organizations through challenge to strength.</p>
       </div>
       
       <!-- Left Panel - Hospitals -->
@@ -127,10 +128,10 @@
         <div class="absolute inset-0 hero-image" data-parallax data-parallax-speed="0.3">
           <img src="/assets/images/hero/hero-hospitals.jpg" alt="" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
         </div>
-        <div class="hero-overlay absolute inset-0 bg-gradient-to-br from-warm-stone to-white opacity-80"></div>
+        <div class="hero-overlay absolute inset-0 bg-gradient-to-br from-warm-stone to-white opacity-50"></div>
         
-        <div class="relative z-10 p-8 md:p-12 lg:p-16 max-w-2xl text-center lg:text-left hero-content">
-          <h2 class="text-4xl md:text-5xl mb-6">For Hospitals</h2>
+        <div class="relative z-10 p-12 md:p-16 lg:p-20 max-w-2xl text-center lg:text-left hero-content">
+          <h2 class="text-5xl md:text-6xl mb-8">For Hospitals</h2>
           
           <p class="text-xl md:text-2xl mb-4 font-montserrat font-light">
             Hands-on turnaround advisory for distressed hospitals.
@@ -163,10 +164,10 @@
         <div class="absolute inset-0 hero-image" data-parallax data-parallax-speed="0.3">
           <img src="/assets/images/hero/hero-physicians.jpg" alt="" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
         </div>
-        <div class="hero-overlay absolute inset-0 bg-gradient-to-bl from-white to-warm-stone opacity-80"></div>
+        <div class="hero-overlay absolute inset-0 bg-gradient-to-bl from-white to-warm-stone opacity-50"></div>
         
-        <div class="relative z-10 p-8 md:p-12 lg:p-16 max-w-2xl text-center lg:text-left hero-content">
-          <h2 class="text-4xl md:text-5xl mb-6">For Physicians</h2>
+        <div class="relative z-10 p-12 md:p-16 lg:p-20 max-w-2xl text-center lg:text-left hero-content">
+          <h2 class="text-5xl md:text-6xl mb-8">For Physicians</h2>
           
           <p class="text-xl md:text-2xl mb-4 font-montserrat font-light">
             Strategic support for physician groups and clinical leaders.
@@ -191,17 +192,56 @@
       
     </section>
     
-    <!-- Contact Form Section -->
-    <section class="py-xxl bg-white">
-      <div class="container-custom max-w-4xl">
-        <div class="text-center mb-12" data-animate>
-          <h2 class="text-4xl md:text-5xl mb-4">Not sure where you fit?</h2>
-          <p class="text-xl text-black text-opacity-70">
-            Tell us a bit about your organization and we'll guide you to the right place.
-          </p>
-        </div>
+    <!-- Contact Form Section - Asymmetric Layout -->
+    <section class="relative py-24 overflow-hidden">
+      <!-- Background with diagonal split -->
+      <div class="absolute inset-0 bg-gradient-to-br from-white via-warm-stone-5 to-white"></div>
+      <div class="absolute inset-0 opacity-30">
+        <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-bl from-soft-gold-5 to-transparent"></div>
+        <div class="absolute bottom-0 left-0 w-1/3 h-2/3 bg-gradient-to-tr from-gold-5 to-transparent"></div>
+      </div>
+      
+      <!-- Decorative accent line -->
+      <div class="absolute top-24 left-1/4 w-32 h-1 bg-gradient-to-r from-gold-ochre to-soft-gold opacity-60"></div>
+      
+      <div class="container-custom relative z-10">
+        <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <!-- Left: Text Content -->
+          <div class="space-y-6" data-animate>
+            <div class="inline-block px-4 py-2 bg-white rounded-full border border-gold-ochre text-sm font-semibold text-gold-ochre">
+              Get Started
+            </div>
+            <h2 class="text-5xl md:text-6xl">Not sure where you fit?</h2>
+            <p class="text-xl text-black text-opacity-70 leading-relaxed">
+              Tell us about your organization and we'll guide you to the right resources and expertise.
+            </p>
+            <div class="pt-4 space-y-3">
+              <div class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-gold-ochre flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-lg">Direct response from senior operators</span>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-gold-ochre flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-lg">Confidential consultation</span>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-gold-ochre flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-lg">No obligation, no sales pressure</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Right: Form Card (elevated) -->
+          <div class="relative" data-animate>
+            <div class="absolute -inset-4 bg-gradient-to-r from-gold-ochre to-soft-gold rounded-3xl opacity-10 blur-2xl"></div>
         
-        <form data-contact-form class="max-w-2xl mx-auto" data-animate>
+            <form data-contact-form class="relative bg-white rounded-2xl shadow-2xl p-8 border border-black border-opacity-5" data-animate>
           <div class="grid md:grid-cols-2 gap-6 mb-6">
             <div>
               <label for="fullName" class="form-label">Full Name <span class="text-deep-red">*</span></label>

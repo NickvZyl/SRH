@@ -3,45 +3,1712 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>Hospital Advisory - St Raphael Health</title>
-  <meta name="description" content="Hands-on turnaround advisory for distressed hospitals. Our operating team with 200+ years of experience restores profitability in under six months.">
-  <link rel="canonical" href="https://saintraphaelhealth.com/hospital-advisory">
-  
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://saintraphaelhealth.com/hospital-advisory">
-  <meta property="og:title" content="Hospital Advisory - St Raphael Health">
-  <meta property="og:description" content="Hands-on turnaround advisory for distressed hospitals. Restore profitability in under six months.">
-  <meta property="og:image" content="https://saintraphaelhealth.com/assets/logos/SRH Logo Light Background.png">
-  
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://saintraphaelhealth.com/hospital-advisory">
-  <meta property="twitter:title" content="Hospital Advisory - St Raphael Health">
-  <meta property="twitter:description" content="Hands-on turnaround advisory for distressed hospitals.">
-  <meta property="twitter:image" content="https://saintraphaelhealth.com/assets/logos/SRH Logo Light Background.png">
-  
-  <link rel="icon" type="image/svg+xml" href="/assets/logos/Icon.svg">
-  <link rel="icon" type="image/png" href="/assets/logos/Icon.png">
-  <link rel="apple-touch-icon" href="/assets/logos/Icon.png">
-  
-  <link rel="stylesheet" href="/styles.css">
-  <link rel="stylesheet" href="/styles/animations.css">
-  
+  <title>Hospital Advisory | St Raphael Health</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    /* ═══════════════════════════════════════════════════════════
+       ST RAPHAEL HEALTH – REFINED EXECUTIVE DESIGN
+       Light, modern, data-driven with warm color washes
+       ═══════════════════════════════════════════════════════════ */
+
+    :root {
+      --gold: #CBA85C;
+      --gold-light: #EDBD56;
+      --orange: #F28A32;
+      --warm-grey: #DBD5CA;
+      --text-dark: #2a2a2a;
+      --text-medium: #3a3a3a;
+      --text-light: #555555;
+      --white: #FFFFFF;
+      --cream: #FFFBF5;
+      --off-white: #FFF9F0;
+
+      /* Data viz colors - lighter, more energetic */
+      --accent-yellow: #FFD966;
+      --accent-amber: #FFBF47;
+      --accent-coral: #FF9D6E;
+      --accent-red: #C2322F;
+
+      /* Very light color washes for backgrounds */
+      --wash-yellow: rgba(255, 217, 102, 0.04);
+      --wash-amber: rgba(255, 191, 71, 0.05);
+      --wash-orange: rgba(242, 138, 50, 0.04);
+
+      --font: 'Montserrat', -apple-system, system-ui, sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font);
+      font-weight: 400;
+      color: var(--text-dark);
+      background: var(--cream);
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--gold);
+      color: var(--white);
+      padding: 8px 16px;
+      text-decoration: none;
+      z-index: 100;
+      font-weight: 600;
+    }
+
+    .skip-link:focus {
+      top: 0;
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       HERO – Modern Hospital Image with Gradient Fade
+       ═══════════════════════════════════════════════════════════ */
+
+    .hero {
+      display: flex;
+      align-items: center;
+      padding: 1.5rem 5% 5rem;
+      position: relative;
+      background: linear-gradient(135deg, var(--cream) 0%, var(--off-white) 100%);
+      overflow: hidden;
+    }
+
+    /* Very subtle diagonal wash */
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -20%;
+      right: -5%;
+      width: 80%;
+      height: 140%;
+      background: linear-gradient(145deg,
+        transparent 0%,
+        var(--wash-yellow) 30%,
+        var(--wash-amber) 50%,
+        var(--wash-orange) 70%,
+        transparent 100%
+      );
+      transform: rotate(-12deg);
+      pointer-events: none;
+    }
+
+    .hero-container {
+      max-width: 1600px;
+      margin: 0 auto;
+      width: 100%;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 4rem;
+      align-items: stretch;
+    }
+
+    .hero-content {
+      max-width: 600px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 2rem;
+      padding: 8px 0;
+    }
+
+    .hero-eyebrow::before {
+      content: '';
+      width: 36px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+    }
+
+    .hero h1 {
+      font-size: clamp(2.75rem, 6vw, 5rem);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+      margin-bottom: 2rem;
+      color: var(--text-dark);
+    }
+
+    .hero h1 .accent {
+      display: block;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--orange) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: 800;
+    }
+
+    .hero-lead {
+      font-size: 1.35rem;
+      font-weight: 300;
+      line-height: 1.6;
+      color: var(--text-medium);
+      margin-bottom: 3rem;
+      max-width: 540px;
+    }
+
+    .hero-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 1.1rem 2.25rem;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+      color: var(--white);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      border-radius: 2px;
+      transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(203, 168, 92, 0.25);
+    }
+
+    .hero-cta::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, var(--orange) 0%, var(--accent-coral) 100%);
+      opacity: 0;
+      transition: opacity 0.35s ease;
+    }
+
+    .hero-cta:hover::before {
+      opacity: 1;
+    }
+
+    .hero-cta:hover {
+      box-shadow: 0 6px 24px rgba(242, 138, 50, 0.35);
+      transform: translateY(-2px);
+    }
+
+    .hero-cta span {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-cta svg {
+      width: 18px;
+      height: 18px;
+      position: relative;
+      z-index: 1;
+      transition: transform 0.35s ease;
+    }
+
+    .hero-cta:hover svg {
+      transform: translateX(4px);
+    }
+
+    /* Hero Image with Elegant Fade */
+    .hero-image {
+      position: relative;
+      height: 100%;
+      min-height: 550px;
+      border-radius: 4px;
+      overflow: hidden;
+      display: flex;
+      align-items: stretch;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    /* Elegant gradient fade from right to left */
+    .hero-image::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right,
+        var(--cream) 0%,
+        rgba(255, 251, 245, 0.95) 5%,
+        rgba(255, 251, 245, 0.7) 15%,
+        rgba(255, 251, 245, 0.3) 30%,
+        rgba(255, 251, 245, 0.1) 45%,
+        transparent 60%
+      );
+      pointer-events: none;
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       FLOATING STAT CALLOUT – Animated circular stat
+       ═══════════════════════════════════════════════════════════ */
+
+    .stat-float {
+      padding: 5rem 5% 6rem;
+      position: relative;
+      background: var(--white);
+    }
+
+    /* Connecting line from hero */
+    .stat-float::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 2px;
+      height: 70px;
+      background: linear-gradient(180deg, var(--gold) 0%, transparent 100%);
+    }
+
+    .stat-float-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      position: relative;
+    }
+
+    .float-content {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr;
+      gap: 6rem;
+      align-items: center;
+    }
+
+    .float-text {
+      max-width: 700px;
+    }
+
+    .float-text .kicker {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+    }
+
+    .float-text h2 {
+      font-size: clamp(2.25rem, 4vw, 3.5rem);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -0.03em;
+      margin-bottom: 0;
+      color: var(--text-dark);
+    }
+
+    .float-text h2 .highlight {
+      color: var(--gold);
+    }
+
+    /* Circular stat ring with animation */
+    .stat-ring {
+      width: 280px;
+      height: 280px;
+      margin-left: auto;
+      position: relative;
+      transform: translateX(20px);
+    }
+
+    .ring-svg {
+      position: absolute;
+      inset: 0;
+      transform: rotate(-90deg);
+    }
+
+    .ring-track {
+      fill: none;
+      stroke: rgba(219, 213, 202, 0.25);
+      stroke-width: 12;
+    }
+
+    .ring-progress {
+      fill: none;
+      stroke: url(#ringGradient);
+      stroke-width: 12;
+      stroke-linecap: round;
+      stroke-dasharray: 785;
+      stroke-dashoffset: 785;
+      animation: ring-draw 2.5s cubic-bezier(0.4, 0, 0.2, 1) 0.5s forwards;
+    }
+
+    @keyframes ring-draw {
+      to {
+        stroke-dashoffset: 196;
+      }
+    }
+
+    .ring-inner {
+      position: absolute;
+      inset: 35px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .ring-number {
+      font-size: 4.5rem;
+      font-weight: 800;
+      line-height: 1;
+      color: var(--text-dark);
+      margin-bottom: 0.5rem;
+      opacity: 0;
+      animation: count-fade 1s ease-out 1.5s forwards;
+    }
+
+    @keyframes count-fade {
+      to {
+        opacity: 1;
+      }
+    }
+
+    .ring-label {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: #666;
+      line-height: 1.3;
+      opacity: 0;
+      animation: count-fade 1s ease-out 1.7s forwards;
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       TRANSFORMATION METRICS – With hospital images
+       ═══════════════════════════════════════════════════════════ */
+
+    .metrics-scatter {
+      padding: 8rem 5% 9rem;
+      background: linear-gradient(180deg,
+        rgba(255, 251, 230, 0.5) 0%,
+        rgba(255, 253, 240, 0.3) 100%
+      );
+      position: relative;
+    }
+
+    .metrics-header {
+      text-align: center;
+      margin-bottom: 6rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .metrics-header .kicker {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+
+    .metrics-header h2 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.25rem;
+      color: var(--text-dark);
+    }
+
+    .metrics-header p {
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: #555;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Transformation cards with images */
+    .metrics-grid {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3rem;
+      position: relative;
+    }
+
+    .metric-card {
+      background: var(--white);
+      border-radius: 3px;
+      box-shadow:
+        0 1px 2px rgba(0,0,0,0.03),
+        0 4px 12px rgba(0,0,0,0.04),
+        0 12px 32px rgba(0,0,0,0.05);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      animation: card-float 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+      opacity: 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    @keyframes card-float {
+      from {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .metric-card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow:
+        0 2px 4px rgba(0,0,0,0.04),
+        0 8px 20px rgba(0,0,0,0.06),
+        0 20px 48px rgba(0,0,0,0.08);
+    }
+
+    .card-1 { animation-delay: 0.1s; }
+    .card-2 { animation-delay: 0.3s; }
+    .card-3 { animation-delay: 0.5s; }
+
+    .metric-image {
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+    }
+
+    .metric-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .metric-card:hover .metric-image img {
+      transform: scale(1.05);
+    }
+
+    .metric-content {
+      padding: 2.5rem;
+    }
+
+    .transform-arrow-container {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .transform-from {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #bbb;
+      line-height: 1;
+    }
+
+    .transform-arrow {
+      font-size: 1.75rem;
+      background: linear-gradient(90deg, var(--gold) 0%, var(--orange) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin: 0 0.75rem;
+      display: inline-block;
+      animation: pulse-arrow 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse-arrow {
+      0%, 100% { transform: translateX(0); opacity: 1; }
+      50% { transform: translateX(4px); opacity: 0.85; }
+    }
+
+    .transform-to {
+      font-size: 3.25rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--gold), var(--orange));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+    }
+
+    .card-2 .transform-to {
+      font-size: 3.75rem;
+    }
+
+    .metric-label {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 0.5rem;
+      text-align: center;
+    }
+
+    .metric-detail {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #777;
+      text-align: center;
+    }
+
+    /* Accent mark on card */
+    .metric-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light), var(--orange));
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       ECOSYSTEM – Tech-savvy with improved visual separation
+       ═══════════════════════════════════════════════════════════ */
+
+    .ecosystem {
+      padding: 9rem 5%;
+      background: linear-gradient(180deg,
+        rgba(255, 243, 220, 0.4) 0%,
+        rgba(255, 237, 200, 0.5) 50%,
+        rgba(255, 243, 220, 0.4) 100%
+      );
+      position: relative;
+    }
+
+    .ecosystem-header {
+      text-align: center;
+      margin-bottom: 7rem;
+    }
+
+    .ecosystem-header .kicker {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+
+    .ecosystem-header h2 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.25rem;
+      color: var(--text-dark);
+    }
+
+    .ecosystem-header p {
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: #555;
+      max-width: 650px;
+      margin: 0 auto;
+    }
+
+    .ecosystem-visual {
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      min-height: 700px;
+      padding: 2rem;
+    }
+
+    /* Tech-style connection lines */
+    .eco-connections {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+    }
+
+    .eco-connections svg {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Center hub - larger with gradient background and pulsing effect */
+    .eco-center {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 3;
+    }
+
+    .center-hub {
+      width: 280px;
+      height: 280px;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2.5rem 2rem;
+      box-shadow:
+        0 8px 32px rgba(203, 168, 92, 0.3),
+        0 16px 64px rgba(203, 168, 92, 0.15);
+      position: relative;
+      animation: pulse-glow 4s ease-in-out infinite;
+    }
+
+    @keyframes pulse-glow {
+      0%, 100% {
+        box-shadow:
+          0 8px 32px rgba(203, 168, 92, 0.3),
+          0 16px 64px rgba(203, 168, 92, 0.15);
+      }
+      50% {
+        box-shadow:
+          0 12px 48px rgba(203, 168, 92, 0.4),
+          0 24px 80px rgba(203, 168, 92, 0.2);
+      }
+    }
+
+    /* Dual animated orbital rings */
+    .center-hub::before,
+    .center-hub::after {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      border: 3px solid transparent;
+    }
+
+    .center-hub::before {
+      inset: -24px;
+      border-top-color: rgba(255, 217, 102, 0.35);
+      border-right-color: rgba(255, 217, 102, 0.2);
+      animation: ring-rotate 15s linear infinite;
+    }
+
+    .center-hub::after {
+      inset: -40px;
+      border-bottom-color: rgba(242, 138, 50, 0.3);
+      border-left-color: rgba(242, 138, 50, 0.15);
+      animation: ring-rotate 25s linear infinite reverse;
+    }
+
+    @keyframes ring-rotate {
+      to { transform: rotate(360deg); }
+    }
+
+    .center-hub-inner {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hub-icon {
+      width: 72px;
+      height: 72px;
+      margin: 0 auto 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(255, 255, 255, 0.25);
+      border: 3px solid rgba(255, 255, 255, 0.5);
+      border-radius: 50%;
+      font-size: 36px;
+      backdrop-filter: blur(8px);
+    }
+
+    .hub-label {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.85);
+      margin-bottom: 0.75rem;
+    }
+
+    .hub-title {
+      font-size: 1.5rem;
+      font-weight: 800;
+      line-height: 1.2;
+      color: white;
+    }
+
+    /* Circular orbital positioning - 4 nodes around center */
+    .eco-node {
+      position: absolute;
+      z-index: 2;
+      animation: slide-in 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+      opacity: 0;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 251, 245, 0.98));
+      padding: 1.75rem 1.5rem;
+      border-radius: 50px;
+      box-shadow:
+        0 2px 12px rgba(203, 168, 92, 0.08),
+        0 8px 32px rgba(203, 168, 92, 0.06);
+      border: 1px solid rgba(203, 168, 92, 0.12);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      max-width: 240px;
+      text-align: center;
+      backdrop-filter: blur(8px);
+    }
+
+    @keyframes slide-in {
+      from {
+        opacity: 0;
+        transform: scale(0.9);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+
+    /* Orbital positioning - clock positions */
+    .eco-node:nth-child(2) {
+      animation-delay: 0.2s;
+      top: 5%;
+      left: 8%;
+    }
+    .eco-node:nth-child(3) {
+      animation-delay: 0.4s;
+      top: 5%;
+      right: 8%;
+    }
+    .eco-node:nth-child(4) {
+      animation-delay: 0.6s;
+      bottom: 8%;
+      left: 8%;
+    }
+    .eco-node:nth-child(5) {
+      animation-delay: 0.8s;
+      bottom: 8%;
+      right: 8%;
+    }
+
+    .eco-node:hover {
+      transform: scale(1.05) translateY(-4px);
+      box-shadow:
+        0 4px 20px rgba(203, 168, 92, 0.12),
+        0 12px 48px rgba(203, 168, 92, 0.08);
+      border-color: rgba(203, 168, 92, 0.25);
+    }
+
+    .eco-node-icon {
+      width: 68px;
+      height: 68px;
+      margin: 0 auto 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, rgba(203, 168, 92, 0.15), rgba(255, 191, 71, 0.2));
+      border-radius: 50%;
+      font-size: 30px;
+      border: 2px solid rgba(203, 168, 92, 0.2);
+      box-shadow: 0 2px 8px rgba(203, 168, 92, 0.1);
+    }
+
+    .eco-node h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 0.85rem;
+      color: var(--text-dark);
+      line-height: 1.3;
+    }
+
+    .eco-node p {
+      font-size: 0.88rem;
+      font-weight: 400;
+      color: #666;
+      line-height: 1.5;
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       EXECUTION STATEMENT – Cleaner circular data elements
+       ═══════════════════════════════════════════════════════════ */
+
+    .execution {
+      padding: 11rem 5%;
+      background: var(--white);
+      position: relative;
+    }
+
+    /* Top accent line */
+    .execution::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg,
+        transparent 0%,
+        var(--gold) 30%,
+        var(--gold-light) 50%,
+        var(--orange) 70%,
+        transparent 100%
+      );
+    }
+
+    .execution-grid {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 7rem;
+      align-items: center;
+    }
+
+    .execution-message h2 {
+      font-size: clamp(2.75rem, 5.5vw, 4.5rem);
+      font-weight: 800;
+      line-height: 1.08;
+      letter-spacing: -0.04em;
+      margin-bottom: 2rem;
+      color: var(--text-dark);
+    }
+
+    .execution-message h2 .emphasis {
+      display: block;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--orange) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .execution-message p {
+      font-size: 1.25rem;
+      font-weight: 400;
+      line-height: 1.65;
+      color: #3a3a3a;
+    }
+
+    /* Clean circular stat display */
+    .execution-visual {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .execution-circle {
+      width: 320px;
+      height: 320px;
+      border-radius: 50%;
+      background: var(--white);
+      box-shadow:
+        0 0 0 1px rgba(203, 168, 92, 0.1),
+        0 8px 24px rgba(203, 168, 92, 0.12),
+        0 20px 48px rgba(203, 168, 92, 0.08);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 3rem;
+      position: relative;
+    }
+
+    /* Animated ring around circle */
+    .execution-circle::before {
+      content: '';
+      position: absolute;
+      inset: -12px;
+      border-radius: 50%;
+      border: 3px solid transparent;
+      border-top-color: rgba(203, 168, 92, 0.3);
+      border-right-color: rgba(242, 138, 50, 0.3);
+      animation: ring-rotate 15s linear infinite;
+    }
+
+    .stat-number {
+      font-size: 6rem;
+      font-weight: 800;
+      line-height: 1;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--orange) 60%, var(--accent-red) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 1rem;
+    }
+
+    .stat-label {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #333;
+      margin-bottom: 1rem;
+    }
+
+    .stat-caption {
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: #666;
+      line-height: 1.6;
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       CASE STUDY – BMC Hospitals (directly below metrics)
+       ═══════════════════════════════════════════════════════════ */
+
+    .case-study {
+      padding: 9rem 5%;
+      background: linear-gradient(135deg,
+        rgba(255, 249, 235, 0.8) 0%,
+        rgba(255, 246, 230, 0.6) 100%
+      );
+      position: relative;
+    }
+
+    .case-study::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 5%;
+      right: 5%;
+      height: 2px;
+      background: linear-gradient(90deg,
+        transparent 0%,
+        var(--accent-yellow) 20%,
+        var(--gold-light) 50%,
+        var(--orange) 80%,
+        transparent 100%
+      );
+    }
+
+    .case-container {
+      max-width: 1500px;
+      margin: 0 auto;
+    }
+
+    .case-intro {
+      max-width: 900px;
+      margin-bottom: 5rem;
+    }
+
+    .case-intro .location {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+
+    .case-intro h2 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 2rem;
+      color: var(--text-dark);
+    }
+
+    .case-intro p {
+      font-size: 1.2rem;
+      font-weight: 400;
+      line-height: 1.7;
+      color: #444;
+    }
+
+    /* Metrics grid – asymmetric, editorial style */
+    .case-metrics {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 4rem 3rem;
+      margin-top: 4rem;
+    }
+
+    .case-metric {
+      position: relative;
+      padding-top: 1.5rem;
+    }
+
+    .case-metric::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 50px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--orange));
+      transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .case-metric:hover::before {
+      width: 70px;
+    }
+
+    .metric-value {
+      font-size: 3.5rem;
+      font-weight: 800;
+      line-height: 1;
+      background: linear-gradient(135deg, var(--gold), var(--orange));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 0.75rem;
+    }
+
+    .case-metric:nth-child(even) .metric-value {
+      background: linear-gradient(135deg, var(--orange), var(--accent-coral));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .case-metric .metric-label {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #555;
+      text-align: left;
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       PROCESS – Color progression gold→yellow→orange→orange-red
+       ═══════════════════════════════════════════════════════════ */
+
+    .process {
+      padding: 9rem 5%;
+      background: linear-gradient(135deg,
+        rgba(255, 249, 235, 0.7) 0%,
+        rgba(255, 246, 225, 0.5) 100%
+      );
+      position: relative;
+    }
+
+    .process-header {
+      text-align: center;
+      margin-bottom: 6rem;
+    }
+
+    .process-header .kicker {
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1rem;
+    }
+
+    .process-header h2 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      color: var(--text-dark);
+    }
+
+    .process-timeline {
+      max-width: 1300px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      position: relative;
+      padding: 5rem 0;
+    }
+
+    /* Gradient connecting path */
+    .process-timeline::before {
+      content: '';
+      position: absolute;
+      top: 60px;
+      left: 10%;
+      right: 10%;
+      height: 6px;
+      background: linear-gradient(90deg,
+        var(--gold) 0%,
+        var(--accent-yellow) 33%,
+        var(--orange) 66%,
+        var(--accent-coral) 100%
+      );
+      border-radius: 3px;
+    }
+
+    .process-step {
+      flex: 1;
+      max-width: 260px;
+      text-align: center;
+      position: relative;
+      z-index: 2;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .process-step:hover {
+      transform: translateY(-8px);
+    }
+
+    .step-marker {
+      width: 72px;
+      height: 72px;
+      margin: 0 auto 2rem;
+      background: var(--white);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      box-shadow:
+        0 0 0 1px rgba(203, 168, 92, 0.2),
+        0 6px 16px rgba(203, 168, 92, 0.15),
+        0 12px 32px rgba(203, 168, 92, 0.1);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .process-step:hover .step-marker {
+      box-shadow:
+        0 0 0 1px rgba(203, 168, 92, 0.3),
+        0 8px 24px rgba(203, 168, 92, 0.25),
+        0 16px 40px rgba(203, 168, 92, 0.15);
+    }
+
+    .step-marker::before {
+      content: '';
+      position: absolute;
+      inset: -10px;
+      border-radius: 50%;
+      opacity: 0.2;
+    }
+
+    /* Color progression */
+    .process-step:nth-child(1) .step-marker::before {
+      border: 3px solid var(--gold);
+    }
+
+    .process-step:nth-child(2) .step-marker::before {
+      border: 3px solid var(--accent-yellow);
+    }
+
+    .process-step:nth-child(3) .step-marker::before {
+      border: 3px solid var(--orange);
+    }
+
+    .process-step:nth-child(4) .step-marker::before {
+      border: 3px solid var(--accent-coral);
+    }
+
+    .step-number {
+      font-size: 1.75rem;
+      font-weight: 800;
+    }
+
+    .process-step:nth-child(1) .step-number {
+      color: var(--gold);
+    }
+
+    .process-step:nth-child(2) .step-number {
+      color: var(--accent-yellow);
+    }
+
+    .process-step:nth-child(3) .step-number {
+      color: var(--orange);
+    }
+
+    .process-step:nth-child(4) .step-number {
+      color: var(--accent-coral);
+    }
+
+    .step-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      color: var(--text-dark);
+    }
+
+    .step-desc {
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: #666;
+      line-height: 1.6;
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       TIMELINE – Why We Exist with icons
+       ═══════════════════════════════════════════════════════════ */
+
+    .origin {
+      padding: 9rem 5% 11rem;
+      background: linear-gradient(180deg,
+        rgba(255, 251, 230, 0.45) 0%,
+        rgba(255, 253, 245, 0.3) 100%
+      );
+      position: relative;
+      overflow: visible;
+    }
+
+    .origin-header {
+      text-align: center;
+      margin-bottom: 6rem;
+    }
+
+    .origin-header h2 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      color: var(--text-dark);
+    }
+
+    .timeline {
+      max-width: 1000px;
+      margin: 0 auto;
+      position: relative;
+      padding-left: 100px;
+    }
+
+    /* Spine extending beyond */
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 28px;
+      top: -150px;
+      bottom: -150px;
+      width: 4px;
+      background: linear-gradient(180deg,
+        transparent 0%,
+        rgba(219, 213, 202, 0.4) 8%,
+        var(--gold) 30%,
+        var(--gold-light) 50%,
+        var(--orange) 70%,
+        var(--gold) 92%,
+        transparent 100%
+      );
+      border-radius: 2px;
+    }
+
+    .timeline-item {
+      position: relative;
+      padding: 3rem 0;
+      opacity: 0;
+      transform: translateX(-40px);
+      transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+                  transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .timeline-item.visible {
+      opacity: 1;
+      transform: translateX(0);
+    }
+
+    .timeline-item:nth-child(1) { transition-delay: 0.1s; }
+    .timeline-item:nth-child(2) { transition-delay: 0.3s; }
+    .timeline-item:nth-child(3) { transition-delay: 0.5s; }
+
+    /* Icon circles */
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -78px;
+      top: 3.5rem;
+      width: 18px;
+      height: 18px;
+      background: var(--gold);
+      border-radius: 50%;
+      box-shadow:
+        0 0 0 6px var(--cream),
+        0 0 0 8px rgba(203, 168, 92, 0.3);
+    }
+
+    .timeline-item:nth-child(2)::before {
+      background: var(--gold-light);
+      box-shadow:
+        0 0 0 6px var(--cream),
+        0 0 0 8px rgba(237, 189, 86, 0.3);
+    }
+
+    .timeline-item:nth-child(3)::before {
+      background: var(--orange);
+      box-shadow:
+        0 0 0 6px var(--cream),
+        0 0 0 8px rgba(242, 138, 50, 0.3);
+    }
+
+    /* Simple icon indicators */
+    .timeline-icon {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, rgba(203, 168, 92, 0.15), rgba(255, 191, 71, 0.2));
+      border-radius: 50%;
+      color: var(--gold);
+      font-size: 32px;
+      font-weight: 800;
+      border: 3px solid rgba(203, 168, 92, 0.25);
+    }
+
+    .timeline-kicker {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.75rem;
+    }
+
+    .timeline-title {
+      font-size: 1.6rem;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 1rem;
+      color: var(--text-dark);
+    }
+
+    .timeline-text {
+      font-size: 1.05rem;
+      font-weight: 400;
+      line-height: 1.75;
+      color: #555;
+      max-width: 750px;
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       FINAL CTA
+       ═══════════════════════════════════════════════════════════ */
+
+    .final-cta {
+      padding: 10rem 5%;
+      background: rgba(255, 255, 255, 0.95);
+      text-align: center;
+      position: relative;
+    }
+
+    .final-cta::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 20%;
+      right: 20%;
+      height: 2px;
+      background: linear-gradient(90deg,
+        transparent,
+        var(--gold) 30%,
+        var(--orange) 70%,
+        transparent
+      );
+    }
+
+    .final-cta h2 {
+      font-size: clamp(2.75rem, 5vw, 4rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.5rem;
+      color: var(--text-dark);
+    }
+
+    .final-cta p {
+      font-size: 1.3rem;
+      font-weight: 400;
+      color: #444;
+      margin-bottom: 3.5rem;
+      max-width: 650px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 1.25rem 2.75rem;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+      color: var(--white);
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      border-radius: 2px;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 4px 16px rgba(203, 168, 92, 0.25);
+    }
+
+    .cta-button::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, var(--orange) 0%, var(--accent-coral) 100%);
+      opacity: 0;
+      transition: opacity 0.35s ease;
+    }
+
+    .cta-button:hover::before {
+      opacity: 1;
+    }
+
+    .cta-button:hover {
+      box-shadow: 0 6px 24px rgba(242, 138, 50, 0.35);
+      transform: translateY(-2px);
+    }
+
+    .cta-button span {
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-button svg {
+      width: 20px;
+      height: 20px;
+      position: relative;
+      z-index: 1;
+      transition: transform 0.35s ease;
+    }
+
+    .cta-button:hover svg {
+      transform: translateX(4px);
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       FOOTER – Warm darks instead of black
+       ═══════════════════════════════════════════════════════════ */
+
+    footer {
+      padding: 4.5rem 5%;
+      background: #E8DCC8;
+      border-top: 1px solid rgba(203, 168, 92, 0.15);
+      position: relative;
+    }
+
+    footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 20%;
+      right: 20%;
+      height: 2px;
+      background: linear-gradient(90deg,
+        transparent,
+        var(--gold) 30%,
+        var(--gold-light) 50%,
+        var(--orange) 70%,
+        transparent
+      );
+    }
+
+    .footer-content {
+      max-width: 1600px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-logo {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+
+    .footer-logo .accent {
+      color: var(--gold);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 3rem;
+    }
+
+    .footer-links a {
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--text-light);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--gold);
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       SCROLL-TRIGGERED ANIMATIONS
+       ═══════════════════════════════════════════════════════════ */
+
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+                  transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .fade-in-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .scale-in {
+      opacity: 0;
+      transform: scale(0.95);
+      transition: opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1),
+                  transform 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .scale-in.visible {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    /* Staggered animation delays */
+    .stagger-1 { transition-delay: 0.1s; }
+    .stagger-2 { transition-delay: 0.2s; }
+    .stagger-3 { transition-delay: 0.3s; }
+    .stagger-4 { transition-delay: 0.4s; }
+    .stagger-5 { transition-delay: 0.5s; }
+    .stagger-6 { transition-delay: 0.6s; }
+
+    /* ═══════════════════════════════════════════════════════════
+       RESPONSIVE
+       ═══════════════════════════════════════════════════════════ */
+
+    @media (max-width: 1200px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 5rem;
+      }
+
+      .hero-image {
+        height: 450px;
+      }
+
+      .float-content {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+        text-align: center;
+      }
+
+      .stat-ring {
+        margin: 0 auto;
+        transform: none;
+      }
+
+      .metrics-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        max-width: 500px;
+        margin: 0 auto;
+      }
+
+      .execution-grid {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+      }
+
+      .execution-circle {
+        margin: 0 auto;
+      }
+
+      .case-metrics {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .process-timeline {
+        flex-wrap: wrap;
+        gap: 3rem;
+      }
+
+      .process-timeline::before {
+        display: none;
+      }
+
+      .process-step {
+        flex-basis: calc(50% - 1.5rem);
+      }
+
+      .ecosystem-visual {
+        min-height: 750px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        padding: 8rem 4% 4rem;
+      }
+
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero-image {
+        height: 350px;
+      }
+
+      .stat-float,
+      .metrics-scatter,
+      .ecosystem,
+      .execution,
+      .case-study,
+      .process,
+      .origin,
+      .final-cta {
+        padding: 5rem 4%;
+      }
+
+      .ring-number {
+        font-size: 3.5rem;
+      }
+
+      .stat-number {
+        font-size: 4.5rem;
+      }
+
+      .case-metrics {
+        grid-template-columns: 1fr;
+      }
+
+      .process-step {
+        flex-basis: 100%;
+      }
+
+      .timeline {
+        padding-left: 70px;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+      }
+
+      .ecosystem-visual {
+        min-height: 900px;
+      }
+
+      .eco-node {
+        max-width: 200px;
+      }
+    }
+  </style>
 </head>
 <body>
-  
-  <!-- Header -->
+
+  <!-- Global Header Component -->
   <header class="bg-white border-b border-warm-stone sticky top-0" style="z-index: 10000;">
     <a href="#main-content" class="skip-link">Skip to main content</a>
-    
+
     <nav class="container-custom py-4 md:py-6" aria-label="Main navigation">
       <div class="flex items-center justify-between">
         <a href="/" class="flex items-center" aria-label="St Raphael Health - Home">
-          <img src="/assets/logos/SRH Logo Light Background.svg" alt="St Raphael Health" class="h-10 md:h-12" width="200" height="48">
+          <img src="/assets/logos/SRH Logo Light Background.svg" alt="St Raphael Health" class="h-14 md:h-16" width="200" height="64">
         </a>
-        
+
         <ul class="hidden lg:flex items-center gap-8">
           <li><a href="/hospital-advisory" class="text-black hover:text-gold-ochre transition-colors duration-fast font-montserrat">Hospital Advisory</a></li>
           <li><a href="/our-approach" class="text-black hover:text-gold-ochre transition-colors duration-fast font-montserrat">Our Approach</a></li>
@@ -51,43 +1718,25 @@
           <li><a href="/physicians" class="text-black hover:text-gold-ochre transition-colors duration-fast font-montserrat">Physicians</a></li>
           <li><a href="/contact" class="btn btn-primary text-sm">Contact</a></li>
         </ul>
-        
-        <button 
-          id="menu-toggle" 
-          class="lg:hidden p-2 text-black hover:text-gold-ochre transition-colors"
-          aria-expanded="false"
-          aria-controls="mobile-menu"
-          aria-label="Toggle navigation menu"
-        >
+
+        <button id="menu-toggle" class="lg:hidden p-2 text-black hover:text-gold-ochre transition-colors" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle navigation menu">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
         </button>
       </div>
     </nav>
-    
-    <div 
-      id="mobile-menu" 
-      class="hidden fixed inset-0 bg-white lg:hidden"
-      role="dialog"
-      aria-modal="true"
-      aria-label="Mobile navigation"
-      style="background-color: white; z-index: 9999; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100vh;"
-    >
+
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-white lg:hidden" role="dialog" aria-modal="true" aria-label="Mobile navigation" style="background-color: white; z-index: 9999;">
       <div class="container-custom py-6">
         <div class="flex items-center justify-between mb-8">
-          <img src="/assets/logos/SRH Logo Light Background.svg" alt="St Raphael Health" class="h-10" width="200" height="48">
-          <button 
-            id="menu-close" 
-            class="p-2 text-black hover:text-gold-ochre transition-colors"
-            aria-label="Close navigation menu"
-          >
+          <img src="/assets/logos/SRH Logo Light Background.svg" alt="St Raphael Health" class="h-14" width="200" height="64">
+          <button id="menu-close" class="p-2 text-black hover:text-gold-ochre transition-colors" aria-label="Close navigation menu">
             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
             </svg>
           </button>
         </div>
-        
         <ul class="flex flex-col gap-6">
           <li><a href="/hospital-advisory" class="text-2xl text-black hover:text-gold-ochre transition-colors font-montserrat">Hospital Advisory</a></li>
           <li><a href="/our-approach" class="text-2xl text-black hover:text-gold-ochre transition-colors font-montserrat">Our Approach</a></li>
@@ -100,393 +1749,395 @@
       </div>
     </div>
   </header>
-  
+
   <main id="main-content">
-    
-    <!-- Section 1: Hero - Authority + Immediate Proof -->
-    <section class="relative overflow-hidden" style="min-height: 100vh; padding-top: 7rem; padding-bottom: 2rem;">
-      <!-- Hero Background Image -->
-      <div class="absolute inset-0 z-0" style="top: -7rem; height: calc(100% + 7rem);">
-        <img src="/assets/images/hospital-advisory/hero-advisory.jpg" alt="" class="w-full h-full object-cover" loading="eager">
-      </div>
-      
-      <div class="container-custom relative z-10 w-full">
-        <!-- Content with semi-opaque white background -->
-        <div class="max-w-5xl mx-auto text-center bg-white bg-opacity-85 backdrop-blur-sm rounded-2xl p-6 md:p-8 shadow-xl" data-animate>
-          <h1 class="text-4xl md:text-5xl mb-4 text-black">
-            We help distressed hospitals become profitable in months, not years.
-          </h1>
-          
-          <p class="text-xl md:text-2xl mb-4 font-montserrat font-light text-black text-opacity-80">
-            We transform distressed Texas hospitals into profitable regional healthcare leaders, delivering exceptional patient care within their communities.
-          </p>
-          
-          <p class="text-base md:text-lg mb-6 leading-relaxed max-w-4xl mx-auto text-black text-opacity-75">
-            Our operating team with 200+ years of experience partners hands-on with Texas hospitals to restore profitability in under six months while delivering exceptional patient outcomes.
-          </p>
-          
-          <!-- Proof Strip - Redesigned -->
-          <div class="grid md:grid-cols-3 gap-4 mb-6" data-animate>
-            <!-- Metric 1 -->
-            <div class="metric-card">
-              <div class="metric-value-group">
-                <span class="metric-value">$85M</span>
-                <svg class="metric-arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                <span class="metric-value">$290M</span>
-              </div>
-              <p class="metric-description">Gross revenue, 19% profit margin</p>
-            </div>
-            
-            <!-- Metric 2 -->
-            <div class="metric-card">
-              <div class="metric-value-group">
-                <span class="metric-value">$18M</span>
-                <svg class="metric-arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                <span class="metric-value">$190M</span>
-              </div>
-              <p class="metric-description">Gross revenue, 12% profit margin</p>
-            </div>
-            
-            <!-- Metric 3 -->
-            <div class="metric-card">
-              <div class="metric-value-group">
-                <span class="metric-value">$10M</span>
-                <svg class="metric-arrow-icon" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                <span class="metric-value">$56M</span>
-              </div>
-              <p class="metric-description">Gross revenue, 32% profit margin</p>
-            </div>
+
+    <!-- HERO – Hospital Image with Gradient Fade -->
+    <section class="hero">
+      <div class="hero-container">
+        <div class="hero-grid">
+          <div class="hero-content">
+            <div class="hero-eyebrow">Hospital Advisory</div>
+            <h1>Turning Distressed Hospitals into <span class="accent">Sustainable Operations</span></h1>
+            <p class="hero-lead">
+              We don't advise from the sidelines. We embed with your team, restructure operations,
+              and drive measurable turnarounds—transforming crisis into long-term viability.
+            </p>
+            <a href="/contact/" class="hero-cta">
+              <span>Start the Conversation</span>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
           </div>
-          
-          <a href="/contact" class="btn btn-primary inline-flex items-center gap-2">
-            Speak With Our Operating Team
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+
+          <div class="hero-image">
+            <img src="/assets/Hospital1.jpeg" alt="Modern hospital interior" loading="eager">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FLOATING STAT CALLOUT -->
+    <section class="stat-float">
+      <div class="stat-float-container">
+        <div class="float-content">
+          <div class="float-text fade-in-up">
+            <div class="kicker">Recent Results</div>
+            <h2>Every engagement produces <span class="highlight">measurable outcomes</span>—not reports that sit on shelves.</h2>
+          </div>
+
+          <div class="stat-ring scale-in">
+            <svg class="ring-svg" viewBox="0 0 280 280">
+              <defs>
+                <linearGradient id="ringGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#CBA85C"/>
+                  <stop offset="50%" stop-color="#EDBD56"/>
+                  <stop offset="100%" stop-color="#F28A32"/>
+                </linearGradient>
+              </defs>
+              <circle class="ring-track" cx="140" cy="140" r="125"/>
+              <circle class="ring-progress" cx="140" cy="140" r="125"/>
             </svg>
-          </a>
-        </div>
-      </div>
-    </section>
-    
-    <!-- Section 2: Who We Serve -->
-    <section class="py-xxl bg-warm-stone">
-      <div class="container-custom">
-        <h2 class="text-4xl md:text-5xl text-center mb-16" data-animate>
-          Built for hospital environments under pressure.
-        </h2>
-        
-        <div class="grid md:grid-cols-3 gap-12 max-w-6xl mx-auto">
-          <div class="text-center" data-animate>
-            <h3 class="text-2xl mb-4">Hospitals & Operators</h3>
-            <p class="mb-4 leading-relaxed">
-              Hands-on operational leadership to stabilize performance and restore profitability.
-            </p>
-            <p class="text-sm font-semibold text-gold-ochre">
-              Outcome: Daily patient census increased 75%.
-            </p>
-          </div>
-          
-          <div class="text-center" data-animate>
-            <h3 class="text-2xl mb-4">Municipalities & Hospital Boards</h3>
-            <p class="mb-4 leading-relaxed">
-              Preserve community access to care while restoring financial health.
-            </p>
-            <p class="text-sm font-semibold text-gold-ochre">
-              Outcome: Reserves expanded by 150%.
-            </p>
-          </div>
-          
-          <div class="text-center" data-animate>
-            <h3 class="text-2xl mb-4">Investors & Lenders</h3>
-            <p class="mb-4 leading-relaxed">
-              Stabilized assets with improved margins and exit optionality.
-            </p>
-            <p class="text-sm font-semibold text-gold-ochre">
-              Outcome: Negative margins converted to double-digit profitability.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <!-- Section 3: Our Approach (High-Level) -->
-    <section class="py-xxl bg-white">
-      <div class="container-custom max-w-4xl">
-        <h2 class="text-4xl md:text-5xl text-center mb-12" data-animate>
-          This is not consulting. This is execution.
-        </h2>
-        
-        <div class="prose-custom mx-auto" data-animate>
-          <p>
-            St Raphael Health embeds directly with hospital leadership teams to diagnose issues, drive operations, and deliver measurable results. We do not deliver reports and walk away. We stay accountable to outcomes.
-          </p>
-        </div>
-        
-        <div class="bg-warm-stone p-8 md:p-12 rounded-lg mt-12 text-center" data-animate>
-          <blockquote class="text-xl md:text-2xl italic">
-            "In only two years, emergency room visits increased 380%, surgical volume grew 300%, and inpatient census increased 14x."
-          </blockquote>
-        </div>
-        
-        <div class="text-center mt-8">
-          <a href="/our-approach" class="text-gold-ochre hover:underline font-montserrat font-semibold">
-            Learn more about our approach →
-          </a>
-        </div>
-      </div>
-    </section>
-    
-    <!-- Section 4: Why St Raphael Health Was Formed -->
-    <section class="py-xxl bg-warm-stone">
-      <div class="container-custom max-w-4xl">
-        <h2 class="text-4xl md:text-5xl text-center mb-12" data-animate>
-          Why St Raphael Health Was Formed
-        </h2>
-        
-        <div class="prose-custom mx-auto space-y-6" data-animate>
-          <p>
-            St Raphael Health was formed when a group of hospital operators and M&A professionals partnered with a Houston-based hospital CEO to help save a 270+ bed hospital operating under Chapter 11.
-          </p>
-          
-          <p>
-            During that engagement, they uncovered a broader and deeply concerning reality. More than 60% of hospitals were operating in some level of distress, yet many could be stabilized quickly using a repeatable, operator-led framework focused on execution rather than theory.
-          </p>
-          
-          <p>
-            They also discovered that many hospital owners wanted to sell or partner, but could not. Distressed operations meant little to no enterprise value, leaving communities, boards, and stakeholders with limited options.
-          </p>
-          
-          <p>
-            St Raphael Health was created to address this gap—to restore hospitals to sustainable profitability first, protect patient care, and, where appropriate, help hospitals pursue strategic outcomes from a position of strength rather than distress.
-          </p>
-        </div>
-      </div>
-    </section>
-    
-    <!-- Section 5: Our Operating Pillars -->
-    <section class="py-xxl bg-white">
-      <div class="container-custom">
-        <h2 class="text-4xl md:text-5xl text-center mb-16" data-animate>
-          Our Operating Pillars
-        </h2>
-        
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-          <div class="card" data-animate>
-            <div class="text-gold-ochre text-4xl mb-4">01</div>
-            <h3 class="text-xl font-semibold mb-3">Cash Flow Acceleration</h3>
-            <p class="text-black text-opacity-70">
-              Turn revenue into predictable, reliable cash.
-            </p>
-          </div>
-          
-          <div class="card" data-animate>
-            <div class="text-gold-ochre text-4xl mb-4">02</div>
-            <h3 class="text-xl font-semibold mb-3">Cost Efficiency & Margin Improvement</h3>
-            <p class="text-black text-opacity-70">
-              Create durable margin expansion across operations.
-            </p>
-          </div>
-          
-          <div class="card" data-animate>
-            <div class="text-gold-ochre text-4xl mb-4">03</div>
-            <h3 class="text-xl font-semibold mb-3">Revenue Expansion</h3>
-            <p class="text-black text-opacity-70">
-              Grow top-line revenue through smarter operations.
-            </p>
-          </div>
-          
-          <div class="card" data-animate>
-            <div class="text-gold-ochre text-4xl mb-4">04</div>
-            <h3 class="text-xl font-semibold mb-3">Capital Structure Optimization</h3>
-            <p class="text-black text-opacity-70">
-              Strengthen the financial foundation for resilience.
-            </p>
-          </div>
-          
-          <div class="card" data-animate>
-            <div class="text-gold-ochre text-4xl mb-4">05</div>
-            <h3 class="text-xl font-semibold mb-3">Regulatory Compliance & Operational Integrity</h3>
-            <p class="text-black text-opacity-70">
-              Reduce risk and ensure operational stability.
-            </p>
-          </div>
-          
-          <div class="card" data-animate>
-            <div class="text-gold-ochre text-4xl mb-4">06</div>
-            <h3 class="text-xl font-semibold mb-3">Sale or Partnership (If Applicable)</h3>
-            <p class="text-black text-opacity-70">
-              Position stabilized hospitals for strategic outcomes.
-            </p>
-          </div>
-        </div>
-        
-        <div class="text-center mt-12" data-animate>
-          <a href="/our-approach" class="btn btn-primary inline-flex items-center gap-2">
-            Learn More About Our Approach
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-            </svg>
-          </a>
-        </div>
-      </div>
-    </section>
-    
-    <!-- Section 6: Case Studies Preview -->
-    <section class="py-xxl bg-warm-stone">
-      <div class="container-custom">
-        <div class="text-center mb-12" data-animate>
-          <h2 class="text-4xl md:text-5xl mb-4">Proven Hospital Turnarounds</h2>
-          <p class="text-xl text-black text-opacity-70">
-            Real-world outcomes achieved through hands-on operational leadership, not theory.
-          </p>
-        </div>
-        
-        <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-12">
-          <div class="card" data-animate>
-            <h3 class="text-xl font-semibold mb-2">BMC Hospitals</h3>
-            <p class="text-sm text-black text-opacity-60 mb-4">Greater Houston</p>
-            <div class="space-y-2 text-sm">
-              <p>$85M → $290M revenue</p>
-              <p>19% margin</p>
-              <p>ER +380%</p>
-              <p>Surgical +300%</p>
-            </div>
-          </div>
-          
-          <div class="card" data-animate>
-            <h3 class="text-xl font-semibold mb-2">Emergency Hospital Systems</h3>
-            <p class="text-sm text-black text-opacity-60 mb-4">Northeast Houston</p>
-            <div class="space-y-2 text-sm">
-              <p>$18M → $190M revenue</p>
-              <p>12% margin</p>
-              <p>Profitability in 6 months</p>
-            </div>
-          </div>
-          
-          <div class="card" data-animate>
-            <h3 class="text-xl font-semibold mb-2">Doctors Diagnostic Hospital</h3>
-            <p class="text-sm text-black text-opacity-60 mb-4">Cleveland, TX</p>
-            <div class="space-y-2 text-sm">
-              <p>$10M → $56M revenue</p>
-              <p>32% margin</p>
-              <p>$18M profit achieved</p>
+            <div class="ring-inner">
+              <div class="ring-number">23</div>
+              <div class="ring-label">Hospital<br>Turnarounds</div>
             </div>
           </div>
         </div>
-        
-        <div class="text-center">
-          <a href="/case-studies" class="btn btn-secondary">View Full Case Studies</a>
+      </div>
+    </section>
+
+    <!-- TRANSFORMATION METRICS – WITH HOSPITAL IMAGES -->
+    <section class="metrics-scatter">
+      <div class="metrics-header fade-in-up">
+        <div class="kicker">Proven Track Record</div>
+        <h2>Real Turnarounds</h2>
+        <p>These aren't projections. They're completed transformations.</p>
+      </div>
+
+      <div class="metrics-grid">
+        <div class="metric-card card-1">
+          <div class="metric-image">
+            <img src="/assets/images/case-studies/1.MBC Case study.jpg" alt="BMC Hospitals" loading="lazy">
+          </div>
+          <div class="metric-content">
+            <div class="transform-arrow-container">
+              <span class="transform-from">$85M</span>
+              <span class="transform-arrow">→</span>
+              <span class="transform-to">$290M</span>
+            </div>
+            <div class="metric-label">Gross Revenue</div>
+            <div class="metric-detail">19% profit margin achieved</div>
+          </div>
+        </div>
+
+        <div class="metric-card card-2">
+          <div class="metric-image">
+            <img src="/assets/images/case-studies/2.EHS Case study.jpg" alt="Emergency Hospital Systems" loading="lazy">
+          </div>
+          <div class="metric-content">
+            <div class="transform-arrow-container">
+              <span class="transform-from">$18M</span>
+              <span class="transform-arrow">→</span>
+              <span class="transform-to">$190M</span>
+            </div>
+            <div class="metric-label">Gross Revenue</div>
+            <div class="metric-detail">12% profit margin, 6 months</div>
+          </div>
+        </div>
+
+        <div class="metric-card card-3">
+          <div class="metric-image">
+            <img src="/assets/images/case-studies/3.DDH case study.jpg" alt="Doctors Diagnostic Hospital" loading="lazy">
+          </div>
+          <div class="metric-content">
+            <div class="transform-arrow-container">
+              <span class="transform-from">$10M</span>
+              <span class="transform-arrow">→</span>
+              <span class="transform-to">$56M</span>
+            </div>
+            <div class="metric-label">Gross Revenue</div>
+            <div class="metric-detail">32% profit margin achieved</div>
+          </div>
         </div>
       </div>
     </section>
-    
-    <!-- Section 7: Mission & Vision -->
-    <section class="py-xxl bg-white">
-      <div class="container-custom max-w-4xl">
-        <div class="grid md:grid-cols-2 gap-12" data-animate>
-          <div>
-            <h2 class="text-3xl mb-4">Our Mission</h2>
-            <p class="text-lg leading-relaxed">
-              Restoring hospital profitability to protect patient care and strengthen the communities they serve.
-            </p>
-          </div>
-          
-          <div>
-            <h2 class="text-3xl mb-4">Our Vision</h2>
-            <p class="text-lg leading-relaxed">
-              A resilient, profitable network of exceptionally run hospitals delivering long-term value to patients, operators, and communities.
-            </p>
-          </div>
-        </div>
-        
-        <div class="text-center mt-12">
-          <p class="text-xl italic text-gold-ochre">
-            Profit enables care, stability, and choice.
+
+    <!-- CASE STUDY – BMC HOSPITALS -->
+    <section class="case-study">
+      <div class="case-container">
+        <div class="case-intro fade-in-up">
+          <div class="location">Greater Houston, TX</div>
+          <h2>BMC Hospitals</h2>
+          <p>
+            A distressed two-hospital system operating at significant losses. Within 18 months,
+            we restructured operations, expanded services, and transformed it into one of
+            Houston's fastest-growing health systems.
           </p>
         </div>
+
+        <div class="case-metrics">
+          <div class="case-metric fade-in-up stagger-1">
+            <div class="metric-value">+380%</div>
+            <div class="metric-label">ER Visits</div>
+          </div>
+
+          <div class="case-metric fade-in-up stagger-2">
+            <div class="metric-value">+300%</div>
+            <div class="metric-label">Surgical Volume</div>
+          </div>
+
+          <div class="case-metric fade-in-up stagger-3">
+            <div class="metric-value">14×</div>
+            <div class="metric-label">Inpatient Census</div>
+          </div>
+
+          <div class="case-metric fade-in-up stagger-4">
+            <div class="metric-value">290</div>
+            <div class="metric-label">FTEs Added</div>
+          </div>
+
+          <div class="case-metric fade-in-up stagger-5">
+            <div class="metric-value">19%</div>
+            <div class="metric-label">Profit Margin</div>
+          </div>
+
+          <div class="case-metric fade-in-up stagger-6">
+            <div class="metric-value">$290M</div>
+            <div class="metric-label">Gross Revenue</div>
+          </div>
+        </div>
       </div>
     </section>
-    
-    <!-- Section 8: Why Profit Matters Teaser -->
-    <section class="py-xxl bg-warm-stone">
-      <div class="container-custom max-w-3xl text-center">
-        <h2 class="text-4xl md:text-5xl mb-6" data-animate>
-          Why profitability is the foundation of every successful hospital.
-        </h2>
-        
-        <p class="text-xl mb-8 leading-relaxed" data-animate>
-          Profit is not the objective. It is the enabler of value, care, and operational stability.
-        </p>
-        
-        <a href="/why-profit-matters" class="text-gold-ochre hover:underline font-montserrat font-semibold text-lg">
-          Explore Why Profit Matters →
-        </a>
+
+    <!-- ECOSYSTEM – TECH-SAVVY SYSTEM DESIGN -->
+    <section class="ecosystem">
+      <div class="ecosystem-header fade-in-up">
+        <div class="kicker">Stakeholder Alignment</div>
+        <h2>Built for Hospitals Under Pressure</h2>
+        <p>We work across the entire stakeholder ecosystem to align interests and drive sustainable outcomes.</p>
       </div>
-    </section>
-    
-    <!-- Section 9: Primary CTA -->
-    <section class="py-xxl bg-white">
-      <div class="container-custom max-w-3xl text-center">
-        <h2 class="text-4xl md:text-5xl mb-6" data-animate>
-          If your hospital is under pressure, speed matters.
-        </h2>
-        
-        <p class="text-xl mb-8 text-black text-opacity-70" data-animate>
-          Every month of delay reduces options. Early action creates leverage.
-        </p>
-        
-        <a href="/contact" class="btn btn-primary inline-flex items-center gap-2">
-          Speak With Our Operating Team
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+
+      <div class="ecosystem-visual">
+        <div class="eco-connections">
+          <svg viewBox="0 0 1200 600" preserveAspectRatio="xMidYMid meet">
+            <defs>
+              <linearGradient id="lineGrad">
+                <stop offset="0%" stop-color="#CBA85C" stop-opacity="0.3"/>
+                <stop offset="50%" stop-color="#EDBD56" stop-opacity="0.6"/>
+                <stop offset="100%" stop-color="#F28A32" stop-opacity="0.3"/>
+              </linearGradient>
+            </defs>
+            <line x1="180" y1="120" x2="520" y2="280" stroke="url(#lineGrad)" stroke-width="2" stroke-dasharray="8 6"/>
+            <line x1="1020" y1="120" x2="680" y2="280" stroke="url(#lineGrad)" stroke-width="2" stroke-dasharray="8 6"/>
+            <line x1="180" y1="480" x2="520" y2="320" stroke="url(#lineGrad)" stroke-width="2" stroke-dasharray="8 6"/>
+            <line x1="1020" y1="480" x2="680" y2="320" stroke="url(#lineGrad)" stroke-width="2" stroke-dasharray="8 6"/>
           </svg>
-        </a>
-      </div>
-    </section>
-    
-    <!-- Section 10: Contact Preview -->
-    <section class="py-xl bg-warm-stone">
-      <div class="container-custom max-w-3xl text-center">
-        <p class="text-xl mb-6" data-animate>
-          Have a confidential conversation with our operating team.
-        </p>
-        
-        <a href="/contact" class="btn btn-secondary">Contact Us</a>
-      </div>
-    </section>
-    
-  </main>
-  
-  <!-- Footer -->
-  <footer class="bg-warm-stone py-12 md:py-16 border-t border-black border-opacity-10">
-    <div class="container-custom">
-      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-        <nav aria-label="Legal navigation" class="flex flex-wrap items-center gap-4 text-sm">
-          <a href="/privacy-policy" class="text-black hover:text-gold-ochre transition-colors font-montserrat">Privacy Policy</a>
-          <span class="text-black" aria-hidden="true">·</span>
-          <a href="/terms" class="text-black hover:text-gold-ochre transition-colors font-montserrat">Terms & Conditions</a>
-          <span class="text-black" aria-hidden="true">·</span>
-          <a href="/compliance" class="text-black hover:text-gold-ochre transition-colors font-montserrat">Compliance</a>
-        </nav>
-        
-        <div class="text-sm">
-          <a href="mailto:info@saintraphaelhealth.com" class="text-black hover:text-gold-ochre transition-colors font-montserrat">
-            info@saintraphaelhealth.com
-          </a>
+        </div>
+
+        <div class="eco-center">
+          <div class="center-hub">
+            <div class="center-hub-inner">
+              <div class="hub-icon">🏥</div>
+              <div class="hub-label">Primary Focus</div>
+              <div class="hub-title">Hospitals &<br>Health Systems</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="eco-node node-1">
+          <div class="eco-node-icon">🏛</div>
+          <h3>Municipal Leaders</h3>
+          <p>Protecting community healthcare access while managing fiscal responsibility</p>
+        </div>
+
+        <div class="eco-node node-2">
+          <div class="eco-node-icon">💼</div>
+          <h3>Private Equity</h3>
+          <p>Maximizing value through operational excellence, not financial engineering</p>
+        </div>
+
+        <div class="eco-node node-3">
+          <div class="eco-node-icon">👥</div>
+          <h3>Health System Boards</h3>
+          <p>Strategic guidance for governance through complex transitions</p>
+        </div>
+
+        <div class="eco-node node-4">
+          <div class="eco-node-icon">🏦</div>
+          <h3>Lenders & Bondholders</h3>
+          <p>Protecting investments through structured turnaround execution</p>
         </div>
       </div>
-      
-      <div class="mt-8 pt-8 border-t border-black border-opacity-10 text-sm text-black text-opacity-60">
-        <p>&copy; <span id="current-year">2026</span> St Raphael Health. All rights reserved.</p>
+    </section>
+
+    <!-- EXECUTION STATEMENT – CLEAN CIRCULAR DESIGN -->
+    <section class="execution">
+      <div class="execution-grid">
+        <div class="execution-message fade-in-up">
+          <h2>This Is Not Consulting.<span class="emphasis">This Is Execution.</span></h2>
+          <p>
+            We don't deliver slide decks and recommendations. We take operational control,
+            make the hard decisions, and stay until the job is done. Our team has restructured
+            more distressed hospitals than any other firm in the country.
+          </p>
+        </div>
+
+        <div class="execution-visual scale-in">
+          <div class="execution-circle">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Implementation</div>
+            <p class="stat-caption">
+              Every recommendation we make, we execute. No orphaned strategies.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS – COLOR PROGRESSION -->
+    <section class="process">
+      <div class="process-header fade-in-up">
+        <div class="kicker">Our Methodology</div>
+        <h2>How We Drive Transformation</h2>
+      </div>
+
+      <div class="process-timeline">
+        <div class="process-step">
+          <div class="step-marker">
+            <div class="step-number">1</div>
+          </div>
+          <div class="step-title">Assess</div>
+          <p class="step-desc">Rapid diagnostic of financial position, operations, and organizational capacity</p>
+        </div>
+
+        <div class="process-step">
+          <div class="step-marker">
+            <div class="step-number">2</div>
+          </div>
+          <div class="step-title">Stabilize</div>
+          <p class="step-desc">Immediate cash preservation and operational triage within first 30 days</p>
+        </div>
+
+        <div class="process-step">
+          <div class="step-marker">
+            <div class="step-number">3</div>
+          </div>
+          <div class="step-title">Transform</div>
+          <p class="step-desc">Structural changes to revenue cycle, cost base, and service lines</p>
+        </div>
+
+        <div class="process-step">
+          <div class="step-marker">
+            <div class="step-number">4</div>
+          </div>
+          <div class="step-title">Sustain</div>
+          <p class="step-desc">Leadership development and systems to maintain performance long-term</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TIMELINE – WHY WE EXIST WITH ICONS -->
+    <section class="origin">
+      <div class="origin-header fade-in-up">
+        <h2>Why We Exist</h2>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-icon">!</div>
+          <div class="timeline-kicker">The Problem</div>
+          <div class="timeline-title">Rural and community hospitals are closing at record rates</div>
+          <p class="timeline-text">
+            Since 2010, over 130 rural hospitals have closed. Hundreds more operate on the brink.
+            Traditional consulting hasn't solved the problem because consultants leave before implementation.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-icon">→</div>
+          <div class="timeline-kicker">Our Response</div>
+          <div class="timeline-title">Operators who stay until the job is done</div>
+          <p class="timeline-text">
+            We built a firm of healthcare operators—people who have run hospitals, not just advised them.
+            We take interim leadership roles, make difficult decisions, and own outcomes.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <div class="timeline-icon">✓</div>
+          <div class="timeline-kicker">The Difference</div>
+          <div class="timeline-title">Execution over advice, sustainability over quick fixes</div>
+          <p class="timeline-text">
+            Our engagements average 18 months. We don't declare victory at the first sign of improvement.
+            We stay until systems are in place to sustain performance without us.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta">
+      <div class="fade-in-up">
+        <h2>Ready to Turn It Around?</h2>
+        <p>Let's discuss how we can help stabilize operations and build sustainable performance.</p>
+      </div>
+      <a href="/contact/" class="cta-button">
+        <span>Schedule a Conversation</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </a>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">St Raphael <span class="accent">Health</span></div>
+      <div class="footer-links">
+        <a href="/privacy-policy/">Privacy</a>
+        <a href="/terms/">Terms</a>
+        <a href="/contact/">Contact</a>
       </div>
     </div>
   </footer>
-  
+
   <script src="/js/site.js"></script>
-  <script src="/js/animations.js"></script>
+
+  <!-- Scroll Animation Script -->
   <script>
-    document.getElementById('current-year').textContent = new Date().getFullYear();
+    // Intersection Observer for scroll-triggered animations
+    const observerOptions = {
+      threshold: 0.15,
+      rootMargin: '0px 0px -100px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    // Observe elements on page load
+    document.addEventListener('DOMContentLoaded', () => {
+      // Fade in up elements
+      document.querySelectorAll('.fade-in-up').forEach(el => observer.observe(el));
+
+      // Scale in elements
+      document.querySelectorAll('.scale-in').forEach(el => observer.observe(el));
+
+      // Timeline items
+      document.querySelectorAll('.timeline-item').forEach(el => observer.observe(el));
+
+      // Case metrics
+      document.querySelectorAll('.case-metric').forEach(el => observer.observe(el));
+    });
   </script>
-  
+
 </body>
 </html>

@@ -236,29 +236,19 @@ function initParallax() {
 /**
  * Mobile menu animation
  * DISABLED - Mobile menu is now handled by site.js to prevent conflicts
- * Style Guide: 200-300ms transitions
  */
 function initMobileMenu() {
   // Mobile menu functionality moved to site.js
-  // This prevents duplicate event handlers and body overflow conflicts
   return;
 }
 
 /**
  * Set active navigation link based on current page
+ * NOTE: Deferred to site.js to avoid duplicate logic
  */
 function initActiveNavigation() {
-  const currentPath = window.location.pathname;
-  const navLinks = document.querySelectorAll('nav a, .nav-link');
-  
-  navLinks.forEach((link) => {
-    const href = link.getAttribute('href');
-    
-    // Exact match or starts with (for subdirectories)
-    if (href === currentPath || (href !== '/' && currentPath.startsWith(href))) {
-      link.classList.add('active');
-    }
-  });
+  // Active nav state is handled by site.js initActiveNavState()
+  return;
 }
 
 /**

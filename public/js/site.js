@@ -17,18 +17,34 @@ function initNavigation() {
   
   if (menuToggle && mobileMenu) {
     menuToggle.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-      body.classList.toggle('overflow-hidden');
-      menuToggle.setAttribute('aria-expanded', 
-        menuToggle.getAttribute('aria-expanded') === 'true' ? 'false' : 'true'
-      );
+      const isHidden = mobileMenu.classList.contains('hidden');
+      if (isHidden) {
+        // Opening menu
+        mobileMenu.classList.remove('hidden');
+        mobileMenu.classList.add('open');
+        body.classList.add('overflow-hidden');
+        menuToggle.setAttribute('aria-expanded', 'true');
+      } else {
+        // Closing menu
+        mobileMenu.classList.remove('open');
+        // Wait for animation to finish before hiding
+        setTimeout(() => {
+          mobileMenu.classList.add('hidden');
+        }, 300);
+        body.classList.remove('overflow-hidden');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      }
     });
   }
   
   if (menuClose && mobileMenu) {
     menuClose.addEventListener('click', () => {
-      mobileMenu.classList.add('hidden');
+      mobileMenu.classList.remove('open');
       body.classList.remove('overflow-hidden');
+      // Wait for animation to finish before hiding
+      setTimeout(() => {
+        mobileMenu.classList.add('hidden');
+      }, 300);
       if (menuToggle) {
         menuToggle.setAttribute('aria-expanded', 'false');
       }
@@ -38,8 +54,11 @@ function initNavigation() {
   // Close mobile menu on escape key
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && mobileMenu && !mobileMenu.classList.contains('hidden')) {
-      mobileMenu.classList.add('hidden');
+      mobileMenu.classList.remove('open');
       body.classList.remove('overflow-hidden');
+      setTimeout(() => {
+        mobileMenu.classList.add('hidden');
+      }, 300);
       if (menuToggle) {
         menuToggle.setAttribute('aria-expanded', 'false');
         menuToggle.focus();

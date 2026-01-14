@@ -102,49 +102,96 @@
   
   <main id="main-content">
     
-    <!-- Hero Section -->
-    <section class="min-h-screen relative flex items-center justify-center overflow-hidden">
-      <!-- Background Image -->
-      <div class="absolute inset-0">
-        <img src="/assets/images/hero/hero-physicians.jpg" alt="" class="absolute inset-0 w-full h-full object-cover" loading="eager">
-      </div>
-      <!-- Subtle tint for readability (inline rgba so it actually applies) -->
-      <div class="absolute inset-0 pointer-events-none" style="background: rgba(255, 255, 255, 0.18);"></div>
+    <!-- Hero Section - Modern Asymmetric -->
+    <section class="relative py-32 overflow-hidden bg-gradient-to-br from-white via-warm-stone-5 to-white">
+      <!-- Decorative elements -->
+      <div class="absolute top-20 right-1/4 w-96 h-96 bg-soft-gold-5 rounded-full blur-3xl opacity-30"></div>
+      <div class="absolute bottom-20 left-1/4 w-64 h-64 bg-gold-5 rounded-full blur-3xl opacity-20"></div>
       
-      <div class="relative z-10 container-custom max-w-4xl text-center py-16 md:py-20">
-        <!-- Glass panel to keep text readable while still showing the photo -->
-        <div class="bg-white bg-opacity-80 backdrop-blur-sm rounded-2xl shadow-xl p-8 md:p-10">
-          <h1 class="text-5xl md:text-6xl mb-6 text-black">
-            For Physicians
-          </h1>
+      <div class="container-custom relative z-10">
+        <div class="grid lg:grid-cols-12 gap-12 items-center">
           
-          <p class="text-2xl md:text-3xl mb-5 font-montserrat font-light text-black text-opacity-80">
-            Strategic support for physician groups and clinical leaders.
-          </p>
-          
-          <p class="text-lg md:text-xl mb-6 leading-relaxed max-w-3xl mx-auto text-black text-opacity-75">
-            Operational alignment, growth strategy, and systems support designed to let physicians focus on care while strengthening long-term sustainability.
-          </p>
-          
-          <p class="text-base mb-8 max-w-2xl mx-auto text-black text-opacity-70">
-            Built by operators with deep healthcare and systems expertise.
-          </p>
-          
-          <div class="bg-white bg-opacity-90 backdrop-blur-sm p-6 md:p-8 rounded-xl shadow-lg mb-8 max-w-2xl mx-auto">
-            <p class="text-lg md:text-xl mb-4">
-              Content for this section is currently being developed. Our physician advisory services are designed by operators with deep healthcare and systems expertise.
+          <!-- Left: Content (Wider - 7 cols) -->
+          <div class="lg:col-span-7 space-y-8" data-animate>
+            <div class="inline-flex items-center gap-2 px-4 py-2 bg-white rounded-full border border-gold-ochre shadow-sm">
+              <div class="w-2 h-2 bg-deep-red rounded-full animate-pulse"></div>
+              <span class="text-sm font-semibold text-black">Physician Advisory</span>
+            </div>
+            
+            <h1 class="text-5xl md:text-6xl lg:text-7xl leading-tight">
+              Strategic support for <br/>
+              <span class="text-gold-ochre">physician groups</span>
+            </h1>
+            
+            <p class="text-xl md:text-2xl text-black text-opacity-70 leading-relaxed max-w-2xl">
+              Operational alignment, growth strategy, and systems support designed to let physicians focus on care while strengthening long-term sustainability.
             </p>
-            <p class="text-sm text-black text-opacity-70">
-              For immediate inquiries, please contact our team directly.
-            </p>
+            
+            <div class="space-y-4 text-lg">
+              <div class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-gold-ochre flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Built by operators with deep healthcare expertise</span>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-gold-ochre flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Systems designed for clinical leadership</span>
+              </div>
+              <div class="flex items-start gap-3">
+                <svg class="w-6 h-6 text-gold-ochre flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Focus on sustainable practice growth</span>
+              </div>
+            </div>
+            
+            <div class="flex flex-wrap gap-4">
+              <a href="/contact" class="btn btn-primary inline-flex items-center gap-2">
+                Schedule Consultation
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                </svg>
+              </a>
+              <a href="/hospital-advisory" class="btn btn-secondary inline-flex items-center gap-2">
+                View Hospital Advisory
+              </a>
+            </div>
           </div>
           
-          <a href="/contact" class="btn btn-primary inline-flex items-center gap-2">
-            Contact Our Team
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-            </svg>
-          </a>
+          <!-- Right: Info Card (5 cols) -->
+          <div class="lg:col-span-5" data-animate>
+            <div class="relative">
+              <!-- Glow effect -->
+              <div class="absolute -inset-4 bg-gradient-to-br from-gold-ochre via-soft-gold to-gold-ochre opacity-10 blur-2xl rounded-3xl"></div>
+              
+              <!-- Card -->
+              <div class="relative bg-white rounded-2xl shadow-2xl p-8 border border-black border-opacity-5">
+                <div class="text-sm font-semibold text-gold-ochre mb-6 uppercase tracking-wide">Physician Advisory</div>
+                
+                <div class="space-y-6 text-lg leading-relaxed text-black text-opacity-70">
+                  <p>
+                    Content for this section is currently being developed. Our physician advisory services are designed by operators with deep healthcare and systems expertise.
+                  </p>
+                  
+                  <div class="pt-6 border-t border-warm-stone-20">
+                    <p class="text-sm text-black text-opacity-60 mb-4">
+                      For immediate inquiries, please contact our team directly.
+                    </p>
+                    <a href="mailto:info@saintraphaelhealth.com" class="text-burgundy hover:text-gold-ochre font-semibold inline-flex items-center gap-2 transition-colors">
+                      info@saintraphaelhealth.com
+                      <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
         </div>
       </div>
     </section>

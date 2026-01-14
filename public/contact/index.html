@@ -103,32 +103,77 @@
   
   <main id="main-content">
     
-    <!-- Page Header -->
-    <section class="relative py-xl bg-white overflow-hidden">
-      <!-- Hero Background Image -->
-      <div class="absolute inset-0 z-0">
-        <img src="/assets/images/contact/hero-contact.jpg" alt="" class="w-full h-full object-cover opacity-10" loading="eager">
-      </div>
+    <!-- Page Header - Asymmetric Split -->
+    <section class="relative min-h-[600px] overflow-hidden bg-white">
       
-      <div class="container-custom max-w-4xl text-center relative z-10">
-        <h1 class="text-5xl md:text-6xl mb-8" data-animate>Start the conversation.</h1>
-        
-        <div class="prose-custom mx-auto" data-animate>
-          <p>
-            If your hospital, health system, or community is under operational or financial pressure, an early conversation can create options.
-          </p>
+      <div class="container-custom h-full">
+        <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center min-h-[600px] py-20">
           
-          <p>
-            St Raphael Health works confidentially with hospital leadership, boards, municipalities, and investors to assess situations, stabilize operations, and restore control.
-          </p>
+          <!-- Left: Content -->
+          <div class="lg:col-span-7 relative z-10" data-animate>
+            <div class="w-16 h-1 bg-gradient-to-r from-burgundy via-deep-red to-gold-ochre mb-8"></div>
+            
+            <h1 class="text-4xl md:text-5xl lg:text-6xl mb-8 leading-tight font-light">
+              Start the <span class="text-burgundy font-normal">conversation</span>
+            </h1>
+            
+            <p class="text-xl md:text-2xl text-black text-opacity-70 mb-8 leading-relaxed">
+              If your hospital, health system, or community is under operational or financial pressure, an early conversation can create options.
+            </p>
+            
+            <div class="bg-burgundy-5 rounded-2xl p-8 border-l-4 border-burgundy">
+              <p class="text-lg md:text-xl font-light italic">
+                St Raphael Health works confidentially with hospital leadership, boards, municipalities, and investors to assess situations, stabilize operations, and restore control.
+              </p>
+            </div>
+          </div>
+          
+          <!-- Right: Gradient with Stats -->
+          <div class="lg:col-span-5 relative" data-animate>
+            <div class="relative rounded-3xl overflow-hidden p-10 lg:p-12" style="background: linear-gradient(135deg, rgba(120, 40, 60, 1) 0%, rgba(178, 34, 34, 1) 50%, rgba(212, 175, 55, 1) 100%);">
+              
+              <div class="relative z-10 text-white space-y-8">
+                <div>
+                  <div class="text-sm font-medium uppercase tracking-wide mb-2 text-white text-opacity-80">Response Time</div>
+                  <div class="text-5xl font-light mb-2">24-48h</div>
+                  <div class="text-base text-white text-opacity-90">Prompt and discreet follow-up</div>
+                </div>
+                
+                <div class="w-16 h-0.5 bg-white bg-opacity-30"></div>
+                
+                <div>
+                  <div class="text-sm font-medium uppercase tracking-wide mb-2 text-white text-opacity-80">Confidentiality</div>
+                  <div class="text-5xl font-light mb-2">100%</div>
+                  <div class="text-base text-white text-opacity-90">All inquiries treated privately</div>
+                </div>
+                
+                <div class="w-16 h-0.5 bg-white bg-opacity-30"></div>
+                
+                <div>
+                  <div class="text-sm font-medium uppercase tracking-wide mb-2 text-white text-opacity-80">Obligation</div>
+                  <div class="text-5xl font-light mb-2">Zero</div>
+                  <div class="text-base text-white text-opacity-90">No pressure, just options</div>
+                </div>
+              </div>
+              
+              <!-- Decorative circle -->
+              <div class="absolute -bottom-20 -right-20 w-64 h-64 bg-white bg-opacity-10 rounded-full blur-2xl"></div>
+            </div>
+          </div>
+          
         </div>
       </div>
     </section>
     
     <!-- Contact Form -->
-    <section class="py-xxl bg-warm-stone">
-      <div class="container-custom max-w-3xl">
-        <form data-contact-form class="bg-white p-8 md:p-12 rounded-lg" data-animate>
+    <section class="py-24 bg-gradient-to-b from-warm-stone-light to-white">
+      <div class="container-custom max-w-4xl">
+        <div class="text-center mb-12" data-animate>
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-light mb-4">Send Us a Message</h2>
+          <p class="text-lg text-black text-opacity-70">We'll respond within 24-48 hours</p>
+        </div>
+        
+        <form data-contact-form class="bg-white p-10 md:p-12 lg:p-16 rounded-3xl shadow-2xl border border-warm-stone-20" data-animate>
           <div class="grid md:grid-cols-2 gap-6 mb-6">
             <div>
               <label for="fullName" class="form-label">Full Name <span class="text-deep-red">*</span></label>
@@ -200,40 +245,56 @@
       </div>
     </section>
     
-    <!-- Direct Contact -->
-    <section class="py-xl bg-white">
-      <div class="container-custom max-w-3xl text-center">
-        <h2 class="text-3xl mb-6" data-animate>If you prefer, you may contact us directly:</h2>
-        
-        <div class="mb-8" data-animate>
-          <p class="text-xl mb-2">Email:</p>
-          <a href="mailto:info@saintraphaelhealth.com" class="text-2xl text-gold-ochre hover:underline font-montserrat">
-            info@saintraphaelhealth.com
-          </a>
+    <!-- What Happens Next -->
+    <section class="py-20 bg-white">
+      <div class="container-custom max-w-5xl">
+        <div class="text-center mb-12" data-animate>
+          <h2 class="text-3xl md:text-4xl font-light mb-4">What Happens Next</h2>
         </div>
         
-        <p class="text-sm text-black text-opacity-70" data-animate>
-          All inquiries are treated as confidential.
-        </p>
-      </div>
-    </section>
-    
-    <!-- What Happens Next -->
-    <section class="py-xl bg-warm-stone">
-      <div class="container-custom max-w-3xl">
-        <h2 class="text-3xl text-center mb-12" data-animate>What Happens Next</h2>
-        
-        <div class="prose-custom mx-auto" data-animate>
-          <p>After submitting your inquiry:</p>
-          <ul class="space-y-3">
-            <li>A member of our operating team will review your message</li>
-            <li>We will respond promptly and discreetly</li>
-            <li>No obligation, no pressure</li>
-          </ul>
+        <div class="grid md:grid-cols-3 gap-8 mb-16">
+          <!-- Step 1 -->
+          <div class="text-center" data-animate>
+            <div class="w-16 h-16 rounded-full bg-burgundy text-white flex items-center justify-center text-2xl font-light mx-auto mb-6">
+              1
+            </div>
+            <h3 class="text-xl font-normal mb-3 text-burgundy">We Review</h3>
+            <p class="text-base text-black text-opacity-70">A member of our operating team will review your message</p>
+          </div>
           
-          <p class="text-center mt-8">
-            Our goal is to understand your situation and determine whether we can be helpful.
+          <!-- Step 2 -->
+          <div class="text-center" data-animate>
+            <div class="w-16 h-16 rounded-full bg-deep-red text-white flex items-center justify-center text-2xl font-light mx-auto mb-6">
+              2
+            </div>
+            <h3 class="text-xl font-normal mb-3 text-deep-red">We Respond</h3>
+            <p class="text-base text-black text-opacity-70">We will respond promptly and discreetly within 24-48 hours</p>
+          </div>
+          
+          <!-- Step 3 -->
+          <div class="text-center" data-animate>
+            <div class="w-16 h-16 rounded-full bg-gold-ochre text-white flex items-center justify-center text-2xl font-light mx-auto mb-6">
+              3
+            </div>
+            <h3 class="text-xl font-normal mb-3 text-gold-ochre">We Assess</h3>
+            <p class="text-base text-black text-opacity-70">Our goal is to understand your situation and determine if we can help</p>
+          </div>
+        </div>
+        
+        <div class="bg-gold-5 rounded-2xl p-8 md:p-10 text-center border-l-4 border-gold-ochre" data-animate>
+          <p class="text-xl md:text-2xl font-light italic mb-6">
+            No obligation, no pressure. All inquiries are treated as confidential.
           </p>
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <div class="flex items-center gap-2 text-lg">
+              <svg class="w-6 h-6 text-gold-ochre" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+              </svg>
+              <a href="mailto:info@saintraphaelhealth.com" class="text-gold-ochre hover:underline font-medium">
+                info@saintraphaelhealth.com
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>

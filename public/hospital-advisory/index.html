@@ -4,19 +4,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hospital Advisory | St Raphael Health</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-
   <style>
-    /* Ensure Montserrat loads properly with font-face fallback */
+    /* Self-hosted Montserrat fonts for guaranteed loading */
     @font-face {
-      font-family: 'Montserrat Fallback';
-      src: local('Arial');
-      size-adjust: 107%;
-      ascent-override: 90%;
-      descent-override: 22%;
-      line-gap-override: 0%;
+      font-family: 'Montserrat';
+      src: url('/fonts/Montserrat-300.ttf') format('truetype');
+      font-weight: 300;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('/fonts/Montserrat-400.ttf') format('truetype');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('/fonts/Montserrat-500.ttf') format('truetype');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('/fonts/Montserrat-600.ttf') format('truetype');
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('/fonts/Montserrat-700.ttf') format('truetype');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('/fonts/Montserrat-800.ttf') format('truetype');
+      font-weight: 800;
+      font-style: normal;
+      font-display: swap;
     }
   </style>
   <link rel="stylesheet" href="/styles.css">
@@ -49,7 +79,7 @@
       --wash-amber: rgba(255, 191, 71, 0.05);
       --wash-orange: rgba(242, 138, 50, 0.04);
 
-      --font: 'Montserrat', 'Montserrat Fallback', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      --font: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
     }
 
     * {
@@ -2149,17 +2179,6 @@
       // Case metrics
       document.querySelectorAll('.case-metric').forEach(el => observer.observe(el));
     });
-
-    // Font loading check - ensure Montserrat loads properly
-    if ('fonts' in document) {
-      document.fonts.ready.then(function() {
-        // Check if Montserrat loaded
-        const montserratLoaded = document.fonts.check('1em Montserrat');
-        if (!montserratLoaded) {
-          console.warn('Montserrat font did not load - using fallback');
-        }
-      });
-    }
   </script>
 
 </body>

@@ -56,7 +56,6 @@ module.exports = {
         'rose-8': 'color-mix(in srgb, #A04050 8%, white)',
       },
       fontFamily: {
-        'lounge': ['Lounge', 'Georgia', 'serif'],
         'montserrat': ['Montserrat', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Helvetica', 'Arial', 'sans-serif'],
       },
       spacing: {

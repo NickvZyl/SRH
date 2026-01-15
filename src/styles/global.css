@@ -1248,15 +1248,59 @@
 }
 
 /* ============================================
-   GOOGLE FONTS
+   SELF-HOSTED MONTSERRAT FONTS
    ============================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/montserrat-v31-latin-300.woff2') format('woff2'),
+       url('/fonts/montserrat-v31-latin-300.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
 
 @font-face {
-  font-family: 'Lounge';
-  src: local('Georgia');
+  font-family: 'Montserrat';
+  src: url('/fonts/montserrat-v31-latin-regular.woff2') format('woff2'),
+       url('/fonts/montserrat-v31-latin-regular.woff') format('woff');
   font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/montserrat-v31-latin-500.woff2') format('woff2'),
+       url('/fonts/montserrat-v31-latin-500.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/montserrat-v31-latin-600.woff2') format('woff2'),
+       url('/fonts/montserrat-v31-latin-600.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/montserrat-v31-latin-700.woff2') format('woff2'),
+       url('/fonts/montserrat-v31-latin-700.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url('/fonts/montserrat-v31-latin-800.woff2') format('woff2'),
+       url('/fonts/montserrat-v31-latin-800.woff') format('woff');
+  font-weight: 800;
   font-style: normal;
   font-display: swap;
 }

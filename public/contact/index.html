@@ -3,45 +3,822 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <title>Contact - St Raphael Health</title>
   <meta name="description" content="Start the conversation. St Raphael Health works confidentially with hospital leadership, boards, municipalities, and investors.">
   <link rel="canonical" href="https://saintraphaelhealth.com/contact">
-  
+
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://saintraphaelhealth.com/contact">
   <meta property="og:title" content="Contact - St Raphael Health">
   <meta property="og:description" content="Start the conversation with our operating team.">
   <meta property="og:image" content="https://saintraphaelhealth.com/assets/logos/SRH Logo Light Background.png">
-  
+
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://saintraphaelhealth.com/contact">
   <meta property="twitter:title" content="Contact - St Raphael Health">
   <meta property="twitter:description" content="Start the conversation with our operating team.">
   <meta property="twitter:image" content="https://saintraphaelhealth.com/assets/logos/SRH Logo Light Background.png">
-  
+
   <link rel="icon" type="image/svg+xml" href="/assets/logos/Icon.svg">
   <link rel="icon" type="image/png" href="/assets/logos/Icon.png">
   <link rel="apple-touch-icon" href="/assets/logos/Icon.png">
-  
+
+  <style>
+    /* Self-hosted Montserrat fonts - WOFF2 + WOFF for maximum compatibility */
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('/fonts/montserrat-v31-latin-300.woff2') format('woff2'),
+           url('/fonts/montserrat-v31-latin-300.woff') format('woff');
+      font-weight: 300;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('/fonts/montserrat-v31-latin-regular.woff2') format('woff2'),
+           url('/fonts/montserrat-v31-latin-regular.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('/fonts/montserrat-v31-latin-500.woff2') format('woff2'),
+           url('/fonts/montserrat-v31-latin-500.woff') format('woff');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('/fonts/montserrat-v31-latin-600.woff2') format('woff2'),
+           url('/fonts/montserrat-v31-latin-600.woff') format('woff');
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('/fonts/montserrat-v31-latin-700.woff2') format('woff2'),
+           url('/fonts/montserrat-v31-latin-700.woff') format('woff');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('/fonts/montserrat-v31-latin-800.woff2') format('woff2'),
+           url('/fonts/montserrat-v31-latin-800.woff') format('woff');
+      font-weight: 800;
+      font-style: normal;
+      font-display: swap;
+    }
+  </style>
+
   <link rel="stylesheet" href="/styles.css">
-  <link rel="stylesheet" href="/styles/animations.css">
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <style>
+    /* ═══════════════════════════════════════════════════════════
+       ST RAPHAEL HEALTH CONTACT – REFINED EXECUTIVE DESIGN
+       Light, modern, data-driven with warm color washes
+       ═══════════════════════════════════════════════════════════ */
+
+    :root {
+      --gold: #CBA85C;
+      --gold-light: #EDBD56;
+      --orange: #F28A32;
+      --warm-grey: #DBD5CA;
+      --text-dark: #2a2a2a;
+      --text-medium: #3a3a3a;
+      --text-light: #555555;
+      --white: #FFFFFF;
+      --cream: #FFFBF5;
+      --off-white: #FFF9F0;
+
+      /* Data viz colors - lighter, more energetic */
+      --accent-yellow: #FFD966;
+      --accent-amber: #FFBF47;
+      --accent-coral: #FF9D6E;
+      --accent-red: #C2322F;
+
+      /* Very light color washes for backgrounds */
+      --wash-yellow: rgba(255, 217, 102, 0.04);
+      --wash-amber: rgba(255, 191, 71, 0.05);
+      --wash-orange: rgba(242, 138, 50, 0.04);
+
+      --font: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font);
+      font-weight: 400;
+      color: var(--text-dark);
+      background: var(--cream);
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--gold);
+      color: var(--white);
+      padding: 8px 16px;
+      text-decoration: none;
+      z-index: 100;
+      font-weight: 600;
+    }
+
+    .skip-link:focus {
+      top: 0;
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       HERO – Contact page hero
+       ═══════════════════════════════════════════════════════════ */
+
+    .hero {
+      display: flex;
+      align-items: center;
+      padding: 7rem 5% 8rem;
+      position: relative;
+      background: linear-gradient(135deg, var(--cream) 0%, var(--off-white) 100%);
+      overflow: hidden;
+    }
+
+    /* Very subtle diagonal wash */
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -20%;
+      right: -5%;
+      width: 80%;
+      height: 140%;
+      background: linear-gradient(145deg,
+        transparent 0%,
+        var(--wash-yellow) 30%,
+        var(--wash-amber) 50%,
+        var(--wash-orange) 70%,
+        transparent 100%
+      );
+      transform: rotate(-12deg);
+      pointer-events: none;
+    }
+
+    .hero-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      width: 100%;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 0.9fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .hero-content {
+      max-width: 640px;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 2rem;
+      padding: 8px 0;
+    }
+
+    .hero-eyebrow::before {
+      content: '';
+      width: 36px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 5.5vw, 4.75rem);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.04em;
+      margin-bottom: 2rem;
+      color: var(--text-dark);
+    }
+
+    .hero h1 .accent {
+      background: linear-gradient(135deg, var(--gold) 0%, var(--orange) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      font-weight: 800;
+    }
+
+    .hero-lead {
+      font-size: 1.3rem;
+      font-weight: 300;
+      line-height: 1.6;
+      color: var(--text-medium);
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-note {
+      background: rgba(255, 255, 255, 0.7);
+      border-left: 3px solid var(--gold);
+      padding: 1.75rem 2rem;
+      border-radius: 2px;
+      font-size: 1.1rem;
+      font-weight: 400;
+      line-height: 1.7;
+      color: var(--text-medium);
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+    }
+
+    /* Stats card */
+    .stats-card {
+      background: linear-gradient(135deg,
+        rgba(203, 168, 92, 0.95) 0%,
+        rgba(237, 189, 86, 0.95) 50%,
+        rgba(242, 138, 50, 0.95) 100%
+      );
+      padding: 3rem 2.5rem;
+      border-radius: 4px;
+      color: var(--white);
+      box-shadow: 0 8px 32px rgba(203, 168, 92, 0.2);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .stats-card::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .stat-item {
+      position: relative;
+      z-index: 1;
+      margin-bottom: 2.5rem;
+    }
+
+    .stat-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .stat-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      opacity: 0.85;
+      margin-bottom: 0.75rem;
+    }
+
+    .stat-value {
+      font-size: 3.5rem;
+      font-weight: 300;
+      line-height: 1;
+      margin-bottom: 0.75rem;
+    }
+
+    .stat-description {
+      font-size: 1rem;
+      font-weight: 400;
+      opacity: 0.95;
+      line-height: 1.5;
+    }
+
+    .stat-divider {
+      width: 48px;
+      height: 1px;
+      background: rgba(255, 255, 255, 0.3);
+      margin: 2rem 0;
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       CONTACT FORM SECTION
+       ═══════════════════════════════════════════════════════════ */
+
+    .form-section {
+      padding: 8rem 5% 9rem;
+      background: linear-gradient(180deg,
+        rgba(255, 251, 230, 0.3) 0%,
+        rgba(255, 249, 240, 0.5) 50%,
+        rgba(255, 251, 230, 0.3) 100%
+      );
+      position: relative;
+    }
+
+    .form-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg,
+        transparent 0%,
+        rgba(203, 168, 92, 0.2) 50%,
+        transparent 100%
+      );
+    }
+
+    .form-container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .form-header {
+      text-align: center;
+      margin-bottom: 5rem;
+    }
+
+    .form-header h2 {
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--text-dark);
+      margin-bottom: 1.25rem;
+    }
+
+    .form-header p {
+      font-size: 1.2rem;
+      font-weight: 300;
+      color: var(--text-light);
+    }
+
+    .contact-form {
+      background: var(--white);
+      padding: 3.5rem 3rem;
+      border-radius: 4px;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+      border: 1px solid rgba(203, 168, 92, 0.1);
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.75rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.75rem;
+    }
+
+    .form-label {
+      display: block;
+      font-size: 0.875rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      color: var(--text-dark);
+      margin-bottom: 0.6rem;
+    }
+
+    .required {
+      color: var(--accent-red);
+    }
+
+    .form-input,
+    .form-textarea,
+    .form-select {
+      width: 100%;
+      padding: 0.9rem 1.1rem;
+      font-family: var(--font);
+      font-size: 0.95rem;
+      font-weight: 400;
+      color: var(--text-dark);
+      background: var(--white);
+      border: 1px solid rgba(0, 0, 0, 0.12);
+      border-radius: 2px;
+      transition: all 0.25s ease;
+      outline: none;
+    }
+
+    .form-input:focus,
+    .form-textarea:focus,
+    .form-select:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(203, 168, 92, 0.08);
+    }
+
+    .form-textarea {
+      resize: vertical;
+      min-height: 140px;
+      line-height: 1.6;
+    }
+
+    .form-checkbox-group {
+      margin-bottom: 2rem;
+    }
+
+    .checkbox-label {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: 0.9rem;
+      line-height: 1.6;
+      color: var(--text-medium);
+      cursor: pointer;
+    }
+
+    .checkbox-label input[type="checkbox"] {
+      margin-top: 0.2rem;
+      width: 18px;
+      height: 18px;
+      cursor: pointer;
+      accent-color: var(--gold);
+    }
+
+    .form-submit {
+      text-align: center;
+      margin-top: 2.5rem;
+    }
+
+    .submit-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 1.1rem 2.75rem;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+      color: var(--white);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      border: none;
+      border-radius: 2px;
+      cursor: pointer;
+      transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 16px rgba(203, 168, 92, 0.25);
+    }
+
+    .submit-btn::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, var(--orange) 0%, var(--accent-coral) 100%);
+      opacity: 0;
+      transition: opacity 0.35s ease;
+    }
+
+    .submit-btn:hover::before {
+      opacity: 1;
+    }
+
+    .submit-btn span,
+    .submit-btn svg {
+      position: relative;
+      z-index: 1;
+    }
+
+    .submit-btn svg {
+      transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .submit-btn:hover svg {
+      transform: translateX(4px);
+    }
+
+    /* Honeypot */
+    .honeypot {
+      position: absolute;
+      left: -9999px;
+      width: 1px;
+      height: 1px;
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       PROCESS SECTION
+       ═══════════════════════════════════════════════════════════ */
+
+    .process-section {
+      padding: 8rem 5%;
+      background: var(--white);
+      position: relative;
+    }
+
+    .process-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .process-header {
+      text-align: center;
+      margin-bottom: 5rem;
+    }
+
+    .process-header h2 {
+      font-size: clamp(2rem, 4vw, 3.25rem);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: var(--text-dark);
+      margin-bottom: 1rem;
+    }
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3rem;
+      margin-bottom: 4rem;
+    }
+
+    .process-step {
+      text-align: center;
+      position: relative;
+    }
+
+    .step-number {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 2rem;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      font-weight: 300;
+      color: var(--white);
+      position: relative;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    }
+
+    .process-step:nth-child(1) .step-number {
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+    }
+
+    .process-step:nth-child(2) .step-number {
+      background: linear-gradient(135deg, var(--gold-light) 0%, var(--accent-amber) 100%);
+    }
+
+    .process-step:nth-child(3) .step-number {
+      background: linear-gradient(135deg, var(--accent-amber) 0%, var(--orange) 100%);
+    }
+
+    .step-title {
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-bottom: 0.75rem;
+    }
+
+    .step-description {
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.6;
+      color: var(--text-light);
+    }
+
+    /* Confidence note */
+    .confidence-note {
+      background: linear-gradient(135deg,
+        rgba(255, 249, 240, 0.6) 0%,
+        rgba(255, 251, 230, 0.8) 100%
+      );
+      border: 1px solid rgba(203, 168, 92, 0.15);
+      border-left: 4px solid var(--gold);
+      padding: 2.5rem 3rem;
+      border-radius: 4px;
+      text-align: center;
+    }
+
+    .confidence-note p {
+      font-size: 1.3rem;
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.6;
+      color: var(--text-dark);
+      margin-bottom: 1.5rem;
+    }
+
+    .confidence-contact {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--gold);
+      text-decoration: none;
+      transition: color 0.25s ease;
+    }
+
+    .confidence-contact:hover {
+      color: var(--orange);
+    }
+
+    .confidence-contact svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════════════════════════ */
+
+    footer {
+      padding: 4.5rem 5%;
+      background: #E8DCC8;
+      border-top: 1px solid rgba(203, 168, 92, 0.15);
+      position: relative;
+    }
+
+    footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg,
+        transparent 0%,
+        rgba(203, 168, 92, 0.3) 50%,
+        transparent 100%
+      );
+    }
+
+    .footer-content {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 2.5rem;
+      border-bottom: 1px solid rgba(42, 42, 42, 0.1);
+      margin-bottom: 2rem;
+    }
+
+    .footer-nav {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-nav a {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-dark);
+      text-decoration: none;
+      transition: color 0.25s ease;
+    }
+
+    .footer-nav a:hover {
+      color: var(--gold);
+    }
+
+    .footer-nav .separator {
+      color: var(--text-light);
+      opacity: 0.4;
+    }
+
+    .footer-email a {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text-dark);
+      text-decoration: none;
+      transition: color 0.25s ease;
+    }
+
+    .footer-email a:hover {
+      color: var(--gold);
+    }
+
+    .footer-bottom {
+      font-size: 0.875rem;
+      color: var(--text-light);
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       ANIMATIONS
+       ═══════════════════════════════════════════════════════════ */
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .fade-in-up {
+      animation: fadeInUp 0.8s ease forwards;
+    }
+
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.2s; }
+    .delay-3 { animation-delay: 0.3s; }
+
+    /* ═══════════════════════════════════════════════════════════
+       RESPONSIVE
+       ═══════════════════════════════════════════════════════════ */
+
+    @media (max-width: 1024px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+      }
+
+      .stats-card {
+        max-width: 500px;
+        margin: 0 auto;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+        gap: 1.75rem;
+      }
+
+      .process-steps {
+        grid-template-columns: 1fr;
+        gap: 3.5rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        padding: 5rem 5% 6rem;
+      }
+
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero-lead {
+        font-size: 1.1rem;
+      }
+
+      .stat-value {
+        font-size: 2.75rem;
+      }
+
+      .form-section {
+        padding: 5rem 5% 6rem;
+      }
+
+      .contact-form {
+        padding: 2.5rem 1.75rem;
+      }
+
+      .process-section {
+        padding: 5rem 5%;
+      }
+
+      .footer-top {
+        flex-direction: column;
+        gap: 2rem;
+        align-items: flex-start;
+      }
+    }
+  </style>
 </head>
 <body>
-  
-  <!-- Header (same structure) -->
+
+  <!-- Header -->
   <header class="bg-white border-b border-warm-stone sticky top-0" style="z-index: 10000;">
     <a href="#main-content" class="skip-link">Skip to main content</a>
-    
-    <nav class="container-custom py-4 md:py-6" aria-label="Main navigation">
-      <div class="flex items-center justify-between">
+
+    <nav class="container-custom py-5 md:py-7" aria-label="Main navigation">
+      <div class="flex items-center justify-between gap-12">
         <a href="/" class="flex items-center" aria-label="St Raphael Health - Home">
-          <img src="/assets/logos/SRH Logo Light Background.svg" alt="St Raphael Health" class="h-10 md:h-12" width="200" height="48">
+          <img src="/assets/logos/SRH Logo Light Background.svg" alt="St Raphael Health" class="h-14 md:h-16" width="200" height="64">
         </a>
-        
+
         <ul class="hidden lg:flex items-center gap-8">
           <li><a href="/hospital-advisory" class="text-black hover:text-gold-ochre transition-colors duration-fast font-montserrat">Hospital Advisory</a></li>
           <!-- HIDDEN UNTIL COMPLETE - Uncomment to show -->
@@ -52,9 +829,9 @@
           <!-- <li><a href="/physicians" class="text-black hover:text-gold-ochre transition-colors duration-fast font-montserrat">Physicians</a></li> -->
           <li><a href="/contact" class="btn btn-primary text-sm">Contact</a></li>
         </ul>
-        
-        <button 
-          id="menu-toggle" 
+
+        <button
+          id="menu-toggle"
           class="lg:hidden p-2 text-black hover:text-gold-ochre transition-colors"
           aria-expanded="false"
           aria-controls="mobile-menu"
@@ -66,9 +843,9 @@
         </button>
       </div>
     </nav>
-    
-    <div 
-      id="mobile-menu" 
+
+    <div
+      id="mobile-menu"
       class="hidden fixed inset-0 bg-white lg:hidden"
       role="dialog"
       aria-modal="true"
@@ -77,9 +854,9 @@
     >
       <div class="container-custom py-6">
         <div class="flex items-center justify-between mb-8">
-          <img src="/assets/logos/SRH Logo Light Background.svg" alt="St Raphael Health" class="h-10" width="200" height="48">
-          <button 
-            id="menu-close" 
+          <img src="/assets/logos/SRH Logo Light Background.svg" alt="St Raphael Health" class="h-14" width="200" height="64">
+          <button
+            id="menu-close"
             class="p-2 text-black hover:text-gold-ochre transition-colors"
             aria-label="Close navigation menu"
           >
@@ -88,7 +865,7 @@
             </svg>
           </button>
         </div>
-        
+
         <ul class="flex flex-col gap-6">
           <li><a href="/hospital-advisory" class="text-2xl text-black hover:text-gold-ochre transition-colors font-montserrat">Hospital Advisory</a></li>
           <!-- HIDDEN UNTIL COMPLETE - Uncomment to show -->
@@ -102,113 +879,106 @@
       </div>
     </div>
   </header>
-  
+
   <main id="main-content">
-    
-    <!-- Page Header - Asymmetric Split -->
-    <section class="relative min-h-[600px] overflow-hidden bg-white">
-      
-      <div class="container-custom h-full">
-        <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center min-h-[600px] py-20">
-          
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-container">
+        <div class="hero-grid">
+
           <!-- Left: Content -->
-          <div class="lg:col-span-7 relative z-10" data-animate>
-            <div class="w-16 h-1 bg-gradient-to-r from-burgundy via-deep-red to-gold-ochre mb-8"></div>
-            
-            <h1 class="text-4xl md:text-5xl lg:text-6xl mb-8 leading-tight font-light">
-              Start the <span class="text-burgundy font-normal">conversation</span>
+          <div class="hero-content fade-in-up">
+            <div class="hero-eyebrow">
+              Contact Our Team
+            </div>
+
+            <h1>
+              Start the <span class="accent">conversation</span>
             </h1>
-            
-            <p class="text-xl md:text-2xl text-black text-opacity-70 mb-8 leading-relaxed">
+
+            <p class="hero-lead">
               If your hospital, health system, or community is under operational or financial pressure, an early conversation can create options.
             </p>
-            
-            <div class="bg-burgundy-5 rounded-2xl p-8 border-l-4 border-burgundy">
-              <p class="text-lg md:text-xl font-light italic">
-                St Raphael Health works confidentially with hospital leadership, boards, municipalities, and investors to assess situations, stabilize operations, and restore control.
-              </p>
+
+            <div class="hero-note">
+              St Raphael Health works confidentially with hospital leadership, boards, municipalities, and investors to assess situations, stabilize operations, and restore control.
             </div>
           </div>
-          
-          <!-- Right: Gradient with Stats -->
-          <div class="lg:col-span-5 relative" data-animate>
-            <div class="relative rounded-3xl overflow-hidden p-10 lg:p-12" style="background: linear-gradient(135deg, rgba(120, 40, 60, 1) 0%, rgba(178, 34, 34, 1) 50%, rgba(212, 175, 55, 1) 100%);">
-              
-              <div class="relative z-10 text-white space-y-8">
-                <div>
-                  <div class="text-sm font-medium uppercase tracking-wide mb-2 text-white text-opacity-80">Response Time</div>
-                  <div class="text-5xl font-light mb-2">24-48h</div>
-                  <div class="text-base text-white text-opacity-90">Prompt and discreet follow-up</div>
-                </div>
-                
-                <div class="w-16 h-0.5 bg-white bg-opacity-30"></div>
-                
-                <div>
-                  <div class="text-sm font-medium uppercase tracking-wide mb-2 text-white text-opacity-80">Confidentiality</div>
-                  <div class="text-5xl font-light mb-2">100%</div>
-                  <div class="text-base text-white text-opacity-90">All inquiries treated privately</div>
-                </div>
-                
-                <div class="w-16 h-0.5 bg-white bg-opacity-30"></div>
-                
-                <div>
-                  <div class="text-sm font-medium uppercase tracking-wide mb-2 text-white text-opacity-80">Obligation</div>
-                  <div class="text-5xl font-light mb-2">Zero</div>
-                  <div class="text-base text-white text-opacity-90">No pressure, just options</div>
-                </div>
+
+          <!-- Right: Stats Card -->
+          <div class="fade-in-up delay-2">
+            <div class="stats-card">
+              <div class="stat-item">
+                <div class="stat-label">Response Time</div>
+                <div class="stat-value">24-48h</div>
+                <div class="stat-description">Prompt and discreet follow-up</div>
               </div>
-              
-              <!-- Decorative circle -->
-              <div class="absolute -bottom-20 -right-20 w-64 h-64 bg-white bg-opacity-10 rounded-full blur-2xl"></div>
+
+              <div class="stat-divider"></div>
+
+              <div class="stat-item">
+                <div class="stat-label">Confidentiality</div>
+                <div class="stat-value">100%</div>
+                <div class="stat-description">All inquiries treated privately</div>
+              </div>
+
+              <div class="stat-divider"></div>
+
+              <div class="stat-item">
+                <div class="stat-label">Obligation</div>
+                <div class="stat-value">Zero</div>
+                <div class="stat-description">No pressure, just options</div>
+              </div>
             </div>
           </div>
-          
+
         </div>
       </div>
     </section>
-    
-    <!-- Contact Form -->
-    <section class="py-24 bg-gradient-to-b from-warm-stone-light to-white">
-      <div class="container-custom max-w-4xl">
-        <div class="text-center mb-12" data-animate>
-          <h2 class="text-3xl md:text-4xl lg:text-5xl font-light mb-4">Send Us a Message</h2>
-          <p class="text-lg text-black text-opacity-70">We'll respond within 24-48 hours</p>
+
+    <!-- Contact Form Section -->
+    <section class="form-section">
+      <div class="form-container">
+        <div class="form-header fade-in-up">
+          <h2>Send Us a Message</h2>
+          <p>We'll respond within 24-48 hours</p>
         </div>
-        
-        <form data-contact-form class="bg-white p-10 md:p-12 lg:p-16 rounded-3xl shadow-2xl border border-warm-stone-20" data-animate>
-          <div class="grid md:grid-cols-2 gap-6 mb-6">
-            <div>
-              <label for="fullName" class="form-label">Full Name <span class="text-deep-red">*</span></label>
+
+        <form class="contact-form fade-in-up delay-1" data-contact-form>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fullName" class="form-label">Full Name <span class="required">*</span></label>
               <input type="text" id="fullName" name="fullName" class="form-input" required>
             </div>
-            
-            <div>
-              <label for="email" class="form-label">Email Address <span class="text-deep-red">*</span></label>
+
+            <div class="form-group">
+              <label for="email" class="form-label">Email Address <span class="required">*</span></label>
               <input type="email" id="email" name="email" class="form-input" required>
             </div>
           </div>
-          
-          <div class="grid md:grid-cols-2 gap-6 mb-6">
-            <div>
-              <label for="phone" class="form-label">Phone Number <span class="text-deep-red">*</span></label>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="phone" class="form-label">Phone Number <span class="required">*</span></label>
               <input type="tel" id="phone" name="phone" class="form-input" required>
             </div>
-            
-            <div>
-              <label for="organization" class="form-label">Organization / Hospital Name <span class="text-deep-red">*</span></label>
+
+            <div class="form-group">
+              <label for="organization" class="form-label">Organization / Hospital Name <span class="required">*</span></label>
               <input type="text" id="organization" name="organization" class="form-input" required>
             </div>
           </div>
-          
-          <div class="grid md:grid-cols-2 gap-6 mb-6">
-            <div>
-              <label for="cityState" class="form-label">City / State <span class="text-deep-red">*</span></label>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="cityState" class="form-label">City / State <span class="required">*</span></label>
               <input type="text" id="cityState" name="cityState" class="form-input" required>
             </div>
-            
-            <div>
+
+            <div class="form-group">
               <label for="reason" class="form-label">Reason for Contact</label>
-              <select id="reason" name="reason" class="form-input">
+              <select id="reason" name="reason" class="form-select">
                 <option value="">Select an option</option>
                 <option value="Advisory Services">Advisory Services</option>
                 <option value="Hospital Partnership">Hospital Partnership</option>
@@ -219,26 +989,26 @@
               </select>
             </div>
           </div>
-          
-          <div class="mb-6">
-            <label for="message" class="form-label">Message <span class="text-deep-red">*</span></label>
-            <textarea id="message" name="message" rows="6" class="form-input" required></textarea>
+
+          <div class="form-group">
+            <label for="message" class="form-label">Message <span class="required">*</span></label>
+            <textarea id="message" name="message" class="form-textarea" required></textarea>
           </div>
-          
-          <div class="mb-6">
-            <label class="flex items-start gap-3">
-              <input type="checkbox" name="consent" class="mt-1" required>
-              <span class="text-sm">I agree to be contacted by St Raphael Health regarding my inquiry. <span class="text-deep-red">*</span></span>
+
+          <div class="form-checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" name="consent" required>
+              <span>I agree to be contacted by St Raphael Health regarding my inquiry. <span class="required">*</span></span>
             </label>
           </div>
-          
-          <!-- Honeypot field (hidden from users) -->
-          <input type="text" name="website" style="position: absolute; left: -9999px;" tabindex="-1" autocomplete="off">
-          
-          <div class="text-center">
-            <button type="submit" class="btn btn-primary inline-flex items-center gap-2">
-              Submit Inquiry
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+          <!-- Honeypot field -->
+          <input type="text" name="website" class="honeypot" tabindex="-1" autocomplete="off">
+
+          <div class="form-submit">
+            <button type="submit" class="submit-btn">
+              <span>Submit Inquiry</span>
+              <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
               </svg>
             </button>
@@ -246,94 +1016,78 @@
         </form>
       </div>
     </section>
-    
+
     <!-- What Happens Next -->
-    <section class="py-20 bg-white">
-      <div class="container-custom max-w-5xl">
-        <div class="text-center mb-12" data-animate>
-          <h2 class="text-3xl md:text-4xl font-light mb-4">What Happens Next</h2>
+    <section class="process-section">
+      <div class="process-container">
+        <div class="process-header fade-in-up">
+          <h2>What Happens Next</h2>
         </div>
-        
-        <div class="grid md:grid-cols-3 gap-8 mb-16">
-          <!-- Step 1 -->
-          <div class="text-center" data-animate>
-            <div class="w-16 h-16 rounded-full bg-burgundy text-white flex items-center justify-center text-2xl font-light mx-auto mb-6">
-              1
-            </div>
-            <h3 class="text-xl font-normal mb-3 text-burgundy">We Review</h3>
-            <p class="text-base text-black text-opacity-70">A member of our operating team will review your message</p>
+
+        <div class="process-steps">
+          <div class="process-step fade-in-up delay-1">
+            <div class="step-number">1</div>
+            <h3 class="step-title">We Review</h3>
+            <p class="step-description">A member of our operating team will review your message</p>
           </div>
-          
-          <!-- Step 2 -->
-          <div class="text-center" data-animate>
-            <div class="w-16 h-16 rounded-full bg-deep-red text-white flex items-center justify-center text-2xl font-light mx-auto mb-6">
-              2
-            </div>
-            <h3 class="text-xl font-normal mb-3 text-deep-red">We Respond</h3>
-            <p class="text-base text-black text-opacity-70">We will respond promptly and discreetly within 24-48 hours</p>
+
+          <div class="process-step fade-in-up delay-2">
+            <div class="step-number">2</div>
+            <h3 class="step-title">We Respond</h3>
+            <p class="step-description">We will respond promptly and discreetly within 24-48 hours</p>
           </div>
-          
-          <!-- Step 3 -->
-          <div class="text-center" data-animate>
-            <div class="w-16 h-16 rounded-full bg-gold-ochre text-white flex items-center justify-center text-2xl font-light mx-auto mb-6">
-              3
-            </div>
-            <h3 class="text-xl font-normal mb-3 text-gold-ochre">We Assess</h3>
-            <p class="text-base text-black text-opacity-70">Our goal is to understand your situation and determine if we can help</p>
+
+          <div class="process-step fade-in-up delay-3">
+            <div class="step-number">3</div>
+            <h3 class="step-title">We Assess</h3>
+            <p class="step-description">Our goal is to understand your situation and determine if we can help</p>
           </div>
         </div>
-        
-        <div class="bg-gold-5 rounded-2xl p-8 md:p-10 text-center border-l-4 border-gold-ochre" data-animate>
-          <p class="text-xl md:text-2xl font-light italic mb-6">
+
+        <div class="confidence-note fade-in-up">
+          <p>
             No obligation, no pressure. All inquiries are treated as confidential.
           </p>
-          <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <div class="flex items-center gap-2 text-lg">
-              <svg class="w-6 h-6 text-gold-ochre" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-              </svg>
-              <a href="mailto:info@saintraphaelhealth.com" class="text-gold-ochre hover:underline font-medium">
-                info@saintraphaelhealth.com
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-  </main>
-  
-  <!-- Footer -->
-  <footer class="bg-warm-stone py-12 md:py-16 border-t border-black border-opacity-10">
-    <div class="container-custom">
-      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-        <nav aria-label="Legal navigation" class="flex flex-wrap items-center gap-4 text-sm">
-          <a href="/privacy-policy" class="text-black hover:text-gold-ochre transition-colors font-montserrat">Privacy Policy</a>
-          <span class="text-black" aria-hidden="true">·</span>
-          <a href="/terms" class="text-black hover:text-gold-ochre transition-colors font-montserrat">Terms & Conditions</a>
-          <span class="text-black" aria-hidden="true">·</span>
-          <a href="/compliance" class="text-black hover:text-gold-ochre transition-colors font-montserrat">Compliance</a>
-        </nav>
-        
-        <div class="text-sm">
-          <a href="mailto:info@saintraphaelhealth.com" class="text-black hover:text-gold-ochre transition-colors font-montserrat">
+          <a href="mailto:info@saintraphaelhealth.com" class="confidence-contact">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+            </svg>
             info@saintraphaelhealth.com
           </a>
         </div>
       </div>
-      
-      <div class="mt-8 pt-8 border-t border-black border-opacity-10 text-sm text-black text-opacity-60">
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-top">
+        <nav aria-label="Legal navigation" class="footer-nav">
+          <a href="/privacy-policy">Privacy Policy</a>
+          <span class="separator" aria-hidden="true">·</span>
+          <a href="/terms">Terms & Conditions</a>
+          <span class="separator" aria-hidden="true">·</span>
+          <a href="/compliance">Compliance</a>
+        </nav>
+
+        <div class="footer-email">
+          <a href="mailto:info@saintraphaelhealth.com">info@saintraphaelhealth.com</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
         <p>&copy; <span id="current-year">2026</span> St Raphael Health. All rights reserved.</p>
       </div>
     </div>
   </footer>
-  
+
   <script src="/js/site.js"></script>
   <script src="/js/forms.js"></script>
-  <script src="/js/animations.js"></script>
   <script>
     document.getElementById('current-year').textContent = new Date().getFullYear();
   </script>
-  
+
 </body>
 </html>

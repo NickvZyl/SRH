@@ -677,8 +677,24 @@
       max-width: 1200px;
       margin: 0 auto;
       position: relative;
-      min-height: 700px;
+      min-height: 850px;
       padding: 2rem;
+    }
+
+    @media (max-width: 1024px) {
+      .ecosystem-visual {
+        min-height: 1100px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .ecosystem-visual {
+        min-height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        padding: 1rem;
+      }
     }
 
     /* Tech-style connection lines */
@@ -694,6 +710,12 @@
       height: 100%;
     }
 
+    @media (max-width: 768px) {
+      .eco-connections {
+        display: none;
+      }
+    }
+
     /* Center hub - larger with gradient background and pulsing effect */
     .eco-center {
       position: absolute;
@@ -701,6 +723,16 @@
       top: 50%;
       transform: translate(-50%, -50%);
       z-index: 3;
+    }
+
+    @media (max-width: 768px) {
+      .eco-center {
+        position: relative;
+        left: auto;
+        top: auto;
+        transform: none;
+        margin: 0 auto 2rem;
+      }
     }
 
     .center-hub {
@@ -810,50 +842,103 @@
         0 8px 32px rgba(203, 168, 92, 0.06);
       border: 1px solid rgba(203, 168, 92, 0.12);
       transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      max-width: 240px;
+      max-width: 280px;
       text-align: center;
       backdrop-filter: blur(8px);
+    }
+
+    @media (max-width: 768px) {
+      .eco-node {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        transform: none !important;
+        max-width: 100%;
+        margin: 0 auto;
+      }
     }
 
     @keyframes slide-in {
       from {
         opacity: 0;
-        transform: scale(0.9);
       }
       to {
         opacity: 1;
-        transform: scale(1);
       }
     }
 
-    /* Orbital positioning - clock positions */
-    .eco-node:nth-child(2) {
-      animation-delay: 0.2s;
-      top: 5%;
-      left: 8%;
-    }
+    /* Orbital positioning - perfectly aligned in grid */
+    /* Top left - Municipal Leaders (3rd child after connections + center) */
     .eco-node:nth-child(3) {
-      animation-delay: 0.4s;
-      top: 5%;
-      right: 8%;
+      animation-delay: 0.2s;
+      top: 50%;
+      left: 5%;
+      transform: translateY(-100%) translateY(-2rem);
     }
+    /* Top right - Private Equity (4th child) */
     .eco-node:nth-child(4) {
-      animation-delay: 0.6s;
-      bottom: 8%;
-      left: 8%;
+      animation-delay: 0.4s;
+      top: 50%;
+      right: 5%;
+      transform: translateY(-100%) translateY(-2rem);
     }
+    /* Bottom left - Health System Boards (5th child) */
     .eco-node:nth-child(5) {
+      animation-delay: 0.6s;
+      top: 50%;
+      left: 5%;
+      transform: translateY(2rem);
+    }
+    /* Bottom right - Lenders & Bondholders (6th child) */
+    .eco-node:nth-child(6) {
       animation-delay: 0.8s;
-      bottom: 8%;
-      right: 8%;
+      top: 50%;
+      right: 5%;
+      transform: translateY(2rem);
+    }
+
+    @media (max-width: 1200px) {
+      .eco-node:nth-child(3) {
+        left: 2%;
+        transform: translateY(-100%) translateY(-1.5rem);
+      }
+      .eco-node:nth-child(4) {
+        right: 2%;
+        transform: translateY(-100%) translateY(-1.5rem);
+      }
+      .eco-node:nth-child(5) {
+        left: 2%;
+        transform: translateY(1.5rem);
+      }
+      .eco-node:nth-child(6) {
+        right: 2%;
+        transform: translateY(1.5rem);
+      }
     }
 
     .eco-node:hover {
-      transform: scale(1.05) translateY(-4px);
       box-shadow:
         0 4px 20px rgba(203, 168, 92, 0.12),
         0 12px 48px rgba(203, 168, 92, 0.08);
       border-color: rgba(203, 168, 92, 0.25);
+    }
+
+    .eco-node:nth-child(3):hover {
+      transform: translateY(-100%) translateY(-2rem) scale(1.03);
+    }
+
+    .eco-node:nth-child(4):hover {
+      transform: translateY(-100%) translateY(-2rem) scale(1.03);
+    }
+
+    .eco-node:nth-child(5):hover {
+      transform: translateY(2rem) scale(1.03);
+    }
+
+    .eco-node:nth-child(6):hover {
+      transform: translateY(2rem) scale(1.03);
     }
 
     .eco-node-icon {
@@ -871,15 +956,15 @@
     }
 
     .eco-node h3 {
-      font-size: 1.1rem;
+      font-size: 1.05rem;
       font-weight: 700;
-      margin-bottom: 0.85rem;
+      margin-bottom: 0.75rem;
       color: var(--text-dark);
       line-height: 1.3;
     }
 
     .eco-node p {
-      font-size: 0.88rem;
+      font-size: 0.84rem;
       font-weight: 400;
       color: #666;
       line-height: 1.5;
@@ -1808,10 +1893,9 @@
         <div class="hero-grid">
           <div class="hero-content">
             <div class="hero-eyebrow">Hospital Advisory</div>
-            <h1>Turning Distressed Hospitals into <span class="accent">Sustainable Operations</span></h1>
+            <h1>Turning Distressed Hospitals into <span class="accent">Successful Operations</span></h1>
             <p class="hero-lead">
-              We don't advise from the sidelines. We embed with your team, restructure operations,
-              and drive measurable turnarounds—transforming crisis into long-term viability.
+              We don't advise from the sidelines. We are seasoned operators and capital experts that embed with your team, restructure operations and balance sheets, to drive successful turnarounds—transforming crisis into long-term profitability.
             </p>
             <a href="/contact/" class="hero-cta">
               <span>Start the Conversation</span>
@@ -1834,7 +1918,7 @@
         <div class="float-content">
           <div class="float-text fade-in-up">
             <div class="kicker">Recent Results</div>
-            <h2>Every engagement produces <span class="highlight">measurable outcomes</span>—not reports that sit on shelves.</h2>
+            <h2>In every engagement we deliver <span class="highlight">measurable outcomes</span>: cashflow, profit, a refinance or a transaction - not useless reports that sit on shelves.</h2>
           </div>
 
           <div class="stat-ring scale-in">
@@ -1862,7 +1946,7 @@
     <section class="metrics-scatter">
       <div class="metrics-header fade-in-up">
         <div class="kicker">Proven Track Record</div>
-        <h2>Real Turnarounds</h2>
+        <h2>Real Turnarounds we've Executed</h2>
         <p>These aren't projections. They're completed transformations.</p>
       </div>
 
@@ -1877,8 +1961,8 @@
               <span class="transform-arrow">→</span>
               <span class="transform-to">$290M</span>
             </div>
-            <div class="metric-label">Gross Revenue</div>
-            <div class="metric-detail">19% profit margin achieved</div>
+            <div class="metric-label">Net Revenue</div>
+            <div class="metric-detail">$55M Profit and 19% profit margin achieved, 18 months</div>
           </div>
         </div>
 
@@ -1892,8 +1976,8 @@
               <span class="transform-arrow">→</span>
               <span class="transform-to">$190M</span>
             </div>
-            <div class="metric-label">Gross Revenue</div>
-            <div class="metric-detail">12% profit margin, 6 months</div>
+            <div class="metric-label">Net Revenue</div>
+            <div class="metric-detail">$22M Profit and 12% profit margin achieved, 6 months</div>
           </div>
         </div>
 
@@ -1907,8 +1991,8 @@
               <span class="transform-arrow">→</span>
               <span class="transform-to">$56M</span>
             </div>
-            <div class="metric-label">Gross Revenue</div>
-            <div class="metric-detail">32% profit margin achieved</div>
+            <div class="metric-label">Net  Revenue</div>
+            <div class="metric-detail">$18M Profit and 32% profit margin achieved, 12 months</div>
           </div>
         </div>
       </div>
@@ -1921,9 +2005,7 @@
           <div class="location">Greater Houston, TX</div>
           <h2>BMC Hospitals</h2>
           <p>
-            A distressed two-hospital system operating at significant losses. Within 18 months,
-            we restructured operations, expanded services, and transformed it into one of
-            Houston's fastest-growing health systems.
+            A distressed two-hospital system was operating at significant losses. Within 18 months, we restructured operations, acquired 2 other facilities, expanded services, and transformed it into one of Houston's fastest-growing health systems.
           </p>
         </div>
 
@@ -1966,7 +2048,7 @@
       <div class="ecosystem-header fade-in-up">
         <div class="kicker">Stakeholder Alignment</div>
         <h2>Built for Hospitals Under Pressure</h2>
-        <p>We work across the entire stakeholder ecosystem to align interests and drive sustainable outcomes.</p>
+        <p>We work across the entire hospital stakeholder ecosystem to align interests and drive sustainable and winning outcomes for all.</p>
       </div>
 
       <div class="ecosystem-visual">
@@ -1999,25 +2081,25 @@
         <div class="eco-node node-1">
           <div class="eco-node-icon">🏛</div>
           <h3>Municipal Leaders</h3>
-          <p>Protecting community healthcare access while managing fiscal responsibility</p>
+          <p>Protecting community healthcare access while increasing services by managing operations with fiscal responsibility</p>
         </div>
 
         <div class="eco-node node-2">
           <div class="eco-node-icon">💼</div>
           <h3>Private Equity</h3>
-          <p>Maximizing value through operational excellence, not financial engineering</p>
+          <p>Maximizing value through organic growth levers and operational excellence, not financial engineering</p>
         </div>
 
         <div class="eco-node node-3">
           <div class="eco-node-icon">👥</div>
           <h3>Health System Boards</h3>
-          <p>Strategic guidance for governance through complex transitions</p>
+          <p>Strategic guidance and execution through complex transitions and transactions that align with governance requirements</p>
         </div>
 
         <div class="eco-node node-4">
           <div class="eco-node-icon">🏦</div>
           <h3>Lenders & Bondholders</h3>
-          <p>Protecting investments through structured turnaround execution</p>
+          <p>Protecting principal investments through structured turnaround execution prioritizing return of deployed capital</p>
         </div>
       </div>
     </section>
@@ -2028,18 +2110,16 @@
         <div class="execution-message fade-in-up">
           <h2>This Is Not Consulting.<span class="emphasis">This Is Execution.</span></h2>
           <p>
-            We don't deliver slide decks and recommendations. We take operational control,
-            make the hard decisions, and stay until the job is done. Our team has restructured
-            more distressed hospitals than any other firm in the country.
+            We don't deliver slide decks and recommendations. We take an operational role with responsibility (the buck stops with us), help make and execute the hard decisions, and stay until the job is done. Our partners always feel relief when we start because we deliver first results in days, not months.
           </p>
         </div>
 
         <div class="execution-visual scale-in">
           <div class="execution-circle">
             <div class="stat-number">100%</div>
-            <div class="stat-label">Implementation</div>
+            <div class="stat-label">Action and Implementation</div>
             <p class="stat-caption">
-              Every recommendation we make, we execute. No orphaned strategies.
+              Every recommendation we make, we execute. No Orphaned strategies.
             </p>
           </div>
         </div>
@@ -2067,7 +2147,7 @@
             <div class="step-number">2</div>
           </div>
           <div class="step-title">Stabilize</div>
-          <p class="step-desc">Immediate cash preservation and operational triage within first 30 days</p>
+          <p class="step-desc">Immediate cash preservation, capital restructuring (if necessary) and operational quick wins within first 30 days</p>
         </div>
 
         <div class="process-step">
@@ -2075,7 +2155,7 @@
             <div class="step-number">3</div>
           </div>
           <div class="step-title">Transform</div>
-          <p class="step-desc">Structural changes to revenue cycle, cost base, and service lines</p>
+          <p class="step-desc">Structural changes to revenue cycle, cost base, service lines and capital structure/ownership.</p>
         </div>
 
         <div class="process-step">
@@ -2098,10 +2178,9 @@
         <div class="timeline-item">
           <div class="timeline-icon">!</div>
           <div class="timeline-kicker">The Problem</div>
-          <div class="timeline-title">Rural and community hospitals are closing at record rates</div>
+          <div class="timeline-title">Community hospitals are closing at record rates</div>
           <p class="timeline-text">
-            Since 2010, over 130 rural hospitals have closed. Hundreds more operate on the brink.
-            Traditional consulting hasn't solved the problem because consultants leave before implementation.
+            Since 2010, over 130 hospitals have closed in Texas.  27% of total current Texas hospitals  operate in distress. Traditional consulting hasn't solved the problem because consultants leave before implementation.
           </p>
         </div>
 
@@ -2110,8 +2189,7 @@
           <div class="timeline-kicker">Our Response</div>
           <div class="timeline-title">Operators who stay until the job is done</div>
           <p class="timeline-text">
-            We built a firm of healthcare operators—people who have run hospitals, not just advised them.
-            We take interim leadership roles, make difficult decisions, and own outcomes.
+            We built a firm of healthcare operators and private equity professionals —people who have run hospitals, and raised capital, not just advised them. We take interim leadership roles, make difficult decisions, and own outcomes.
           </p>
         </div>
 

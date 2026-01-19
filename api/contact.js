@@ -1,7 +1,9 @@
 // Vercel Serverless Function - Contact Form Handler
-import { Resend } from 'resend';
 import fs from 'fs';
 import path from 'path';
+
+// Use native fetch if available (Node 18+), otherwise will need node-fetch
+const fetchImpl = globalThis.fetch || fetch;
 
 // Rate limiting store (in-memory, resets on cold start)
 const rateLimitStore = new Map();
@@ -55,7 +57,7 @@ export default async function handler(req, res) {
     const zohoWebhookUrl = 'https://flow.zoho.com/911288603/flow/webhook/incoming?zapikey=1001.411633f8f20975946015cae753d84208.9f9f5eba48c94a3632fb557f744a2c05&isdebug=false';
 
     try {
-      const zohoResponse = await fetch(zohoWebhookUrl, {
+      const zohoResponse = await fetchImpl(zohoWebhookUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -74,69 +76,9 @@ export default async function handler(req, res) {
       // Don't fail the request - log the error and continue
     }
 
-    // Send email via Resend (optional backup)
-    const resend = new Resend(process.env.RESEND_API_KEY);
-    
-    const emailHtml = `
-      <h2>New Contact Form Submission</h2>
-      <p><strong>From:</strong> ${fullName}</p>
-      <p><strong>Email:</strong> ${email}</p>
-      <p><strong>Phone:</strong> ${phone}</p>
-      <p><strong>Organization:</strong> ${organization}</p>
-      <p><strong>City/State:</strong> ${cityState}</p>
-      ${reason ? `<p><strong>Reason:</strong> ${reason}</p>` : ''}
-      <p><strong>Message:</strong></p>
-      <p>${message.replace(/\n/g, '<br>')}</p>
-      <hr>
-      <p style="color: #666; font-size: 12px;">Submitted from St Raphael Health website</p>
-    `;
-    
-    const emailText = `
-New Contact Form Submission
-
-From: ${fullName}
-Email: ${email}
-Phone: ${phone}
-Organization: ${organization}
-City/State: ${cityState}
-${reason ? `Reason: ${reason}\n` : ''}
-Message:
-${message}
-
----
-Submitted from St Raphael Health website
-    `;
-    
-    const toEmail = process.env.TO_EMAIL || 'info@saintraphaelhealth.com';
-    const ccEmail = process.env.CC_EMAIL;
-    
-    const emailData = {
-      from: 'SRH Website <noreply@saintraphaelhealth.com>',
-      to: [toEmail],
-      subject: `New Contact: ${fullName} - ${organization}`,
-      html: emailHtml,
-      text: emailText,
-      replyTo: email,
-    };
-    
-    // Add CC if configured
-    if (ccEmail) {
-      emailData.cc = [ccEmail];
-    }
-    
-    const result = await resend.emails.send(emailData);
-    
-    if (result.error) {
-      console.error('Resend error:', result.error);
-      return res.status(500).json({ 
-        ok: false, 
-        message: 'Failed to send email. Please try again or contact us directly.' 
-      });
-    }
-    
-    return res.status(200).json({ 
-      ok: true, 
-      message: 'Message sent successfully' 
+    return res.status(200).json({
+      ok: true,
+      message: 'Message sent successfully'
     });
     
   } catch (error) {

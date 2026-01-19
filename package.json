@@ -1,6 +1,7 @@
 {
   "name": "srh-website",
   "version": "1.0.0",
+  "type": "module",
   "description": "St Raphael Health - Static Website",
   "scripts": {
     "dev": "tailwindcss -i ./src/styles/global.css -o ./public/styles.css --watch",
@@ -16,7 +17,6 @@
     "tailwindcss": "^3.4.0"
   },
   "dependencies": {
-    "resend": "^3.0.0",
     "dotenv": "^16.4.1"
   }
 }

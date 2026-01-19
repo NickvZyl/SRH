@@ -38,9 +38,9 @@ function initContactForm(form) {
       submitButton.disabled = true;
       submitButton.textContent = 'Sending...';
     }
-    
+
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch('https://flow.zoho.com/911288603/flow/webhook/incoming?zapikey=1001.411633f8f20975946015cae753d84208.9f9f5eba48c94a3632fb557f744a2c05&isdebug=false', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -48,17 +48,24 @@ function initContactForm(form) {
         body: JSON.stringify(data),
       });
       
-      const result = await response.json();
-      
-      if (response.ok && result.ok) {
-        showFormMessage(form, 'success', 
+      // Zoho webhook typically returns 200 for success
+      if (response.ok) {
+        showFormMessage(form, 'success',
           'Thank you. A member of our operating team will be in touch shortly.'
         );
         form.reset();
       } else {
-        showFormMessage(form, 'error', 
-          result.message || 'There was an error sending your message. Please try again or contact us directly at info@saintraphaelhealth.com'
-        );
+        // Try to get error message from response
+        let errorMessage = 'There was an error sending your message. Please try again or contact us directly at info@saintraphaelhealth.com';
+        try {
+          const result = await response.json();
+          if (result.message) {
+            errorMessage = result.message;
+          }
+        } catch (e) {
+          // If JSON parsing fails, use default message
+        }
+        showFormMessage(form, 'error', errorMessage);
       }
     } catch (error) {
       console.error('Form submission error:', error);

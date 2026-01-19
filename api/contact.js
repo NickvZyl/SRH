@@ -50,8 +50,31 @@ export default async function handler(req, res) {
       console.error('Failed to log submission to file:', logError);
       // Continue even if logging fails - don't block the submission
     }
-    
-    // Send email via Resend
+
+    // Send to Zoho webhook
+    const zohoWebhookUrl = 'https://flow.zoho.com/911288603/flow/webhook/incoming?zapikey=1001.411633f8f20975946015cae753d84208.9f9f5eba48c94a3632fb557f744a2c05&isdebug=false';
+
+    try {
+      const zohoResponse = await fetch(zohoWebhookUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ fullName, email, phone, organization, cityState, reason, message }),
+      });
+
+      if (!zohoResponse.ok) {
+        console.error('Zoho webhook error:', zohoResponse.status, zohoResponse.statusText);
+        // Don't fail the request - log the error and continue
+      } else {
+        console.log('Successfully sent to Zoho webhook');
+      }
+    } catch (zohoError) {
+      console.error('Failed to send to Zoho webhook:', zohoError);
+      // Don't fail the request - log the error and continue
+    }
+
+    // Send email via Resend (optional backup)
     const resend = new Resend(process.env.RESEND_API_KEY);
     
     const emailHtml = `

@@ -1,5 +1,7 @@
 // Vercel Serverless Function - Contact Form Handler
 import { Resend } from 'resend';
+import fs from 'fs';
+import path from 'path';
 
 // Rate limiting store (in-memory, resets on cold start)
 const rateLimitStore = new Map();
@@ -39,6 +41,14 @@ export default async function handler(req, res) {
     const errors = validateForm({ fullName, email, phone, organization, cityState, message });
     if (Object.keys(errors).length > 0) {
       return res.status(400).json({ ok: false, message: 'Validation failed', errors });
+    }
+
+    // Log submission to file (backup)
+    try {
+      logSubmissionToFile({ fullName, email, phone, organization, cityState, reason, message });
+    } catch (logError) {
+      console.error('Failed to log submission to file:', logError);
+      // Continue even if logging fails - don't block the submission
     }
     
     // Send email via Resend
@@ -175,4 +185,37 @@ function checkRateLimit(clientIp) {
   }
   
   return clientData.count <= MAX_REQUESTS;
+}
+
+function logSubmissionToFile(data) {
+  const timestamp = new Date().toISOString();
+  const logEntry = `
+================================================================================
+SUBMISSION: ${timestamp}
+================================================================================
+Name: ${data.fullName}
+Email: ${data.email}
+Phone: ${data.phone}
+Organization: ${data.organization}
+City/State: ${data.cityState}
+Reason: ${data.reason || 'Not specified'}
+Message:
+${data.message}
+================================================================================
+
+`;
+
+  // In Vercel, /tmp is the only writable directory
+  const logDir = process.env.VERCEL ? '/tmp' : path.join(process.cwd(), 'logs');
+  const logFile = path.join(logDir, 'contact-submissions.log');
+
+  // Create logs directory if it doesn't exist (only works locally, not on Vercel)
+  if (!process.env.VERCEL && !fs.existsSync(logDir)) {
+    fs.mkdirSync(logDir, { recursive: true });
+  }
+
+  // Append to log file
+  fs.appendFileSync(logFile, logEntry, 'utf8');
+
+  console.log(`Submission logged to: ${logFile}`);
 }

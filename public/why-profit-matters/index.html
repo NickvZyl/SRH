@@ -3,450 +3,1289 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <title>Why Profit Matters - St Raphael Health</title>
   <meta name="description" content="Profitability is not the objective. It is the enabler of care, stability, and choice for hospitals.">
   <link rel="canonical" href="https://saintraphaelhealth.com/why-profit-matters">
-  
+
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://saintraphaelhealth.com/why-profit-matters">
   <meta property="og:title" content="Why Profit Matters - St Raphael Health">
   <meta property="og:description" content="Profitability is the enabler of care, stability, and choice.">
   <meta property="og:image" content="https://saintraphaelhealth.com/assets/logos/SRH Logo Light Background.png">
-  
+
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://saintraphaelhealth.com/why-profit-matters">
   <meta property="twitter:title" content="Why Profit Matters - St Raphael Health">
   <meta property="twitter:description" content="Profitability is the enabler of care, stability, and choice.">
   <meta property="twitter:image" content="https://saintraphaelhealth.com/assets/logos/SRH Logo Light Background.png">
-  
+
   <link rel="icon" type="image/svg+xml" href="/assets/logos/Icon.svg">
   <link rel="icon" type="image/png" href="/assets/logos/Icon.png">
   <link rel="apple-touch-icon" href="/assets/logos/Icon.png">
-  
+
+  <style>
+    /* Self-hosted Montserrat fonts */
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('/fonts/montserrat-v31-latin-300.woff2') format('woff2'),
+           url('/fonts/montserrat-v31-latin-300.woff') format('woff');
+      font-weight: 300;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('/fonts/montserrat-v31-latin-regular.woff2') format('woff2'),
+           url('/fonts/montserrat-v31-latin-regular.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('/fonts/montserrat-v31-latin-500.woff2') format('woff2'),
+           url('/fonts/montserrat-v31-latin-500.woff') format('woff');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('/fonts/montserrat-v31-latin-600.woff2') format('woff2'),
+           url('/fonts/montserrat-v31-latin-600.woff') format('woff');
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('/fonts/montserrat-v31-latin-700.woff2') format('woff2'),
+           url('/fonts/montserrat-v31-latin-700.woff') format('woff');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('/fonts/montserrat-v31-latin-800.woff2') format('woff2'),
+           url('/fonts/montserrat-v31-latin-800.woff') format('woff');
+      font-weight: 800;
+      font-style: normal;
+      font-display: swap;
+    }
+  </style>
   <link rel="stylesheet" href="/styles.css">
-  <link rel="stylesheet" href="/styles/animations.css">
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <style>
+    /* ═══════════════════════════════════════════════════════════
+       ST RAPHAEL HEALTH – WHY PROFIT MATTERS
+       Refined Executive Design Language
+       ═══════════════════════════════════════════════════════════ */
+
+    :root {
+      --gold: #CBA85C;
+      --gold-light: #EDBD56;
+      --orange: #F28A32;
+      --warm-grey: #DBD5CA;
+      --text-dark: #2a2a2a;
+      --text-medium: #3a3a3a;
+      --text-light: #555555;
+      --white: #FFFFFF;
+      --cream: #FFFBF5;
+      --off-white: #FFF9F0;
+
+      --accent-yellow: #FFD966;
+      --accent-amber: #FFBF47;
+      --accent-coral: #FF9D6E;
+      --accent-red: #C2322F;
+
+      --wash-yellow: rgba(255, 217, 102, 0.04);
+      --wash-amber: rgba(255, 191, 71, 0.05);
+      --wash-orange: rgba(242, 138, 50, 0.04);
+
+      --font: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font);
+      font-weight: 400;
+      color: var(--text-dark);
+      background: var(--cream);
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--gold);
+      color: var(--white);
+      padding: 8px 16px;
+      text-decoration: none;
+      z-index: 100;
+      font-weight: 600;
+    }
+
+    .skip-link:focus {
+      top: 0;
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       HERO SECTION
+       ═══════════════════════════════════════════════════════════ */
+
+    .hero {
+      padding: 10rem 5% 8rem;
+      position: relative;
+      background: linear-gradient(135deg, var(--cream) 0%, var(--off-white) 100%);
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -20%;
+      right: -5%;
+      width: 80%;
+      height: 140%;
+      background: linear-gradient(145deg,
+        transparent 0%,
+        var(--wash-yellow) 30%,
+        var(--wash-amber) 50%,
+        var(--wash-orange) 70%,
+        transparent 100%
+      );
+      transform: rotate(-12deg);
+      pointer-events: none;
+    }
+
+    .hero-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 2rem;
+    }
+
+    .hero-eyebrow::before {
+      content: '';
+      width: 36px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      font-weight: 300;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: var(--text-dark);
+      margin-bottom: 1.5rem;
+    }
+
+    .hero h2 {
+      font-size: clamp(2.5rem, 5vw, 4.5rem);
+      font-weight: 600;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      color: var(--gold);
+      margin-bottom: 3rem;
+    }
+
+    .hero-description {
+      font-size: 1.35rem;
+      font-weight: 400;
+      line-height: 1.7;
+      color: var(--text-light);
+      max-width: 900px;
+      margin: 0 auto 4rem;
+    }
+
+    .hero-comparison {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .comparison-card {
+      background: var(--white);
+      border-radius: 12px;
+      padding: 2.5rem;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+      border-left: 4px solid var(--gold);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .comparison-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    }
+
+    .comparison-card:first-child {
+      border-left-color: var(--accent-red);
+    }
+
+    .comparison-card:last-child {
+      border-left-color: var(--gold);
+    }
+
+    .comparison-title {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: var(--text-dark);
+    }
+
+    .comparison-card:first-child .comparison-title {
+      color: var(--accent-red);
+    }
+
+    .comparison-card:last-child .comparison-title {
+      color: var(--gold);
+    }
+
+    .comparison-text {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: var(--text-light);
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       SECTION SEPARATORS
+       ═══════════════════════════════════════════════════════════ */
+
+    .section {
+      padding: 9rem 5%;
+      position: relative;
+    }
+
+    .section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 20%;
+      right: 20%;
+      height: 2px;
+      background: linear-gradient(90deg,
+        transparent,
+        var(--gold) 30%,
+        var(--orange) 70%,
+        transparent
+      );
+    }
+
+    .section-light {
+      background: linear-gradient(180deg,
+        rgba(255, 251, 230, 0.5) 0%,
+        rgba(255, 253, 240, 0.3) 100%
+      );
+    }
+
+    .section-white {
+      background: var(--white);
+    }
+
+    .section-cream {
+      background: var(--cream);
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       SECTION HEADERS
+       ═══════════════════════════════════════════════════════════ */
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 5rem;
+      max-width: 1000px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .section-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+    }
+
+    .section-kicker::before {
+      content: '';
+      width: 36px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+    }
+
+    .section-title {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      color: var(--text-dark);
+      margin-bottom: 1.5rem;
+    }
+
+    .section-subtitle {
+      font-size: 1.3rem;
+      font-weight: 400;
+      line-height: 1.7;
+      color: var(--text-light);
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       REALITY SECTION
+       ═══════════════════════════════════════════════════════════ */
+
+    .reality-container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .reality-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 4rem;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    }
+
+    .reality-statement {
+      font-size: 2rem;
+      font-weight: 400;
+      line-height: 1.5;
+      text-align: center;
+      margin-bottom: 3rem;
+      color: var(--text-dark);
+    }
+
+    .reality-intro {
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--gold);
+      margin-bottom: 2rem;
+    }
+
+    .reality-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+      margin-bottom: 3rem;
+    }
+
+    .reality-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1.5rem;
+      background: linear-gradient(135deg, rgba(203, 168, 92, 0.08), rgba(255, 191, 71, 0.12));
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .reality-item:hover {
+      transform: translateX(4px);
+    }
+
+    .reality-item i {
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+      color: var(--gold);
+      margin-top: 2px;
+    }
+
+    .reality-item span {
+      font-size: 1.05rem;
+      line-height: 1.6;
+      color: var(--text-dark);
+    }
+
+    .reality-conclusion {
+      padding-top: 3rem;
+      border-top: 2px solid rgba(219, 213, 202, 0.3);
+      text-align: center;
+    }
+
+    .reality-conclusion p {
+      font-size: 1.75rem;
+      font-weight: 400;
+      font-style: italic;
+      line-height: 1.5;
+      color: var(--gold);
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       THREE PILLARS SECTION
+       ═══════════════════════════════════════════════════════════ */
+
+    .pillars-container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2.5rem;
+    }
+
+    .pillar-card {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 3rem;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pillar-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+    }
+
+    .pillar-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
+    }
+
+    .pillar-icon-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .pillar-number {
+      width: 64px;
+      height: 64px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.75rem;
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+
+    .pillar-icon {
+      width: 56px;
+      height: 56px;
+      color: var(--gold);
+    }
+
+    .pillar-title {
+      font-size: 1.75rem;
+      font-weight: 700;
+      line-height: 1.3;
+      color: var(--text-dark);
+      margin-bottom: 1.5rem;
+    }
+
+    .pillar-intro {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--text-medium);
+      margin-bottom: 1.5rem;
+    }
+
+    .pillar-list {
+      list-style: none;
+      margin-bottom: 2rem;
+    }
+
+    .pillar-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      line-height: 1.6;
+      color: var(--text-light);
+    }
+
+    .pillar-list li i {
+      width: 20px;
+      height: 20px;
+      flex-shrink: 0;
+      color: var(--gold);
+      margin-top: 2px;
+    }
+
+    .pillar-conclusion {
+      padding-top: 1.5rem;
+      border-top: 2px solid rgba(219, 213, 202, 0.3);
+      font-size: 1.05rem;
+      font-weight: 600;
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       DIAGRAM SECTION
+       ═══════════════════════════════════════════════════════════ */
+
+    .diagram-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .diagram-title {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      color: var(--text-dark);
+      margin-bottom: 4rem;
+    }
+
+    .diagram-wrapper {
+      margin-bottom: 4rem;
+    }
+
+    .diagram-wrapper img {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
+    }
+
+    .diagram-caption {
+      font-size: 1.3rem;
+      font-weight: 400;
+      line-height: 1.7;
+      color: var(--text-light);
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .diagram-caption strong {
+      font-weight: 700;
+      color: var(--gold);
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       CORE PRINCIPLE SECTION
+       ═══════════════════════════════════════════════════════════ */
+
+    .principle-container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .principle-content {
+      background: var(--white);
+      border-radius: 16px;
+      padding: 4rem;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+      margin-bottom: 4rem;
+    }
+
+    .principle-content p {
+      font-size: 1.15rem;
+      line-height: 1.8;
+      color: var(--text-dark);
+      margin-bottom: 1.5rem;
+    }
+
+    .principle-content ul {
+      list-style: none;
+      margin: 1.5rem 0 2rem 1.5rem;
+    }
+
+    .principle-content ul li {
+      font-size: 1.15rem;
+      line-height: 1.8;
+      color: var(--text-dark);
+      margin-bottom: 0.75rem;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+
+    .principle-content ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.75rem;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--gold);
+    }
+
+    .principle-highlight {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin: 2rem 0;
+    }
+
+    .principle-quote {
+      background: linear-gradient(135deg, rgba(203, 168, 92, 0.12), rgba(255, 191, 71, 0.15));
+      border-radius: 12px;
+      padding: 3rem;
+      text-align: center;
+    }
+
+    .principle-quote blockquote {
+      font-size: 1.75rem;
+      font-weight: 500;
+      font-style: italic;
+      line-height: 1.6;
+      color: var(--gold);
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       FINAL CTA
+       ═══════════════════════════════════════════════════════════ */
+
+    .final-cta {
+      padding: 10rem 5%;
+      background: rgba(255, 255, 255, 0.95);
+      text-align: center;
+      position: relative;
+    }
+
+    .final-cta::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 20%;
+      right: 20%;
+      height: 2px;
+      background: linear-gradient(90deg,
+        transparent,
+        var(--gold) 30%,
+        var(--orange) 70%,
+        transparent
+      );
+    }
+
+    .cta-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .cta-title {
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin-bottom: 3rem;
+      color: var(--text-dark);
+    }
+
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 1.25rem 2.75rem;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+      color: var(--white);
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      border-radius: 2px;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 4px 16px rgba(203, 168, 92, 0.25);
+    }
+
+    .cta-button::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, var(--orange) 0%, var(--accent-coral) 100%);
+      opacity: 0;
+      transition: opacity 0.35s ease;
+    }
+
+    .cta-button:hover::before {
+      opacity: 1;
+    }
+
+    .cta-button:hover {
+      box-shadow: 0 6px 24px rgba(242, 138, 50, 0.35);
+      transform: translateY(-2px);
+    }
+
+    .cta-button span {
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-button svg {
+      width: 20px;
+      height: 20px;
+      position: relative;
+      z-index: 1;
+      transition: transform 0.35s ease;
+    }
+
+    .cta-button:hover svg {
+      transform: translateX(4px);
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════════════════════════ */
+
+    footer {
+      padding: 4.5rem 5%;
+      background: #E8DCC8;
+      border-top: 1px solid rgba(203, 168, 92, 0.15);
+      position: relative;
+    }
+
+    footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 20%;
+      right: 20%;
+      height: 2px;
+      background: linear-gradient(90deg,
+        transparent,
+        var(--gold) 30%,
+        var(--gold-light) 50%,
+        var(--orange) 70%,
+        transparent
+      );
+    }
+
+    .footer-content {
+      max-width: 1600px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-logo {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+
+    .footer-logo .accent {
+      color: var(--gold);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .footer-links a {
+      color: var(--text-dark);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--gold);
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       ANIMATIONS
+       ═══════════════════════════════════════════════════════════ */
+
+    .fade-in-up {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
+                  transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .fade-in-up.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .stagger-1 { transition-delay: 0.1s; }
+    .stagger-2 { transition-delay: 0.2s; }
+    .stagger-3 { transition-delay: 0.3s; }
+
+    /* ═══════════════════════════════════════════════════════════
+       RESPONSIVE
+       ═══════════════════════════════════════════════════════════ */
+
+    @media (max-width: 1024px) {
+      .hero {
+        padding: 8rem 5% 6rem;
+      }
+
+      .hero-comparison {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .pillars-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .reality-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .section {
+        padding: 7rem 5%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        padding: 6rem 4% 4rem;
+      }
+
+      .section {
+        padding: 5rem 4%;
+      }
+
+      .reality-card,
+      .principle-content,
+      .principle-quote {
+        padding: 2.5rem;
+      }
+
+      .pillar-card {
+        padding: 2rem;
+      }
+
+      .final-cta {
+        padding: 6rem 4%;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+      }
+
+      .footer-links {
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  
-  <!-- Header (same structure) -->
-  <header class="bg-white border-b border-warm-stone sticky top-0" style="z-index: 10000;">
+
+  <!-- Global Header Component -->
+  <header class="bg-white border-b border-warm-stone sticky top-0" style="z-index: 10000; border-bottom: 1px solid rgba(219, 213, 202, 0.3);">
     <a href="#main-content" class="skip-link">Skip to main content</a>
-    
-    <nav class="container-custom py-4 md:py-6" aria-label="Main navigation">
-      <div class="flex items-center justify-between">
-        <a href="/" class="flex items-center" aria-label="St Raphael Health - Home">
-          <img src="/assets/logos/SRH Logo Light Background.svg" alt="St Raphael Health" class="h-10 md:h-12" width="200" height="48">
+
+    <nav class="container-custom py-5 md:py-7" style="max-width: 1600px; margin: 0 auto; padding-left: 5%; padding-right: 5%;" aria-label="Main navigation">
+      <div class="flex items-center justify-between gap-12" style="display: flex; align-items: center; justify-content: space-between;">
+        <a href="/" class="flex items-center" aria-label="St Raphael Health - Home" style="display: flex; align-items: center;">
+          <img src="/assets/logos/SRH Logo Light Background.svg" alt="St Raphael Health" class="h-14 md:h-16" style="height: 56px;" width="200" height="64">
         </a>
-        
-        <ul class="hidden lg:flex items-center gap-8">
-          <li><a href="/hospital-advisory" class="text-black hover:text-gold-ochre transition-colors duration-fast font-montserrat">Hospital Advisory</a></li>
-          <li><a href="/our-approach" class="text-black hover:text-gold-ochre transition-colors duration-fast font-montserrat">Our Approach</a></li>
-          <li><a href="/case-studies" class="text-black hover:text-gold-ochre transition-colors duration-fast font-montserrat">Case Studies</a></li>
-          <li><a href="/team" class="text-black hover:text-gold-ochre transition-colors duration-fast font-montserrat">Team</a></li>
-          <li><a href="/why-profit-matters" class="text-black hover:text-gold-ochre transition-colors duration-fast font-montserrat">Why Profit Matters</a></li>
-          <li><a href="/physicians" class="text-black hover:text-gold-ochre transition-colors duration-fast font-montserrat">Physicians</a></li>
-          <li><a href="/contact" class="btn btn-primary text-sm">Contact</a></li>
+
+        <ul class="hidden lg:flex items-center gap-8" style="display: none; align-items: center; gap: 2rem; list-style: none;">
+          <li><a href="/hospital-advisory" style="color: #000; text-decoration: none; font-family: 'Montserrat', sans-serif; transition: color 0.2s;">Hospital Advisory</a></li>
+          <li><a href="/contact" style="display: inline-block; padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #CBA85C 0%, #EDBD56 100%); color: #fff; text-decoration: none; font-weight: 700; border-radius: 2px; font-size: 0.875rem;">Contact</a></li>
         </ul>
-        
-        <button 
-          id="menu-toggle" 
-          class="lg:hidden p-2 text-black hover:text-gold-ochre transition-colors"
-          aria-expanded="false"
-          aria-controls="mobile-menu"
-          aria-label="Toggle navigation menu"
-        >
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+        <button id="menu-toggle" style="display: block; padding: 0.5rem; background: none; border: none; cursor: pointer;" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle navigation menu">
+          <svg style="width: 24px; height: 24px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
         </button>
       </div>
     </nav>
-    
-    <div 
-      id="mobile-menu" 
-      class="hidden fixed inset-0 bg-white lg:hidden"
-      role="dialog"
-      aria-modal="true"
-      aria-label="Mobile navigation"
-      style="background-color: white; z-index: 9999; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100vh;"
-    >
-      <div class="container-custom py-6">
-        <div class="flex items-center justify-between mb-8">
-          <img src="/assets/logos/SRH Logo Light Background.svg" alt="St Raphael Health" class="h-10" width="200" height="48">
-          <button 
-            id="menu-close" 
-            class="p-2 text-black hover:text-gold-ochre transition-colors"
-            aria-label="Close navigation menu"
-          >
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-white lg:hidden" role="dialog" aria-modal="true" aria-label="Mobile navigation" style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: #fff; z-index: 9999;">
+      <div style="max-width: 1600px; margin: 0 auto; padding: 1.5rem 5%;">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 2rem;">
+          <img src="/assets/logos/SRH Logo Light Background.svg" alt="St Raphael Health" style="height: 56px;" width="200" height="64">
+          <button id="menu-close" style="padding: 0.5rem; background: none; border: none; cursor: pointer;" aria-label="Close navigation menu">
+            <svg style="width: 24px; height: 24px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
             </svg>
           </button>
         </div>
-        
-        <ul class="flex flex-col gap-6">
-          <li><a href="/hospital-advisory" class="text-2xl text-black hover:text-gold-ochre transition-colors font-montserrat">Hospital Advisory</a></li>
-          <li><a href="/our-approach" class="text-2xl text-black hover:text-gold-ochre transition-colors font-montserrat">Our Approach</a></li>
-          <li><a href="/case-studies" class="text-2xl text-black hover:text-gold-ochre transition-colors font-montserrat">Case Studies</a></li>
-          <li><a href="/team" class="text-2xl text-black hover:text-gold-ochre transition-colors font-montserrat">Team</a></li>
-          <li><a href="/why-profit-matters" class="text-2xl text-black hover:text-gold-ochre transition-colors font-montserrat">Why Profit Matters</a></li>
-          <li><a href="/physicians" class="text-2xl text-black hover:text-gold-ochre transition-colors font-montserrat">Physicians</a></li>
-          <li class="pt-4"><a href="/contact" class="btn btn-primary inline-block">Contact</a></li>
+        <ul style="display: flex; flex-direction: column; gap: 1.5rem; list-style: none;">
+          <li><a href="/hospital-advisory" style="font-size: 1.5rem; color: #000; text-decoration: none; font-family: 'Montserrat', sans-serif;">Hospital Advisory</a></li>
+          <li style="padding-top: 1rem;"><a href="/contact" style="display: inline-block; padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #CBA85C 0%, #EDBD56 100%); color: #fff; text-decoration: none; font-weight: 700; border-radius: 2px;">Contact</a></li>
         </ul>
       </div>
     </div>
   </header>
-  
+
   <main id="main-content">
-    
-    <!-- Page Header - Clean & Direct -->
-    <section class="relative py-24 lg:py-32 overflow-hidden" style="background: linear-gradient(135deg, rgba(161, 130, 98, 0.15) 0%, rgba(255, 255, 255, 0.5) 35%, rgba(212, 175, 55, 0.12) 100%);">
-      
-      <!-- Background Orbs -->
-      <div class="absolute inset-0">
-        <div class="absolute top-10 right-0 w-[700px] h-[700px] rounded-full blur-3xl" style="background: radial-gradient(circle, rgba(120, 40, 60, 0.15) 0%, transparent 70%);"></div>
-        <div class="absolute bottom-0 left-0 w-[800px] h-[800px] rounded-full blur-3xl" style="background: radial-gradient(circle, rgba(212, 175, 55, 0.2) 0%, transparent 70%);"></div>
-        <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full blur-3xl" style="background: radial-gradient(circle, rgba(161, 130, 98, 0.08) 0%, transparent 70%);"></div>
-      </div>
-      
-      <div class="container-custom relative z-10">
-        <div class="max-w-5xl mx-auto">
-          
-          <!-- Main Statement -->
-          <div class="text-center mb-12" data-animate>
-            <div class="w-16 h-1 bg-gradient-to-r from-burgundy via-deep-red to-gold-ochre mx-auto mb-8"></div>
-            
-            <h1 class="text-4xl md:text-5xl lg:text-6xl mb-6 leading-tight font-light">
-              Profitability is not the objective.
-            </h1>
-            
-            <h2 class="text-4xl md:text-5xl lg:text-6xl mb-12 leading-tight text-burgundy font-normal">
-              It is the enabler.
-            </h2>
-            
-            <p class="text-xl md:text-2xl text-black text-opacity-70 max-w-3xl mx-auto leading-relaxed">
-              At St Raphael Health, profitability is not about extracting value from communities. It is about protecting patient care, preserving access, and creating stability.
-            </p>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="hero-container">
+        <div style="text-align: center;">
+          <div class="hero-eyebrow fade-in-up">
+            Core Philosophy
           </div>
-          
-          <!-- Key Contrast - Two Columns -->
-          <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto" data-animate>
-            <div class="bg-white rounded-2xl p-8 border-l-4 border-burgundy shadow-lg">
-              <p class="text-2xl md:text-3xl font-light mb-3 text-burgundy">Without profit</p>
-              <p class="text-lg text-black text-opacity-70">Hospitals lose options, control, and strategic flexibility.</p>
+
+          <h1 class="fade-in-up stagger-1">
+            Profitability is not the objective.
+          </h1>
+
+          <h2 class="fade-in-up stagger-2">
+            It is the enabler.
+          </h2>
+
+          <p class="hero-description fade-in-up stagger-3">
+            At St Raphael Health, profitability is not about extracting value from communities. It is about protecting patient care, preserving access, and creating stability.
+          </p>
+
+          <div class="hero-comparison">
+            <div class="comparison-card fade-in-up stagger-1">
+              <p class="comparison-title">Without profit</p>
+              <p class="comparison-text">Hospitals lose options, control, and strategic flexibility.</p>
             </div>
-            <div class="bg-white rounded-2xl p-8 border-l-4 border-gold-ochre shadow-lg">
-              <p class="text-2xl md:text-3xl font-light mb-3 text-gold-ochre">With profit</p>
-              <p class="text-lg text-black text-opacity-70">They gain stability, freedom, and the ability to invest in care.</p>
+            <div class="comparison-card fade-in-up stagger-2">
+              <p class="comparison-title">With profit</p>
+              <p class="comparison-text">They gain stability, freedom, and the ability to invest in care.</p>
             </div>
           </div>
-          
         </div>
       </div>
     </section>
-    
-    <!-- Section 1: The Reality Facing Hospitals -->
-    <section class="py-24 bg-gradient-to-br from-warm-stone-5 to-white">
-      <div class="container-custom max-w-5xl">
-        <div class="text-center mb-16" data-animate>
-          <div class="w-16 h-1 bg-gradient-to-r from-burgundy via-deep-red to-gold-ochre mx-auto mb-8"></div>
-          <h2 class="text-4xl md:text-5xl lg:text-6xl font-light">
-            The Reality Facing <span class="text-burgundy">Hospitals</span>
+
+    <!-- REALITY SECTION -->
+    <section class="section section-light">
+      <div class="reality-container">
+        <div class="section-header fade-in-up">
+          <div class="section-kicker">The Challenge</div>
+          <h2 class="section-title">
+            The Reality Facing <span style="color: var(--gold);">Hospitals</span>
           </h2>
         </div>
-        
-        <div class="bg-white rounded-3xl shadow-xl p-10 md:p-12 lg:p-16" data-animate>
-          <p class="text-2xl md:text-3xl text-center font-light mb-12 text-black">
+
+        <div class="reality-card fade-in-up">
+          <p class="reality-statement">
             Across the United States, the majority of hospitals operate under some level of financial distress.
           </p>
-          
-          <p class="text-xl mb-8 text-burgundy font-semibold">When margins are negative or unpredictable:</p>
-          
-          <div class="grid md:grid-cols-2 gap-6 mb-12">
-            <div class="flex items-start gap-4 bg-burgundy-5 rounded-xl p-6">
-              <svg class="w-6 h-6 text-burgundy flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-              </svg>
-              <span class="text-lg">Capital becomes constrained</span>
+
+          <p class="reality-intro">When margins are negative or unpredictable:</p>
+
+          <div class="reality-grid">
+            <div class="reality-item">
+              <i data-lucide="x" stroke-width="2"></i>
+              <span>Capital becomes constrained</span>
             </div>
-            <div class="flex items-start gap-4 bg-burgundy-5 rounded-xl p-6">
-              <svg class="w-6 h-6 text-burgundy flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-              </svg>
-              <span class="text-lg">Staff turnover increases</span>
+            <div class="reality-item">
+              <i data-lucide="x" stroke-width="2"></i>
+              <span>Staff turnover increases</span>
             </div>
-            <div class="flex items-start gap-4 bg-burgundy-5 rounded-xl p-6">
-              <svg class="w-6 h-6 text-burgundy flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-              </svg>
-              <span class="text-lg">Technology investment stalls</span>
+            <div class="reality-item">
+              <i data-lucide="x" stroke-width="2"></i>
+              <span>Technology investment stalls</span>
             </div>
-            <div class="flex items-start gap-4 bg-burgundy-5 rounded-xl p-6">
-              <svg class="w-6 h-6 text-burgundy flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-              </svg>
-              <span class="text-lg">Community trust erodes</span>
+            <div class="reality-item">
+              <i data-lucide="x" stroke-width="2"></i>
+              <span>Community trust erodes</span>
             </div>
-            <div class="flex items-start gap-4 bg-burgundy-5 rounded-xl p-6 md:col-span-2">
-              <svg class="w-6 h-6 text-burgundy flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
-              </svg>
-              <span class="text-lg">Strategic choices disappear</span>
+            <div class="reality-item" style="grid-column: 1 / -1;">
+              <i data-lucide="x" stroke-width="2"></i>
+              <span>Strategic choices disappear</span>
             </div>
           </div>
-          
-          <div class="pt-8 border-t border-warm-stone-20">
-            <p class="text-2xl md:text-3xl font-light text-center italic text-burgundy">
+
+          <div class="reality-conclusion">
+            <p>
               Profitability is the difference between constant reaction and effective leadership.
             </p>
           </div>
         </div>
       </div>
     </section>
-    
-    <!-- Section 2: Profit Enables What Matters Most -->
-    <section class="py-24 bg-white">
-      
-      <div class="container-custom max-w-7xl">
-        <div class="text-center mb-16" data-animate>
-          <div class="w-16 h-1 bg-gradient-to-r from-burgundy via-deep-red to-gold-ochre mx-auto mb-8"></div>
-          <h2 class="text-4xl md:text-5xl lg:text-6xl font-light mb-6">
-            Profit Enables <span class="text-burgundy">What Matters Most</span>
+
+    <!-- THREE PILLARS SECTION -->
+    <section class="section section-white">
+      <div class="pillars-container">
+        <div class="section-header fade-in-up">
+          <div class="section-kicker">Three Dimensions</div>
+          <h2 class="section-title">
+            Profit Enables <span style="color: var(--gold);">What Matters Most</span>
           </h2>
-          <p class="text-xl md:text-2xl text-black text-opacity-70 max-w-3xl mx-auto">
+          <p class="section-subtitle">
             Sustainable profitability unlocks three critical dimensions of hospital success
           </p>
         </div>
-        
-        <div class="grid lg:grid-cols-3 gap-8">
-          <!-- Card 1: Care for the Community -->
-          <div class="bg-white rounded-2xl shadow-xl p-10 border-t-4 border-burgundy hover:-translate-y-2 transition-all duration-300" data-animate>
-            <div class="flex items-center gap-4 mb-6">
-              <div class="w-16 h-16 rounded-xl bg-burgundy text-white flex items-center justify-center text-2xl font-light flex-shrink-0">
-                01
-              </div>
-              <svg class="w-12 h-12 text-burgundy" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
-              </svg>
+
+        <div class="pillars-grid">
+          <!-- Pillar 1 -->
+          <div class="pillar-card fade-in-up stagger-1">
+            <div class="pillar-icon-wrapper">
+              <div class="pillar-number">01</div>
+              <i data-lucide="heart" class="pillar-icon" stroke-width="1.5"></i>
             </div>
-            <h3 class="text-3xl font-light mb-4 text-burgundy">Care for the Community</h3>
-            <p class="text-lg mb-6 text-black text-opacity-70 font-medium">Sustainable profit allows hospitals to:</p>
-            <ul class="space-y-4 mb-8">
-              <li class="flex items-start gap-3">
-                <svg class="w-6 h-6 text-burgundy flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                </svg>
-                <span class="text-base">Invest in modern equipment and technology</span>
+            <h3 class="pillar-title">Care for the Community</h3>
+            <p class="pillar-intro">Sustainable profit allows hospitals to:</p>
+            <ul class="pillar-list">
+              <li>
+                <i data-lucide="check" stroke-width="2"></i>
+                <span>Invest in modern equipment and technology</span>
               </li>
-              <li class="flex items-start gap-3">
-                <svg class="w-6 h-6 text-burgundy flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                </svg>
-                <span class="text-base">Recruit and retain high-quality clinical staff</span>
+              <li>
+                <i data-lucide="check" stroke-width="2"></i>
+                <span>Recruit and retain high-quality clinical staff</span>
               </li>
-              <li class="flex items-start gap-3">
-                <svg class="w-6 h-6 text-burgundy flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                </svg>
-                <span class="text-base">Expand service lines that meet real community needs</span>
+              <li>
+                <i data-lucide="check" stroke-width="2"></i>
+                <span>Expand service lines that meet real community needs</span>
               </li>
-              <li class="flex items-start gap-3">
-                <svg class="w-6 h-6 text-burgundy flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                </svg>
-                <span class="text-base">Improve patient experience and outcomes</span>
+              <li>
+                <i data-lucide="check" stroke-width="2"></i>
+                <span>Improve patient experience and outcomes</span>
               </li>
             </ul>
-            <div class="pt-6 border-t border-warm-stone-20">
-              <p class="font-medium text-burgundy text-lg italic">Care improves when hospitals are financially stable.</p>
+            <div class="pillar-conclusion">
+              Care improves when hospitals are financially stable.
             </div>
           </div>
-          
-          <!-- Card 2: Freedom and Stability -->
-          <div class="bg-white rounded-2xl shadow-xl p-10 border-t-4 border-deep-red hover:-translate-y-2 transition-all duration-300" data-animate>
-            <div class="flex items-center gap-4 mb-6">
-              <div class="w-16 h-16 rounded-xl bg-deep-red text-white flex items-center justify-center text-2xl font-light flex-shrink-0">
-                02
-              </div>
-              <svg class="w-12 h-12 text-deep-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-              </svg>
+
+          <!-- Pillar 2 -->
+          <div class="pillar-card fade-in-up stagger-2">
+            <div class="pillar-icon-wrapper">
+              <div class="pillar-number">02</div>
+              <i data-lucide="shield-check" class="pillar-icon" stroke-width="1.5"></i>
             </div>
-            <h3 class="text-3xl font-light mb-4 text-deep-red">Freedom and Stability for Leadership</h3>
-            <p class="text-lg mb-6 text-black text-opacity-70 font-medium">When a hospital is profitable:</p>
-            <ul class="space-y-4 mb-8">
-              <li class="flex items-start gap-3">
-                <svg class="w-6 h-6 text-deep-red flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                </svg>
-                <span class="text-base">Leaders can plan instead of firefighting</span>
+            <h3 class="pillar-title">Freedom and Stability for Leadership</h3>
+            <p class="pillar-intro">When a hospital is profitable:</p>
+            <ul class="pillar-list">
+              <li>
+                <i data-lucide="check" stroke-width="2"></i>
+                <span>Leaders can plan instead of firefighting</span>
               </li>
-              <li class="flex items-start gap-3">
-                <svg class="w-6 h-6 text-deep-red flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                </svg>
-                <span class="text-base">Decisions are proactive rather than forced</span>
+              <li>
+                <i data-lucide="check" stroke-width="2"></i>
+                <span>Decisions are proactive rather than forced</span>
               </li>
-              <li class="flex items-start gap-3">
-                <svg class="w-6 h-6 text-deep-red flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                </svg>
-                <span class="text-base">Teams operate with clarity and confidence</span>
+              <li>
+                <i data-lucide="check" stroke-width="2"></i>
+                <span>Teams operate with clarity and confidence</span>
               </li>
-              <li class="flex items-start gap-3">
-                <svg class="w-6 h-6 text-deep-red flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                </svg>
-                <span class="text-base">Governance becomes strategic instead of defensive</span>
+              <li>
+                <i data-lucide="check" stroke-width="2"></i>
+                <span>Governance becomes strategic instead of defensive</span>
               </li>
             </ul>
-            <div class="pt-6 border-t border-warm-stone-20">
-              <p class="font-medium text-deep-red text-lg italic">Profit restores operational freedom.</p>
+            <div class="pillar-conclusion">
+              Profit restores operational freedom.
             </div>
           </div>
-          
-          <!-- Card 3: Value Creation -->
-          <div class="bg-white rounded-2xl shadow-xl p-10 border-t-4 border-gold-ochre hover:-translate-y-2 transition-all duration-300" data-animate>
-            <div class="flex items-center gap-4 mb-6">
-              <div class="w-16 h-16 rounded-xl bg-gold-ochre text-white flex items-center justify-center text-2xl font-light flex-shrink-0">
-                03
-              </div>
-              <svg class="w-12 h-12 text-gold-ochre" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
-              </svg>
+
+          <!-- Pillar 3 -->
+          <div class="pillar-card fade-in-up stagger-3">
+            <div class="pillar-icon-wrapper">
+              <div class="pillar-number">03</div>
+              <i data-lucide="trending-up" class="pillar-icon" stroke-width="1.5"></i>
             </div>
-            <h3 class="text-3xl font-light mb-4 text-gold-ochre">Value Creation and Strategic Options</h3>
-            <p class="text-lg mb-6 text-black text-opacity-70 font-medium">Profitability creates optionality. Stable, well-run hospitals can:</p>
-            <ul class="space-y-4 mb-8">
-              <li class="flex items-start gap-3">
-                <svg class="w-6 h-6 text-gold-ochre flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                </svg>
-                <span class="text-base">Remain independent</span>
+            <h3 class="pillar-title">Value Creation and Strategic Options</h3>
+            <p class="pillar-intro">Profitability creates optionality. Stable, well-run hospitals can:</p>
+            <ul class="pillar-list">
+              <li>
+                <i data-lucide="check" stroke-width="2"></i>
+                <span>Remain independent</span>
               </li>
-              <li class="flex items-start gap-3">
-                <svg class="w-6 h-6 text-gold-ochre flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                </svg>
-                <span class="text-base">Form strategic partnerships</span>
+              <li>
+                <i data-lucide="check" stroke-width="2"></i>
+                <span>Form strategic partnerships</span>
               </li>
-              <li class="flex items-start gap-3">
-                <svg class="w-6 h-6 text-gold-ochre flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                </svg>
-                <span class="text-base">Access capital on better terms</span>
+              <li>
+                <i data-lucide="check" stroke-width="2"></i>
+                <span>Access capital on better terms</span>
               </li>
-              <li class="flex items-start gap-3">
-                <svg class="w-6 h-6 text-gold-ochre flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                </svg>
-                <span class="text-base">Pursue a sale at a materially higher valuation</span>
+              <li>
+                <i data-lucide="check" stroke-width="2"></i>
+                <span>Pursue a sale at a materially higher valuation</span>
               </li>
             </ul>
-            <div class="pt-6 border-t border-warm-stone-20">
-              <p class="font-medium text-gold-ochre text-lg italic">Without profit, these options do not exist.</p>
+            <div class="pillar-conclusion">
+              Without profit, these options do not exist.
             </div>
           </div>
         </div>
       </div>
     </section>
-    
-    <!-- Section 3: Profit Is the Enabler (Diagram) -->
-    <section class="section-flow surface">
-      <div class="container-custom max-w-6xl">
-        <h2 class="text-4xl md:text-5xl text-center mb-16 surface-accent pt-8" data-animate>Profit Is the Enabler</h2>
-        
-        <!-- Profit Enabler Diagram Image -->
-        <div class="max-w-5xl mx-auto" data-animate>
-          <img src="/assets/images/profit/profit-enabler-diagram.jpg" alt="Profit Is the Enabler - Care for Community, Freedom & Stability, Value Creation" class="w-full rounded-2xl shadow-2xl" loading="lazy">
+
+    <!-- DIAGRAM SECTION -->
+    <section class="section section-light">
+      <div class="diagram-container">
+        <h2 class="diagram-title fade-in-up">Profit Is the Enabler</h2>
+
+        <div class="diagram-wrapper fade-in-up">
+          <img src="/assets/images/profit/profit-enabler-diagram.jpg" alt="Profit Is the Enabler - Care for Community, Freedom & Stability, Value Creation" loading="lazy">
         </div>
-        
-        <p class="text-center mt-16 text-xl font-light text-black" data-animate>
-          Whether the goal is care, stability, or strategic options, <span class="font-semibold text-gold-ochre">profitability is the starting point.</span>
+
+        <p class="diagram-caption fade-in-up">
+          Whether the goal is care, stability, or strategic options, <strong>profitability is the starting point.</strong>
         </p>
       </div>
     </section>
-    
-    <!-- Section 4: The Core Principle -->
-    <section class="py-xxl bg-white">
-      <div class="container-custom max-w-4xl">
-        <div class="prose-custom mx-auto" data-animate>
+
+    <!-- CORE PRINCIPLE SECTION -->
+    <section class="section section-white">
+      <div class="principle-container">
+        <div class="principle-content fade-in-up">
           <p>Whether the goal is to:</p>
-          <ul class="list-disc list-inside space-y-3">
+          <ul>
             <li>Protect essential community healthcare</li>
             <li>Restore operational control</li>
             <li>Stabilize a distressed facility</li>
             <li>Or prepare for a future transaction</li>
           </ul>
-          
-          <p class="font-semibold text-xl">Profitability is the starting point.</p>
-          
+
+          <p class="principle-highlight">Profitability is the starting point.</p>
+
           <p>
             That is why St Raphael Health focuses first on restoring sustainable profit—not as an end in itself, but as the foundation for care, stability, and long-term value.
           </p>
         </div>
-        
-        <!-- Pull Quote -->
-        <div class="bg-warm-stone p-12 rounded-lg mt-16 text-center" data-animate>
-          <blockquote class="text-2xl md:text-3xl italic text-gold-ochre">
+
+        <div class="principle-quote fade-in-up">
+          <blockquote>
             "Profit is not the objective. It is the enabler of care, stability, and choice."
           </blockquote>
         </div>
       </div>
     </section>
-    
-    <!-- Closing CTA -->
-    <section class="section-flow surface">
-      <div class="container-custom max-w-3xl text-center">
-        <h2 class="text-4xl md:text-5xl mb-8 surface-accent pt-8" data-animate>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta">
+      <div class="cta-container fade-in-up">
+        <h2 class="cta-title">
           Hospitals cannot serve their communities without financial strength.
         </h2>
-        
-        <a href="/contact" class="btn btn-primary inline-flex items-center gap-2">
-          Speak With Our Operating Team
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+
+        <a href="/contact/" class="cta-button">
+          <span>Speak With Our Operating Team</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
           </svg>
         </a>
       </div>
     </section>
-    
+
   </main>
-  
-  <!-- Footer -->
-  <footer class="bg-warm-stone py-12 md:py-16 border-t border-black border-opacity-10">
-    <div class="container-custom">
-      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-        <nav aria-label="Legal navigation" class="flex flex-wrap items-center gap-4 text-sm">
-          <a href="/privacy-policy" class="text-black hover:text-gold-ochre transition-colors font-montserrat">Privacy Policy</a>
-          <span class="text-black" aria-hidden="true">·</span>
-          <a href="/terms" class="text-black hover:text-gold-ochre transition-colors font-montserrat">Terms & Conditions</a>
-          <span class="text-black" aria-hidden="true">·</span>
-          <a href="/compliance" class="text-black hover:text-gold-ochre transition-colors font-montserrat">Compliance</a>
-        </nav>
-        
-        <div class="text-sm">
-          <a href="mailto:info@saintraphaelhealth.com" class="text-black hover:text-gold-ochre transition-colors font-montserrat">
-            info@saintraphaelhealth.com
-          </a>
-        </div>
-      </div>
-      
-      <div class="mt-8 pt-8 border-t border-black border-opacity-10 text-sm text-black text-opacity-60">
-        <p>&copy; <span id="current-year">2026</span> St Raphael Health. All rights reserved.</p>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">St Raphael <span class="accent">Health</span></div>
+      <div class="footer-links">
+        <a href="/privacy-policy/">Privacy</a>
+        <a href="/terms/">Terms</a>
+        <a href="/contact/">Contact</a>
       </div>
     </div>
   </footer>
-  
+
   <script src="/js/site.js"></script>
-  <script src="/js/animations.js"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Scroll Animation Script -->
   <script>
-    document.getElementById('current-year').textContent = new Date().getFullYear();
+    // Initialize Lucide icons
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+      }
+
+      // Intersection Observer for scroll-triggered animations
+      const observerOptions = {
+        threshold: 0.15,
+        rootMargin: '0px 0px -100px 0px'
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, observerOptions);
+
+      document.querySelectorAll('.fade-in-up').forEach(el => {
+        observer.observe(el);
+      });
+
+      // Mobile menu toggle
+      const menuToggle = document.getElementById('menu-toggle');
+      const menuClose = document.getElementById('menu-close');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener('click', () => {
+          mobileMenu.classList.remove('hidden');
+          mobileMenu.style.display = 'block';
+          menuToggle.setAttribute('aria-expanded', 'true');
+        });
+      }
+
+      if (menuClose && mobileMenu) {
+        menuClose.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          mobileMenu.style.display = 'none';
+          if (menuToggle) menuToggle.setAttribute('aria-expanded', 'false');
+        });
+      }
+    });
   </script>
-  
+
+  <script>
+    // Show desktop menu on larger screens
+    const updateMenu = () => {
+      const desktopMenu = document.querySelector('.hidden.lg\\:flex');
+      if (desktopMenu && window.innerWidth >= 1024) {
+        desktopMenu.style.display = 'flex';
+      }
+    };
+    window.addEventListener('resize', updateMenu);
+    updateMenu();
+  </script>
+
 </body>
 </html>

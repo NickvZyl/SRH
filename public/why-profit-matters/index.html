@@ -79,7 +79,7 @@
   <style>
     /* ═══════════════════════════════════════════════════════════
        ST RAPHAEL HEALTH – WHY PROFIT MATTERS
-       Refined Executive Design Language
+       Authoritative, Execution-Focused Design
        ═══════════════════════════════════════════════════════════ */
 
     :root {
@@ -144,37 +144,51 @@
     }
 
     /* ═══════════════════════════════════════════════════════════
-       HERO SECTION
+       HERO SECTION - Refined Editorial Layout
        ═══════════════════════════════════════════════════════════ */
 
     .hero {
-      padding: 10rem 5% 8rem;
+      padding: 3.125rem 0 13rem;
       position: relative;
-      background: linear-gradient(135deg, var(--cream) 0%, var(--off-white) 100%);
+      background: linear-gradient(to bottom, #FFFBF5 0%, #FFF9F0 100%);
       overflow: hidden;
     }
 
     .hero::before {
       content: '';
       position: absolute;
-      top: -20%;
-      right: -5%;
-      width: 80%;
-      height: 140%;
-      background: linear-gradient(145deg,
-        transparent 0%,
-        var(--wash-yellow) 30%,
-        var(--wash-amber) 50%,
-        var(--wash-orange) 70%,
-        transparent 100%
+      top: -15%;
+      right: -10%;
+      width: 900px;
+      height: 900px;
+      background: radial-gradient(circle,
+        rgba(242, 138, 50, 0.04) 0%,
+        rgba(237, 189, 86, 0.03) 40%,
+        transparent 70%
       );
-      transform: rotate(-12deg);
       pointer-events: none;
+      z-index: 1;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -15%;
+      left: -10%;
+      width: 700px;
+      height: 700px;
+      background: radial-gradient(circle,
+        rgba(203, 168, 92, 0.04) 0%,
+        transparent 60%
+      );
+      pointer-events: none;
+      z-index: 1;
     }
 
     .hero-container {
-      max-width: 1200px;
+      max-width: 1400px;
       margin: 0 auto;
+      padding: 0 5%;
       position: relative;
       z-index: 2;
     }
@@ -184,96 +198,232 @@
       align-items: center;
       gap: 12px;
       font-size: 0.65rem;
-      font-weight: 700;
-      letter-spacing: 0.3em;
+      font-weight: 800;
+      letter-spacing: 0.28em;
       text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 2rem;
+      color: var(--orange);
+      margin-bottom: 2.75rem;
+      padding: 10px 24px;
+      border: 1.5px solid rgba(242, 138, 50, 0.25);
+      border-radius: 24px;
+      position: relative;
+      background: rgba(255, 251, 245, 0.7);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 4px 12px rgba(242, 138, 50, 0.08);
     }
 
     .hero-eyebrow::before {
       content: '';
-      width: 36px;
+      position: absolute;
+      top: 50%;
+      left: -50px;
+      width: 32px;
       height: 2px;
-      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+      background: linear-gradient(to left, var(--orange), transparent);
+      transform: translateY(-50%);
+      border-radius: 2px;
     }
 
     .hero h1 {
-      font-size: clamp(2.5rem, 5vw, 4.5rem);
-      font-weight: 300;
-      line-height: 1.15;
-      letter-spacing: -0.02em;
+      font-size: clamp(3.25rem, 7.5vw, 6.5rem);
+      font-weight: 200;
+      line-height: 1.05;
+      letter-spacing: -0.035em;
       color: var(--text-dark);
-      margin-bottom: 1.5rem;
+      margin-bottom: 0.5rem;
+      max-width: 1000px;
     }
 
     .hero h2 {
-      font-size: clamp(2.5rem, 5vw, 4.5rem);
-      font-weight: 600;
-      line-height: 1.15;
-      letter-spacing: -0.02em;
-      color: var(--gold);
-      margin-bottom: 3rem;
+      font-size: clamp(3.25rem, 7.5vw, 6.5rem);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.035em;
+      background: linear-gradient(135deg, #CBA85C 0%, #EDBD56 50%, #F28A32 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 3.5rem;
+      max-width: 1000px;
+      position: relative;
+    }
+
+    .hero h2::after {
+      content: '';
+      position: absolute;
+      bottom: -1.25rem;
+      left: 0;
+      width: 100px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--orange) 0%, var(--gold-light) 100%);
+      border-radius: 3px;
     }
 
     .hero-description {
-      font-size: 1.35rem;
+      font-size: 1.3rem;
       font-weight: 400;
-      line-height: 1.7;
-      color: var(--text-light);
-      max-width: 900px;
-      margin: 0 auto 4rem;
+      line-height: 1.85;
+      color: var(--text-medium);
+      max-width: 680px;
+      margin: 0 0 2.5rem 0;
     }
 
-    .hero-comparison {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2rem;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-
-    .comparison-card {
-      background: var(--white);
-      border-radius: 12px;
-      padding: 2.5rem;
-      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
-      border-left: 4px solid var(--gold);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .comparison-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-    }
-
-    .comparison-card:first-child {
-      border-left-color: var(--accent-red);
-    }
-
-    .comparison-card:last-child {
-      border-left-color: var(--gold);
-    }
-
-    .comparison-title {
-      font-size: 1.8rem;
+    .hero-description em {
+      font-style: normal;
       font-weight: 600;
-      margin-bottom: 1rem;
       color: var(--text-dark);
+      position: relative;
+      background: linear-gradient(to right, rgba(242, 138, 50, 0.12), transparent);
+      padding: 2px 6px 2px 2px;
+      border-radius: 4px;
     }
 
-    .comparison-card:first-child .comparison-title {
-      color: var(--accent-red);
+    /* Progression Layout - Symmetric Two-Column Grid */
+    .hero-progression {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: stretch;
+      position: relative;
+      margin-top: 1rem;
     }
 
-    .comparison-card:last-child .comparison-title {
+    .progression-item {
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      gap: 2.5rem;
+      align-items: start;
+      position: relative;
+      padding: 2.75rem 2.5rem;
+      transition: all 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+      border-radius: 16px;
+    }
+
+    .progression-item:first-child {
+      background: linear-gradient(135deg, rgba(232, 93, 52, 0.04) 0%, rgba(232, 93, 52, 0.01) 100%);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04), inset 0 0 0 1px rgba(232, 93, 52, 0.1);
+    }
+
+    .progression-item:last-child {
+      background: linear-gradient(135deg, rgba(203, 168, 92, 0.05) 0%, rgba(203, 168, 92, 0.01) 100%);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04), inset 0 0 0 1px rgba(203, 168, 92, 0.1);
+    }
+
+    .progression-item:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 28px 72px rgba(0, 0, 0, 0.08);
+    }
+
+    .progression-item:first-child:hover {
+      box-shadow: 0 28px 72px rgba(232, 93, 52, 0.12), inset 0 0 0 1px rgba(232, 93, 52, 0.15);
+    }
+
+    .progression-item:last-child:hover {
+      box-shadow: 0 28px 72px rgba(203, 168, 92, 0.12), inset 0 0 0 1px rgba(203, 168, 92, 0.15);
+    }
+
+    .progression-image {
+      width: 240px;
+      height: 320px;
+      object-fit: cover;
+      position: relative;
+      border-radius: 12px;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .progression-item:hover .progression-image {
+      transform: translateY(-4px) scale(1.02);
+      box-shadow: 0 20px 48px rgba(0, 0, 0, 0.16);
+    }
+
+    .progression-content {
+      padding-top: 0;
+    }
+
+    .progression-content h3 {
+      font-size: 1.35rem;
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+      text-align: left;
+    }
+
+    .progression-item:first-child h3 {
+      color: #E85D34;
+    }
+
+    .progression-item:last-child h3 {
+      background: linear-gradient(135deg, #CBA85C 0%, #EDBD56 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .progression-content .subtitle {
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: var(--text-light);
+      margin-bottom: 1.75rem;
+      opacity: 0.55;
+      text-align: left;
+    }
+
+    .progression-content ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1.35rem;
+      text-align: left;
+    }
+
+    .progression-content ul li {
+      font-size: 1.05rem;
+      font-weight: 500;
+      line-height: 1.65;
+      color: var(--text-dark);
+      padding-left: 1.75rem;
+      position: relative;
+      transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      text-align: left;
+    }
+
+    .progression-content ul li:hover {
+      padding-left: 2rem;
+      color: var(--text-medium);
+    }
+
+    .progression-content ul li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.7em;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: currentColor;
+      opacity: 0.5;
+      transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .progression-item:first-child .progression-content ul li::before {
+      color: #E85D34;
+    }
+
+    .progression-item:last-child .progression-content ul li::before {
       color: var(--gold);
     }
 
-    .comparison-text {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      color: var(--text-light);
+    .progression-content ul li:hover::before {
+      transform: scale(1.5);
+      opacity: 1;
+      box-shadow: 0 0 8px currentColor;
     }
 
     /* ═══════════════════════════════════════════════════════════
@@ -309,10 +459,6 @@
 
     .section-white {
       background: var(--white);
-    }
-
-    .section-cream {
-      background: var(--cream);
     }
 
     /* ═══════════════════════════════════════════════════════════
@@ -363,19 +509,24 @@
     }
 
     /* ═══════════════════════════════════════════════════════════
-       REALITY SECTION
+       REALITY SECTION WITH STAT - Flowing Design
        ═══════════════════════════════════════════════════════════ */
 
     .reality-container {
-      max-width: 1200px;
+      max-width: 1300px;
       margin: 0 auto;
+      position: relative;
     }
 
-    .reality-card {
-      background: var(--white);
-      border-radius: 16px;
-      padding: 4rem;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    .reality-layout {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4rem;
+    }
+
+    .reality-content {
+      width: 100%;
     }
 
     .reality-statement {
@@ -383,221 +534,447 @@
       font-weight: 400;
       line-height: 1.5;
       text-align: center;
-      margin-bottom: 3rem;
+      max-width: 900px;
+      margin: 0 auto 2rem;
       color: var(--text-dark);
+    }
+
+    .reality-statement strong {
+      font-weight: 700;
+      color: #666;
+      display: inline;
     }
 
     .reality-intro {
-      font-size: 1.25rem;
+      font-size: 1.15rem;
       font-weight: 600;
       color: var(--gold);
-      margin-bottom: 2rem;
+      text-align: center;
+      margin: 0 auto 3rem;
+      width: 100%;
     }
 
-    .reality-grid {
+    .reality-content-wrapper {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1.5rem;
-      margin-bottom: 3rem;
+      grid-template-columns: 1fr auto 1fr;
+      gap: 5rem;
+      align-items: center;
+      width: 100%;
     }
 
-    .reality-item {
+    .reality-icons-left,
+    .reality-icons-right {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .reality-icon-item {
       display: flex;
       align-items: flex-start;
-      gap: 1rem;
-      padding: 1.5rem;
-      background: linear-gradient(135deg, rgba(203, 168, 92, 0.08), rgba(255, 191, 71, 0.12));
-      border-radius: 8px;
-      transition: transform 0.3s ease;
+      gap: 1.25rem;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      opacity: 0;
+      transform: translateX(0);
     }
 
-    .reality-item:hover {
-      transform: translateX(4px);
+    .reality-icons-left .reality-icon-item {
+      animation: slideInLeft 0.6s ease forwards;
     }
 
-    .reality-item i {
-      width: 24px;
-      height: 24px;
-      flex-shrink: 0;
-      color: var(--gold);
-      margin-top: 2px;
+    .reality-icons-right .reality-icon-item {
+      animation: slideInRight 0.6s ease forwards;
+      flex-direction: row-reverse;
+      text-align: right;
     }
 
-    .reality-item span {
-      font-size: 1.05rem;
-      line-height: 1.6;
-      color: var(--text-dark);
+    @keyframes slideInLeft {
+      from {
+        opacity: 0;
+        transform: translateX(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
     }
 
-    .reality-conclusion {
-      padding-top: 3rem;
-      border-top: 2px solid rgba(219, 213, 202, 0.3);
-      text-align: center;
+    @keyframes slideInRight {
+      from {
+        opacity: 0;
+        transform: translateX(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
     }
 
-    .reality-conclusion p {
-      font-size: 1.75rem;
-      font-weight: 400;
-      font-style: italic;
-      line-height: 1.5;
-      color: var(--gold);
+    .reality-icon-item:nth-child(1) { animation-delay: 0.1s; }
+    .reality-icon-item:nth-child(2) { animation-delay: 0.2s; }
+    .reality-icon-item:nth-child(3) { animation-delay: 0.3s; }
+
+    .reality-icon-item:hover {
+      transform: scale(1.05);
     }
 
-    /* ═══════════════════════════════════════════════════════════
-       THREE PILLARS SECTION
-       ═══════════════════════════════════════════════════════════ */
-
-    .pillars-container {
-      max-width: 1400px;
-      margin: 0 auto;
+    .reality-icons-right .reality-icon-item:hover {
+      transform: scale(1.05);
     }
 
-    .pillars-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2.5rem;
-    }
-
-    .pillar-card {
-      background: var(--white);
-      border-radius: 16px;
-      padding: 3rem;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .pillar-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 4px;
-      background: linear-gradient(90deg, var(--gold), var(--gold-light));
-    }
-
-    .pillar-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
-    }
-
-    .pillar-icon-wrapper {
-      display: flex;
-      align-items: center;
-      gap: 1.5rem;
-      margin-bottom: 2rem;
-    }
-
-    .pillar-number {
-      width: 64px;
-      height: 64px;
-      border-radius: 12px;
-      background: linear-gradient(135deg, var(--gold), var(--gold-light));
-      color: var(--white);
+    .reality-icon-circle {
+      width: 56px;
+      height: 56px;
+      min-width: 56px;
+      border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.75rem;
-      font-weight: 600;
-      flex-shrink: 0;
+      background: linear-gradient(135deg, rgba(232, 93, 52, 0.1) 0%, rgba(237, 189, 86, 0.1) 100%);
+      border: 2px solid rgba(242, 138, 50, 0.2);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
-    .pillar-icon {
-      width: 56px;
-      height: 56px;
-      color: var(--gold);
+    .reality-icon-item:hover .reality-icon-circle {
+      background: linear-gradient(135deg, rgba(232, 93, 52, 0.15) 0%, rgba(237, 189, 86, 0.15) 100%);
+      border-color: rgba(242, 138, 50, 0.4);
+      box-shadow: 0 8px 24px rgba(242, 138, 50, 0.2);
     }
 
-    .pillar-title {
-      font-size: 1.75rem;
-      font-weight: 700;
-      line-height: 1.3;
+    .reality-icon-circle i {
+      width: 28px;
+      height: 28px;
+      color: var(--orange);
+    }
+
+    .reality-icon-text {
+      flex: 1;
+      font-size: 1.1rem;
+      font-weight: 500;
+      line-height: 1.5;
       color: var(--text-dark);
-      margin-bottom: 1.5rem;
+      padding-top: 0.75rem;
     }
 
-    .pillar-intro {
-      font-size: 1.05rem;
+    .reality-list {
+      display: none;
+    }
+
+    .reality-conclusion {
+      margin-top: 4rem;
+      padding: 2.5rem 3rem;
+      border-radius: 16px;
+      background: linear-gradient(135deg, rgba(203, 168, 92, 0.08) 0%, rgba(237, 189, 86, 0.08) 100%);
+      border: 1px solid rgba(203, 168, 92, 0.2);
+      font-size: 1.5rem;
+      font-weight: 500;
+      font-style: italic;
+      line-height: 1.6;
+      text-align: center;
+      color: var(--text-dark);
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Circular Stat */
+    .stat-circle-wrapper {
+      display: flex;
+      justify-content: center;
+      background: transparent;
+    }
+
+    .stat-circle {
+      position: relative;
+      width: 280px;
+      height: 280px;
+      background: transparent !important;
+    }
+
+    .stat-ring-svg {
+      width: 100%;
+      height: 100%;
+      transform: rotate(-90deg);
+      background: transparent;
+    }
+
+    .stat-ring-track {
+      fill: none;
+      stroke: rgba(219, 213, 202, 0.2);
+      stroke-width: 12;
+    }
+
+    .stat-ring-progress {
+      fill: none;
+      stroke: url(#statGradient);
+      stroke-width: 12;
+      stroke-linecap: round;
+      stroke-dasharray: 842;
+      stroke-dashoffset: 842;
+      transition: stroke-dashoffset 2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .stat-circle.stat-animated .stat-ring-progress {
+      stroke-dashoffset: 615;
+    }
+
+    .stat-inner {
+      position: absolute;
+      inset: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background: transparent !important;
+    }
+
+    .stat-value {
+      font-size: 4rem;
+      font-weight: 800;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 0.5rem;
+      background: transparent !important;
+    }
+
+    .stat-label {
+      font-size: 0.85rem;
       font-weight: 600;
       color: var(--text-medium);
-      margin-bottom: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      max-width: 150px;
+      background: transparent !important;
     }
 
-    .pillar-list {
-      list-style: none;
-      margin-bottom: 2rem;
-    }
-
-    .pillar-list li {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.75rem;
-      margin-bottom: 1rem;
-      font-size: 1rem;
-      line-height: 1.6;
-      color: var(--text-light);
-    }
-
-    .pillar-list li i {
-      width: 20px;
-      height: 20px;
-      flex-shrink: 0;
-      color: var(--gold);
-      margin-top: 2px;
-    }
-
-    .pillar-conclusion {
-      padding-top: 1.5rem;
-      border-top: 2px solid rgba(219, 213, 202, 0.3);
-      font-size: 1.05rem;
-      font-weight: 600;
-      font-style: italic;
-      color: var(--gold);
-    }
 
     /* ═══════════════════════════════════════════════════════════
-       DIAGRAM SECTION
+       THREE DIMENSIONS SECTION - Clean Card Grid
        ═══════════════════════════════════════════════════════════ */
 
-    .diagram-container {
+    .dimensions-container {
       max-width: 1200px;
       margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .dimensions-header {
       text-align: center;
+      margin-bottom: 4rem;
     }
 
-    .diagram-title {
-      font-size: clamp(2.5rem, 5vw, 4rem);
+    .dimensions-title {
+      font-size: clamp(2rem, 4vw, 2.75rem);
       font-weight: 800;
-      line-height: 1.1;
-      letter-spacing: -0.03em;
       color: var(--text-dark);
-      margin-bottom: 4rem;
+      margin-bottom: 1rem;
+      line-height: 1.2;
     }
 
-    .diagram-wrapper {
-      margin-bottom: 4rem;
-    }
-
-    .diagram-wrapper img {
-      width: 100%;
-      border-radius: 16px;
-      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
-    }
-
-    .diagram-caption {
-      font-size: 1.3rem;
-      font-weight: 400;
-      line-height: 1.7;
-      color: var(--text-light);
-      max-width: 900px;
+    .dimensions-subtitle {
+      font-size: clamp(1rem, 2.5vw, 1.15rem);
+      color: #666;
+      max-width: 700px;
       margin: 0 auto;
+      line-height: 1.6;
     }
 
-    .diagram-caption strong {
+    /* Central Profit Source - Prominent Circle */
+    .profit-source {
+      text-align: center;
+      margin: 0 auto 5rem;
+      max-width: 360px;
+      padding: 3rem 2.5rem;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+      border-radius: 50%;
+      box-shadow:
+        0 8px 32px rgba(203, 168, 92, 0.3),
+        0 16px 64px rgba(203, 168, 92, 0.15);
+      position: relative;
+      animation: pulse-glow 4s ease-in-out infinite;
+    }
+
+    @keyframes pulse-glow {
+      0%, 100% {
+        box-shadow:
+          0 8px 32px rgba(203, 168, 92, 0.3),
+          0 16px 64px rgba(203, 168, 92, 0.15);
+      }
+      50% {
+        box-shadow:
+          0 12px 48px rgba(203, 168, 92, 0.4),
+          0 24px 80px rgba(203, 168, 92, 0.2);
+      }
+    }
+
+    .profit-source::before,
+    .profit-source::after {
+      content: '';
+      position: absolute;
+      border-radius: 50%;
+      border: 3px solid transparent;
+    }
+
+    .profit-source::before {
+      inset: -24px;
+      border-top-color: rgba(255, 217, 102, 0.35);
+      border-right-color: rgba(255, 217, 102, 0.2);
+      animation: ring-rotate 15s linear infinite;
+    }
+
+    .profit-source::after {
+      inset: -40px;
+      border-bottom-color: rgba(242, 138, 50, 0.3);
+      border-left-color: rgba(242, 138, 50, 0.15);
+      animation: ring-rotate 25s linear infinite reverse;
+    }
+
+    @keyframes ring-rotate {
+      to { transform: rotate(360deg); }
+    }
+
+    .profit-source-label {
+      font-size: 0.7rem;
       font-weight: 700;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.85);
+      margin-bottom: 0.75rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .profit-source-title {
+      font-size: clamp(1.5rem, 3vw, 1.85rem);
+      font-weight: 800;
+      color: white;
+      margin-bottom: 0.75rem;
+      line-height: 1.2;
+      position: relative;
+      z-index: 2;
+    }
+
+    .profit-source-subtitle {
+      font-size: clamp(0.9rem, 1.8vw, 1rem);
+      color: rgba(255, 255, 255, 0.9);
+      font-style: italic;
+      font-weight: 500;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* Three Dimension Cards - Clean Grid */
+    .dimensions-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .dimension-card {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 251, 245, 0.98));
+      padding: 2.5rem 2rem;
+      border-radius: 50px;
+      box-shadow:
+        0 2px 12px rgba(203, 168, 92, 0.08),
+        0 8px 32px rgba(203, 168, 92, 0.06);
+      border: 1px solid rgba(203, 168, 92, 0.12);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      text-align: center;
+      backdrop-filter: blur(8px);
+      opacity: 0;
+      transform: translateY(30px);
+    }
+
+    .dimension-card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .dimension-card:nth-child(1) {
+      transition-delay: 0.1s;
+    }
+
+    .dimension-card:nth-child(2) {
+      transition-delay: 0.2s;
+    }
+
+    .dimension-card:nth-child(3) {
+      transition-delay: 0.3s;
+    }
+
+    .dimension-card:hover {
+      box-shadow:
+        0 4px 20px rgba(203, 168, 92, 0.12),
+        0 12px 48px rgba(203, 168, 92, 0.08);
+      border-color: rgba(203, 168, 92, 0.25);
+      transform: translateY(-4px);
+    }
+
+    /* Icon Container */
+    .dimension-icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 1.75rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, rgba(203, 168, 92, 0.15), rgba(255, 191, 71, 0.2));
+      border-radius: 50%;
+      border: 2px solid rgba(203, 168, 92, 0.2);
+      box-shadow: 0 2px 8px rgba(203, 168, 92, 0.1);
+    }
+
+    .dimension-icon i {
+      width: 40px;
+      height: 40px;
       color: var(--gold);
+      stroke-width: 2;
+    }
+
+    .dimension-title {
+      font-size: clamp(1.15rem, 2.2vw, 1.35rem);
+      font-weight: 700;
+      color: var(--text-dark);
+      line-height: 1.3;
+      margin-bottom: 1rem;
+    }
+
+    .dimension-description {
+      font-size: clamp(0.9rem, 1.6vw, 0.98rem);
+      color: #666;
+      line-height: 1.6;
+      font-weight: 400;
+    }
+
+    /* Conclusion Statement */
+    .dimensions-conclusion {
+      text-align: center;
+      margin-top: 2rem;
+      padding: 2rem 2rem;
+      background: linear-gradient(135deg,
+        rgba(203, 168, 92, 0.08) 0%,
+        rgba(237, 189, 86, 0.06) 100%
+      );
+      border-radius: 50px;
+      border: 2px solid rgba(203, 168, 92, 0.15);
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    .dimensions-conclusion.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .dimensions-conclusion-text {
+      font-size: clamp(1rem, 2vw, 1.15rem);
+      font-weight: 700;
+      color: var(--text-dark);
+      line-height: 1.5;
+      font-style: italic;
     }
 
     /* ═══════════════════════════════════════════════════════════
@@ -605,16 +982,16 @@
        ═══════════════════════════════════════════════════════════ */
 
     .principle-container {
-      max-width: 1000px;
+      max-width: 900px;
       margin: 0 auto;
+      text-align: center;
     }
 
     .principle-content {
       background: var(--white);
       border-radius: 16px;
-      padding: 4rem;
+      padding: 3.5rem;
       box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
-      margin-bottom: 4rem;
     }
 
     .principle-content p {
@@ -624,51 +1001,11 @@
       margin-bottom: 1.5rem;
     }
 
-    .principle-content ul {
-      list-style: none;
-      margin: 1.5rem 0 2rem 1.5rem;
-    }
-
-    .principle-content ul li {
-      font-size: 1.15rem;
-      line-height: 1.8;
-      color: var(--text-dark);
-      margin-bottom: 0.75rem;
-      padding-left: 1.5rem;
-      position: relative;
-    }
-
-    .principle-content ul li::before {
-      content: '';
-      position: absolute;
-      left: 0;
-      top: 0.75rem;
-      width: 6px;
-      height: 6px;
-      border-radius: 50%;
-      background: var(--gold);
-    }
-
     .principle-highlight {
-      font-size: 1.35rem;
+      font-size: 1.5rem;
       font-weight: 700;
-      color: var(--text-dark);
-      margin: 2rem 0;
-    }
-
-    .principle-quote {
-      background: linear-gradient(135deg, rgba(203, 168, 92, 0.12), rgba(255, 191, 71, 0.15));
-      border-radius: 12px;
-      padding: 3rem;
-      text-align: center;
-    }
-
-    .principle-quote blockquote {
-      font-size: 1.75rem;
-      font-weight: 500;
-      font-style: italic;
-      line-height: 1.6;
       color: var(--gold);
+      margin: 2rem 0;
     }
 
     /* ═══════════════════════════════════════════════════════════
@@ -677,9 +1014,13 @@
 
     .final-cta {
       padding: 10rem 5%;
-      background: rgba(255, 255, 255, 0.95);
+      background: linear-gradient(135deg,
+        rgba(255, 251, 245, 0.8) 0%,
+        rgba(255, 249, 235, 0.9) 100%
+      );
       text-align: center;
       position: relative;
+      overflow: hidden;
     }
 
     .final-cta::before {
@@ -697,9 +1038,23 @@
       );
     }
 
+    .final-cta::after {
+      content: '';
+      position: absolute;
+      top: -10%;
+      right: -10%;
+      width: 500px;
+      height: 500px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(203, 168, 92, 0.1) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
     .cta-container {
       max-width: 900px;
       margin: 0 auto;
+      position: relative;
+      z-index: 2;
     }
 
     .cta-title {
@@ -853,21 +1208,55 @@
 
     @media (max-width: 1024px) {
       .hero {
-        padding: 8rem 5% 6rem;
+        padding: 9rem 0 8rem;
       }
 
-      .hero-comparison {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-      }
-
-      .pillars-grid {
+      .hero-progression {
         grid-template-columns: 1fr;
         gap: 2rem;
       }
 
-      .reality-grid {
+      .progression-item {
         grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 2.25rem 2rem;
+        border-radius: 12px;
+      }
+
+      .progression-image {
+        width: 100%;
+        height: 300px;
+        border-radius: 10px;
+      }
+
+      .reality-content-wrapper {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      .reality-icons-left,
+      .reality-icons-right {
+        max-width: 500px;
+        margin: 0 auto;
+      }
+
+      .reality-icons-right .reality-icon-item {
+        flex-direction: row;
+        text-align: left;
+      }
+
+      .reality-statement {
+        font-size: 2rem;
+      }
+
+      .profit-source {
+        max-width: 320px;
+        padding: 2.5rem 2rem;
+      }
+
+      .dimensions-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
       }
 
       .section {
@@ -877,21 +1266,178 @@
 
     @media (max-width: 768px) {
       .hero {
-        padding: 6rem 4% 4rem;
+        padding: 7rem 0 6rem;
+      }
+
+      .hero-container {
+        padding: 0 4%;
+      }
+
+      .hero-eyebrow {
+        font-size: 0.6rem;
+        padding: 8px 18px;
+      }
+
+      .hero-eyebrow::before {
+        display: none;
+      }
+
+      .hero h1 {
+        margin-bottom: 0.5rem;
+      }
+
+      .hero h2 {
+        margin-bottom: 2.5rem;
+      }
+
+      .hero h2::after {
+        width: 70px;
+        height: 2.5px;
+        bottom: -1rem;
+      }
+
+      .hero-description {
+        font-size: 1.15rem;
+        margin-bottom: 5rem;
+      }
+
+      .hero-progression {
+        gap: 1.5rem;
+      }
+
+      .progression-item {
+        padding: 2rem 1.5rem;
+        border-radius: 10px;
+      }
+
+      .progression-image {
+        width: 100%;
+        height: 260px;
+        border-radius: 8px;
+      }
+
+      .progression-content h3 {
+        font-size: 1.85rem;
+      }
+
+      .progression-content .subtitle {
+        font-size: 0.65rem;
+        margin-bottom: 1.5rem;
+      }
+
+      .progression-content ul {
+        gap: 1.15rem;
+      }
+
+      .progression-content ul li {
+        font-size: 1.05rem;
+        padding-left: 1.5rem;
+      }
+
+      .progression-content ul li::before {
+        width: 6px;
+        height: 6px;
       }
 
       .section {
         padding: 5rem 4%;
       }
 
-      .reality-card,
-      .principle-content,
-      .principle-quote {
-        padding: 2.5rem;
+      .reality-statement {
+        font-size: 1.75rem;
       }
 
-      .pillar-card {
-        padding: 2rem;
+      .reality-intro {
+        font-size: 1rem;
+        margin-bottom: 2rem;
+      }
+
+      .reality-conclusion {
+        font-size: 1.25rem;
+        padding: 2rem 1.5rem;
+        margin-top: 3rem;
+      }
+
+      .reality-icon-circle {
+        width: 48px;
+        height: 48px;
+        min-width: 48px;
+      }
+
+      .reality-icon-circle i {
+        width: 24px;
+        height: 24px;
+      }
+
+      .reality-icon-text {
+        font-size: 1rem;
+        padding-top: 0.5rem;
+      }
+
+      .stat-circle {
+        width: 220px;
+        height: 220px;
+      }
+
+      .stat-value {
+        font-size: 3rem;
+      }
+
+      .profit-source-title {
+        font-size: 2rem;
+      }
+
+      .profit-source-subtitle {
+        font-size: 1rem;
+      }
+
+      .profit-source-subtitle::before,
+      .profit-source-subtitle::after {
+        display: none;
+      }
+
+      .profit-source {
+        max-width: 280px;
+        padding: 2rem 1.75rem;
+        margin-bottom: 3rem;
+      }
+
+      .profit-source::before {
+        inset: -20px;
+      }
+
+      .profit-source::after {
+        inset: -32px;
+      }
+
+      .dimensions-container {
+        padding: 0 1rem;
+      }
+
+      .dimensions-grid {
+        gap: 1.5rem;
+      }
+
+      .dimension-card {
+        padding: 2rem 1.5rem;
+        border-radius: 40px;
+      }
+
+      .dimension-icon {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 1.5rem;
+      }
+
+      .dimension-icon i {
+        width: 36px;
+        height: 36px;
+      }
+
+      .dimensions-conclusion {
+        margin-top: 2rem;
+        padding: 1.75rem 1.5rem;
+        border-radius: 40px;
       }
 
       .final-cta {
@@ -907,6 +1453,10 @@
       .footer-links {
         flex-direction: column;
         gap: 1rem;
+      }
+
+      .diagram-stats {
+        grid-template-columns: 1fr;
       }
     }
   </style>
@@ -959,38 +1509,53 @@
     <!-- HERO SECTION -->
     <section class="hero">
       <div class="hero-container">
-        <div style="text-align: center;">
-          <div class="hero-eyebrow fade-in-up">
-            Core Philosophy
+        <div class="hero-eyebrow fade-in-up">
+          Core Philosophy
+        </div>
+
+        <h1 class="fade-in-up stagger-1">
+          Profitability is not the objective.
+        </h1>
+
+        <h2 class="fade-in-up stagger-2">
+          It is the enabler.
+        </h2>
+
+        <p class="hero-description fade-in-up stagger-3">
+          At St Raphael Health, <em>profitability is not about extracting value</em> from communities. It is about <em>protecting patient care</em>, <em>preserving access</em>, and creating <em>stability</em>.
+        </p>
+
+        <div class="hero-progression">
+          <div class="progression-item fade-in-up stagger-1">
+            <img src="/assets/images/chaos-hospital.jpg" alt="Hospital in distress" class="progression-image" loading="lazy">
+            <div class="progression-content">
+              <h3>Without Profit</h3>
+              <div class="subtitle">Hospitals Lose:</div>
+              <ul>
+                <li>Strategic flexibility</li>
+                <li>Operational control</li>
+                <li>Financial stability</li>
+              </ul>
+            </div>
           </div>
 
-          <h1 class="fade-in-up stagger-1">
-            Profitability is not the objective.
-          </h1>
-
-          <h2 class="fade-in-up stagger-2">
-            It is the enabler.
-          </h2>
-
-          <p class="hero-description fade-in-up stagger-3">
-            At St Raphael Health, profitability is not about extracting value from communities. It is about protecting patient care, preserving access, and creating stability.
-          </p>
-
-          <div class="hero-comparison">
-            <div class="comparison-card fade-in-up stagger-1">
-              <p class="comparison-title">Without profit</p>
-              <p class="comparison-text">Hospitals lose options, control, and strategic flexibility.</p>
-            </div>
-            <div class="comparison-card fade-in-up stagger-2">
-              <p class="comparison-title">With profit</p>
-              <p class="comparison-text">They gain stability, freedom, and the ability to invest in care.</p>
+          <div class="progression-item fade-in-up stagger-2">
+            <img src="/assets/images/stable-hospital.jpg" alt="Stable hospital operations" class="progression-image" loading="lazy">
+            <div class="progression-content">
+              <h3>With Profit</h3>
+              <div class="subtitle">Hospitals Gain:</div>
+              <ul>
+                <li>Strategic freedom</li>
+                <li>Ability to invest in care</li>
+                <li>Long-term stability</li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- REALITY SECTION -->
+    <!-- REALITY SECTION WITH STAT -->
     <section class="section section-light">
       <div class="reality-container">
         <div class="section-header fade-in-up">
@@ -1000,193 +1565,160 @@
           </h2>
         </div>
 
-        <div class="reality-card fade-in-up">
-          <p class="reality-statement">
-            Across the United States, the majority of hospitals operate under some level of financial distress.
-          </p>
+        <div class="reality-layout">
+          <div class="reality-content fade-in-up">
+            <p class="reality-statement">
+              Across the United States, the majority of hospitals operate <strong>under some level of financial distress.</strong>
+            </p>
 
-          <p class="reality-intro">When margins are negative or unpredictable:</p>
+            <p class="reality-intro">When margins are negative or unpredictable:</p>
 
-          <div class="reality-grid">
-            <div class="reality-item">
-              <i data-lucide="x" stroke-width="2"></i>
-              <span>Capital becomes constrained</span>
+            <div class="reality-content-wrapper">
+              <!-- Left Icons -->
+              <div class="reality-icons-left">
+                <div class="reality-icon-item">
+                  <div class="reality-icon-circle">
+                    <i data-lucide="lock" stroke-width="2"></i>
+                  </div>
+                  <div class="reality-icon-text">Capital becomes constrained</div>
+                </div>
+                <div class="reality-icon-item">
+                  <div class="reality-icon-circle">
+                    <i data-lucide="user-round-x" stroke-width="2"></i>
+                  </div>
+                  <div class="reality-icon-text">Staff turnover increases</div>
+                </div>
+                <div class="reality-icon-item">
+                  <div class="reality-icon-circle">
+                    <i data-lucide="cpu" stroke-width="2"></i>
+                  </div>
+                  <div class="reality-icon-text">Technology investment stalls</div>
+                </div>
+              </div>
+
+              <!-- Center Stat Circle -->
+              <div class="stat-circle-wrapper fade-in-up stagger-1">
+                <div class="stat-circle">
+                  <svg class="stat-ring-svg" viewBox="0 0 280 280">
+                    <defs>
+                      <linearGradient id="statGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stop-color="#E85D34"/>
+                        <stop offset="50%" stop-color="#F28A32"/>
+                        <stop offset="100%" stop-color="#EDBD56"/>
+                      </linearGradient>
+                    </defs>
+                    <circle class="stat-ring-track" cx="140" cy="140" r="134"/>
+                    <circle class="stat-ring-progress" cx="140" cy="140" r="134"/>
+                  </svg>
+                  <div class="stat-inner">
+                    <div class="stat-value" data-count-target="27">0</div>
+                    <div class="stat-label">% of Texas Hospitals in Distress</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Right Icons -->
+              <div class="reality-icons-right">
+                <div class="reality-icon-item">
+                  <div class="reality-icon-circle">
+                    <i data-lucide="activity" stroke-width="2"></i>
+                  </div>
+                  <div class="reality-icon-text">Clinical quality initiatives stall</div>
+                </div>
+                <div class="reality-icon-item">
+                  <div class="reality-icon-circle">
+                    <i data-lucide="shield-off" stroke-width="2"></i>
+                  </div>
+                  <div class="reality-icon-text">Community trust erodes</div>
+                </div>
+                <div class="reality-icon-item">
+                  <div class="reality-icon-circle">
+                    <i data-lucide="git-branch-plus" stroke-width="2"></i>
+                  </div>
+                  <div class="reality-icon-text">Strategic choices disappear</div>
+                </div>
+              </div>
             </div>
-            <div class="reality-item">
-              <i data-lucide="x" stroke-width="2"></i>
-              <span>Staff turnover increases</span>
-            </div>
-            <div class="reality-item">
-              <i data-lucide="x" stroke-width="2"></i>
-              <span>Technology investment stalls</span>
-            </div>
-            <div class="reality-item">
-              <i data-lucide="x" stroke-width="2"></i>
-              <span>Community trust erodes</span>
-            </div>
-            <div class="reality-item" style="grid-column: 1 / -1;">
-              <i data-lucide="x" stroke-width="2"></i>
-              <span>Strategic choices disappear</span>
+
+            <div class="reality-conclusion">
+              Profitability is the difference between constant reaction and effective leadership.
             </div>
           </div>
+        </div>
+      </div>
+    </section>
 
-          <div class="reality-conclusion">
-            <p>
-              Profitability is the difference between constant reaction and effective leadership.
+    <!-- THREE DIMENSIONS SECTION -->
+    <section class="section section-white">
+      <div class="dimensions-container">
+        <div class="dimensions-header fade-in-up">
+          <h2 class="dimensions-title">Profit Enables What Matters Most</h2>
+          <p class="dimensions-subtitle">Sustainable profitability is the foundation of hospital stability and long-term success.</p>
+        </div>
+
+        <!-- Central Profit Circle -->
+        <div class="profit-source fade-in-up">
+          <div class="profit-source-label">PROFIT</div>
+          <h3 class="profit-source-title">Sustainable Profitability</h3>
+          <p class="profit-source-subtitle">Not the objective. The enabler.</p>
+        </div>
+
+        <!-- Three Dimension Cards -->
+        <div class="dimensions-grid">
+          <!-- DIMENSION 1: Care for the Community -->
+          <div class="dimension-card">
+            <div class="dimension-icon">
+              <i data-lucide="heart" stroke-width="2"></i>
+            </div>
+            <h3 class="dimension-title">Care for the Community</h3>
+            <p class="dimension-description">
+              Sustainable profitability enables hospitals to <strong>invest in modern equipment</strong>, <strong>retain clinical talent</strong>, <strong>expand essential services</strong>, and <strong>improve patient outcomes</strong> while protecting community access.
+            </p>
+          </div>
+
+          <!-- DIMENSION 2: Freedom and Stability -->
+          <div class="dimension-card">
+            <div class="dimension-icon">
+              <i data-lucide="shield-check" stroke-width="2"></i>
+            </div>
+            <h3 class="dimension-title">Freedom and Stability</h3>
+            <p class="dimension-description">
+              Financial stability allows leadership to <strong>plan instead of firefight</strong>, <strong>make proactive decisions</strong>, operate with <strong>clarity and confidence</strong>, and shift governance from defensive to strategic.
+            </p>
+          </div>
+
+          <!-- DIMENSION 3: Value Creation -->
+          <div class="dimension-card">
+            <div class="dimension-icon">
+              <i data-lucide="trending-up" stroke-width="2"></i>
+            </div>
+            <h3 class="dimension-title">Value Creation</h3>
+            <p class="dimension-description">
+              Profitability restores optionality by <strong>preserving independence</strong>, enabling <strong>strategic partnerships</strong>, improving <strong>access to capital</strong>, and supporting transactions from a position of strength.
             </p>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- THREE PILLARS SECTION -->
-    <section class="section section-white">
-      <div class="pillars-container">
-        <div class="section-header fade-in-up">
-          <div class="section-kicker">Three Dimensions</div>
-          <h2 class="section-title">
-            Profit Enables <span style="color: var(--gold);">What Matters Most</span>
-          </h2>
-          <p class="section-subtitle">
-            Sustainable profitability unlocks three critical dimensions of hospital success
-          </p>
+        <!-- Conclusion -->
+        <div class="dimensions-conclusion">
+          <p class="dimensions-conclusion-text">Without sustainable profit, these outcomes are not possible.</p>
         </div>
-
-        <div class="pillars-grid">
-          <!-- Pillar 1 -->
-          <div class="pillar-card fade-in-up stagger-1">
-            <div class="pillar-icon-wrapper">
-              <div class="pillar-number">01</div>
-              <i data-lucide="heart" class="pillar-icon" stroke-width="1.5"></i>
-            </div>
-            <h3 class="pillar-title">Care for the Community</h3>
-            <p class="pillar-intro">Sustainable profit allows hospitals to:</p>
-            <ul class="pillar-list">
-              <li>
-                <i data-lucide="check" stroke-width="2"></i>
-                <span>Invest in modern equipment and technology</span>
-              </li>
-              <li>
-                <i data-lucide="check" stroke-width="2"></i>
-                <span>Recruit and retain high-quality clinical staff</span>
-              </li>
-              <li>
-                <i data-lucide="check" stroke-width="2"></i>
-                <span>Expand service lines that meet real community needs</span>
-              </li>
-              <li>
-                <i data-lucide="check" stroke-width="2"></i>
-                <span>Improve patient experience and outcomes</span>
-              </li>
-            </ul>
-            <div class="pillar-conclusion">
-              Care improves when hospitals are financially stable.
-            </div>
-          </div>
-
-          <!-- Pillar 2 -->
-          <div class="pillar-card fade-in-up stagger-2">
-            <div class="pillar-icon-wrapper">
-              <div class="pillar-number">02</div>
-              <i data-lucide="shield-check" class="pillar-icon" stroke-width="1.5"></i>
-            </div>
-            <h3 class="pillar-title">Freedom and Stability for Leadership</h3>
-            <p class="pillar-intro">When a hospital is profitable:</p>
-            <ul class="pillar-list">
-              <li>
-                <i data-lucide="check" stroke-width="2"></i>
-                <span>Leaders can plan instead of firefighting</span>
-              </li>
-              <li>
-                <i data-lucide="check" stroke-width="2"></i>
-                <span>Decisions are proactive rather than forced</span>
-              </li>
-              <li>
-                <i data-lucide="check" stroke-width="2"></i>
-                <span>Teams operate with clarity and confidence</span>
-              </li>
-              <li>
-                <i data-lucide="check" stroke-width="2"></i>
-                <span>Governance becomes strategic instead of defensive</span>
-              </li>
-            </ul>
-            <div class="pillar-conclusion">
-              Profit restores operational freedom.
-            </div>
-          </div>
-
-          <!-- Pillar 3 -->
-          <div class="pillar-card fade-in-up stagger-3">
-            <div class="pillar-icon-wrapper">
-              <div class="pillar-number">03</div>
-              <i data-lucide="trending-up" class="pillar-icon" stroke-width="1.5"></i>
-            </div>
-            <h3 class="pillar-title">Value Creation and Strategic Options</h3>
-            <p class="pillar-intro">Profitability creates optionality. Stable, well-run hospitals can:</p>
-            <ul class="pillar-list">
-              <li>
-                <i data-lucide="check" stroke-width="2"></i>
-                <span>Remain independent</span>
-              </li>
-              <li>
-                <i data-lucide="check" stroke-width="2"></i>
-                <span>Form strategic partnerships</span>
-              </li>
-              <li>
-                <i data-lucide="check" stroke-width="2"></i>
-                <span>Access capital on better terms</span>
-              </li>
-              <li>
-                <i data-lucide="check" stroke-width="2"></i>
-                <span>Pursue a sale at a materially higher valuation</span>
-              </li>
-            </ul>
-            <div class="pillar-conclusion">
-              Without profit, these options do not exist.
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- DIAGRAM SECTION -->
-    <section class="section section-light">
-      <div class="diagram-container">
-        <h2 class="diagram-title fade-in-up">Profit Is the Enabler</h2>
-
-        <div class="diagram-wrapper fade-in-up">
-          <img src="/assets/images/profit/profit-enabler-diagram.jpg" alt="Profit Is the Enabler - Care for Community, Freedom & Stability, Value Creation" loading="lazy">
-        </div>
-
-        <p class="diagram-caption fade-in-up">
-          Whether the goal is care, stability, or strategic options, <strong>profitability is the starting point.</strong>
-        </p>
       </div>
     </section>
 
     <!-- CORE PRINCIPLE SECTION -->
-    <section class="section section-white">
-      <div class="principle-container">
-        <div class="principle-content fade-in-up">
-          <p>Whether the goal is to:</p>
-          <ul>
-            <li>Protect essential community healthcare</li>
-            <li>Restore operational control</li>
-            <li>Stabilize a distressed facility</li>
-            <li>Or prepare for a future transaction</li>
-          </ul>
+    <section class="section section-light">
+      <div class="principle-container fade-in-up">
+        <div class="principle-content">
+          <p>
+            Whether the goal is to protect essential community healthcare, restore operational control, or prepare for a future transaction —
+          </p>
 
           <p class="principle-highlight">Profitability is the starting point.</p>
 
           <p>
             That is why St Raphael Health focuses first on restoring sustainable profit—not as an end in itself, but as the foundation for care, stability, and long-term value.
           </p>
-        </div>
-
-        <div class="principle-quote fade-in-up">
-          <blockquote>
-            "Profit is not the objective. It is the enabler of care, stability, and choice."
-          </blockquote>
         </div>
       </div>
     </section>
@@ -1226,7 +1758,7 @@
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest"></script>
 
-  <!-- Scroll Animation Script -->
+  <!-- Scroll Animation & Count-up Script -->
   <script>
     // Initialize Lucide icons
     document.addEventListener('DOMContentLoaded', () => {
@@ -1244,13 +1776,63 @@
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             entry.target.classList.add('visible');
+
+            // Trigger stat animations
+            if (entry.target.classList.contains('stat-circle')) {
+              entry.target.classList.add('stat-animated');
+              animateCounter(entry.target.querySelector('[data-count-target]'));
+            }
+
+            if (entry.target.classList.contains('diagram-stat')) {
+              entry.target.classList.add('stat-animated');
+              animateCounter(entry.target.querySelector('[data-count-target]'));
+            }
           }
         });
       }, observerOptions);
 
+      // Observe fade-in elements
       document.querySelectorAll('.fade-in-up').forEach(el => {
         observer.observe(el);
       });
+
+      // Observe stat circles
+      document.querySelectorAll('.stat-circle, .diagram-stat').forEach(el => {
+        observer.observe(el);
+      });
+
+      // Observe dimensions cards
+      document.querySelectorAll('.dimension-card').forEach(el => {
+        observer.observe(el);
+      });
+
+      // Observe dimensions conclusion
+      document.querySelectorAll('.dimensions-conclusion').forEach(el => {
+        observer.observe(el);
+      });
+
+      // Counter animation function
+      function animateCounter(element) {
+        if (!element || element.dataset.counted) return;
+        element.dataset.counted = 'true';
+
+        const target = parseInt(element.dataset.countTarget);
+        const duration = 2000;
+        const increment = target / (duration / 16);
+        let current = 0;
+
+        const updateCounter = () => {
+          current += increment;
+          if (current < target) {
+            element.textContent = Math.floor(current);
+            requestAnimationFrame(updateCounter);
+          } else {
+            element.textContent = target;
+          }
+        };
+
+        updateCounter();
+      }
 
       // Mobile menu toggle
       const menuToggle = document.getElementById('menu-toggle');

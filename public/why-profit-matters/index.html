@@ -978,34 +978,96 @@
     }
 
     /* ═══════════════════════════════════════════════════════════
-       CORE PRINCIPLE SECTION
+       CORE PRINCIPLE SECTION - Visual Pause
        ═══════════════════════════════════════════════════════════ */
 
     .principle-container {
-      max-width: 900px;
+      max-width: 850px;
       margin: 0 auto;
       text-align: center;
+      padding: 0 2rem;
     }
 
-    .principle-content {
-      background: var(--white);
-      border-radius: 16px;
-      padding: 3.5rem;
-      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+    .principle-intro {
+      font-size: clamp(1rem, 2vw, 1.1rem);
+      font-weight: 400;
+      line-height: 1.7;
+      color: var(--text-light);
+      margin-bottom: 3.5rem;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
     }
 
-    .principle-content p {
-      font-size: 1.15rem;
-      line-height: 1.8;
-      color: var(--text-dark);
-      margin-bottom: 1.5rem;
+    .principle-intro.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .principle-core {
+      position: relative;
+      margin: 0 0 3.5rem;
+      padding: 3rem 0;
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 1s cubic-bezier(0.16, 1, 0.3, 1) 0.2s;
+    }
+
+    .principle-core.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .principle-core::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold) 0%, var(--orange) 100%);
+      border-radius: 2px;
+    }
+
+    .principle-core::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 60px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--orange) 0%, var(--gold) 100%);
+      border-radius: 2px;
     }
 
     .principle-highlight {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--gold);
-      margin: 2rem 0;
+      font-size: clamp(2.25rem, 5vw, 3.5rem);
+      font-weight: 800;
+      line-height: 1.15;
+      letter-spacing: -0.02em;
+      background: linear-gradient(135deg, #CBA85C 0%, #EDBD56 50%, #F28A32 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin: 0;
+    }
+
+    .principle-supporting {
+      font-size: clamp(1rem, 2vw, 1.15rem);
+      font-weight: 400;
+      line-height: 1.75;
+      color: var(--text-medium);
+      margin-top: 3.5rem;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.4s;
+    }
+
+    .principle-supporting.visible {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     /* ═══════════════════════════════════════════════════════════
@@ -1440,6 +1502,28 @@
         border-radius: 40px;
       }
 
+      .principle-container {
+        padding: 0 1rem;
+      }
+
+      .principle-intro {
+        margin-bottom: 2.5rem;
+      }
+
+      .principle-core {
+        padding: 2.5rem 0;
+        margin-bottom: 2.5rem;
+      }
+
+      .principle-core::before,
+      .principle-core::after {
+        width: 40px;
+      }
+
+      .principle-supporting {
+        margin-top: 2.5rem;
+      }
+
       .final-cta {
         padding: 6rem 4%;
       }
@@ -1708,18 +1792,18 @@
 
     <!-- CORE PRINCIPLE SECTION -->
     <section class="section section-light">
-      <div class="principle-container fade-in-up">
-        <div class="principle-content">
-          <p>
-            Whether the goal is to protect essential community healthcare, restore operational control, or prepare for a future transaction —
-          </p>
+      <div class="principle-container">
+        <p class="principle-intro">
+          Whether the goal is to protect essential community healthcare, restore operational control, or prepare for a future transaction...
+        </p>
 
-          <p class="principle-highlight">Profitability is the starting point.</p>
-
-          <p>
-            That is why St Raphael Health focuses first on restoring sustainable profit—not as an end in itself, but as the foundation for care, stability, and long-term value.
-          </p>
+        <div class="principle-core">
+          <h2 class="principle-highlight">Profitability is the starting point.</h2>
         </div>
+
+        <p class="principle-supporting">
+          That is why St Raphael Health <strong>focuses first on restoring sustainable profit—not as an end in itself, but as the foundation for care, stability, and long-term value</strong>.
+        </p>
       </div>
     </section>
 
@@ -1808,6 +1892,11 @@
 
       // Observe dimensions conclusion
       document.querySelectorAll('.dimensions-conclusion').forEach(el => {
+        observer.observe(el);
+      });
+
+      // Observe principle elements
+      document.querySelectorAll('.principle-intro, .principle-core, .principle-supporting').forEach(el => {
         observer.observe(el);
       });
 

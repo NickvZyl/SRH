@@ -3,906 +3,1795 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <title>Our Approach - St Raphael Health</title>
   <meta name="description" content="This is not consulting. This is execution. St Raphael Health embeds directly with hospital leadership teams to stabilize operations and restore profitability.">
   <link rel="canonical" href="https://saintraphaelhealth.com/our-approach">
-  
+
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://saintraphaelhealth.com/our-approach">
   <meta property="og:title" content="Our Approach - St Raphael Health">
   <meta property="og:description" content="Operator-led framework for hospital turnarounds. Rapid diagnosis, hands-on execution, and accountability to outcomes.">
   <meta property="og:image" content="https://saintraphaelhealth.com/assets/logos/SRH Logo Light Background.png">
-  
+
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://saintraphaelhealth.com/our-approach">
   <meta property="twitter:title" content="Our Approach - St Raphael Health">
   <meta property="twitter:description" content="Operator-led framework for hospital turnarounds.">
   <meta property="twitter:image" content="https://saintraphaelhealth.com/assets/logos/SRH Logo Light Background.png">
-  
+
   <link rel="icon" type="image/svg+xml" href="/assets/logos/Icon.svg">
   <link rel="icon" type="image/png" href="/assets/logos/Icon.png">
   <link rel="apple-touch-icon" href="/assets/logos/Icon.png">
-  
+
+  <style>
+    /* Self-hosted Montserrat fonts */
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('/fonts/montserrat-v31-latin-300.woff2') format('woff2'),
+           url('/fonts/montserrat-v31-latin-300.woff') format('woff');
+      font-weight: 300;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('/fonts/montserrat-v31-latin-regular.woff2') format('woff2'),
+           url('/fonts/montserrat-v31-latin-regular.woff') format('woff');
+      font-weight: 400;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('/fonts/montserrat-v31-latin-500.woff2') format('woff2'),
+           url('/fonts/montserrat-v31-latin-500.woff') format('woff');
+      font-weight: 500;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('/fonts/montserrat-v31-latin-600.woff2') format('woff2'),
+           url('/fonts/montserrat-v31-latin-600.woff') format('woff');
+      font-weight: 600;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('/fonts/montserrat-v31-latin-700.woff2') format('woff2'),
+           url('/fonts/montserrat-v31-latin-700.woff') format('woff');
+      font-weight: 700;
+      font-style: normal;
+      font-display: swap;
+    }
+    @font-face {
+      font-family: 'Montserrat';
+      src: url('/fonts/montserrat-v31-latin-800.woff2') format('woff2'),
+           url('/fonts/montserrat-v31-latin-800.woff') format('woff');
+      font-weight: 800;
+      font-style: normal;
+      font-display: swap;
+    }
+  </style>
   <link rel="stylesheet" href="/styles.css">
-  <link rel="stylesheet" href="/styles/animations.css">
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <style>
+    /* ═══════════════════════════════════════════════════════════
+       ST RAPHAEL HEALTH – OUR APPROACH
+       Executive Design with Refined Aesthetics
+       ═══════════════════════════════════════════════════════════ */
+
+    :root {
+      --gold: #CBA85C;
+      --gold-light: #EDBD56;
+      --orange: #F28A32;
+      --warm-grey: #DBD5CA;
+      --text-dark: #2a2a2a;
+      --text-medium: #3a3a3a;
+      --text-light: #555555;
+      --white: #FFFFFF;
+      --cream: #FFFBF5;
+      --off-white: #FFF9F0;
+
+      --accent-yellow: #FFD966;
+      --accent-amber: #FFBF47;
+      --accent-coral: #FF9D6E;
+      --accent-red: #C2322F;
+
+      --wash-yellow: rgba(255, 217, 102, 0.04);
+      --wash-amber: rgba(255, 191, 71, 0.05);
+      --wash-orange: rgba(242, 138, 50, 0.04);
+
+      --font: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font);
+      font-weight: 400;
+      color: var(--text-dark);
+      background: var(--cream);
+      line-height: 1.6;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    .skip-link {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--gold);
+      color: var(--white);
+      padding: 8px 16px;
+      text-decoration: none;
+      z-index: 100;
+      font-weight: 600;
+    }
+
+    .skip-link:focus {
+      top: 0;
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       HERO SECTION
+       ═══════════════════════════════════════════════════════════ */
+
+    .hero {
+      padding: 3.125rem 0 10rem;
+      position: relative;
+      background: linear-gradient(to bottom, #FFFBF5 0%, #FFF9F0 100%);
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -15%;
+      right: -10%;
+      width: 900px;
+      height: 900px;
+      background: radial-gradient(circle,
+        rgba(242, 138, 50, 0.04) 0%,
+        rgba(237, 189, 86, 0.03) 40%,
+        transparent 70%
+      );
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .hero-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      padding: 0 5%;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.65rem;
+      font-weight: 800;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--orange);
+      margin-bottom: 2.75rem;
+      padding: 10px 24px;
+      border: 1.5px solid rgba(242, 138, 50, 0.25);
+      border-radius: 24px;
+      position: relative;
+      background: rgba(255, 251, 245, 0.7);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 4px 12px rgba(242, 138, 50, 0.08);
+    }
+
+    .hero-eyebrow::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: -50px;
+      width: 32px;
+      height: 2px;
+      background: linear-gradient(to left, var(--orange), transparent);
+      transform: translateY(-50%);
+      border-radius: 2px;
+    }
+
+    .hero h1 {
+      font-size: clamp(3.25rem, 7.5vw, 6.5rem);
+      font-weight: 200;
+      line-height: 1.05;
+      letter-spacing: -0.035em;
+      color: var(--text-dark);
+      margin-bottom: 0.5rem;
+      max-width: 1000px;
+    }
+
+    .hero h2 {
+      font-size: clamp(3.25rem, 7.5vw, 6.5rem);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.035em;
+      background: linear-gradient(135deg, #CBA85C 0%, #EDBD56 50%, #F28A32 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 3.5rem;
+      max-width: 1000px;
+      position: relative;
+    }
+
+    .hero h2::after {
+      content: '';
+      position: absolute;
+      bottom: -1.25rem;
+      left: 0;
+      width: 100px;
+      height: 3px;
+      background: linear-gradient(90deg, var(--orange) 0%, var(--gold-light) 100%);
+      border-radius: 3px;
+    }
+
+    .hero-description {
+      font-size: 1.3rem;
+      font-weight: 400;
+      line-height: 1.85;
+      color: var(--text-medium);
+      max-width: 750px;
+      margin: 0 0 2.5rem 0;
+    }
+
+    .hero-description em {
+      font-style: normal;
+      font-weight: 600;
+      color: var(--text-dark);
+      position: relative;
+      background: linear-gradient(to right, rgba(242, 138, 50, 0.12), transparent);
+      padding: 2px 6px 2px 2px;
+      border-radius: 4px;
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       HOW WE WORK SECTION
+       ═══════════════════════════════════════════════════════════ */
+
+    .how-we-work {
+      padding: 9rem 5%;
+      background: var(--white);
+      position: relative;
+    }
+
+    .how-we-work::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 20%;
+      right: 20%;
+      height: 2px;
+      background: linear-gradient(90deg,
+        transparent,
+        var(--gold) 30%,
+        var(--orange) 70%,
+        transparent
+      );
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 6rem;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .section-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+    }
+
+    .section-kicker::before {
+      content: '';
+      width: 36px;
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+    }
+
+    .section-title {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      color: var(--text-dark);
+      margin-bottom: 1.5rem;
+    }
+
+    .section-subtitle {
+      font-size: 1.3rem;
+      font-weight: 400;
+      line-height: 1.7;
+      color: var(--text-light);
+    }
+
+    .framework-grid {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3rem;
+    }
+
+    .framework-card {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 251, 245, 0.98));
+      padding: 2.75rem 2.5rem;
+      border-radius: 4px;
+      box-shadow:
+        0 2px 12px rgba(203, 168, 92, 0.08),
+        0 8px 32px rgba(203, 168, 92, 0.06);
+      border-top: 3px solid transparent;
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      opacity: 0;
+      transform: translateY(40px);
+      animation: card-float 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    }
+
+    @keyframes card-float {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .framework-card:nth-child(1) {
+      animation-delay: 0.1s;
+      border-top-color: var(--gold);
+    }
+
+    .framework-card:nth-child(2) {
+      animation-delay: 0.2s;
+      border-top-color: var(--orange);
+    }
+
+    .framework-card:nth-child(3) {
+      animation-delay: 0.3s;
+      border-top-color: var(--gold-light);
+    }
+
+    .framework-card:nth-child(4) {
+      animation-delay: 0.4s;
+      border-top-color: var(--gold);
+    }
+
+    .framework-card:nth-child(5) {
+      animation-delay: 0.5s;
+      border-top-color: var(--orange);
+    }
+
+    .framework-card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow:
+        0 4px 20px rgba(203, 168, 92, 0.12),
+        0 12px 48px rgba(203, 168, 92, 0.08);
+    }
+
+    .card-number {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(203, 168, 92, 0.15), rgba(255, 191, 71, 0.2));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.75rem;
+      font-weight: 800;
+      color: var(--gold);
+      margin-bottom: 1.75rem;
+      border: 2px solid rgba(203, 168, 92, 0.2);
+    }
+
+    .framework-card h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 1rem;
+      line-height: 1.3;
+    }
+
+    .framework-card p {
+      font-size: 1.05rem;
+      font-weight: 400;
+      color: #666;
+      line-height: 1.65;
+      margin-bottom: 1.5rem;
+    }
+
+    .card-emphasis {
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(203, 168, 92, 0.15);
+      font-size: 0.95rem;
+      font-weight: 600;
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       OPERATING PILLARS SECTION
+       ═══════════════════════════════════════════════════════════ */
+
+    .operating-pillars {
+      padding: 9rem 5%;
+      background: linear-gradient(180deg,
+        rgba(255, 251, 230, 0.5) 0%,
+        rgba(255, 253, 240, 0.3) 100%
+      );
+      position: relative;
+    }
+
+    .operating-pillars::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 20%;
+      right: 20%;
+      height: 2px;
+      background: linear-gradient(90deg,
+        transparent,
+        var(--gold) 30%,
+        var(--orange) 70%,
+        transparent
+      );
+    }
+
+    .pillars-container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .pillars-intro {
+      max-width: 850px;
+      margin-bottom: 6rem;
+    }
+
+    .pillars-intro h2 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      color: var(--text-dark);
+      margin-bottom: 1.5rem;
+    }
+
+    .pillars-intro h2 .accent {
+      background: linear-gradient(135deg, var(--gold) 0%, var(--orange) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .pillars-intro p {
+      font-size: 1.2rem;
+      font-weight: 400;
+      line-height: 1.7;
+      color: var(--text-light);
+    }
+
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3rem;
+    }
+
+    .pillar-card {
+      background: var(--white);
+      padding: 3rem 2.75rem;
+      border-radius: 4px;
+      box-shadow:
+        0 2px 12px rgba(203, 168, 92, 0.08),
+        0 8px 32px rgba(203, 168, 92, 0.06);
+      border-left: 4px solid var(--gold);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      opacity: 0;
+      transform: translateY(40px);
+      animation: card-float 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    }
+
+    .pillar-card:nth-child(even) {
+      border-left: none;
+      border-right: 4px solid var(--orange);
+    }
+
+    .pillar-card:nth-child(1) { animation-delay: 0.1s; }
+    .pillar-card:nth-child(2) { animation-delay: 0.2s; }
+    .pillar-card:nth-child(3) { animation-delay: 0.3s; }
+    .pillar-card:nth-child(4) { animation-delay: 0.4s; }
+    .pillar-card:nth-child(5) { animation-delay: 0.5s; }
+    .pillar-card:nth-child(6) { animation-delay: 0.6s; }
+
+    .pillar-card:hover {
+      transform: translateY(-8px);
+      box-shadow:
+        0 4px 20px rgba(203, 168, 92, 0.12),
+        0 12px 48px rgba(203, 168, 92, 0.08);
+    }
+
+    .pillar-icon {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(203, 168, 92, 0.15), rgba(255, 191, 71, 0.2));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.75rem;
+      border: 2px solid rgba(203, 168, 92, 0.2);
+      box-shadow: 0 2px 8px rgba(203, 168, 92, 0.1);
+    }
+
+    .pillar-icon i {
+      width: 36px;
+      height: 36px;
+      color: var(--gold);
+      stroke-width: 2;
+    }
+
+    .pillar-card h3 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 1.25rem;
+      line-height: 1.2;
+    }
+
+    .pillar-card h3 .accent {
+      background: linear-gradient(135deg, var(--gold) 0%, var(--orange) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .pillar-card p {
+      font-size: 1.1rem;
+      font-weight: 400;
+      color: #666;
+      line-height: 1.7;
+      margin-bottom: 1.75rem;
+    }
+
+    .pillar-items {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin-bottom: 1.75rem;
+    }
+
+    .pillar-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: 0.98rem;
+      color: var(--text-dark);
+    }
+
+    .pillar-item::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      min-width: 6px;
+      border-radius: 50%;
+      background: var(--gold);
+      margin-top: 0.5em;
+    }
+
+    .pillar-conclusion {
+      padding-top: 1.75rem;
+      border-top: 1px solid rgba(203, 168, 92, 0.15);
+      font-size: 1.05rem;
+      font-weight: 600;
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       EXECUTION MODEL SECTION WITH CIRCULAR STATS
+       ═══════════════════════════════════════════════════════════ */
+
+    .execution-model {
+      padding: 9rem 5%;
+      background: var(--white);
+      position: relative;
+    }
+
+    .execution-model::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg,
+        transparent 0%,
+        var(--gold) 30%,
+        var(--gold-light) 50%,
+        var(--orange) 70%,
+        transparent 100%
+      );
+    }
+
+    .execution-container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    .execution-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      align-items: center;
+      margin-bottom: 6rem;
+    }
+
+    .execution-content h2 {
+      font-size: clamp(2.75rem, 5.5vw, 4.5rem);
+      font-weight: 800;
+      line-height: 1.08;
+      letter-spacing: -0.04em;
+      margin-bottom: 2rem;
+      color: var(--text-dark);
+    }
+
+    .execution-content h2 .emphasis {
+      display: block;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--orange) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .execution-content p {
+      font-size: 1.25rem;
+      font-weight: 400;
+      line-height: 1.65;
+      color: #3a3a3a;
+    }
+
+    .execution-stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3rem;
+    }
+
+    .stat-circle {
+      position: relative;
+      width: 240px;
+      height: 240px;
+      margin: 0 auto;
+    }
+
+    .stat-ring-svg {
+      width: 100%;
+      height: 100%;
+      transform: rotate(-90deg);
+    }
+
+    .stat-ring-track {
+      fill: none;
+      stroke: rgba(219, 213, 202, 0.2);
+      stroke-width: 10;
+    }
+
+    .stat-ring-progress {
+      fill: none;
+      stroke: url(#statGradient);
+      stroke-width: 10;
+      stroke-linecap: round;
+      stroke-dasharray: 678;
+      stroke-dashoffset: 678;
+      transition: stroke-dashoffset 2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .stat-circle.stat-animated .stat-ring-progress {
+      stroke-dashoffset: 0;
+    }
+
+    .stat-inner {
+      position: absolute;
+      inset: 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 3rem;
+      font-weight: 800;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--orange) 60%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      line-height: 1;
+      margin-bottom: 0.5rem;
+    }
+
+    .stat-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--text-medium);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      max-width: 130px;
+    }
+
+    /* Timeline */
+    .execution-timeline {
+      max-width: 900px;
+      margin: 4rem auto 0;
+      position: relative;
+      padding-left: 3rem;
+    }
+
+    .execution-timeline::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(180deg, var(--gold) 0%, var(--orange) 100%);
+    }
+
+    .timeline-phase {
+      position: relative;
+      padding: 2.5rem 0;
+      border-bottom: 1px solid rgba(203, 168, 92, 0.15);
+    }
+
+    .timeline-phase:last-child {
+      border-bottom: none;
+    }
+
+    .timeline-marker {
+      position: absolute;
+      left: -3rem;
+      top: 2.5rem;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: var(--gold);
+      border: 3px solid var(--cream);
+      box-shadow: 0 0 0 2px var(--gold);
+    }
+
+    .timeline-duration {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.75rem;
+    }
+
+    .timeline-phase h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 1rem;
+    }
+
+    .timeline-objective {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--orange);
+      margin-bottom: 1rem;
+      font-style: italic;
+    }
+
+    .timeline-phase p {
+      font-size: 1rem;
+      color: var(--text-medium);
+      line-height: 1.6;
+      margin-bottom: 1rem;
+    }
+
+    .timeline-items {
+      list-style: none;
+      padding: 0;
+      margin: 1rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .timeline-items li {
+      font-size: 0.95rem;
+      color: var(--text-light);
+      padding-left: 1.5rem;
+      position: relative;
+    }
+
+    .timeline-items li::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0.65em;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--gold);
+      opacity: 0.5;
+    }
+
+    .timeline-outcome {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      margin-top: 1rem;
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       WHAT MAKES DIFFERENT SECTION
+       ═══════════════════════════════════════════════════════════ */
+
+    .what-makes-different {
+      padding: 9rem 5%;
+      background: linear-gradient(180deg,
+        rgba(255, 251, 230, 0.5) 0%,
+        rgba(255, 253, 240, 0.3) 100%
+      );
+      position: relative;
+    }
+
+    .what-makes-different::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 20%;
+      right: 20%;
+      height: 2px;
+      background: linear-gradient(90deg,
+        transparent,
+        var(--gold) 30%,
+        var(--orange) 70%,
+        transparent
+      );
+    }
+
+    .different-container {
+      max-width: 1300px;
+      margin: 0 auto;
+    }
+
+    .different-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 3rem;
+      margin-bottom: 5rem;
+    }
+
+    .different-card {
+      background: var(--white);
+      padding: 3rem 2.5rem;
+      border-radius: 4px;
+      box-shadow:
+        0 2px 12px rgba(203, 168, 92, 0.08),
+        0 8px 32px rgba(203, 168, 92, 0.06);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      opacity: 0;
+      transform: translateY(40px);
+      animation: card-float 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    }
+
+    .different-card:nth-child(1) { animation-delay: 0.1s; }
+    .different-card:nth-child(2) { animation-delay: 0.2s; }
+    .different-card:nth-child(3) { animation-delay: 0.3s; }
+
+    .different-card:hover {
+      transform: translateY(-8px) scale(1.02);
+      box-shadow:
+        0 4px 20px rgba(203, 168, 92, 0.12),
+        0 12px 48px rgba(203, 168, 92, 0.08);
+    }
+
+    .different-icon {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, rgba(203, 168, 92, 0.15), rgba(255, 191, 71, 0.2));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 2rem;
+      border: 2px solid rgba(203, 168, 92, 0.2);
+      box-shadow: 0 2px 8px rgba(203, 168, 92, 0.1);
+    }
+
+    .different-icon i {
+      width: 40px;
+      height: 40px;
+      color: var(--gold);
+      stroke-width: 2;
+    }
+
+    .different-card h3 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 1.25rem;
+      line-height: 1.2;
+    }
+
+    .different-card p {
+      font-size: 1.05rem;
+      font-weight: 400;
+      color: #666;
+      line-height: 1.7;
+    }
+
+    /* Proof callout */
+    .proof-callout {
+      max-width: 1000px;
+      margin: 0 auto 5rem;
+      padding: 4rem 3.5rem;
+      background: linear-gradient(135deg, rgba(203, 168, 92, 0.08) 0%, rgba(237, 189, 86, 0.08) 100%);
+      border-radius: 4px;
+      border: 1px solid rgba(203, 168, 92, 0.2);
+      text-align: center;
+    }
+
+    .proof-kicker {
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 1.5rem;
+    }
+
+    .proof-quote {
+      font-size: 1.75rem;
+      font-weight: 400;
+      font-style: italic;
+      line-height: 1.6;
+      color: var(--text-dark);
+      margin-bottom: 1.5rem;
+    }
+
+    .proof-quote strong {
+      font-weight: 700;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--orange) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .proof-caption {
+      font-size: 1.05rem;
+      color: var(--text-medium);
+    }
+
+    /* Who this is for */
+    .for-whom {
+      max-width: 850px;
+      margin: 0 auto;
+    }
+
+    .for-whom h3 {
+      font-size: 2.25rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 2.5rem;
+      line-height: 1.2;
+    }
+
+    .for-whom h3 .accent {
+      background: linear-gradient(135deg, var(--gold) 0%, var(--orange) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .for-whom-list {
+      list-style: none;
+      padding: 0;
+      margin-bottom: 3rem;
+    }
+
+    .for-whom-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 1rem;
+      padding: 1.25rem 0;
+      border-bottom: 1px solid rgba(203, 168, 92, 0.1);
+      font-size: 1.1rem;
+      color: var(--text-dark);
+    }
+
+    .for-whom-list li::before {
+      content: '';
+      width: 10px;
+      height: 10px;
+      min-width: 10px;
+      border-radius: 50%;
+      background: var(--gold);
+      margin-top: 0.5em;
+      box-shadow: 0 0 8px rgba(203, 168, 92, 0.4);
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       FINAL CTA
+       ═══════════════════════════════════════════════════════════ */
+
+    .final-cta {
+      padding: 10rem 5%;
+      background: linear-gradient(135deg,
+        rgba(255, 251, 245, 0.8) 0%,
+        rgba(255, 249, 235, 0.9) 100%
+      );
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .final-cta::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 20%;
+      right: 20%;
+      height: 2px;
+      background: linear-gradient(90deg,
+        transparent,
+        var(--gold) 30%,
+        var(--orange) 70%,
+        transparent
+      );
+    }
+
+    .cta-container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .cta-title {
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      font-weight: 700;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin-bottom: 3rem;
+      color: var(--text-dark);
+    }
+
+    .cta-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 1.25rem 2.75rem;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+      color: var(--white);
+      text-decoration: none;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.02em;
+      border-radius: 2px;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+      box-shadow: 0 4px 16px rgba(203, 168, 92, 0.25);
+    }
+
+    .cta-button::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, var(--orange) 0%, var(--accent-coral) 100%);
+      opacity: 0;
+      transition: opacity 0.35s ease;
+    }
+
+    .cta-button:hover::before {
+      opacity: 1;
+    }
+
+    .cta-button:hover {
+      box-shadow: 0 6px 24px rgba(242, 138, 50, 0.35);
+      transform: translateY(-2px);
+    }
+
+    .cta-button span {
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-button svg {
+      width: 20px;
+      height: 20px;
+      position: relative;
+      z-index: 1;
+      transition: transform 0.35s ease;
+    }
+
+    .cta-button:hover svg {
+      transform: translateX(4px);
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       FOOTER
+       ═══════════════════════════════════════════════════════════ */
+
+    footer {
+      padding: 4.5rem 5%;
+      background: #E8DCC8;
+      border-top: 1px solid rgba(203, 168, 92, 0.15);
+      position: relative;
+    }
+
+    footer::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 20%;
+      right: 20%;
+      height: 2px;
+      background: linear-gradient(90deg,
+        transparent,
+        var(--gold) 30%,
+        var(--gold-light) 50%,
+        var(--orange) 70%,
+        transparent
+      );
+    }
+
+    .footer-content {
+      max-width: 1600px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-logo {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-dark);
+    }
+
+    .footer-logo .accent {
+      color: var(--gold);
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .footer-links a {
+      color: var(--text-dark);
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .footer-links a:hover {
+      color: var(--gold);
+    }
+
+    /* ═══════════════════════════════════════════════════════════
+       RESPONSIVE
+       ═══════════════════════════════════════════════════════════ */
+
+    @media (max-width: 1024px) {
+      .framework-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .pillars-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .execution-grid {
+        grid-template-columns: 1fr;
+        gap: 4rem;
+      }
+
+      .execution-stats {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .different-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        padding: 7rem 0 6rem;
+      }
+
+      .how-we-work,
+      .operating-pillars,
+      .execution-model,
+      .what-makes-different {
+        padding: 6rem 4%;
+      }
+
+      .section-header {
+        margin-bottom: 4rem;
+      }
+
+      .execution-stats {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .stat-circle {
+        width: 200px;
+        height: 200px;
+      }
+
+      .stat-number {
+        font-size: 2.5rem;
+      }
+
+      .execution-timeline {
+        padding-left: 2rem;
+      }
+
+      .timeline-marker {
+        left: -2rem;
+      }
+
+      .pillar-items {
+        grid-template-columns: 1fr;
+      }
+
+      .proof-callout {
+        padding: 3rem 2rem;
+      }
+
+      .proof-quote {
+        font-size: 1.35rem;
+      }
+
+      .footer-content {
+        flex-direction: column;
+        gap: 2rem;
+        text-align: center;
+      }
+
+      .footer-links {
+        flex-direction: column;
+        gap: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  
-  <!-- Header -->
-  <header class="bg-white border-b border-warm-stone sticky top-0" style="z-index: 10000;">
+
+  <!-- Global Header Component -->
+  <header class="bg-white border-b border-warm-stone sticky top-0" style="z-index: 10000; border-bottom: 1px solid rgba(219, 213, 202, 0.3);">
     <a href="#main-content" class="skip-link">Skip to main content</a>
-    
-    <nav class="container-custom py-4 md:py-6" aria-label="Main navigation">
-      <div class="flex items-center justify-between">
-        <a href="/" class="flex items-center" aria-label="St Raphael Health - Home">
-          <img src="/assets/logos/SRH Logo Light Background.svg" alt="St Raphael Health" class="h-10 md:h-12" width="200" height="48">
+
+    <nav class="container-custom py-5 md:py-7" style="max-width: 1600px; margin: 0 auto; padding-left: 5%; padding-right: 5%;" aria-label="Main navigation">
+      <div class="flex items-center justify-between gap-12" style="display: flex; align-items: center; justify-content: space-between;">
+        <a href="/" class="flex items-center" aria-label="St Raphael Health - Home" style="display: flex; align-items: center;">
+          <img src="/assets/logos/SRH Logo Light Background.svg" alt="St Raphael Health" class="h-14 md:h-16" style="height: 56px;" width="200" height="64">
         </a>
-        
-        <ul class="hidden lg:flex items-center gap-8">
-          <li><a href="/hospital-advisory" class="text-black hover:text-gold-ochre transition-colors duration-fast font-montserrat">Hospital Advisory</a></li>
-          <li><a href="/our-approach" class="text-black hover:text-gold-ochre transition-colors duration-fast font-montserrat">Our Approach</a></li>
-          <li><a href="/case-studies" class="text-black hover:text-gold-ochre transition-colors duration-fast font-montserrat">Case Studies</a></li>
-          <li><a href="/team" class="text-black hover:text-gold-ochre transition-colors duration-fast font-montserrat">Team</a></li>
-          <li><a href="/why-profit-matters" class="text-black hover:text-gold-ochre transition-colors duration-fast font-montserrat">Why Profit Matters</a></li>
-          <li><a href="/physicians" class="text-black hover:text-gold-ochre transition-colors duration-fast font-montserrat">Physicians</a></li>
-          <li><a href="/contact" class="btn btn-primary text-sm">Contact</a></li>
+
+        <ul class="hidden lg:flex items-center gap-8" style="display: none; align-items: center; gap: 2rem; list-style: none;">
+          <li><a href="/hospital-advisory" style="color: #000; text-decoration: none; font-family: 'Montserrat', sans-serif; transition: color 0.2s;">Hospital Advisory</a></li>
+          <li><a href="/contact" style="display: inline-block; padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #CBA85C 0%, #EDBD56 100%); color: #fff; text-decoration: none; font-weight: 700; border-radius: 2px; font-size: 0.875rem;">Contact</a></li>
         </ul>
-        
-        <button 
-          id="menu-toggle" 
-          class="lg:hidden p-2 text-black hover:text-gold-ochre transition-colors"
-          aria-expanded="false"
-          aria-controls="mobile-menu"
-          aria-label="Toggle navigation menu"
-        >
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+        <button id="menu-toggle" style="display: block; padding: 0.5rem; background: none; border: none; cursor: pointer;" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle navigation menu">
+          <svg style="width: 24px; height: 24px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
         </button>
       </div>
     </nav>
-    
-    <div 
-      id="mobile-menu" 
-      class="hidden fixed inset-0 bg-white lg:hidden"
-      role="dialog"
-      aria-modal="true"
-      aria-label="Mobile navigation"
-      style="background-color: white; z-index: 9999; top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100vh;"
-    >
-      <div class="container-custom py-6">
-        <div class="flex items-center justify-between mb-8">
-          <img src="/assets/logos/SRH Logo Light Background.svg" alt="St Raphael Health" class="h-10" width="200" height="48">
-          <button 
-            id="menu-close" 
-            class="p-2 text-black hover:text-gold-ochre transition-colors"
-            aria-label="Close navigation menu"
-          >
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-white lg:hidden" role="dialog" aria-modal="true" aria-label="Mobile navigation" style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: #fff; z-index: 9999;">
+      <div style="max-width: 1600px; margin: 0 auto; padding: 1.5rem 5%;">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 2rem;">
+          <img src="/assets/logos/SRH Logo Light Background.svg" alt="St Raphael Health" style="height: 56px;" width="200" height="64">
+          <button id="menu-close" style="padding: 0.5rem; background: none; border: none; cursor: pointer;" aria-label="Close navigation menu">
+            <svg style="width: 24px; height: 24px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
             </svg>
           </button>
         </div>
-        
-        <ul class="flex flex-col gap-6">
-          <li><a href="/hospital-advisory" class="text-2xl text-black hover:text-gold-ochre transition-colors font-montserrat">Hospital Advisory</a></li>
-          <li><a href="/our-approach" class="text-2xl text-black hover:text-gold-ochre transition-colors font-montserrat">Our Approach</a></li>
-          <li><a href="/case-studies" class="text-2xl text-black hover:text-gold-ochre transition-colors font-montserrat">Case Studies</a></li>
-          <li><a href="/team" class="text-2xl text-black hover:text-gold-ochre transition-colors font-montserrat">Team</a></li>
-          <li><a href="/why-profit-matters" class="text-2xl text-black hover:text-gold-ochre transition-colors font-montserrat">Why Profit Matters</a></li>
-          <li><a href="/physicians" class="text-2xl text-black hover:text-gold-ochre transition-colors font-montserrat">Physicians</a></li>
-          <li class="pt-4"><a href="/contact" class="btn btn-primary inline-block">Contact</a></li>
+        <ul style="display: flex; flex-direction: column; gap: 1.5rem; list-style: none;">
+          <li><a href="/hospital-advisory" style="font-size: 1.5rem; color: #000; text-decoration: none; font-family: 'Montserrat', sans-serif;">Hospital Advisory</a></li>
+          <li style="padding-top: 1rem;"><a href="/contact" style="display: inline-block; padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #CBA85C 0%, #EDBD56 100%); color: #fff; text-decoration: none; font-weight: 700; border-radius: 2px;">Contact</a></li>
         </ul>
       </div>
     </div>
   </header>
-  
+
   <main id="main-content">
-    
-    <!-- Page Header - Asymmetric Split Hero -->
-    <section class="relative overflow-hidden">
-      <!-- Split background -->
-      <div class="absolute inset-0 lg:grid lg:grid-cols-2">
-        <div class="bg-white"></div>
-        <div class="bg-gradient-to-br from-burgundy via-deep-red to-gold-ochre"></div>
-      </div>
-      
-      <div class="container-custom relative z-10 py-20 lg:py-32">
-        <div class="grid lg:grid-cols-2 gap-12 items-center">
-          
-          <!-- Left: Content on White -->
-          <div class="text-left" data-animate>
-            <div class="w-16 h-1 bg-gradient-to-r from-burgundy via-deep-red to-gold-ochre mb-8"></div>
-            
-            <h1 class="text-5xl md:text-6xl lg:text-7xl mb-8 leading-tight">
-              This is not consulting.<br/>
-              <span class="text-burgundy">This is execution.</span>
-            </h1>
-            
-            <p class="text-xl md:text-2xl text-black text-opacity-70 mb-6 leading-relaxed">
-              St Raphael Health works alongside hospital leadership teams to stabilize operations, restore profitability, and create durable long-term value.
-            </p>
-            
-            <div class="bg-burgundy-5 border-l-4 border-burgundy p-6 rounded-r-xl">
-              <p class="text-lg md:text-xl font-light text-black">
-                We do not advise from the sidelines. We embed directly, take responsibility for execution, and remain accountable for outcomes.
-              </p>
-            </div>
-          </div>
-          
-          <!-- Right: Stats/Navigation on Gradient -->
-          <div class="text-white" data-animate>
-            <div class="space-y-8">
-              
-              <!-- Badge -->
-              <div class="inline-block px-5 py-2 bg-white/20 rounded-full text-sm font-semibold uppercase tracking-wider backdrop-blur-sm">
-                Hospital Turnaround Specialists
-              </div>
-              
-              <!-- Key Stats -->
-              <div class="grid grid-cols-2 gap-6">
-                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                  <div class="text-4xl md:text-5xl font-light mb-2">200+</div>
-                  <div class="text-sm opacity-90">Years Combined Experience</div>
-                </div>
-                <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
-                  <div class="text-4xl md:text-5xl font-light mb-2">100%</div>
-                  <div class="text-sm opacity-90">Accountable to Outcomes</div>
-                </div>
-              </div>
-              
-              <!-- Navigation -->
-              <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
-                <p class="text-sm uppercase tracking-wider font-semibold mb-4 opacity-90">Jump to Section</p>
-                <nav class="space-y-2" aria-label="Page sections">
-                  <a href="#how-we-work" class="block px-4 py-3 rounded-lg bg-white/10 hover:bg-white hover:text-burgundy transition-all duration-300 font-medium">How We Work</a>
-                  <a href="#operating-pillars" class="block px-4 py-3 rounded-lg bg-white/10 hover:bg-white hover:text-burgundy transition-all duration-300 font-medium">Operating Pillars</a>
-                  <a href="#execution-model" class="block px-4 py-3 rounded-lg bg-white/10 hover:bg-white hover:text-burgundy transition-all duration-300 font-medium">Execution Model</a>
-                  <a href="#what-makes-different" class="block px-4 py-3 rounded-lg bg-white/10 hover:bg-white hover:text-burgundy transition-all duration-300 font-medium">What Makes Us Different</a>
-                </nav>
-              </div>
-              
-            </div>
-          </div>
-          
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="hero-container">
+        <div class="hero-eyebrow">
+          Operating Philosophy
         </div>
-      </div>
-    </section>
-    
-    <!-- Section 1: How We Work - Card Grid Layout -->
-    <section id="how-we-work" class="py-24 bg-white">
-      <div class="container-custom">
-        <div class="text-center mb-16" data-animate>
-          <div class="w-16 h-1 bg-gradient-to-r from-deep-red via-gold-ochre to-soft-gold mx-auto mb-6"></div>
-          <h2 class="text-5xl md:text-6xl mb-4">How We Work</h2>
-          <p class="text-xl text-black text-opacity-70">A disciplined, operator-led framework</p>
-        </div>
-        
-        <!-- Modern Card Grid -->
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-          
-          <!-- Card 1: Rapid Diagnosis -->
-          <div class="relative group" data-animate>
-            <div class="absolute inset-0 bg-gradient-to-br from-burgundy to-deep-red rounded-2xl opacity-5 group-hover:opacity-10 transition-opacity"></div>
-            <div class="relative bg-white rounded-2xl shadow-lg p-8 border-t-4 border-burgundy h-full flex flex-col transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
-              <div class="flex items-center gap-4 mb-6">
-                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-burgundy to-deep-red text-white flex items-center justify-center text-2xl font-light shadow-lg">
-                  1
-                </div>
-                <h3 class="text-2xl font-light text-burgundy">Rapid Diagnosis</h3>
-              </div>
-              
-              <p class="text-base text-black text-opacity-70 mb-4 flex-grow">
-                We begin by quickly identifying the operational and financial constraints preventing performance.
-              </p>
-              
-              <div class="pt-4 border-t border-warm-stone-15">
-                <p class="text-sm font-semibold text-gold-ochre italic">
-                  Our goal is clarity—fast.
-                </p>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Card 2: Hands-On Execution -->
-          <div class="relative group" data-animate>
-            <div class="absolute inset-0 bg-gradient-to-br from-deep-red to-gold-ochre rounded-2xl opacity-5 group-hover:opacity-10 transition-opacity"></div>
-            <div class="relative bg-white rounded-2xl shadow-lg p-8 border-t-4 border-deep-red h-full flex flex-col transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
-              <div class="flex items-center gap-4 mb-6">
-                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-deep-red to-gold-ochre text-white flex items-center justify-center text-2xl font-light shadow-lg">
-                  2
-                </div>
-                <h3 class="text-2xl font-light text-deep-red">Hands-On Execution</h3>
-              </div>
-              
-              <p class="text-base text-black text-opacity-70 mb-4 flex-grow">
-                Once priorities are clear, we move immediately into execution. We work directly with hospital leadership and teams to drive operational decisions and implement changes on the ground.
-              </p>
-              
-              <div class="pt-4 border-t border-warm-stone-15">
-                <p class="text-sm font-semibold text-gold-ochre italic">
-                  We stay involved until change is real and measurable.
-                </p>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Card 3: Profitability First -->
-          <div class="relative group" data-animate>
-            <div class="absolute inset-0 bg-gradient-to-br from-gold-ochre to-soft-gold rounded-2xl opacity-5 group-hover:opacity-10 transition-opacity"></div>
-            <div class="relative bg-white rounded-2xl shadow-lg p-8 border-t-4 border-gold-ochre h-full flex flex-col transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
-              <div class="flex items-center gap-4 mb-6">
-                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-gold-ochre to-soft-gold text-white flex items-center justify-center text-2xl font-light shadow-lg">
-                  3
-                </div>
-                <h3 class="text-2xl font-light text-gold-ochre">Profitability First</h3>
-              </div>
-              
-              <p class="text-base text-black text-opacity-70 mb-4 flex-grow">
-                Profitability is the foundation of every successful hospital outcome. By restoring predictable cash flow and sustainable margins early, we stabilize operations and create optionality for leadership.
-              </p>
-              
-              <div class="pt-4 border-t border-warm-stone-15">
-                <p class="text-sm font-semibold text-gold-ochre italic">
-                  Profit enables better care and long-term stability.
-                </p>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Card 4: Sustainability -->
-          <div class="relative group" data-animate>
-            <div class="absolute inset-0 bg-gradient-to-br from-burgundy to-deep-red rounded-2xl opacity-5 group-hover:opacity-10 transition-opacity"></div>
-            <div class="relative bg-white rounded-2xl shadow-lg p-8 border-t-4 border-burgundy h-full flex flex-col transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
-              <div class="flex items-center gap-4 mb-6">
-                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-burgundy to-deep-red text-white flex items-center justify-center text-2xl font-light shadow-lg">
-                  4
-                </div>
-                <h3 class="text-2xl font-light text-burgundy">Build for Sustainability</h3>
-              </div>
-              
-              <p class="text-base text-black text-opacity-70 mb-4 flex-grow">
-                Stabilization is not the finish line. We ensure operational improvements are repeatable, teams are aligned and supported, and systems are institutionalized.
-              </p>
-              
-              <div class="pt-4 border-t border-warm-stone-15">
-                <p class="text-sm font-semibold text-gold-ochre italic">
-                  A hospital that performs without constant intervention.
-                </p>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Card 5: Strategic Options -->
-          <div class="relative group md:col-span-2 lg:col-span-1" data-animate>
-            <div class="absolute inset-0 bg-gradient-to-br from-deep-red to-gold-ochre rounded-2xl opacity-5 group-hover:opacity-10 transition-opacity"></div>
-            <div class="relative bg-white rounded-2xl shadow-lg p-8 border-t-4 border-deep-red h-full flex flex-col transition-all duration-300 hover:shadow-2xl hover:-translate-y-2">
-              <div class="flex items-center gap-4 mb-6">
-                <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-deep-red to-gold-ochre text-white flex items-center justify-center text-2xl font-light shadow-lg">
-                  5
-                </div>
-                <h3 class="text-2xl font-light text-deep-red">Create Strategic Options</h3>
-              </div>
-              
-              <p class="text-base text-black text-opacity-70 mb-4 flex-grow">
-                Once operations are stable and profitability restored, leadership has choices. We support long-term independent operation, strategic partnerships, or improved valuations.
-              </p>
-              
-              <div class="pt-4 border-t border-warm-stone-15">
-                <p class="text-sm font-semibold text-gold-ochre italic">
-                  Options only exist when operations are healthy.
-                </p>
-              </div>
-            </div>
-          </div>
-          
-        </div>
-      </div>
-    </section>
-    
-    <!-- Section 2: Our Operating Pillars - ASYMMETRIC LAYOUT -->
-    <section id="operating-pillars" class="relative py-32 overflow-hidden">
-      <!-- Diagonal background split -->
-      <div class="absolute inset-0 bg-gradient-to-br from-white via-warm-stone-5 to-white"></div>
-      <div class="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-bl from-soft-gold-5 to-transparent opacity-60"></div>
-      
-      <div class="container-custom relative z-10">
-        <!-- Header - Left Aligned -->
-        <div class="max-w-3xl mb-20" data-animate>
-          <div class="w-16 h-1 bg-gradient-to-r from-deep-red via-gold-ochre to-soft-gold mb-6"></div>
-          <h2 class="text-5xl md:text-6xl lg:text-7xl mb-6">
-            Our Operating <span class="text-burgundy">Pillars</span>
-          </h2>
-          <p class="text-2xl font-light text-black mb-4">
-            An integrated operating system, not standalone services
-          </p>
-          <p class="text-lg text-black text-opacity-70">
-            Our approach is executed through a proven, repeatable operating framework. Each pillar reinforces the others and is applied based on urgency and context.
-          </p>
-        </div>
-        
-        <!-- Pillars - Asymmetric Cards with Visual Hierarchy -->
-        <div class="space-y-12">
-          <!-- Pillar 1: Cash Flow Acceleration - LEFT ALIGNED -->
-          <div class="grid lg:grid-cols-12 gap-8 items-center" data-animate>
-            <!-- Large Number -->
-            <div class="lg:col-span-2">
-              <div class="text-9xl font-light text-burgundy opacity-20">01</div>
-            </div>
-            
-            <!-- Content -->
-            <div class="lg:col-span-10">
-              <div class="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-burgundy">
-                <h3 class="text-3xl md:text-4xl font-light mb-4">
-                  Cash Flow <span class="text-burgundy">Acceleration</span>
-                </h3>
-                <p class="text-xl text-black text-opacity-70 mb-6 leading-relaxed">
-                  Hospitals rarely fail due to lack of revenue. They fail because cash is delayed, trapped, or leaking through broken processes.
-                </p>
-                
-                <div class="grid md:grid-cols-2 gap-6 mb-6">
-                  <div class="flex items-start gap-3">
-                    <svg class="w-6 h-6 text-gold-ochre flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                    <span class="text-lg">Recovering aged receivables</span>
-                  </div>
-                  <div class="flex items-start gap-3">
-                    <svg class="w-6 h-6 text-gold-ochre flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                    <span class="text-lg">Tightening billing & collections cycles</span>
-                  </div>
-                  <div class="flex items-start gap-3">
-                    <svg class="w-6 h-6 text-gold-ochre flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                    <span class="text-lg">Improving payer responsiveness</span>
-                  </div>
-                  <div class="flex items-start gap-3">
-                    <svg class="w-6 h-6 text-gold-ochre flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                    <span class="text-lg">Fixing patient access breakdowns</span>
-                  </div>
-                </div>
-                
-                <div class="pt-6 border-t border-warm-stone-20">
-                  <p class="text-xl font-light text-burgundy italic">
-                    Cash flow is the fastest lever to restore control.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Pillar 2: Cost Efficiency - RIGHT ALIGNED -->
-          <div class="grid lg:grid-cols-12 gap-8 items-center" data-animate>
-            <!-- Content -->
-            <div class="lg:col-span-10 order-2 lg:order-1">
-              <div class="bg-white rounded-2xl shadow-xl p-8 border-r-4 border-gold-ochre">
-                <h3 class="text-3xl md:text-4xl font-light mb-4">
-                  Cost Efficiency & <span class="text-gold-ochre">Margin Improvement</span>
-                </h3>
-                <p class="text-xl text-black text-opacity-70 mb-6 leading-relaxed">
-                  Distressed hospitals often carry cost structures misaligned with actual operating volume.
-                </p>
-                
-                <div class="grid md:grid-cols-2 gap-6 mb-6">
-                  <div class="flex items-start gap-3">
-                    <svg class="w-6 h-6 text-deep-red flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                    <span class="text-lg">Eliminating unnecessary spend</span>
-                  </div>
-                  <div class="flex items-start gap-3">
-                    <svg class="w-6 h-6 text-deep-red flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                    <span class="text-lg">Optimizing supply chain</span>
-                  </div>
-                  <div class="flex items-start gap-3">
-                    <svg class="w-6 h-6 text-deep-red flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                    <span class="text-lg">Renegotiating contracts</span>
-                  </div>
-                  <div class="flex items-start gap-3">
-                    <svg class="w-6 h-6 text-deep-red flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                    <span class="text-lg">Aligning staffing models</span>
-                  </div>
-                </div>
-                
-                <div class="pt-6 border-t border-warm-stone-20">
-                  <p class="text-xl font-light text-gold-ochre italic">
-                    Sustainable margins create options and stability.
-                  </p>
-                </div>
-              </div>
-            </div>
-            
-            <!-- Large Number -->
-            <div class="lg:col-span-2 order-1 lg:order-2 lg:text-right">
-              <div class="text-9xl font-light text-gold-ochre opacity-20">02</div>
-            </div>
-          </div>
-          
-          <!-- Pillar 3: Revenue Expansion - LEFT ALIGNED -->
-          <div class="grid lg:grid-cols-12 gap-8 items-center" data-animate>
-            <!-- Large Number -->
-            <div class="lg:col-span-2">
-              <div class="text-9xl font-light text-burgundy opacity-20">03</div>
-            </div>
-            
-            <!-- Content -->
-            <div class="lg:col-span-10">
-              <div class="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-burgundy">
-                <h3 class="text-3xl md:text-4xl font-light mb-4">
-                  Revenue <span class="text-burgundy">Expansion</span>
-                </h3>
-                <p class="text-xl text-black text-opacity-70 mb-6 leading-relaxed">
-                  Underperformance is often driven by underutilized capacity, not lack of demand.
-                </p>
-                
-                <div class="grid md:grid-cols-2 gap-6 mb-6">
-                  <div class="flex items-start gap-3">
-                    <svg class="w-6 h-6 text-gold-ochre flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                    <span class="text-lg">Strengthening provider networks</span>
-                  </div>
-                  <div class="flex items-start gap-3">
-                    <svg class="w-6 h-6 text-gold-ochre flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                    <span class="text-lg">Expanding service lines</span>
-                  </div>
-                  <div class="flex items-start gap-3">
-                    <svg class="w-6 h-6 text-gold-ochre flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                    <span class="text-lg">Optimizing facility structures</span>
-                  </div>
-                  <div class="flex items-start gap-3">
-                    <svg class="w-6 h-6 text-gold-ochre flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                    <span class="text-lg">Full service capture</span>
-                  </div>
-                </div>
-                
-                <div class="pt-6 border-t border-warm-stone-20">
-                  <p class="text-xl font-light text-burgundy italic">
-                    Revenue growth supports reinvestment and long-term stability.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Pillar 4: Capital Structure - RIGHT ALIGNED -->
-          <div class="grid lg:grid-cols-12 gap-8 items-center" data-animate>
-            <!-- Content -->
-            <div class="lg:col-span-10 order-2 lg:order-1">
-              <div class="bg-white rounded-2xl shadow-xl p-8 border-r-4 border-gold-ochre">
-                <h3 class="text-3xl md:text-4xl font-light mb-4">
-                  Capital Structure <span class="text-gold-ochre">Optimization</span>
-                </h3>
-                <p class="text-xl text-black text-opacity-70 mb-6 leading-relaxed">
-                  Many hospitals are constrained by misaligned capital and restrictive financial structures.
-                </p>
-                
-                <div class="grid md:grid-cols-2 gap-6 mb-6">
-                  <div class="flex items-start gap-3">
-                    <svg class="w-6 h-6 text-deep-red flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                    <span class="text-lg">Right-sizing the balance sheet</span>
-                  </div>
-                  <div class="flex items-start gap-3">
-                    <svg class="w-6 h-6 text-deep-red flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                    <span class="text-lg">Aligning stakeholders</span>
-                  </div>
-                  <div class="flex items-start gap-3">
-                    <svg class="w-6 h-6 text-deep-red flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                    <span class="text-lg">Structuring for recovery</span>
-                  </div>
-                  <div class="flex items-start gap-3">
-                    <svg class="w-6 h-6 text-deep-red flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                    <span class="text-lg">Creating refinancing flexibility</span>
-                  </div>
-                </div>
-                
-                <div class="pt-6 border-t border-warm-stone-20">
-                  <p class="text-xl font-light text-gold-ochre italic">
-                    Capital should support operations, not constrain them.
-                  </p>
-                </div>
-              </div>
-            </div>
-            
-            <!-- Large Number -->
-            <div class="lg:col-span-2 order-1 lg:order-2 lg:text-right">
-              <div class="text-9xl font-light text-gold-ochre opacity-20">04</div>
-            </div>
-          </div>
-          
-          <!-- Pillar 5: Regulatory Compliance - LEFT ALIGNED -->
-          <div class="grid lg:grid-cols-12 gap-8 items-center" data-animate>
-            <!-- Large Number -->
-            <div class="lg:col-span-2">
-              <div class="text-9xl font-light text-burgundy opacity-20">05</div>
-            </div>
-            
-            <!-- Content -->
-            <div class="lg:col-span-10">
-              <div class="bg-white rounded-2xl shadow-xl p-8 border-l-4 border-burgundy">
-                <h3 class="text-3xl md:text-4xl font-light mb-4">
-                  Regulatory Compliance & <span class="text-burgundy">Operational Integrity</span>
-                </h3>
-                <p class="text-xl text-black text-opacity-70 mb-6 leading-relaxed">
-                  Operational distress often increases regulatory risk.
-                </p>
-                
-                <div class="grid md:grid-cols-2 gap-6 mb-6">
-                  <div class="flex items-start gap-3">
-                    <svg class="w-6 h-6 text-gold-ochre flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                    <span class="text-lg">Addressing accreditation gaps</span>
-                  </div>
-                  <div class="flex items-start gap-3">
-                    <svg class="w-6 h-6 text-gold-ochre flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                    <span class="text-lg">Strengthening safety frameworks</span>
-                  </div>
-                  <div class="flex items-start gap-3">
-                    <svg class="w-6 h-6 text-gold-ochre flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                    <span class="text-lg">Survey readiness & audits</span>
-                  </div>
-                  <div class="flex items-start gap-3">
-                    <svg class="w-6 h-6 text-gold-ochre flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                    <span class="text-lg">Embedding daily compliance</span>
-                  </div>
-                </div>
-                
-                <div class="pt-6 border-t border-warm-stone-20">
-                  <p class="text-xl font-light text-burgundy italic">
-                    Operational integrity protects patients, staff, and leadership.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Pillar 6: Sale or Partnership - RIGHT ALIGNED -->
-          <div class="grid lg:grid-cols-12 gap-8 items-center" data-animate>
-            <!-- Content -->
-            <div class="lg:col-span-10 order-2 lg:order-1">
-              <div class="bg-white rounded-2xl shadow-xl p-8 border-r-4 border-gold-ochre">
-                <h3 class="text-3xl md:text-4xl font-light mb-4">
-                  Sale or Partnership <span class="text-gold-ochre">Strategy</span>
-                </h3>
-                <p class="text-xl text-black text-opacity-70 mb-6 leading-relaxed">
-                  Strategic outcomes are pursued only once stability is restored.
-                </p>
-                
-                <div class="grid md:grid-cols-2 gap-6 mb-6">
-                  <div class="flex items-start gap-3">
-                    <svg class="w-6 h-6 text-deep-red flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                    <span class="text-lg">Evaluate strategic alternatives</span>
-                  </div>
-                  <div class="flex items-start gap-3">
-                    <svg class="w-6 h-6 text-deep-red flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                    <span class="text-lg">Support partnership discussions</span>
-                  </div>
-                  <div class="flex items-start gap-3">
-                    <svg class="w-6 h-6 text-deep-red flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                    <span class="text-lg">Improve valuation positioning</span>
-                  </div>
-                  <div class="flex items-start gap-3">
-                    <svg class="w-6 h-6 text-deep-red flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
-                    </svg>
-                    <span class="text-lg">Negotiate from strength</span>
-                  </div>
-                </div>
-                
-                <div class="pt-6 border-t border-warm-stone-20">
-                  <p class="text-xl font-light text-gold-ochre italic">
-                    Optionality is created through execution, not assumption.
-                  </p>
-                </div>
-              </div>
-            </div>
-            
-            <!-- Large Number -->
-            <div class="lg:col-span-2 order-1 lg:order-2 lg:text-right">
-              <div class="text-9xl font-light text-gold-ochre opacity-20">06</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    <!-- Section 3: Execution Model -->
-    <section id="execution-model" class="section-flow surface">
-      <div class="container-custom max-w-5xl">
-        <h2 class="text-4xl md:text-5xl text-center mb-4 surface-accent pt-8" data-animate>Execution Model</h2>
-        <p class="text-xl text-center text-black text-opacity-70 mb-8" data-animate>
-          A disciplined operating model designed for speed and stability
+
+        <h1>
+          This is not consulting.
+        </h1>
+
+        <h2>
+          This is execution.
+        </h2>
+
+        <p class="hero-description">
+          St Raphael Health <em>embeds directly with hospital leadership teams</em> to stabilize operations, restore profitability, and create durable long-term value. We do not advise from the sidelines. <em>We take responsibility for execution</em> and remain <em>accountable for outcomes</em>.
         </p>
-        
-        <p class="text-center mb-16 max-w-3xl mx-auto" data-animate>
-          St Raphael Health operates using a structured execution model designed to stabilize hospitals quickly while building toward sustainable, long-term performance. Every engagement follows the same core phases. The sequence may compress or overlap depending on urgency, but the discipline remains constant.
-        </p>
-        
-        <div class="timeline-container" data-animate>
-          <div class="timeline-connector"></div>
-          
-          <div class="timeline-step">
-            <span class="timeline-number">1</span>
-            <span class="step-label">0-30 Days</span>
+      </div>
+    </section>
+
+    <!-- HOW WE WORK SECTION -->
+    <section class="how-we-work">
+      <div class="section-header">
+        <div class="section-kicker">Our Framework</div>
+        <h2 class="section-title">How We Work</h2>
+        <p class="section-subtitle">A disciplined, operator-led framework designed for speed and stability</p>
+      </div>
+
+      <div class="framework-grid">
+        <!-- Card 1 -->
+        <div class="framework-card">
+          <div class="card-number">1</div>
+          <h3>Rapid Diagnosis</h3>
+          <p>We begin by quickly identifying the operational and financial constraints preventing performance.</p>
+          <div class="card-emphasis">Our goal is clarity—fast.</div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="framework-card">
+          <div class="card-number">2</div>
+          <h3>Hands-On Execution</h3>
+          <p>Once priorities are clear, we move immediately into execution. We work directly with hospital leadership and teams to drive operational decisions and implement changes on the ground.</p>
+          <div class="card-emphasis">We stay involved until change is real and measurable.</div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="framework-card">
+          <div class="card-number">3</div>
+          <h3>Profitability First</h3>
+          <p>Profitability is the foundation of every successful hospital outcome. By restoring predictable cash flow and sustainable margins early, we stabilize operations and create optionality for leadership.</p>
+          <div class="card-emphasis">Profit enables better care and long-term stability.</div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="framework-card">
+          <div class="card-number">4</div>
+          <h3>Build for Sustainability</h3>
+          <p>Stabilization is not the finish line. We ensure operational improvements are repeatable, teams are aligned and supported, and systems are institutionalized.</p>
+          <div class="card-emphasis">A hospital that performs without constant intervention.</div>
+        </div>
+
+        <!-- Card 5 -->
+        <div class="framework-card">
+          <div class="card-number">5</div>
+          <h3>Create Strategic Options</h3>
+          <p>Once operations are stable and profitability restored, leadership has choices. We support long-term independent operation, strategic partnerships, or improved valuations.</p>
+          <div class="card-emphasis">Options only exist when operations are healthy.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OPERATING PILLARS SECTION -->
+    <section class="operating-pillars">
+      <div class="pillars-container">
+        <div class="pillars-intro">
+          <div class="section-kicker">Integrated Operating System</div>
+          <h2>Our Operating <span class="accent">Pillars</span></h2>
+          <p>An integrated operating system, not standalone services. Our approach is executed through a proven, repeatable operating framework. Each pillar reinforces the others and is applied based on urgency and context.</p>
+        </div>
+
+        <div class="pillars-grid">
+          <!-- Pillar 1 -->
+          <div class="pillar-card">
+            <div class="pillar-icon">
+              <i data-lucide="trending-up" stroke-width="2"></i>
+            </div>
+            <h3>Cash Flow <span class="accent">Acceleration</span></h3>
+            <p>Hospitals rarely fail due to lack of revenue. They fail because cash is delayed, trapped, or leaking through broken processes.</p>
+            <div class="pillar-items">
+              <div class="pillar-item">Recovering aged receivables</div>
+              <div class="pillar-item">Tightening billing & collections cycles</div>
+              <div class="pillar-item">Improving payer responsiveness</div>
+              <div class="pillar-item">Fixing patient access breakdowns</div>
+            </div>
+            <div class="pillar-conclusion">Cash flow is the fastest lever to restore control.</div>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="pillar-card">
+            <div class="pillar-icon">
+              <i data-lucide="target" stroke-width="2"></i>
+            </div>
+            <h3>Cost Efficiency & <span class="accent">Margin Improvement</span></h3>
+            <p>Distressed hospitals often carry cost structures misaligned with actual operating volume.</p>
+            <div class="pillar-items">
+              <div class="pillar-item">Eliminating unnecessary spend</div>
+              <div class="pillar-item">Optimizing supply chain</div>
+              <div class="pillar-item">Renegotiating contracts</div>
+              <div class="pillar-item">Aligning staffing models</div>
+            </div>
+            <div class="pillar-conclusion">Sustainable margins create options and stability.</div>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="pillar-card">
+            <div class="pillar-icon">
+              <i data-lucide="bar-chart-3" stroke-width="2"></i>
+            </div>
+            <h3>Revenue <span class="accent">Expansion</span></h3>
+            <p>Underperformance is often driven by underutilized capacity, not lack of demand.</p>
+            <div class="pillar-items">
+              <div class="pillar-item">Strengthening provider networks</div>
+              <div class="pillar-item">Expanding service lines</div>
+              <div class="pillar-item">Optimizing facility structures</div>
+              <div class="pillar-item">Full service capture</div>
+            </div>
+            <div class="pillar-conclusion">Revenue growth supports reinvestment and long-term stability.</div>
+          </div>
+
+          <!-- Pillar 4 -->
+          <div class="pillar-card">
+            <div class="pillar-icon">
+              <i data-lucide="landmark" stroke-width="2"></i>
+            </div>
+            <h3>Capital Structure <span class="accent">Optimization</span></h3>
+            <p>Many hospitals are constrained by misaligned capital and restrictive financial structures.</p>
+            <div class="pillar-items">
+              <div class="pillar-item">Right-sizing the balance sheet</div>
+              <div class="pillar-item">Aligning stakeholders</div>
+              <div class="pillar-item">Structuring for recovery</div>
+              <div class="pillar-item">Creating refinancing flexibility</div>
+            </div>
+            <div class="pillar-conclusion">Capital should support operations, not constrain them.</div>
+          </div>
+
+          <!-- Pillar 5 -->
+          <div class="pillar-card">
+            <div class="pillar-icon">
+              <i data-lucide="shield-check" stroke-width="2"></i>
+            </div>
+            <h3>Regulatory Compliance & <span class="accent">Operational Integrity</span></h3>
+            <p>Operational distress often increases regulatory risk.</p>
+            <div class="pillar-items">
+              <div class="pillar-item">Addressing accreditation gaps</div>
+              <div class="pillar-item">Strengthening safety frameworks</div>
+              <div class="pillar-item">Survey readiness & audits</div>
+              <div class="pillar-item">Embedding daily compliance</div>
+            </div>
+            <div class="pillar-conclusion">Operational integrity protects patients, staff, and leadership.</div>
+          </div>
+
+          <!-- Pillar 6 -->
+          <div class="pillar-card">
+            <div class="pillar-icon">
+              <i data-lucide="handshake" stroke-width="2"></i>
+            </div>
+            <h3>Sale or Partnership <span class="accent">Strategy</span></h3>
+            <p>Strategic outcomes are pursued only once stability is restored.</p>
+            <div class="pillar-items">
+              <div class="pillar-item">Evaluate strategic alternatives</div>
+              <div class="pillar-item">Support partnership discussions</div>
+              <div class="pillar-item">Improve valuation positioning</div>
+              <div class="pillar-item">Negotiate from strength</div>
+            </div>
+            <div class="pillar-conclusion">Optionality is created through execution, not assumption.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXECUTION MODEL SECTION -->
+    <section class="execution-model">
+      <div class="execution-container">
+        <div class="section-header">
+          <div class="section-kicker">Phased Approach</div>
+          <h2 class="section-title">Execution Model</h2>
+          <p class="section-subtitle">A disciplined operating model designed for speed and stability</p>
+        </div>
+
+        <div class="execution-grid">
+          <div class="execution-content">
+            <h2>
+              A structured framework
+              <span class="emphasis">built for hospital turnarounds</span>
+            </h2>
+            <p>Every engagement follows the same core phases. The sequence may compress or overlap depending on urgency, but the discipline remains constant.</p>
+          </div>
+
+          <div class="execution-stats">
+            <div class="stat-circle">
+              <svg class="stat-ring-svg" viewBox="0 0 240 240">
+                <defs>
+                  <linearGradient id="statGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#CBA85C"/>
+                    <stop offset="100%" stop-color="#F28A32"/>
+                  </linearGradient>
+                </defs>
+                <circle class="stat-ring-track" cx="120" cy="120" r="108"/>
+                <circle class="stat-ring-progress" cx="120" cy="120" r="108"/>
+              </svg>
+              <div class="stat-inner">
+                <div class="stat-number">200+</div>
+                <div class="stat-label">Years Combined Experience</div>
+              </div>
+            </div>
+
+            <div class="stat-circle">
+              <svg class="stat-ring-svg" viewBox="0 0 240 240">
+                <circle class="stat-ring-track" cx="120" cy="120" r="108"/>
+                <circle class="stat-ring-progress" cx="120" cy="120" r="108"/>
+              </svg>
+              <div class="stat-inner">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Accountable to Outcomes</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Timeline -->
+        <div class="execution-timeline">
+          <!-- Phase 1 -->
+          <div class="timeline-phase">
+            <div class="timeline-marker"></div>
+            <div class="timeline-duration">0-30 Days</div>
             <h3>Phase 1: Immediate Stabilization</h3>
-            <p class="font-semibold mb-4 text-gold-ochre">Objective: Stop financial and operational bleed. Restore control.</p>
-            <p class="mb-4">Focus Areas:</p>
-            <ul class="list-disc list-inside space-y-2 mb-4">
+            <p class="timeline-objective">Objective: Stop financial and operational bleed. Restore control.</p>
+            <p>Focus Areas:</p>
+            <ul class="timeline-items">
               <li>Cash flow visibility and short-term liquidity</li>
               <li>Critical vendor and payroll stabilization</li>
               <li>Revenue cycle triage</li>
               <li>Immediate compliance or operational risks</li>
               <li>Leadership alignment and decision clarity</li>
             </ul>
-            <p class="font-semibold">Outcome: The hospital moves from reactive crisis management to controlled operations.</p>
+            <p class="timeline-outcome">Outcome: The hospital moves from reactive crisis management to controlled operations.</p>
           </div>
-          
-          <div class="timeline-step">
-            <span class="timeline-number">2</span>
-            <span class="step-label">30-90 Days</span>
+
+          <!-- Phase 2 -->
+          <div class="timeline-phase">
+            <div class="timeline-marker"></div>
+            <div class="timeline-duration">30-90 Days</div>
             <h3>Phase 2: Performance Reset</h3>
-            <p class="font-semibold mb-4 text-gold-ochre">Objective: Restore predictable performance across core functions.</p>
-            <p class="mb-4">Focus Areas:</p>
-            <ul class="list-disc list-inside space-y-2 mb-4">
+            <p class="timeline-objective">Objective: Restore predictable performance across core functions.</p>
+            <p>Focus Areas:</p>
+            <ul class="timeline-items">
               <li>Margin improvement and cost realignment</li>
               <li>Revenue cycle optimization</li>
               <li>Service line performance review</li>
               <li>Staffing and operational workflow stabilization</li>
               <li>Governance and reporting discipline</li>
             </ul>
-            <p class="font-semibold">Outcome: The hospital operates with predictable cash flow, stabilized margins, and measurable performance improvements.</p>
+            <p class="timeline-outcome">Outcome: The hospital operates with predictable cash flow, stabilized margins, and measurable performance improvements.</p>
           </div>
-          
-          <div class="timeline-step">
-            <span class="timeline-number">3</span>
-            <span class="step-label">90-180 Days</span>
+
+          <!-- Phase 3 -->
+          <div class="timeline-phase">
+            <div class="timeline-marker"></div>
+            <div class="timeline-duration">90-180 Days</div>
             <h3>Phase 3: Sustainable Operations</h3>
-            <p class="font-semibold mb-4 text-gold-ochre">Objective: Embed systems and teams that perform without constant intervention.</p>
-            <p class="mb-4">Focus Areas:</p>
-            <ul class="list-disc list-inside space-y-2 mb-4">
+            <p class="timeline-objective">Objective: Embed systems and teams that perform without constant intervention.</p>
+            <p>Focus Areas:</p>
+            <ul class="timeline-items">
               <li>Institutionalized processes and controls</li>
               <li>Leadership capability and accountability</li>
               <li>Compliance readiness and quality frameworks</li>
               <li>Capital alignment and balance sheet health</li>
             </ul>
-            <p class="font-semibold">Outcome: The hospital performs sustainably with reduced dependency on crisis intervention.</p>
+            <p class="timeline-outcome">Outcome: The hospital performs sustainably with reduced dependency on crisis intervention.</p>
           </div>
-          
-          <div class="timeline-step">
-            <span class="timeline-number">4</span>
-            <span class="step-label">Post-Stabilization</span>
+
+          <!-- Phase 4 -->
+          <div class="timeline-phase">
+            <div class="timeline-marker"></div>
+            <div class="timeline-duration">Post-Stabilization</div>
             <h3>Phase 4: Strategic Optionality</h3>
-            <p class="font-semibold mb-4 text-gold-ochre">Objective: Create and evaluate long-term strategic choices.</p>
-            <p class="mb-4">Focus Areas:</p>
-            <ul class="list-disc list-inside space-y-2 mb-4">
+            <p class="timeline-objective">Objective: Create and evaluate long-term strategic choices.</p>
+            <p>Focus Areas:</p>
+            <ul class="timeline-items">
               <li>Independent growth planning</li>
               <li>Strategic partnerships</li>
               <li>Capital restructuring or refinancing</li>
               <li>Sale or transaction (if aligned with objectives)</li>
             </ul>
-            <p class="font-semibold">Outcome: Leadership makes decisions from a position of strength, not distress.</p>
+            <p class="timeline-outcome">Outcome: Leadership makes decisions from a position of strength, not distress.</p>
           </div>
         </div>
       </div>
     </section>
-    
-    <!-- Section 4: What Makes This Different - REDESIGNED -->
-    <section id="what-makes-different" class="relative py-32 overflow-hidden">
-      <!-- Background -->
-      <div class="absolute inset-0 bg-gradient-to-br from-warm-stone-5 via-white to-soft-gold-5"></div>
-      
-      <div class="container-custom relative z-10">
-        <!-- Header -->
-        <div class="text-center mb-20" data-animate>
-          <div class="w-16 h-1 bg-gradient-to-r from-deep-red via-gold-ochre to-soft-gold mx-auto mb-6"></div>
-          <h2 class="text-5xl md:text-6xl mb-6">
-            What Makes This <span class="text-burgundy">Different</span>
-          </h2>
-          <p class="text-xl text-black text-opacity-70 max-w-3xl mx-auto">
-            This is not consulting as usual. It's a fundamentally different approach to hospital turnarounds.
+
+    <!-- WHAT MAKES DIFFERENT SECTION -->
+    <section class="what-makes-different">
+      <div class="different-container">
+        <div class="section-header">
+          <div class="section-kicker">Our Difference</div>
+          <h2 class="section-title">What Makes This Different</h2>
+          <p class="section-subtitle">This is not consulting as usual. It's a fundamentally different approach to hospital turnarounds.</p>
+        </div>
+
+        <div class="different-grid">
+          <!-- Card 1 -->
+          <div class="different-card">
+            <div class="different-icon">
+              <i data-lucide="users" stroke-width="2"></i>
+            </div>
+            <h3>Operators, Not Advisors</h3>
+            <p>Our team brings over 200 years of combined hospital operating, turnaround, and transaction experience. We have worked inside these environments and understand what works under pressure.</p>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="different-card">
+            <div class="different-icon">
+              <i data-lucide="zap" stroke-width="2"></i>
+            </div>
+            <h3>Speed Without Chaos</h3>
+            <p>We move quickly, but not recklessly. Our framework prioritizes actions that matter most and avoids unnecessary disruption.</p>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="different-card">
+            <div class="different-icon">
+              <i data-lucide="check-circle" stroke-width="2"></i>
+            </div>
+            <h3>Accountability to Outcomes</h3>
+            <p>We measure success by results, not recommendations. Performance improvement, margin restoration, and operational stability are the benchmarks.</p>
+          </div>
+        </div>
+
+        <!-- Proof Callout -->
+        <div class="proof-callout">
+          <div class="proof-kicker">Proof in Practice</div>
+          <p class="proof-quote">
+            In only two years, emergency room visits increased <strong>380%</strong>, surgical volume grew <strong>300%</strong>, and inpatient census increased <strong>14x</strong>.
           </p>
+          <p class="proof-caption">These outcomes are the result of disciplined execution, not theory.</p>
         </div>
-        
-        <!-- Three Key Differentiators - Large Cards -->
-        <div class="grid lg:grid-cols-3 gap-8 mb-24 max-w-7xl mx-auto">
-          
-          <!-- 1. Operators -->
-          <div class="relative group" data-animate>
-            <div class="absolute inset-0 bg-gradient-to-br from-burgundy to-deep-red rounded-2xl opacity-5 group-hover:opacity-10 transition-opacity"></div>
-            <div class="relative bg-white rounded-2xl shadow-xl p-10 h-full transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
-              <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-burgundy to-deep-red text-white flex items-center justify-center mb-6 shadow-lg">
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                </svg>
-              </div>
-              <h3 class="text-3xl font-light mb-4 text-burgundy">Operators, Not Advisors</h3>
-              <p class="text-lg text-black text-opacity-70 leading-relaxed">
-                Our team brings over 200 years of combined hospital operating, turnaround, and transaction experience. We have worked inside these environments and understand what works under pressure.
-              </p>
-            </div>
-          </div>
-          
-          <!-- 2. Speed -->
-          <div class="relative group" data-animate>
-            <div class="absolute inset-0 bg-gradient-to-br from-deep-red to-gold-ochre rounded-2xl opacity-5 group-hover:opacity-10 transition-opacity"></div>
-            <div class="relative bg-white rounded-2xl shadow-xl p-10 h-full transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
-              <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-deep-red to-gold-ochre text-white flex items-center justify-center mb-6 shadow-lg">
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
-                </svg>
-              </div>
-              <h3 class="text-3xl font-light mb-4 text-deep-red">Speed Without Chaos</h3>
-              <p class="text-lg text-black text-opacity-70 leading-relaxed">
-                We move quickly, but not recklessly. Our framework prioritizes actions that matter most and avoids unnecessary disruption.
-              </p>
-            </div>
-          </div>
-          
-          <!-- 3. Accountability -->
-          <div class="relative group" data-animate>
-            <div class="absolute inset-0 bg-gradient-to-br from-gold-ochre to-soft-gold rounded-2xl opacity-5 group-hover:opacity-10 transition-opacity"></div>
-            <div class="relative bg-white rounded-2xl shadow-xl p-10 h-full transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
-              <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-gold-ochre to-soft-gold text-white flex items-center justify-center mb-6 shadow-lg">
-                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                </svg>
-              </div>
-              <h3 class="text-3xl font-light mb-4 text-gold-ochre">Accountability to Outcomes</h3>
-              <p class="text-lg text-black text-opacity-70 leading-relaxed">
-                We measure success by results, not recommendations. Performance improvement, margin restoration, and operational stability are the benchmarks.
-              </p>
-            </div>
-          </div>
-          
-        </div>
-        
-        <!-- Proof in Practice - Premium Stats Card -->
-        <div class="max-w-5xl mx-auto mb-24" data-animate>
-          <div class="relative overflow-hidden rounded-3xl shadow-2xl">
-            <div class="absolute inset-0 bg-gradient-to-br from-burgundy via-deep-red to-gold-ochre"></div>
-            <div class="relative p-12 md:p-16 text-center text-white">
-              <div class="inline-block px-4 py-2 bg-white/20 rounded-full text-sm font-semibold uppercase tracking-wider mb-6 backdrop-blur-sm">
-                Proof in Practice
-              </div>
-              <blockquote class="text-3xl md:text-4xl font-light italic mb-8 leading-relaxed">
-                "In only two years, emergency room visits increased <span class="font-semibold">380%</span>, surgical volume grew <span class="font-semibold">300%</span>, and inpatient census increased <span class="font-semibold">14x</span>."
-              </blockquote>
-              <p class="text-lg opacity-90">
-                These outcomes are the result of disciplined execution, not theory.
-              </p>
-            </div>
-          </div>
-        </div>
-        
-        <!-- Two Column: Who This Is For + CTA -->
-        <div class="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto items-center">
-          
-          <!-- Who This Is For -->
-          <div data-animate>
-            <h3 class="text-4xl font-light mb-8">
-              Who This <span class="text-burgundy">Approach</span> Is For
-            </h3>
-            <ul class="space-y-4">
-              <li class="flex items-start gap-4">
-                <svg class="w-6 h-6 text-burgundy flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                </svg>
-                <span class="text-lg text-black text-opacity-80">Hospitals experiencing financial or operational distress</span>
-              </li>
-              <li class="flex items-start gap-4">
-                <svg class="w-6 h-6 text-burgundy flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                </svg>
-                <span class="text-lg text-black text-opacity-80">Boards and municipalities seeking stability and accountability</span>
-              </li>
-              <li class="flex items-start gap-4">
-                <svg class="w-6 h-6 text-burgundy flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                </svg>
-                <span class="text-lg text-black text-opacity-80">Investors and lenders requiring predictable performance</span>
-              </li>
-              <li class="flex items-start gap-4">
-                <svg class="w-6 h-6 text-burgundy flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                </svg>
-                <span class="text-lg text-black text-opacity-80">Leadership teams who want partners, not consultants</span>
-              </li>
-            </ul>
-          </div>
-          
-          <!-- CTA Card -->
-          <div data-animate>
-            <div class="bg-white rounded-2xl shadow-xl p-10 border-l-4 border-burgundy">
-              <h3 class="text-3xl font-light mb-6 leading-snug">
-                If speed, accountability, and outcomes matter, <span class="text-burgundy">our approach is built for you.</span>
-              </h3>
-              <a href="/contact" class="btn btn-primary inline-flex items-center gap-2 text-lg">
-                Speak With Our Operating Team
-                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                </svg>
-              </a>
-            </div>
-          </div>
-          
+
+        <!-- Who This Is For -->
+        <div class="for-whom">
+          <h3>Who This <span class="accent">Approach</span> Is For</h3>
+          <ul class="for-whom-list">
+            <li>Hospitals experiencing financial or operational distress</li>
+            <li>Boards and municipalities seeking stability and accountability</li>
+            <li>Investors and lenders requiring predictable performance</li>
+            <li>Leadership teams who want partners, not consultants</li>
+          </ul>
         </div>
       </div>
     </section>
-    
-  </main>
-  
-  <!-- Footer -->
-  <footer class="bg-warm-stone py-12 md:py-16 border-t border-black border-opacity-10">
-    <div class="container-custom">
-      <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-        <nav aria-label="Legal navigation" class="flex flex-wrap items-center gap-4 text-sm">
-          <a href="/privacy-policy" class="text-black hover:text-gold-ochre transition-colors font-montserrat">Privacy Policy</a>
-          <span class="text-black" aria-hidden="true">·</span>
-          <a href="/terms" class="text-black hover:text-gold-ochre transition-colors font-montserrat">Terms & Conditions</a>
-          <span class="text-black" aria-hidden="true">·</span>
-          <a href="/compliance" class="text-black hover:text-gold-ochre transition-colors font-montserrat">Compliance</a>
-        </nav>
-        
-        <div class="text-sm">
-          <a href="mailto:info@saintraphaelhealth.com" class="text-black hover:text-gold-ochre transition-colors font-montserrat">
-            info@saintraphaelhealth.com
-          </a>
-        </div>
+
+    <!-- FINAL CTA -->
+    <section class="final-cta">
+      <div class="cta-container">
+        <h2 class="cta-title">
+          If speed, accountability, and outcomes matter, our approach is built for you.
+        </h2>
+
+        <a href="/contact/" class="cta-button">
+          <span>Speak With Our Operating Team</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
       </div>
-      
-      <div class="mt-8 pt-8 border-t border-black border-opacity-10 text-sm text-black text-opacity-60">
-        <p>&copy; <span id="current-year">2026</span> St Raphael Health. All rights reserved.</p>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">St Raphael <span class="accent">Health</span></div>
+      <div class="footer-links">
+        <a href="/privacy-policy/">Privacy</a>
+        <a href="/terms/">Terms</a>
+        <a href="/contact/">Contact</a>
       </div>
     </div>
   </footer>
-  
+
   <script src="/js/site.js"></script>
-  <script src="/js/animations.js"></script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Scroll Animation & Stat Ring Script -->
   <script>
-    document.getElementById('current-year').textContent = new Date().getFullYear();
+    // Initialize Lucide icons
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+      }
+
+      // Stat ring animation on scroll
+      const statCircles = document.querySelectorAll('.stat-circle');
+
+      const observerOptions = {
+        threshold: 0.5,
+        rootMargin: '0px'
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('stat-animated');
+          }
+        });
+      }, observerOptions);
+
+      statCircles.forEach(circle => {
+        observer.observe(circle);
+      });
+
+      // Mobile menu toggle
+      const menuToggle = document.getElementById('menu-toggle');
+      const menuClose = document.getElementById('menu-close');
+      const mobileMenu = document.getElementById('mobile-menu');
+
+      if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener('click', () => {
+          mobileMenu.classList.remove('hidden');
+          mobileMenu.style.display = 'block';
+          menuToggle.setAttribute('aria-expanded', 'true');
+        });
+      }
+
+      if (menuClose && mobileMenu) {
+        menuClose.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+          mobileMenu.style.display = 'none';
+          if (menuToggle) menuToggle.setAttribute('aria-expanded', 'false');
+        });
+      }
+    });
   </script>
-  
+
+  <script>
+    // Show desktop menu on larger screens
+    const updateMenu = () => {
+      const desktopMenu = document.querySelector('.hidden.lg\\:flex');
+      if (desktopMenu && window.innerWidth >= 1024) {
+        desktopMenu.style.display = 'flex';
+      }
+    };
+    window.addEventListener('resize', updateMenu);
+    updateMenu();
+  </script>
+
 </body>
 </html>

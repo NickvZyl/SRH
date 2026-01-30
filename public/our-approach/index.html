@@ -331,109 +331,196 @@
       color: var(--text-light);
     }
 
-    .framework-grid {
-      max-width: 1400px;
+    /* S-Curve Journey Container */
+    .framework-journey {
+      max-width: 1300px;
       margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 3rem;
+      position: relative;
+      padding: 4rem 2rem;
     }
 
-    .framework-card {
-      background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 251, 245, 0.98));
-      padding: 2.75rem 2.5rem;
-      border-radius: 4px;
+    /* Flowing SVG Path */
+    .journey-path-svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      height: 750px;
+      z-index: 0;
+      pointer-events: none;
+      opacity: 0.8;
+    }
+
+    .journey-path {
+      fill: none;
+      stroke: url(#journeyGradient);
+      stroke-width: 65;
+      stroke-linecap: round;
+      opacity: 0.75;
+    }
+
+    /* Stage Positioning Container */
+    .journey-stages {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto auto;
+      gap: 3rem 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* Individual Journey Stage */
+    .journey-stage {
+      position: relative;
+      width: 100%;
+      max-width: 340px;
+      background: #FFFFFF;
+      padding: 2.5rem 2rem;
+      border-radius: 12px;
       box-shadow:
-        0 2px 12px rgba(203, 168, 92, 0.08),
-        0 8px 32px rgba(203, 168, 92, 0.06);
-      border-top: 3px solid transparent;
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        0 8px 32px rgba(203, 168, 92, 0.2),
+        0 4px 16px rgba(203, 168, 92, 0.12),
+        0 2px 8px rgba(0, 0, 0, 0.04);
+      border: 2px solid rgba(203, 168, 92, 0.25);
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
       opacity: 0;
-      transform: translateY(40px);
-      animation: card-float 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+      transform: scale(0.95) translateY(20px);
+    }
+
+    .journey-stage.visible {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+
+    /* Stage positioning along S-curve */
+    .journey-stage:nth-child(1) {
+      grid-column: 1;
+      grid-row: 1;
+      justify-self: start;
+      transition-delay: 0.2s;
+    }
+
+    .journey-stage:nth-child(2) {
+      grid-column: 2;
+      grid-row: 1;
+      justify-self: center;
+      transition-delay: 0.4s;
+    }
+
+    .journey-stage:nth-child(3) {
+      grid-column: 3;
+      grid-row: 1;
+      justify-self: end;
+      transition-delay: 0.6s;
+    }
+
+    .journey-stage:nth-child(4) {
+      grid-column: 2;
+      grid-row: 2;
+      justify-self: center;
+      transition-delay: 0.8s;
+    }
+
+    .journey-stage:nth-child(5) {
+      grid-column: 1;
+      grid-row: 2;
+      justify-self: center;
+      margin-left: 5%;
+      transition-delay: 1s;
+    }
+
+    .journey-stage:hover {
+      transform: scale(1.03) translateY(-6px);
+      box-shadow:
+        0 12px 48px rgba(203, 168, 92, 0.28),
+        0 8px 24px rgba(203, 168, 92, 0.18),
+        0 4px 12px rgba(0, 0, 0, 0.08);
+      border-color: rgba(203, 168, 92, 0.4);
+    }
+
+    /* Stage Number Badge */
+    .stage-number {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold) 0%, var(--orange) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--white);
+      position: absolute;
+      top: -35px;
+      left: 50%;
+      transform: translateX(-50%);
+      box-shadow:
+        0 6px 20px rgba(203, 168, 92, 0.3),
+        0 2px 8px rgba(203, 168, 92, 0.2);
+      border: 4px solid var(--white);
+      z-index: 2;
+    }
+
+    /* Stage Content */
+    .stage-content {
+      padding-top: 2.5rem;
+    }
+
+    .stage-content h3 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 1.25rem;
+      line-height: 1.25;
+      text-align: center;
+    }
+
+    .stage-content p {
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--text-medium);
+      line-height: 1.65;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .stage-emphasis {
+      font-size: 0.9rem;
+      font-weight: 600;
+      font-style: italic;
+      color: var(--gold);
+      text-align: center;
+      padding: 1rem;
+      background: rgba(203, 168, 92, 0.06);
+      border-radius: 6px;
+      border-left: 3px solid var(--gold);
+    }
+
+    @keyframes stage-float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-4px);
+      }
     }
 
     @keyframes card-float {
-      to {
+      0% {
+        opacity: 0;
+        transform: translateY(40px);
+      }
+      100% {
         opacity: 1;
         transform: translateY(0);
       }
     }
 
-    .framework-card:nth-child(1) {
-      animation-delay: 0.1s;
-      border-top-color: var(--gold);
-    }
-
-    .framework-card:nth-child(2) {
-      animation-delay: 0.2s;
-      border-top-color: var(--orange);
-    }
-
-    .framework-card:nth-child(3) {
-      animation-delay: 0.3s;
-      border-top-color: var(--gold-light);
-    }
-
-    .framework-card:nth-child(4) {
-      animation-delay: 0.4s;
-      border-top-color: var(--gold);
-    }
-
-    .framework-card:nth-child(5) {
-      animation-delay: 0.5s;
-      border-top-color: var(--orange);
-    }
-
-    .framework-card:hover {
-      transform: translateY(-8px) scale(1.02);
-      box-shadow:
-        0 4px 20px rgba(203, 168, 92, 0.12),
-        0 12px 48px rgba(203, 168, 92, 0.08);
-    }
-
-    .card-number {
-      width: 56px;
-      height: 56px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, rgba(203, 168, 92, 0.15), rgba(255, 191, 71, 0.2));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.75rem;
-      font-weight: 800;
-      color: var(--gold);
-      margin-bottom: 1.75rem;
-      border: 2px solid rgba(203, 168, 92, 0.2);
-    }
-
-    .framework-card h3 {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--text-dark);
-      margin-bottom: 1rem;
-      line-height: 1.3;
-    }
-
-    .framework-card p {
-      font-size: 1.05rem;
-      font-weight: 400;
-      color: #666;
-      line-height: 1.65;
-      margin-bottom: 1.5rem;
-    }
-
-    .card-emphasis {
-      padding-top: 1.5rem;
-      border-top: 1px solid rgba(203, 168, 92, 0.15);
-      font-size: 0.95rem;
-      font-weight: 600;
-      font-style: italic;
-      color: var(--gold);
-    }
-
     /* ═══════════════════════════════════════════════════════════
-       OPERATING PILLARS SECTION
+       OPERATING PILLARS SECTION - RADIAL LAYOUT
        ═══════════════════════════════════════════════════════════ */
 
     .operating-pillars {
@@ -465,152 +552,303 @@
       margin: 0 auto;
     }
 
-    .pillars-intro {
-      max-width: 850px;
-      margin-bottom: 6rem;
-    }
-
-    .pillars-intro h2 {
-      font-size: clamp(2.5rem, 5vw, 4rem);
-      font-weight: 800;
-      line-height: 1.1;
-      letter-spacing: -0.03em;
-      color: var(--text-dark);
-      margin-bottom: 1.5rem;
-    }
-
-    .pillars-intro h2 .accent {
-      background: linear-gradient(135deg, var(--gold) 0%, var(--orange) 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .pillars-intro p {
-      font-size: 1.2rem;
-      font-weight: 400;
-      line-height: 1.7;
-      color: var(--text-light);
-    }
-
-    .pillars-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 3rem;
-    }
-
-    .pillar-card {
-      background: var(--white);
-      padding: 3rem 2.75rem;
-      border-radius: 4px;
-      box-shadow:
-        0 2px 12px rgba(203, 168, 92, 0.08),
-        0 8px 32px rgba(203, 168, 92, 0.06);
-      border-left: 4px solid var(--gold);
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-      opacity: 0;
-      transform: translateY(40px);
-      animation: card-float 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
-    }
-
-    .pillar-card:nth-child(even) {
-      border-left: none;
-      border-right: 4px solid var(--orange);
-    }
-
-    .pillar-card:nth-child(1) { animation-delay: 0.1s; }
-    .pillar-card:nth-child(2) { animation-delay: 0.2s; }
-    .pillar-card:nth-child(3) { animation-delay: 0.3s; }
-    .pillar-card:nth-child(4) { animation-delay: 0.4s; }
-    .pillar-card:nth-child(5) { animation-delay: 0.5s; }
-    .pillar-card:nth-child(6) { animation-delay: 0.6s; }
-
-    .pillar-card:hover {
-      transform: translateY(-8px);
-      box-shadow:
-        0 4px 20px rgba(203, 168, 92, 0.12),
-        0 12px 48px rgba(203, 168, 92, 0.08);
-    }
-
-    .pillar-icon {
-      width: 72px;
-      height: 72px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, rgba(203, 168, 92, 0.15), rgba(255, 191, 71, 0.2));
+    /* Radial layout */
+    .radial-layout {
+      position: relative;
+      max-width: 1300px;
+      margin: 0 auto;
+      min-height: 1200px;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-bottom: 1.75rem;
+    }
+
+    /* Central circle */
+    .radial-center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.9);
+      width: 260px;
+      height: 260px;
+      background: linear-gradient(135deg,
+        rgba(203, 168, 92, 0.95) 0%,
+        rgba(237, 189, 86, 0.9) 100%
+      );
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2.5rem 2rem;
+      box-shadow:
+        0 8px 32px rgba(203, 168, 92, 0.3),
+        0 16px 64px rgba(203, 168, 92, 0.2);
+      z-index: 2;
+      opacity: 0;
+      transition: all 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .radial-center.visible {
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    .radial-center h2 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--white);
+      margin-bottom: 0.85rem;
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+    }
+
+    .radial-center p {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 0.95);
+      line-height: 1.5;
+    }
+
+    /* Outer items container */
+    .radial-items {
+      position: relative;
+      width: 100%;
+      height: 1200px;
+    }
+
+    /* Individual radial items */
+    .radial-item {
+      position: absolute;
+      width: 260px;
+      background: var(--white);
+      border-radius: 16px;
+      padding: 1.75rem 1.5rem;
+      box-shadow:
+        0 4px 16px rgba(203, 168, 92, 0.08),
+        0 2px 8px rgba(203, 168, 92, 0.04);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      z-index: 1;
+      opacity: 0;
+      transform: scale(0.9);
+    }
+
+    .radial-item.visible {
+      opacity: 1;
+    }
+
+    .radial-item:nth-child(1).visible { transform: translateX(-50%) scale(1); }
+    .radial-item:nth-child(2).visible,
+    .radial-item:nth-child(3).visible,
+    .radial-item:nth-child(5).visible,
+    .radial-item:nth-child(6).visible { transform: scale(1); }
+    .radial-item:nth-child(4).visible { transform: translateX(-50%) scale(1); }
+
+    .radial-item:nth-child(1) { transition-delay: 0.1s; }
+    .radial-item:nth-child(2) { transition-delay: 0.2s; }
+    .radial-item:nth-child(3) { transition-delay: 0.4s; }
+    .radial-item:nth-child(4) { transition-delay: 0.5s; }
+    .radial-item:nth-child(5) { transition-delay: 0.4s; }
+    .radial-item:nth-child(6) { transition-delay: 0.3s; }
+
+    /* Connector lines */
+    .radial-item::before {
+      content: '';
+      position: absolute;
+      width: 2px;
+      background: linear-gradient(
+        to bottom,
+        rgba(203, 168, 92, 0.3),
+        rgba(203, 168, 92, 0.15),
+        rgba(203, 168, 92, 0.3)
+      );
+      z-index: -1;
+    }
+
+    /* Position items around center */
+    .radial-item:nth-child(1) { /* Top */
+      top: 5%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .radial-item:nth-child(1)::before {
+      top: 100%;
+      left: 50%;
+      height: 180px;
+      transform: translateX(-50%);
+    }
+
+    .radial-item:nth-child(2) { /* Top Right */
+      top: 15%;
+      right: 6%;
+    }
+
+    .radial-item:nth-child(2)::before {
+      top: 50%;
+      right: 100%;
+      width: 320px;
+      height: 2px;
+      background: linear-gradient(
+        to left,
+        rgba(203, 168, 92, 0.3),
+        rgba(203, 168, 92, 0.15),
+        rgba(203, 168, 92, 0.3)
+      );
+      transform: translateY(-50%) rotate(-22deg);
+      transform-origin: right center;
+    }
+
+    .radial-item:nth-child(3) { /* Bottom Right */
+      bottom: 15%;
+      right: 6%;
+    }
+
+    .radial-item:nth-child(3)::before {
+      bottom: 50%;
+      right: 100%;
+      width: 320px;
+      height: 2px;
+      background: linear-gradient(
+        to left,
+        rgba(203, 168, 92, 0.3),
+        rgba(203, 168, 92, 0.15),
+        rgba(203, 168, 92, 0.3)
+      );
+      transform: translateY(50%) rotate(22deg);
+      transform-origin: right center;
+    }
+
+    .radial-item:nth-child(4) { /* Bottom */
+      bottom: 5%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .radial-item:nth-child(4)::before {
+      bottom: 100%;
+      left: 50%;
+      height: 180px;
+      transform: translateX(-50%);
+    }
+
+    .radial-item:nth-child(5) { /* Bottom Left */
+      bottom: 15%;
+      left: 6%;
+    }
+
+    .radial-item:nth-child(5)::before {
+      bottom: 50%;
+      left: 100%;
+      width: 320px;
+      height: 2px;
+      background: linear-gradient(
+        to right,
+        rgba(203, 168, 92, 0.3),
+        rgba(203, 168, 92, 0.15),
+        rgba(203, 168, 92, 0.3)
+      );
+      transform: translateY(50%) rotate(-22deg);
+      transform-origin: left center;
+    }
+
+    .radial-item:nth-child(6) { /* Top Left */
+      top: 15%;
+      left: 6%;
+    }
+
+    .radial-item:nth-child(6)::before {
+      top: 50%;
+      left: 100%;
+      width: 320px;
+      height: 2px;
+      background: linear-gradient(
+        to right,
+        rgba(203, 168, 92, 0.3),
+        rgba(203, 168, 92, 0.15),
+        rgba(203, 168, 92, 0.3)
+      );
+      transform: translateY(-50%) rotate(22deg);
+      transform-origin: left center;
+    }
+
+    .radial-item:nth-child(1):hover,
+    .radial-item:nth-child(4):hover {
+      transform: translateX(-50%) translateY(-6px) scale(1);
+      box-shadow:
+        0 8px 24px rgba(203, 168, 92, 0.14),
+        0 4px 12px rgba(203, 168, 92, 0.08);
+    }
+
+    .radial-item:nth-child(2):hover,
+    .radial-item:nth-child(3):hover,
+    .radial-item:nth-child(5):hover,
+    .radial-item:nth-child(6):hover {
+      transform: translateY(-6px) scale(1);
+      box-shadow:
+        0 8px 24px rgba(203, 168, 92, 0.14),
+        0 4px 12px rgba(203, 168, 92, 0.08);
+    }
+
+    /* Icon styling */
+    .radial-icon {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      background: linear-gradient(135deg,
+        rgba(203, 168, 92, 0.12),
+        rgba(237, 189, 86, 0.15)
+      );
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 1.5rem;
       border: 2px solid rgba(203, 168, 92, 0.2);
-      box-shadow: 0 2px 8px rgba(203, 168, 92, 0.1);
     }
 
-    .pillar-icon i {
-      width: 36px;
-      height: 36px;
+    .radial-icon i {
+      width: 30px;
+      height: 30px;
       color: var(--gold);
-      stroke-width: 2;
     }
 
-    .pillar-card h3 {
-      font-size: 1.75rem;
+    .radial-item h3 {
+      font-size: 1.15rem;
       font-weight: 700;
       color: var(--text-dark);
-      margin-bottom: 1.25rem;
+      margin-bottom: 1rem;
       line-height: 1.2;
+      text-align: center;
     }
 
-    .pillar-card h3 .accent {
+    .radial-item h3 .accent {
       background: linear-gradient(135deg, var(--gold) 0%, var(--orange) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
 
-    .pillar-card p {
-      font-size: 1.1rem;
-      font-weight: 400;
-      color: #666;
-      line-height: 1.7;
-      margin-bottom: 1.75rem;
+    .radial-description {
+      font-size: 0.88rem;
+      color: var(--text-medium);
+      line-height: 1.6;
+      margin-bottom: 1.25rem;
+      text-align: center;
     }
 
-    .pillar-items {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1rem;
-      margin-bottom: 1.75rem;
-    }
-
-    .pillar-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 0.75rem;
-      font-size: 0.98rem;
-      color: var(--text-dark);
-    }
-
-    .pillar-item::before {
-      content: '';
-      width: 6px;
-      height: 6px;
-      min-width: 6px;
-      border-radius: 50%;
-      background: var(--gold);
-      margin-top: 0.5em;
-    }
-
-    .pillar-conclusion {
-      padding-top: 1.75rem;
-      border-top: 1px solid rgba(203, 168, 92, 0.15);
-      font-size: 1.05rem;
-      font-weight: 600;
-      font-style: italic;
+    .radial-effect {
+      font-size: 0.85rem;
+      font-weight: 700;
       color: var(--gold);
+      font-style: italic;
+      text-align: center;
+      padding-top: 1rem;
+      border-top: 2px solid rgba(203, 168, 92, 0.15);
     }
 
     /* ═══════════════════════════════════════════════════════════
-       EXECUTION MODEL SECTION WITH CIRCULAR STATS
+       EXECUTION MODEL SECTION - HORIZONTAL PROGRESSION
        ═══════════════════════════════════════════════════════════ */
 
     .execution-model {
@@ -636,24 +874,31 @@
     }
 
     .execution-container {
-      max-width: 1400px;
+      max-width: 1600px;
       margin: 0 auto;
     }
 
-    .execution-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 6rem;
+    /* Header with Stats */
+    .execution-header {
+      display: flex;
       align-items: center;
-      margin-bottom: 6rem;
+      justify-content: space-between;
+      gap: 4rem;
+      margin-bottom: 5rem;
+      flex-wrap: wrap;
+    }
+
+    .execution-content {
+      flex: 1;
+      min-width: 400px;
     }
 
     .execution-content h2 {
-      font-size: clamp(2.75rem, 5.5vw, 4.5rem);
+      font-size: clamp(2.5rem, 4.5vw, 3.75rem);
       font-weight: 800;
-      line-height: 1.08;
-      letter-spacing: -0.04em;
-      margin-bottom: 2rem;
+      line-height: 1.1;
+      letter-spacing: -0.03em;
+      margin-bottom: 1.5rem;
       color: var(--text-dark);
     }
 
@@ -666,23 +911,23 @@
     }
 
     .execution-content p {
-      font-size: 1.25rem;
+      font-size: 1.15rem;
       font-weight: 400;
-      line-height: 1.65;
+      line-height: 1.6;
       color: #3a3a3a;
+      max-width: 600px;
     }
 
     .execution-stats {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 3rem;
+      display: flex;
+      gap: 2rem;
+      flex-shrink: 0;
     }
 
     .stat-circle {
       position: relative;
-      width: 240px;
-      height: 240px;
-      margin: 0 auto;
+      width: 180px;
+      height: 180px;
     }
 
     .stat-ring-svg {
@@ -694,13 +939,13 @@
     .stat-ring-track {
       fill: none;
       stroke: rgba(219, 213, 202, 0.2);
-      stroke-width: 10;
+      stroke-width: 8;
     }
 
     .stat-ring-progress {
       fill: none;
       stroke: url(#statGradient);
-      stroke-width: 10;
+      stroke-width: 8;
       stroke-linecap: round;
       stroke-dasharray: 678;
       stroke-dashoffset: 678;
@@ -713,7 +958,7 @@
 
     .stat-inner {
       position: absolute;
-      inset: 30px;
+      inset: 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -722,7 +967,7 @@
     }
 
     .stat-number {
-      font-size: 3rem;
+      font-size: 2.25rem;
       font-weight: 800;
       background: linear-gradient(135deg, var(--gold) 0%, var(--orange) 60%);
       -webkit-background-clip: text;
@@ -733,118 +978,159 @@
     }
 
     .stat-label {
-      font-size: 0.8rem;
+      font-size: 0.7rem;
       font-weight: 600;
       color: var(--text-medium);
       text-transform: uppercase;
       letter-spacing: 0.05em;
-      max-width: 130px;
+      max-width: 110px;
+      line-height: 1.3;
     }
 
-    /* Timeline */
-    .execution-timeline {
-      max-width: 900px;
-      margin: 4rem auto 0;
+    /* Horizontal Phase Progression */
+    .execution-phases {
       position: relative;
-      padding-left: 3rem;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin-top: 4rem;
     }
 
-    .execution-timeline::before {
+    /* Progression Gradient Line */
+    .execution-phases::before {
       content: '';
       position: absolute;
-      left: 0;
-      top: 0;
-      bottom: 0;
-      width: 2px;
-      background: linear-gradient(180deg, var(--gold) 0%, var(--orange) 100%);
+      top: 80px;
+      left: 10%;
+      right: 10%;
+      height: 4px;
+      background: linear-gradient(90deg,
+        var(--gold) 0%,
+        var(--gold-light) 33%,
+        var(--orange) 66%,
+        rgba(203, 168, 92, 0.6) 100%
+      );
+      border-radius: 2px;
+      opacity: 0.3;
+      z-index: 0;
     }
 
-    .timeline-phase {
+    .phase-card {
       position: relative;
-      padding: 2.5rem 0;
-      border-bottom: 1px solid rgba(203, 168, 92, 0.15);
+      background: var(--white);
+      padding: 2.5rem 2rem;
+      border-radius: 8px;
+      border: 2px solid rgba(203, 168, 92, 0.15);
+      box-shadow:
+        0 2px 12px rgba(203, 168, 92, 0.08),
+        0 4px 24px rgba(0, 0, 0, 0.04);
+      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      z-index: 1;
     }
 
-    .timeline-phase:last-child {
-      border-bottom: none;
+    .phase-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(203, 168, 92, 0.35);
+      box-shadow:
+        0 8px 32px rgba(203, 168, 92, 0.16),
+        0 12px 48px rgba(0, 0, 0, 0.08);
     }
 
-    .timeline-marker {
+    /* Phase 4 emphasis */
+    .phase-card:nth-child(4) {
+      border-color: rgba(203, 168, 92, 0.3);
+      background: linear-gradient(135deg,
+        rgba(255, 251, 230, 0.4) 0%,
+        var(--white) 100%
+      );
+      box-shadow:
+        0 4px 16px rgba(203, 168, 92, 0.12),
+        0 6px 32px rgba(203, 168, 92, 0.08);
+    }
+
+    .phase-card:nth-child(4):hover {
+      border-color: rgba(203, 168, 92, 0.45);
+    }
+
+    /* Arrow connectors between phases */
+    .phase-card::after {
+      content: '→';
       position: absolute;
-      left: -3rem;
-      top: 2.5rem;
-      width: 16px;
-      height: 16px;
-      border-radius: 50%;
-      background: var(--gold);
-      border: 3px solid var(--cream);
-      box-shadow: 0 0 0 2px var(--gold);
+      right: -1.25rem;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 1.5rem;
+      color: var(--gold);
+      opacity: 0.3;
+      z-index: 2;
     }
 
-    .timeline-duration {
-      font-size: 0.75rem;
+    .phase-card:last-child::after {
+      display: none;
+    }
+
+    .phase-duration {
+      font-size: 0.7rem;
       font-weight: 700;
-      letter-spacing: 0.2em;
+      letter-spacing: 0.15em;
       text-transform: uppercase;
       color: var(--gold);
-      margin-bottom: 0.75rem;
+      margin-bottom: 1rem;
     }
 
-    .timeline-phase h3 {
-      font-size: 1.5rem;
+    .phase-card h3 {
+      font-size: 1.35rem;
       font-weight: 700;
       color: var(--text-dark);
-      margin-bottom: 1rem;
+      margin-bottom: 0.75rem;
+      line-height: 1.2;
     }
 
-    .timeline-objective {
-      font-size: 1rem;
+    .phase-objective {
+      font-size: 0.9rem;
       font-weight: 600;
       color: var(--orange);
-      margin-bottom: 1rem;
+      margin-bottom: 1.25rem;
       font-style: italic;
+      line-height: 1.4;
     }
 
-    .timeline-phase p {
-      font-size: 1rem;
-      color: var(--text-medium);
-      line-height: 1.6;
-      margin-bottom: 1rem;
-    }
-
-    .timeline-items {
+    .phase-items {
       list-style: none;
       padding: 0;
-      margin: 1rem 0;
+      margin: 0 0 1.5rem 0;
       display: flex;
       flex-direction: column;
-      gap: 0.5rem;
+      gap: 0.6rem;
     }
 
-    .timeline-items li {
-      font-size: 0.95rem;
+    .phase-items li {
+      font-size: 0.88rem;
       color: var(--text-light);
-      padding-left: 1.5rem;
+      padding-left: 1.25rem;
       position: relative;
+      line-height: 1.5;
     }
 
-    .timeline-items li::before {
+    .phase-items li::before {
       content: '';
       position: absolute;
       left: 0;
-      top: 0.65em;
-      width: 6px;
-      height: 6px;
+      top: 0.6em;
+      width: 5px;
+      height: 5px;
       border-radius: 50%;
       background: var(--gold);
-      opacity: 0.5;
+      opacity: 0.6;
     }
 
-    .timeline-outcome {
-      font-size: 1rem;
+    .phase-outcome {
+      font-size: 0.9rem;
       font-weight: 600;
       color: var(--text-dark);
-      margin-top: 1rem;
+      padding-top: 1.25rem;
+      border-top: 2px solid rgba(203, 168, 92, 0.2);
+      line-height: 1.4;
     }
 
     /* ═══════════════════════════════════════════════════════════
@@ -1200,24 +1486,165 @@
        RESPONSIVE
        ═══════════════════════════════════════════════════════════ */
 
+    @media (max-width: 1400px) {
+      .execution-phases {
+        gap: 1.25rem;
+      }
+
+      .phase-card {
+        padding: 2.25rem 1.75rem;
+      }
+
+      .phase-card h3 {
+        font-size: 1.25rem;
+      }
+
+      .phase-items li {
+        font-size: 0.85rem;
+      }
+
+      .phase-outcome {
+        font-size: 0.88rem;
+      }
+    }
+
+    @media (max-width: 1200px) {
+      .framework-journey {
+        padding: 3rem 1.5rem;
+      }
+
+      .journey-stages {
+        gap: 2.5rem 1.5rem;
+      }
+
+      .journey-stage {
+        max-width: 300px;
+        padding: 2rem 1.75rem;
+      }
+
+      .journey-stage:nth-child(4),
+      .journey-stage:nth-child(5) {
+        margin-left: 5%;
+        margin-right: 5%;
+      }
+    }
+
     @media (max-width: 1024px) {
-      .framework-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
+      .framework-journey {
+        padding: 2rem 1rem;
       }
 
-      .pillars-grid {
-        grid-template-columns: 1fr;
-        gap: 2rem;
+      .journey-path-svg {
+        display: none;
       }
 
-      .execution-grid {
+      .journey-stages {
         grid-template-columns: 1fr;
-        gap: 4rem;
+        grid-template-rows: auto;
+        gap: 3rem;
       }
 
-      .execution-stats {
+      .journey-stage {
+        justify-self: center !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        max-width: 500px;
+      }
+
+      .journey-stage:nth-child(1),
+      .journey-stage:nth-child(2),
+      .journey-stage:nth-child(3),
+      .journey-stage:nth-child(4),
+      .journey-stage:nth-child(5) {
+        grid-column: 1;
+        grid-row: auto;
+      }
+
+      .journey-stage.visible {
+        transform: scale(1) translateY(0);
+      }
+
+      .radial-layout {
+        min-height: auto;
+        padding: 2rem 0;
+      }
+
+      .radial-center {
+        position: relative;
+        top: auto;
+        left: auto;
+        transform: scale(0.9);
+        margin: 0 auto 4rem;
+        width: 280px;
+        height: 280px;
+        padding: 2.5rem 2rem;
+      }
+
+      .radial-center.visible {
+        transform: scale(1);
+      }
+
+      .radial-center h2 {
+        font-size: 1.5rem;
+      }
+
+      .radial-center p {
+        font-size: 0.9rem;
+      }
+
+      .radial-items {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+        align-items: center;
+      }
+
+      .radial-item {
+        position: relative !important;
+        top: auto !important;
+        left: auto !important;
+        right: auto !important;
+        bottom: auto !important;
+        transform: none !important;
+        width: 100%;
+        max-width: 500px;
+      }
+
+      .radial-item::before {
+        display: none;
+      }
+
+      .radial-item:hover {
+        transform: translateY(-6px) !important;
+      }
+
+      .execution-header {
+        flex-direction: column;
+        gap: 3rem;
+        align-items: center;
+        text-align: center;
+      }
+
+      .execution-content {
+        min-width: auto;
+      }
+
+      .execution-content p {
+        max-width: 100%;
+      }
+
+      .execution-phases {
         grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+      }
+
+      .execution-phases::before {
+        display: none;
+      }
+
+      .phase-card::after {
+        display: none;
       }
 
       .different-grid {
@@ -1243,8 +1670,9 @@
       }
 
       .execution-stats {
-        grid-template-columns: 1fr;
+        flex-direction: column;
         gap: 2rem;
+        align-items: center;
       }
 
       .stat-circle {
@@ -1256,16 +1684,54 @@
         font-size: 2.5rem;
       }
 
-      .execution-timeline {
-        padding-left: 2rem;
-      }
-
-      .timeline-marker {
-        left: -2rem;
-      }
-
-      .pillar-items {
+      .execution-phases {
         grid-template-columns: 1fr;
+        gap: 2rem;
+        margin-top: 3rem;
+      }
+
+      .phase-card {
+        padding: 2rem 1.75rem;
+      }
+
+      .radial-center {
+        width: 260px;
+        height: 260px;
+        padding: 2rem 1.5rem;
+        margin-bottom: 3rem;
+        transform: scale(0.9);
+      }
+
+      .radial-center.visible {
+        transform: scale(1);
+      }
+
+      .radial-center h2 {
+        font-size: 1.35rem;
+      }
+
+      .radial-center p {
+        font-size: 0.85rem;
+      }
+
+      .radial-items {
+        gap: 2rem;
+      }
+
+      .radial-item {
+        padding: 2rem 1.75rem;
+      }
+
+      .radial-item h3 {
+        font-size: 1.2rem;
+      }
+
+      .radial-description {
+        font-size: 0.9rem;
+      }
+
+      .radial-effect {
+        font-size: 0.85rem;
       }
 
       .proof-callout {
@@ -1363,45 +1829,82 @@
         <p class="section-subtitle">Decision-making, ownership, and speed under operational pressure</p>
       </div>
 
-      <div class="framework-grid">
-        <!-- Card 1 -->
-        <div class="framework-card">
-          <div class="card-number">1</div>
-          <h3>Immediate Triage</h3>
-          <p>Identify what is broken, bleeding, or about to fail. Make decisions on what gets fixed first.</p>
-          <div class="card-emphasis">No reports. Just clarity on what matters now.</div>
-        </div>
+      <div class="framework-journey">
+        <!-- Flowing S-Curve Path -->
+        <svg class="journey-path-svg" viewBox="0 0 1000 750" preserveAspectRatio="xMidYMid meet">
+          <defs>
+            <linearGradient id="journeyGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#CBA85C"/>
+              <stop offset="33%" stop-color="#EDBD56"/>
+              <stop offset="66%" stop-color="#F28A32"/>
+              <stop offset="100%" stop-color="#CBA85C"/>
+            </linearGradient>
+          </defs>
 
-        <!-- Card 2 -->
-        <div class="framework-card">
-          <div class="card-number">2</div>
-          <h3>Direct Execution</h3>
-          <p>We own the implementation. Staff, vendors, physicians—we work directly with those who execute daily operations.</p>
-          <div class="card-emphasis">Execution happens at the operational level, not in conference rooms.</div>
-        </div>
+          <!-- Elegant S-curve path flowing through stages -->
+          <path class="journey-path"
+                d="M 120 200
+                   C 200 180, 280 185, 380 200
+                   C 480 215, 580 210, 680 195
+                   C 780 180, 840 190, 880 210
+                   C 920 240, 940 290, 940 360
+                   C 940 430, 920 490, 880 530
+                   C 840 550, 780 560, 680 550
+                   C 580 540, 480 545, 380 560
+                   C 280 575, 200 570, 140 560" />
+        </svg>
 
-        <!-- Card 3 -->
-        <div class="framework-card">
-          <div class="card-number">3</div>
-          <h3>Restore Cash Flow</h3>
-          <p>Free trapped cash. Accelerate collections. Stop unnecessary spend. Profitability creates breathing room.</p>
-          <div class="card-emphasis">Hospitals cannot improve without financial oxygen.</div>
-        </div>
+        <!-- Journey Stages -->
+        <div class="journey-stages">
+          <!-- Stage 1 -->
+          <div class="journey-stage">
+            <div class="stage-number">1</div>
+            <div class="stage-content">
+              <h3>Immediate Triage</h3>
+              <p>Identify what is broken, bleeding, or about to fail. Make decisions on what gets fixed first.</p>
+              <div class="stage-emphasis">No reports. Just clarity on what matters now.</div>
+            </div>
+          </div>
 
-        <!-- Card 4 -->
-        <div class="framework-card">
-          <div class="card-number">4</div>
-          <h3>Embed Systems</h3>
-          <p>Install processes that hold without us. Build accountability into daily operations. Transfer ownership to leadership.</p>
-          <div class="card-emphasis">Sustainability means performance without dependency.</div>
-        </div>
+          <!-- Stage 2 -->
+          <div class="journey-stage">
+            <div class="stage-number">2</div>
+            <div class="stage-content">
+              <h3>Direct Execution</h3>
+              <p>We own the implementation. Staff, vendors, physicians—we work directly with those who execute daily operations.</p>
+              <div class="stage-emphasis">Execution happens at the operational level, not in conference rooms.</div>
+            </div>
+          </div>
 
-        <!-- Card 5 -->
-        <div class="framework-card">
-          <div class="card-number">5</div>
-          <h3>Create Optionality</h3>
-          <p>Once stable, leadership decides—operate independently, pursue partnerships, or prepare for transaction.</p>
-          <div class="card-emphasis">Strategic choices require operational strength.</div>
+          <!-- Stage 3 -->
+          <div class="journey-stage">
+            <div class="stage-number">3</div>
+            <div class="stage-content">
+              <h3>Restore Cash Flow</h3>
+              <p>Free trapped cash. Accelerate collections. Stop unnecessary spend. Profitability creates breathing room.</p>
+              <div class="stage-emphasis">Hospitals cannot improve without financial oxygen.</div>
+            </div>
+          </div>
+
+          <!-- Stage 4 -->
+          <div class="journey-stage">
+            <div class="stage-number">4</div>
+            <div class="stage-content">
+              <h3>Embed Systems</h3>
+              <p>Install processes that hold without us. Build accountability into daily operations. Transfer ownership to leadership.</p>
+              <div class="stage-emphasis">Sustainability means performance without dependency.</div>
+            </div>
+          </div>
+
+          <!-- Stage 5 -->
+          <div class="journey-stage">
+            <div class="stage-number">5</div>
+            <div class="stage-content">
+              <h3>Create Optionality</h3>
+              <p>Once stable, leadership decides—operate independently, pursue partnerships, or prepare for transaction.</p>
+              <div class="stage-emphasis">Strategic choices require operational strength.</div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -1409,107 +1912,80 @@
     <!-- OPERATING PILLARS SECTION -->
     <section class="operating-pillars">
       <div class="pillars-container">
-        <div class="pillars-intro">
+        <div class="section-header">
           <div class="section-kicker">Operational Levers</div>
-          <h2>What We <span class="accent">Pull</span></h2>
-          <p>These are the levers we pull to stabilize hospitals. Each produces measurable operational change. Order matters. Speed matters. Execution determines outcome.</p>
+          <h2 class="section-title">What We Pull</h2>
+          <p class="section-subtitle">These are the levers we pull to stabilize hospitals. Each produces measurable operational change. Order matters. Speed matters. Execution determines outcome.</p>
         </div>
 
-        <div class="pillars-grid">
-          <!-- Pillar 1 -->
-          <div class="pillar-card">
-            <div class="pillar-icon">
-              <i data-lucide="trending-up" stroke-width="2"></i>
-            </div>
-            <h3>Free <span class="accent">Trapped Cash</span></h3>
-            <p>Cash is stuck in aged receivables, broken billing cycles, and inefficient collections. We recover it.</p>
-            <div class="pillar-items">
-              <div class="pillar-item">Clear aged AR backlogs</div>
-              <div class="pillar-item">Accelerate collection cycles</div>
-              <div class="pillar-item">Fix front-end access failures</div>
-              <div class="pillar-item">Reduce payer denial rates</div>
-            </div>
-            <div class="pillar-conclusion">Effect: Immediate liquidity. Control restored.</div>
+        <div class="radial-layout">
+          <!-- Central Circle -->
+          <div class="radial-center">
+            <h2>Operational Levers</h2>
+            <p>The actions we execute to stabilize hospitals and restore control.</p>
           </div>
 
-          <!-- Pillar 2 -->
-          <div class="pillar-card">
-            <div class="pillar-icon">
-              <i data-lucide="target" stroke-width="2"></i>
+          <!-- Radial Items -->
+          <div class="radial-items">
+            <!-- Item 1: Free Trapped Cash -->
+            <div class="radial-item">
+              <div class="radial-icon">
+                <i data-lucide="dollar-sign" stroke-width="2"></i>
+              </div>
+              <h3>Free <span class="accent">Trapped Cash</span></h3>
+              <p class="radial-description">Clear aged receivables, fix billing and access breakdowns, accelerate collections, and reduce payer denials so cash begins moving again.</p>
+              <div class="radial-effect">Immediate liquidity. Control restored.</div>
             </div>
-            <h3>Cut <span class="accent">Unnecessary Cost</span></h3>
-            <p>Operating costs bloat during distress. We eliminate waste, renegotiate contracts, and align spend with volume.</p>
-            <div class="pillar-items">
-              <div class="pillar-item">Remove low-value spend</div>
-              <div class="pillar-item">Reset supply chain terms</div>
-              <div class="pillar-item">Restructure service contracts</div>
-              <div class="pillar-item">Adjust staffing to demand</div>
-            </div>
-            <div class="pillar-conclusion">Effect: Sustainable margins. Operational breathing room.</div>
-          </div>
 
-          <!-- Pillar 3 -->
-          <div class="pillar-card">
-            <div class="pillar-icon">
-              <i data-lucide="bar-chart-3" stroke-width="2"></i>
+            <!-- Item 2: Cut Unnecessary Cost -->
+            <div class="radial-item">
+              <div class="radial-icon">
+                <i data-lucide="scissors" stroke-width="2"></i>
+              </div>
+              <h3>Cut <span class="accent">Unnecessary Cost</span></h3>
+              <p class="radial-description">Remove low-value spend, renegotiate vendor and service contracts, and align staffing to actual demand rather than historical assumptions.</p>
+              <div class="radial-effect">Margins stabilized. Breathing room created.</div>
             </div>
-            <h3>Capture <span class="accent">Lost Revenue</span></h3>
-            <p>Underutilized capacity and weak provider relationships leave revenue on the table. We activate both.</p>
-            <div class="pillar-items">
-              <div class="pillar-item">Strengthen physician alignment</div>
-              <div class="pillar-item">Expand high-margin services</div>
-              <div class="pillar-item">Optimize facility use</div>
-              <div class="pillar-item">Recapture service line leakage</div>
-            </div>
-            <div class="pillar-conclusion">Effect: Revenue growth. Reinvestment capacity.</div>
-          </div>
 
-          <!-- Pillar 4 -->
-          <div class="pillar-card">
-            <div class="pillar-icon">
-              <i data-lucide="landmark" stroke-width="2"></i>
+            <!-- Item 3: Capture Lost Revenue -->
+            <div class="radial-item">
+              <div class="radial-icon">
+                <i data-lucide="trending-up" stroke-width="2"></i>
+              </div>
+              <h3>Capture <span class="accent">Lost Revenue</span></h3>
+              <p class="radial-description">Strengthen physician alignment, optimize capacity and utilization, expand high-margin services, and close revenue leakage across departments.</p>
+              <div class="radial-effect">Revenue recovered. Reinvestment enabled.</div>
             </div>
-            <h3>Restructure <span class="accent">Capital</span></h3>
-            <p>Misaligned debt, covenants, and capital structures constrain recovery. We realign or restructure.</p>
-            <div class="pillar-items">
-              <div class="pillar-item">Right-size balance sheet obligations</div>
-              <div class="pillar-item">Align stakeholder expectations</div>
-              <div class="pillar-item">Structure for operational needs</div>
-              <div class="pillar-item">Create refinancing pathways</div>
-            </div>
-            <div class="pillar-conclusion">Effect: Financial flexibility. Investment capacity.</div>
-          </div>
 
-          <!-- Pillar 5 -->
-          <div class="pillar-card">
-            <div class="pillar-icon">
-              <i data-lucide="shield-check" stroke-width="2"></i>
+            <!-- Item 4: Execute Strategic Outcomes -->
+            <div class="radial-item">
+              <div class="radial-icon">
+                <i data-lucide="target" stroke-width="2"></i>
+              </div>
+              <h3>Execute <span class="accent">Strategic Outcomes</span></h3>
+              <p class="radial-description">Evaluate strategic options, improve transaction readiness, position for independence or partnership, and negotiate from operational strength.</p>
+              <div class="radial-effect">Control and optionality.</div>
             </div>
-            <h3>Restore <span class="accent">Compliance</span></h3>
-            <p>Operational distress creates regulatory exposure. We close gaps, prepare for surveys, and embed daily compliance.</p>
-            <div class="pillar-items">
-              <div class="pillar-item">Address accreditation deficiencies</div>
-              <div class="pillar-item">Strengthen patient safety systems</div>
-              <div class="pillar-item">Prepare for regulatory reviews</div>
-              <div class="pillar-item">Institutionalize ongoing compliance</div>
-            </div>
-            <div class="pillar-conclusion">Effect: Risk reduced. Leadership protected.</div>
-          </div>
 
-          <!-- Pillar 6 -->
-          <div class="pillar-card">
-            <div class="pillar-icon">
-              <i data-lucide="handshake" stroke-width="2"></i>
+            <!-- Item 5: Restructure Capital -->
+            <div class="radial-item">
+              <div class="radial-icon">
+                <i data-lucide="layers" stroke-width="2"></i>
+              </div>
+              <h3>Restructure <span class="accent">Capital</span></h3>
+              <p class="radial-description">Right-size debt obligations, align lenders and stakeholders, restructure capital to support operations, and open refinancing paths where needed.</p>
+              <div class="radial-effect">Financial flexibility. Investment capacity restored.</div>
             </div>
-            <h3>Execute <span class="accent">Strategic Outcomes</span></h3>
-            <p>Stability creates options. We support independent operations, partnership negotiations, or transaction preparation.</p>
-            <div class="pillar-items">
-              <div class="pillar-item">Evaluate strategic pathways</div>
-              <div class="pillar-item">Position for partnership discussions</div>
-              <div class="pillar-item">Improve transaction valuation</div>
-              <div class="pillar-item">Negotiate from operational strength</div>
+
+            <!-- Item 6: Restore Compliance -->
+            <div class="radial-item">
+              <div class="radial-icon">
+                <i data-lucide="shield-check" stroke-width="2"></i>
+              </div>
+              <h3>Restore <span class="accent">Compliance</span></h3>
+              <p class="radial-description">Close accreditation gaps, prepare for regulatory review, strengthen patient safety systems, and embed compliance into daily operations.</p>
+              <div class="radial-effect">Risk reduced. Leadership protected.</div>
             </div>
-            <div class="pillar-conclusion">Effect: Leadership chooses from strength, not desperation.</div>
           </div>
         </div>
       </div>
@@ -1524,26 +2000,26 @@
           <p class="section-subtitle">This sequence is executed in this order for a reason</p>
         </div>
 
-        <div class="execution-grid">
+        <div class="execution-header">
           <div class="execution-content">
             <h2>
               We've done this before.
               <span class="emphasis">The sequence works.</span>
             </h2>
-            <p>Every hospital turnaround follows this phased model. Timing compresses or extends, but the order does not change. Proven through repetition.</p>
+            <p>Every hospital turnaround follows this execution order for a reason. Timelines may compress or extend, but the sequence itself does not change because outcomes come from disciplined execution, not theory.</p>
           </div>
 
           <div class="execution-stats">
             <div class="stat-circle">
-              <svg class="stat-ring-svg" viewBox="0 0 240 240">
+              <svg class="stat-ring-svg" viewBox="0 0 180 180">
                 <defs>
                   <linearGradient id="statGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                     <stop offset="0%" stop-color="#CBA85C"/>
                     <stop offset="100%" stop-color="#F28A32"/>
                   </linearGradient>
                 </defs>
-                <circle class="stat-ring-track" cx="120" cy="120" r="108"/>
-                <circle class="stat-ring-progress" cx="120" cy="120" r="108"/>
+                <circle class="stat-ring-track" cx="90" cy="90" r="82"/>
+                <circle class="stat-ring-progress" cx="90" cy="90" r="82"/>
               </svg>
               <div class="stat-inner">
                 <div class="stat-number">200+</div>
@@ -1552,9 +2028,9 @@
             </div>
 
             <div class="stat-circle">
-              <svg class="stat-ring-svg" viewBox="0 0 240 240">
-                <circle class="stat-ring-track" cx="120" cy="120" r="108"/>
-                <circle class="stat-ring-progress" cx="120" cy="120" r="108"/>
+              <svg class="stat-ring-svg" viewBox="0 0 180 180">
+                <circle class="stat-ring-track" cx="90" cy="90" r="82"/>
+                <circle class="stat-ring-progress" cx="90" cy="90" r="82"/>
               </svg>
               <div class="stat-inner">
                 <div class="stat-number">100%</div>
@@ -1564,66 +2040,63 @@
           </div>
         </div>
 
-        <!-- Timeline -->
-        <div class="execution-timeline">
+        <!-- Horizontal Phase Progression -->
+        <div class="execution-phases">
           <!-- Phase 1 -->
-          <div class="timeline-phase">
-            <div class="timeline-marker"></div>
-            <div class="timeline-duration">0-30 Days</div>
+          <div class="phase-card">
+            <div class="phase-duration">0–30 Days</div>
             <h3>Phase 1: Stop the Bleed</h3>
-            <p class="timeline-objective">Stop financial and operational deterioration. Restore immediate control.</p>
-            <ul class="timeline-items">
-              <li>Secure liquidity and stabilize payroll</li>
-              <li>Triage revenue cycle failures</li>
-              <li>Address critical compliance exposure</li>
-              <li>Establish leadership decision clarity</li>
+            <p class="phase-objective">Halting financial and operational deterioration.</p>
+            <ul class="phase-items">
+              <li>Securing liquidity</li>
+              <li>Stabilizing payroll</li>
+              <li>Triaging revenue cycle failures</li>
+              <li>Addressing critical compliance exposure</li>
+              <li>Restoring leadership decision clarity</li>
             </ul>
-            <p class="timeline-outcome">Outcome: Crisis management ends. Controlled operations begin.</p>
+            <p class="phase-outcome">The end of crisis conditions and controlled operations.</p>
           </div>
 
           <!-- Phase 2 -->
-          <div class="timeline-phase">
-            <div class="timeline-marker"></div>
-            <div class="timeline-duration">30-90 Days</div>
+          <div class="phase-card">
+            <div class="phase-duration">30–90 Days</div>
             <h3>Phase 2: Restore Performance</h3>
-            <p class="timeline-objective">Establish predictable operational and financial performance.</p>
-            <ul class="timeline-items">
-              <li>Realign cost structure to volume</li>
-              <li>Optimize revenue cycle operations</li>
-              <li>Stabilize service line performance</li>
-              <li>Install reporting and governance discipline</li>
+            <p class="phase-objective">Reestablishing predictable operational and financial performance.</p>
+            <ul class="phase-items">
+              <li>Realigning cost structures to volume</li>
+              <li>Optimizing revenue cycle operations</li>
+              <li>Stabilizing service line performance</li>
+              <li>Installing reporting discipline and governance rhythm</li>
             </ul>
-            <p class="timeline-outcome">Outcome: Predictable cash flow. Stable margins. Measurable improvement.</p>
+            <p class="phase-outcome">Predictable cash flow, stable margins, and measurable improvement.</p>
           </div>
 
           <!-- Phase 3 -->
-          <div class="timeline-phase">
-            <div class="timeline-marker"></div>
-            <div class="timeline-duration">90-180 Days</div>
+          <div class="phase-card">
+            <div class="phase-duration">90–180 Days</div>
             <h3>Phase 3: Embed Systems</h3>
-            <p class="timeline-objective">Institutionalize operational discipline. Transfer ownership.</p>
-            <ul class="timeline-items">
-              <li>Lock in process improvements</li>
-              <li>Build leadership capability and accountability</li>
-              <li>Finalize compliance and quality frameworks</li>
-              <li>Align capital structure with operations</li>
+            <p class="phase-objective">Institutionalizing performance.</p>
+            <ul class="phase-items">
+              <li>Locking in process improvements</li>
+              <li>Building leadership accountability</li>
+              <li>Finalizing compliance and quality frameworks</li>
+              <li>Aligning capital structure with operations</li>
             </ul>
-            <p class="timeline-outcome">Outcome: Hospital sustains performance without external intervention.</p>
+            <p class="phase-outcome">The hospital sustains performance without external intervention.</p>
           </div>
 
           <!-- Phase 4 -->
-          <div class="timeline-phase">
-            <div class="timeline-marker"></div>
-            <div class="timeline-duration">Post-Stabilization</div>
+          <div class="phase-card">
+            <div class="phase-duration">Post-Stabilization</div>
             <h3>Phase 4: Execute Strategy</h3>
-            <p class="timeline-objective">Pursue strategic outcomes from operational strength.</p>
-            <ul class="timeline-items">
+            <p class="phase-objective">Enabling leadership to pursue strategic outcomes from a position of strength.</p>
+            <ul class="phase-items">
               <li>Independent growth execution</li>
               <li>Partnership or affiliation negotiation</li>
               <li>Capital restructuring or refinancing</li>
-              <li>Transaction preparation and execution</li>
+              <li>Transaction preparation or execution</li>
             </ul>
-            <p class="timeline-outcome">Outcome: Leadership decides from strength, not desperation.</p>
+            <p class="phase-outcome">Leadership makes strategic decisions from strength rather than desperation.</p>
           </div>
         </div>
       </div>
@@ -1750,6 +2223,51 @@
 
       statCircles.forEach(circle => {
         observer.observe(circle);
+      });
+
+      // Journey stages animation on scroll
+      const journeyStages = document.querySelectorAll('.journey-stage');
+
+      const journeyObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.2 });
+
+      journeyStages.forEach(stage => {
+        journeyObserver.observe(stage);
+      });
+
+      // Radial center animation on scroll
+      const radialCenter = document.querySelector('.radial-center');
+
+      const radialCenterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.3 });
+
+      if (radialCenter) {
+        radialCenterObserver.observe(radialCenter);
+      }
+
+      // Radial items animation on scroll
+      const radialItems = document.querySelectorAll('.radial-item');
+
+      const radialObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      }, { threshold: 0.2 });
+
+      radialItems.forEach(item => {
+        radialObserver.observe(item);
       });
 
       // Mobile menu toggle

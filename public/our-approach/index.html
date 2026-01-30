@@ -987,99 +987,157 @@
       line-height: 1.3;
     }
 
-    /* Horizontal Phase Progression */
+    /* Industrial Timeline Progression */
     .execution-phases {
       position: relative;
       display: grid;
       grid-template-columns: repeat(4, 1fr);
-      gap: 1.5rem;
-      margin-top: 4rem;
-    }
-
-    /* Progression Gradient Line */
-    .execution-phases::before {
-      content: '';
-      position: absolute;
-      top: 80px;
-      left: 10%;
-      right: 10%;
-      height: 4px;
-      background: linear-gradient(90deg,
-        var(--gold) 0%,
-        var(--gold-light) 33%,
-        var(--orange) 66%,
-        rgba(203, 168, 92, 0.6) 100%
-      );
-      border-radius: 2px;
-      opacity: 0.3;
-      z-index: 0;
+      gap: 0;
+      margin-top: 6rem;
+      padding: 0;
     }
 
     .phase-card {
       position: relative;
-      background: var(--white);
-      padding: 2.5rem 2rem;
-      border-radius: 8px;
-      border: 2px solid rgba(203, 168, 92, 0.15);
-      box-shadow:
-        0 2px 12px rgba(203, 168, 92, 0.08),
-        0 4px 24px rgba(0, 0, 0, 0.04);
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+      background: transparent;
+      padding: 0;
+      transition: all 0.3s ease;
       z-index: 1;
     }
 
-    .phase-card:hover {
-      transform: translateY(-6px);
-      border-color: rgba(203, 168, 92, 0.35);
-      box-shadow:
-        0 8px 32px rgba(203, 168, 92, 0.16),
-        0 12px 48px rgba(0, 0, 0, 0.08);
+    /* Circular Icon */
+    .phase-icon {
+      width: 90px;
+      height: 90px;
+      background: var(--white);
+      border: 3px solid var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      position: relative;
+      z-index: 3;
+      box-shadow: 0 4px 12px rgba(203, 168, 92, 0.25);
     }
 
-    /* Phase 4 emphasis */
-    .phase-card:nth-child(4) {
-      border-color: rgba(203, 168, 92, 0.3);
-      background: linear-gradient(135deg,
-        rgba(255, 251, 230, 0.4) 0%,
-        var(--white) 100%
-      );
-      box-shadow:
-        0 4px 16px rgba(203, 168, 92, 0.12),
-        0 6px 32px rgba(203, 168, 92, 0.08);
+    .phase-icon svg {
+      width: 40px;
+      height: 40px;
+      stroke: var(--gold);
+      stroke-width: 2;
     }
 
-    .phase-card:nth-child(4):hover {
-      border-color: rgba(203, 168, 92, 0.45);
+    /* Phase-specific diamond colors */
+    .phase-card:nth-child(1) .phase-icon {
+      border-color: #A67C52;
+      background: linear-gradient(135deg, #FFFFFF 0%, #FFF9F0 100%);
     }
 
-    /* Arrow connectors between phases */
-    .phase-card::after {
-      content: '→';
-      position: absolute;
-      right: -1.25rem;
-      top: 50%;
-      transform: translateY(-50%);
-      font-size: 1.5rem;
-      color: var(--gold);
-      opacity: 0.3;
-      z-index: 2;
+    .phase-card:nth-child(1) .phase-icon svg {
+      stroke: #A67C52;
     }
 
-    .phase-card:last-child::after {
-      display: none;
+    .phase-card:nth-child(2) .phase-icon {
+      border-color: var(--gold);
+    }
+
+    .phase-card:nth-child(2) .phase-icon svg {
+      stroke: var(--gold);
+    }
+
+    .phase-card:nth-child(3) .phase-icon {
+      border-color: var(--gold-light);
+    }
+
+    .phase-card:nth-child(3) .phase-icon svg {
+      stroke: var(--gold-light);
+    }
+
+    .phase-card:nth-child(4) .phase-icon {
+      border-color: var(--orange);
+      background: linear-gradient(135deg, #FFFEF8 0%, #FFF9EC 100%);
+    }
+
+    .phase-card:nth-child(4) .phase-icon svg {
+      stroke: var(--orange);
+    }
+
+    /* Dotted vertical connector */
+    .phase-connector {
+      width: 2px;
+      height: 60px;
+      background-image: linear-gradient(to bottom, var(--gold) 50%, transparent 50%);
+      background-size: 2px 8px;
+      margin: 1rem auto;
+      opacity: 0.5;
+    }
+
+    /* Chevron Arrow Timeline Bar */
+    .phase-timeline-bar {
+      position: relative;
+      height: 65px;
+      background: var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 50%, calc(100% - 20px) 100%, 0 100%, 20px 50%);
+      margin-left: -10px;
+      box-shadow: 0 3px 10px rgba(203, 168, 92, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .phase-card:first-child .phase-timeline-bar {
+      clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 50%, calc(100% - 20px) 100%, 0 100%);
+      margin-left: 0;
+    }
+
+    /* Color progression for timeline bars */
+    .phase-card:nth-child(1) .phase-timeline-bar {
+      background: linear-gradient(135deg, #A67C52 0%, #B8916A 100%);
+    }
+
+    .phase-card:nth-child(2) .phase-timeline-bar {
+      background: linear-gradient(135deg, var(--gold) 0%, #D4B86C 100%);
+    }
+
+    .phase-card:nth-child(3) .phase-timeline-bar {
+      background: linear-gradient(135deg, var(--gold-light) 0%, #F5CE7A 100%);
+    }
+
+    .phase-card:nth-child(4) .phase-timeline-bar {
+      background: linear-gradient(135deg, #F5A855 0%, var(--orange) 100%);
+    }
+
+    .phase-card:hover .phase-timeline-bar {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(203, 168, 92, 0.4);
     }
 
     .phase-duration {
-      font-size: 0.7rem;
+      font-size: 0.8rem;
       font-weight: 700;
-      letter-spacing: 0.15em;
+      letter-spacing: 0.05em;
       text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 1rem;
+      color: var(--white);
+      text-align: center;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+      padding: 0 1rem;
+      line-height: 1.2;
+    }
+
+    .phase-card:nth-child(4) .phase-duration {
+      color: var(--white);
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Content below timeline */
+    .phase-content {
+      padding: 2.5rem 1.5rem 0;
     }
 
     .phase-card h3 {
-      font-size: 1.35rem;
+      font-size: 1.25rem;
       font-weight: 700;
       color: var(--text-dark);
       margin-bottom: 0.75rem;
@@ -1087,7 +1145,7 @@
     }
 
     .phase-objective {
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       font-weight: 600;
       color: var(--orange);
       margin-bottom: 1.25rem;
@@ -1105,9 +1163,9 @@
     }
 
     .phase-items li {
-      font-size: 0.88rem;
+      font-size: 0.85rem;
       color: var(--text-light);
-      padding-left: 1.25rem;
+      padding-left: 1.2rem;
       position: relative;
       line-height: 1.5;
     }
@@ -1117,18 +1175,18 @@
       position: absolute;
       left: 0;
       top: 0.6em;
-      width: 5px;
-      height: 5px;
-      border-radius: 50%;
+      width: 6px;
+      height: 6px;
       background: var(--gold);
-      opacity: 0.6;
+      opacity: 0.7;
+      border-radius: 50%;
     }
 
     .phase-outcome {
-      font-size: 0.9rem;
+      font-size: 0.88rem;
       font-weight: 600;
       color: var(--text-dark);
-      padding-top: 1.25rem;
+      padding-top: 1.2rem;
       border-top: 2px solid rgba(203, 168, 92, 0.2);
       line-height: 1.4;
     }
@@ -1488,23 +1546,41 @@
 
     @media (max-width: 1400px) {
       .execution-phases {
-        gap: 1.25rem;
+        gap: 0;
       }
 
-      .phase-card {
-        padding: 2.25rem 1.75rem;
+      .phase-icon {
+        width: 64px;
+        height: 64px;
+      }
+
+      .phase-icon svg {
+        width: 28px;
+        height: 28px;
+      }
+
+      .phase-timeline-bar {
+        height: 60px;
+      }
+
+      .phase-duration {
+        font-size: 0.75rem;
+      }
+
+      .phase-content {
+        padding: 2rem 1.25rem 0;
       }
 
       .phase-card h3 {
-        font-size: 1.25rem;
+        font-size: 1.15rem;
       }
 
       .phase-items li {
-        font-size: 0.85rem;
+        font-size: 0.82rem;
       }
 
       .phase-outcome {
-        font-size: 0.88rem;
+        font-size: 0.85rem;
       }
     }
 
@@ -1636,15 +1712,36 @@
 
       .execution-phases {
         grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
+        gap: 0 1.5rem;
+        padding: 0;
       }
 
-      .execution-phases::before {
-        display: none;
+      .phase-icon {
+        width: 60px;
+        height: 60px;
       }
 
-      .phase-card::after {
-        display: none;
+      .phase-icon svg {
+        width: 26px;
+        height: 26px;
+      }
+
+      .phase-timeline-bar {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        margin-left: 0;
+        height: 55px;
+      }
+
+      .phase-connector {
+        height: 50px;
+      }
+
+      .phase-content {
+        padding: 2rem 1rem 0;
+      }
+
+      .phase-card {
+        margin-bottom: 2rem;
       }
 
       .different-grid {
@@ -1686,12 +1783,41 @@
 
       .execution-phases {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 0;
         margin-top: 3rem;
+        padding: 0;
+      }
+
+      .phase-icon {
+        width: 64px;
+        height: 64px;
+      }
+
+      .phase-icon svg {
+        width: 28px;
+        height: 28px;
+      }
+
+      .phase-timeline-bar {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+        margin-left: 0;
+        height: 55px;
+      }
+
+      .phase-connector {
+        height: 45px;
+      }
+
+      .phase-content {
+        padding: 2rem 1.5rem 0;
       }
 
       .phase-card {
-        padding: 2rem 1.75rem;
+        margin-bottom: 2.5rem;
+      }
+
+      .phase-duration {
+        font-size: 0.75rem;
       }
 
       .radial-center {
@@ -2044,59 +2170,105 @@
         <div class="execution-phases">
           <!-- Phase 1 -->
           <div class="phase-card">
-            <div class="phase-duration">0–30 Days</div>
-            <h3>Phase 1: Stop the Bleed</h3>
-            <p class="phase-objective">Halting financial and operational deterioration.</p>
-            <ul class="phase-items">
-              <li>Securing liquidity</li>
-              <li>Stabilizing payroll</li>
-              <li>Triaging revenue cycle failures</li>
-              <li>Addressing critical compliance exposure</li>
-              <li>Restoring leadership decision clarity</li>
-            </ul>
-            <p class="phase-outcome">The end of crisis conditions and controlled operations.</p>
+            <div class="phase-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M12 2v20M2 12h20M6 6l12 12M6 18L18 6"/>
+              </svg>
+            </div>
+            <div class="phase-connector"></div>
+            <div class="phase-timeline-bar">
+              <div class="phase-duration">0–30 Days</div>
+            </div>
+            <div class="phase-content">
+              <h3>Phase 1: Stop the Bleed</h3>
+              <p class="phase-objective">Halting financial and operational deterioration.</p>
+              <ul class="phase-items">
+                <li>Securing liquidity</li>
+                <li>Stabilizing payroll</li>
+                <li>Triaging revenue cycle failures</li>
+                <li>Addressing critical compliance exposure</li>
+                <li>Restoring leadership decision clarity</li>
+              </ul>
+              <p class="phase-outcome">The end of crisis conditions and controlled operations.</p>
+            </div>
           </div>
 
           <!-- Phase 2 -->
           <div class="phase-card">
-            <div class="phase-duration">30–90 Days</div>
-            <h3>Phase 2: Restore Performance</h3>
-            <p class="phase-objective">Reestablishing predictable operational and financial performance.</p>
-            <ul class="phase-items">
-              <li>Realigning cost structures to volume</li>
-              <li>Optimizing revenue cycle operations</li>
-              <li>Stabilizing service line performance</li>
-              <li>Installing reporting discipline and governance rhythm</li>
-            </ul>
-            <p class="phase-outcome">Predictable cash flow, stable margins, and measurable improvement.</p>
+            <div class="phase-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M3 3v18h18"/>
+                <path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3"/>
+                <circle cx="18.7" cy="8" r="1.5"/>
+              </svg>
+            </div>
+            <div class="phase-connector"></div>
+            <div class="phase-timeline-bar">
+              <div class="phase-duration">30–90 Days</div>
+            </div>
+            <div class="phase-content">
+              <h3>Phase 2: Restore Performance</h3>
+              <p class="phase-objective">Reestablishing predictable operational and financial performance.</p>
+              <ul class="phase-items">
+                <li>Realigning cost structures to volume</li>
+                <li>Optimizing revenue cycle operations</li>
+                <li>Stabilizing service line performance</li>
+                <li>Installing reporting discipline and governance rhythm</li>
+              </ul>
+              <p class="phase-outcome">Predictable cash flow, stable margins, and measurable improvement.</p>
+            </div>
           </div>
 
           <!-- Phase 3 -->
           <div class="phase-card">
-            <div class="phase-duration">90–180 Days</div>
-            <h3>Phase 3: Embed Systems</h3>
-            <p class="phase-objective">Institutionalizing performance.</p>
-            <ul class="phase-items">
-              <li>Locking in process improvements</li>
-              <li>Building leadership accountability</li>
-              <li>Finalizing compliance and quality frameworks</li>
-              <li>Aligning capital structure with operations</li>
-            </ul>
-            <p class="phase-outcome">The hospital sustains performance without external intervention.</p>
+            <div class="phase-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                <path d="M2 17l10 5 10-5"/>
+                <path d="M2 12l10 5 10-5"/>
+              </svg>
+            </div>
+            <div class="phase-connector"></div>
+            <div class="phase-timeline-bar">
+              <div class="phase-duration">90–180 Days</div>
+            </div>
+            <div class="phase-content">
+              <h3>Phase 3: Embed Systems</h3>
+              <p class="phase-objective">Institutionalizing performance.</p>
+              <ul class="phase-items">
+                <li>Locking in process improvements</li>
+                <li>Building leadership accountability</li>
+                <li>Finalizing compliance and quality frameworks</li>
+                <li>Aligning capital structure with operations</li>
+              </ul>
+              <p class="phase-outcome">The hospital sustains performance without external intervention.</p>
+            </div>
           </div>
 
           <!-- Phase 4 -->
           <div class="phase-card">
-            <div class="phase-duration">Post-Stabilization</div>
-            <h3>Phase 4: Execute Strategy</h3>
-            <p class="phase-objective">Enabling leadership to pursue strategic outcomes from a position of strength.</p>
-            <ul class="phase-items">
-              <li>Independent growth execution</li>
-              <li>Partnership or affiliation negotiation</li>
-              <li>Capital restructuring or refinancing</li>
-              <li>Transaction preparation or execution</li>
-            </ul>
-            <p class="phase-outcome">Leadership makes strategic decisions from strength rather than desperation.</p>
+            <div class="phase-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 6v6l4 2"/>
+                <path d="M16.2 7.8l3.8-3.8M7.8 16.2l-3.8 3.8M7.8 7.8L4 4M16.2 16.2l3.8 3.8"/>
+              </svg>
+            </div>
+            <div class="phase-connector"></div>
+            <div class="phase-timeline-bar">
+              <div class="phase-duration">Post-Stabilization</div>
+            </div>
+            <div class="phase-content">
+              <h3>Phase 4: Execute Strategy</h3>
+              <p class="phase-objective">Enabling leadership to pursue strategic outcomes from a position of strength.</p>
+              <ul class="phase-items">
+                <li>Independent growth execution</li>
+                <li>Partnership or affiliation negotiation</li>
+                <li>Capital restructuring or refinancing</li>
+                <li>Transaction preparation or execution</li>
+              </ul>
+              <p class="phase-outcome">Leadership makes strategic decisions from strength rather than desperation.</p>
+            </div>
           </div>
         </div>
       </div>

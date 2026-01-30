@@ -313,30 +313,67 @@
       position: relative;
       width: 220px;
       height: 220px;
-      border-radius: 50%;
-      background: var(--white);
-      border: 3px solid var(--gold);
+    }
+
+    .stat-ring-svg {
+      width: 100%;
+      height: 100%;
+      transform: rotate(-90deg);
+    }
+
+    .stat-ring-track {
+      fill: none;
+      stroke: rgba(219, 213, 202, 0.2);
+      stroke-width: 6;
+    }
+
+    .stat-ring-progress {
+      fill: none;
+      stroke-width: 6;
+      stroke-linecap: round;
+      stroke-dasharray: 678;
+      stroke-dashoffset: 678;
+      transition: stroke-dashoffset 1.8s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .stat-card.visible .stat-ring-progress {
+      stroke-dashoffset: 0;
+    }
+
+    /* Color each circle's progress ring */
+    .stat-card:nth-child(1) .stat-ring-progress {
+      stroke: var(--gold);
+    }
+
+    .stat-card:nth-child(2) .stat-ring-progress {
+      stroke: var(--orange);
+    }
+
+    .stat-card:nth-child(3) .stat-ring-progress {
+      stroke: var(--gold-light);
+    }
+
+    .stat-inner {
+      position: absolute;
+      inset: 20px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      text-align: center;
+      background: var(--white);
+      border-radius: 50%;
       box-shadow:
         0 4px 20px rgba(203, 168, 92, 0.15),
         0 2px 8px rgba(203, 168, 92, 0.1);
       transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-      margin-bottom: 2rem;
     }
 
-    .stat-card:nth-child(1) .stat-circle {
-      border-color: var(--gold);
-    }
-
-    .stat-card:nth-child(2) .stat-circle {
-      border-color: var(--orange);
-    }
-
-    .stat-card:nth-child(3) .stat-circle {
-      border-color: var(--gold-light);
+    .stat-card:hover .stat-inner {
+      transform: translateY(-4px);
+      box-shadow:
+        0 8px 32px rgba(203, 168, 92, 0.25),
+        0 4px 16px rgba(203, 168, 92, 0.15);
     }
 
     .stat-number {
@@ -1180,6 +1217,10 @@
         height: 200px;
       }
 
+      .stat-inner {
+        inset: 18px;
+      }
+
       .case-grid,
       .case-grid.reverse {
         grid-template-columns: 1fr;
@@ -1460,19 +1501,37 @@
         <div class="stats-grid">
           <div class="stat-card">
             <div class="stat-circle">
-              <div class="stat-number">200+</div>
+              <svg class="stat-ring-svg" viewBox="0 0 220 220">
+                <circle class="stat-ring-track" cx="110" cy="110" r="104"/>
+                <circle class="stat-ring-progress" cx="110" cy="110" r="104"/>
+              </svg>
+              <div class="stat-inner">
+                <div class="stat-number">200+</div>
+              </div>
             </div>
             <div class="stat-label">Years of Combined Hospital Leadership</div>
           </div>
           <div class="stat-card">
             <div class="stat-circle">
-              <div class="stat-number">$536M</div>
+              <svg class="stat-ring-svg" viewBox="0 0 220 220">
+                <circle class="stat-ring-track" cx="110" cy="110" r="104"/>
+                <circle class="stat-ring-progress" cx="110" cy="110" r="104"/>
+              </svg>
+              <div class="stat-inner">
+                <div class="stat-number">$536M</div>
+              </div>
             </div>
             <div class="stat-label">Revenue Created</div>
           </div>
           <div class="stat-card">
             <div class="stat-circle">
-              <div class="stat-number">19%</div>
+              <svg class="stat-ring-svg" viewBox="0 0 220 220">
+                <circle class="stat-ring-track" cx="110" cy="110" r="104"/>
+                <circle class="stat-ring-progress" cx="110" cy="110" r="104"/>
+              </svg>
+              <div class="stat-inner">
+                <div class="stat-number">19%</div>
+              </div>
             </div>
             <div class="stat-label">Average Profit Margins</div>
           </div>

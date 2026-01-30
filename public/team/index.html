@@ -236,61 +236,164 @@
       margin: 0 0 3.5rem 0;
     }
 
-    /* Stats Grid */
+    /* Stats Grid - Circular Badges */
     .stats-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 3rem;
       margin-bottom: 0rem;
-      max-width: 1100px;
+      max-width: 1200px;
     }
 
-    .stat-card {
-      background: var(--white);
-      padding: 2.5rem 2rem;
-      border-radius: 8px;
-      box-shadow: 0 4px 20px rgba(203, 168, 92, 0.12);
-      border-left: 4px solid var(--gold);
-      transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    .stat-circle {
+      position: relative;
+      width: 260px;
+      height: 260px;
+      min-width: 260px;
+      background: linear-gradient(135deg,
+        rgba(203, 168, 92, 0.08) 0%,
+        rgba(237, 189, 86, 0.12) 100%
+      );
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 3rem 2rem;
+      border: 3px solid rgba(203, 168, 92, 0.2);
+      box-shadow:
+        0 8px 32px rgba(203, 168, 92, 0.2),
+        0 4px 16px rgba(203, 168, 92, 0.12),
+        inset 0 2px 8px rgba(255, 255, 255, 0.6);
+      transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
       opacity: 0;
-      transform: translateY(30px);
+      transform: scale(0.9);
     }
 
-    .stat-card.visible {
+    .stat-circle-svg {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transform: rotate(-90deg);
+      pointer-events: none;
+    }
+
+    .stat-circle-track {
+      fill: none;
+      stroke: rgba(203, 168, 92, 0.1);
+      stroke-width: 3;
+    }
+
+    .stat-circle-progress {
+      fill: none;
+      stroke-width: 3;
+      stroke-linecap: round;
+      stroke-dasharray: 785;
+      stroke-dashoffset: 785;
+      transition: stroke-dashoffset 2s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .stat-circle.visible {
       opacity: 1;
-      transform: translateY(0);
+      transform: scale(1);
     }
 
-    .stat-card:nth-child(2) {
-      border-left-color: var(--orange);
-      transition-delay: 0.1s;
+    .stat-circle.visible .stat-circle-progress {
+      stroke-dashoffset: 0;
     }
 
-    .stat-card:nth-child(3) {
-      border-left-color: var(--gold-light);
+    .stat-circle:nth-child(1) .stat-circle-progress {
+      stroke: url(#statGradient1);
+      transition-delay: 0.3s;
+    }
+
+    .stat-circle:nth-child(2) {
+      background: linear-gradient(135deg,
+        rgba(242, 138, 50, 0.08) 0%,
+        rgba(237, 189, 86, 0.12) 100%
+      );
       transition-delay: 0.2s;
     }
 
-    .stat-card:hover {
-      transform: translateY(-8px);
-      box-shadow: 0 8px 32px rgba(203, 168, 92, 0.18);
+    .stat-circle:nth-child(2) .stat-circle-progress {
+      stroke: url(#statGradient2);
+      transition-delay: 0.5s;
+    }
+
+    .stat-circle:nth-child(3) {
+      background: linear-gradient(135deg,
+        rgba(237, 189, 86, 0.08) 0%,
+        rgba(255, 217, 102, 0.12) 100%
+      );
+      transition-delay: 0.3s;
+    }
+
+    .stat-circle:nth-child(3) .stat-circle-progress {
+      stroke: url(#statGradient3);
+      transition-delay: 0.7s;
+    }
+
+    @keyframes pulse-glow {
+      0%, 100% {
+        filter: drop-shadow(0 0 4px rgba(203, 168, 92, 0.3));
+      }
+      50% {
+        filter: drop-shadow(0 0 12px rgba(203, 168, 92, 0.6));
+      }
+    }
+
+    .stat-circle.visible .stat-circle-progress {
+      animation: pulse-glow 3s ease-in-out infinite;
+    }
+
+    .stat-circle:hover {
+      transform: scale(1.05);
+      box-shadow:
+        0 12px 48px rgba(203, 168, 92, 0.28),
+        0 8px 24px rgba(203, 168, 92, 0.18),
+        inset 0 2px 8px rgba(255, 255, 255, 0.8);
+    }
+
+    .stat-circle::before {
+      content: '';
+      position: absolute;
+      inset: -6px;
+      border-radius: 50%;
+      background: linear-gradient(135deg,
+        rgba(203, 168, 92, 0.1) 0%,
+        rgba(237, 189, 86, 0.15) 100%
+      );
+      z-index: -1;
+      opacity: 0.5;
     }
 
     .stat-number {
-      font-size: 3.5rem;
-      font-weight: 200;
+      font-size: 3rem;
+      font-weight: 800;
       line-height: 1;
       margin-bottom: 0.75rem;
       background: linear-gradient(135deg, var(--gold) 0%, var(--orange) 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
+      letter-spacing: -0.02em;
+      position: relative;
+      z-index: 2;
     }
 
     .stat-label {
-      font-size: 1.05rem;
-      color: var(--text-medium);
-      line-height: 1.4;
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-dark);
+      line-height: 1.35;
+      max-width: 180px;
+      letter-spacing: 0.01em;
+      position: relative;
+      z-index: 2;
     }
 
     /* ═══════════════════════════════════════════════════════════
@@ -546,6 +649,24 @@
        ═══════════════════════════════════════════════════════════ */
 
     @media (max-width: 1024px) {
+      .stats-grid {
+        gap: 2rem;
+      }
+
+      .stat-circle {
+        width: 220px;
+        height: 220px;
+        min-width: 220px;
+      }
+
+      .stat-number {
+        font-size: 2.5rem;
+      }
+
+      .stat-label {
+        font-size: 0.8rem;
+      }
+
       .team-grid,
       .advisory-grid {
         grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
@@ -567,7 +688,23 @@
       }
 
       .stats-grid {
-        grid-template-columns: 1fr;
+        flex-direction: column;
+        gap: 2.5rem;
+      }
+
+      .stat-circle {
+        width: 240px;
+        height: 240px;
+        min-width: 240px;
+        padding: 2.5rem 1.5rem;
+      }
+
+      .stat-number {
+        font-size: 2.75rem;
+      }
+
+      .stat-label {
+        font-size: 0.8rem;
       }
 
       .team-grid,
@@ -650,15 +787,45 @@
 
         <!-- Aggregate Stats -->
         <div class="stats-grid">
-          <div class="stat-card">
+          <div class="stat-circle">
+            <svg class="stat-circle-svg" viewBox="0 0 260 260">
+              <defs>
+                <linearGradient id="statGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#CBA85C"/>
+                  <stop offset="100%" stop-color="#EDBD56"/>
+                </linearGradient>
+              </defs>
+              <circle class="stat-circle-track" cx="130" cy="130" r="125"/>
+              <circle class="stat-circle-progress" cx="130" cy="130" r="125"/>
+            </svg>
             <div class="stat-number">200+</div>
             <div class="stat-label">Years combined healthcare leadership</div>
           </div>
-          <div class="stat-card">
+          <div class="stat-circle">
+            <svg class="stat-circle-svg" viewBox="0 0 260 260">
+              <defs>
+                <linearGradient id="statGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#F28A32"/>
+                  <stop offset="100%" stop-color="#FF9D6E"/>
+                </linearGradient>
+              </defs>
+              <circle class="stat-circle-track" cx="130" cy="130" r="125"/>
+              <circle class="stat-circle-progress" cx="130" cy="130" r="125"/>
+            </svg>
             <div class="stat-number">14</div>
             <div class="stat-label">Hospitals operated and turned around</div>
           </div>
-          <div class="stat-card">
+          <div class="stat-circle">
+            <svg class="stat-circle-svg" viewBox="0 0 260 260">
+              <defs>
+                <linearGradient id="statGradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#EDBD56"/>
+                  <stop offset="100%" stop-color="#FFD966"/>
+                </linearGradient>
+              </defs>
+              <circle class="stat-circle-track" cx="130" cy="130" r="125"/>
+              <circle class="stat-circle-progress" cx="130" cy="130" r="125"/>
+            </svg>
             <div class="stat-number">$400M+</div>
             <div class="stat-label">Incremental revenue generated</div>
           </div>
@@ -733,6 +900,91 @@
             </div>
           </div>
 
+          <!-- Adam Hollander -->
+          <div class="team-card">
+            <div class="team-image-wrapper">
+              <img src="/assets/team/Adam.png" alt="Adam Hollander" class="team-image" loading="lazy">
+            </div>
+            <div class="team-content">
+              <h3 class="team-name">Adam Hollander</h3>
+              <p class="team-role">Vice President of Integrations</p>
+              <p class="team-bio">
+                Adam is a post-acquisition integration specialist with experience leading $1.5B+ in integrations across North America, Europe, Australia, and South Africa. He has managed complex M&A integrations ensuring operational continuity and value realization post-close.
+              </p>
+            </div>
+          </div>
+
+          <!-- Eric Mui -->
+          <div class="team-card">
+            <div class="team-image-wrapper">
+              <img src="/assets/team/Eric.png" alt="Eric Mui" class="team-image" loading="lazy">
+            </div>
+            <div class="team-content">
+              <h3 class="team-name">Eric Mui</h3>
+              <p class="team-role">Vice President of Finance</p>
+              <p class="team-bio">
+                Eric is a finance leader with a strong background in operational efficiency, audit readiness, and scalable financial systems. He has successfully scaled early-stage operations and built reporting frameworks covering project profitability and forecasting.
+              </p>
+            </div>
+          </div>
+
+          <!-- Robin Mason -->
+          <div class="team-card">
+            <div class="team-image-wrapper">
+              <img src="/assets/team/Robin Mason.png" alt="Robin Mason" class="team-image" loading="lazy">
+            </div>
+            <div class="team-content">
+              <h3 class="team-name">Robin Mason</h3>
+              <p class="team-role">Healthcare Human Resources</p>
+              <p class="team-bio">
+                Robin Mason brings 25+ years of healthcare operations and HR leadership. She has led post-merger integrations, workforce alignment initiatives, and multi-facility operational turnarounds. Her expertise includes surgical services optimization and accreditation readiness.
+              </p>
+            </div>
+          </div>
+
+          <!-- Nick van Zyl -->
+          <div class="team-card">
+            <div class="team-image-wrapper">
+              <img src="/assets/team/Nick.png" alt="Nick van Zyl" class="team-image" loading="lazy">
+            </div>
+            <div class="team-content">
+              <h3 class="team-name">Nick van Zyl</h3>
+              <p class="team-role">Head of AI & Business Automation</p>
+              <p class="team-bio">
+                Nick leads SRH's automation, systems integration, and AI infrastructure. With a background in banking-grade development, he designs secure, scalable systems that automate operations and support institutional reporting.
+              </p>
+            </div>
+          </div>
+
+          <!-- Tanya van Zyl -->
+          <div class="team-card">
+            <div class="team-image-wrapper">
+              <img src="/assets/team/Tanya.png" alt="Tanya van Zyl" class="team-image" loading="lazy">
+            </div>
+            <div class="team-content">
+              <h3 class="team-name">Tanya van Zyl</h3>
+              <p class="team-role">Director of Marketing</p>
+              <p class="team-bio">
+                Tanya leads brand strategy, communications, and growth initiatives for St Raphael Health. With over 20 years of experience in strategic marketing, she ensures SRH is clearly positioned as a trusted operator-led healthcare platform.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PRIVATE EQUITY OPERATING TEAM SECTION -->
+    <section class="team-section">
+      <div class="team-container">
+        <div class="section-header">
+          <div class="section-kicker">Capital & Transactions</div>
+          <h2 class="section-title">Private Equity <span class="accent">Operating Team</span></h2>
+          <p class="section-subtitle">This team supports hands-on operations and full M&A execution, including capital formation and restructuring, guiding organizations from stabilization to sale, partnership, or recapitalization, when and if the time is right.</p>
+        </div>
+
+        <div class="team-grid">
+
           <!-- Suzi Halfpenny -->
           <div class="team-card">
             <div class="team-image-wrapper">
@@ -775,48 +1027,6 @@
             </div>
           </div>
 
-          <!-- Adam Hollander -->
-          <div class="team-card">
-            <div class="team-image-wrapper">
-              <img src="/assets/team/Adam.png" alt="Adam Hollander" class="team-image" loading="lazy">
-            </div>
-            <div class="team-content">
-              <h3 class="team-name">Adam Hollander</h3>
-              <p class="team-role">Vice President of Integrations, Partner</p>
-              <p class="team-bio">
-                Adam is a post-acquisition integration specialist with experience leading $1.5B+ in integrations across North America, Europe, Australia, and South Africa. He has managed complex M&A integrations ensuring operational continuity and value realization post-close.
-              </p>
-            </div>
-          </div>
-
-          <!-- Eric Mui -->
-          <div class="team-card">
-            <div class="team-image-wrapper">
-              <img src="/assets/team/Eric.png" alt="Eric Mui" class="team-image" loading="lazy">
-            </div>
-            <div class="team-content">
-              <h3 class="team-name">Eric Mui</h3>
-              <p class="team-role">Vice President of Finance</p>
-              <p class="team-bio">
-                Eric is a finance leader with a strong background in operational efficiency, audit readiness, and scalable financial systems. He has successfully scaled early-stage operations and built reporting frameworks covering project profitability and forecasting.
-              </p>
-            </div>
-          </div>
-
-          <!-- Robin Mason -->
-          <div class="team-card">
-            <div class="team-image-wrapper">
-              <img src="/assets/team/Robin Mason.png" alt="Robin Mason" class="team-image" loading="lazy">
-            </div>
-            <div class="team-content">
-              <h3 class="team-name">Robin Mason</h3>
-              <p class="team-role">Healthcare Human Resources</p>
-              <p class="team-bio">
-                Robin Mason brings 25+ years of healthcare operations and HR leadership. She has led post-merger integrations, workforce alignment initiatives, and multi-facility operational turnarounds. Her expertise includes surgical services optimization and accreditation readiness.
-              </p>
-            </div>
-          </div>
-
           <!-- Greg Shore -->
           <div class="team-card">
             <div class="team-image-wrapper">
@@ -824,37 +1034,9 @@
             </div>
             <div class="team-content">
               <h3 class="team-name">Greg Shore</h3>
-              <p class="team-role">Managing Capital Director</p>
+              <p class="team-role">Head of Capital Markets</p>
               <p class="team-bio">
                 Greg Shore is a capital markets and development executive with experience structuring and financing complex projects across healthcare, real estate, energy infrastructure, and private-equity-backed platforms.
-              </p>
-            </div>
-          </div>
-
-          <!-- Nick van Zyl -->
-          <div class="team-card">
-            <div class="team-image-wrapper">
-              <img src="/assets/team/Nick.png" alt="Nick van Zyl" class="team-image" loading="lazy">
-            </div>
-            <div class="team-content">
-              <h3 class="team-name">Nick van Zyl</h3>
-              <p class="team-role">Head of AI & Business Automation</p>
-              <p class="team-bio">
-                Nick leads SRH's automation, systems integration, and AI infrastructure. With a background in banking-grade development, he designs secure, scalable systems that automate operations and support institutional reporting.
-              </p>
-            </div>
-          </div>
-
-          <!-- Tanya van Zyl -->
-          <div class="team-card">
-            <div class="team-image-wrapper">
-              <img src="/assets/team/Tanya.png" alt="Tanya van Zyl" class="team-image" loading="lazy">
-            </div>
-            <div class="team-content">
-              <h3 class="team-name">Tanya van Zyl</h3>
-              <p class="team-role">Director of Marketing</p>
-              <p class="team-bio">
-                Tanya leads brand strategy, communications, and growth initiatives for St Raphael Health. With over 20 years of experience in strategic marketing, she ensures SRH is clearly positioned as a trusted operator-led healthcare platform.
               </p>
             </div>
           </div>
@@ -967,9 +1149,9 @@
         });
       }, observerOptions);
 
-      // Observe stat cards
-      document.querySelectorAll('.stat-card').forEach(card => {
-        observer.observe(card);
+      // Observe stat circles
+      document.querySelectorAll('.stat-circle').forEach(circle => {
+        observer.observe(circle);
       });
 
       // Observe team cards

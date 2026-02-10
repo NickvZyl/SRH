@@ -2043,53 +2043,50 @@
 <body>
 
   <!-- Global Header Component -->
+  <!-- Global Header Component -->
   <header class="bg-white border-b border-warm-stone sticky top-0" style="z-index: 10000;">
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <nav class="container-custom py-5 md:py-7" aria-label="Main navigation">
-      <div class="flex items-center justify-between gap-12">
+    <nav class="container-custom py-4 md:py-6" aria-label="Main navigation">
+      <div class="flex items-center justify-between">
         <a href="/" class="flex items-center" aria-label="St Raphael Health - Home">
-          <img src="/assets/logos/SRH Logo Light Background.svg" alt="St Raphael Health" class="h-14 md:h-16" width="200" height="64">
+          <img src="/assets/logos/SRH Logo Light Background.svg" alt="St Raphael Health" class="h-10 md:h-12" width="200" height="48">
         </a>
 
         <ul class="hidden lg:flex items-center gap-8">
-          <li><a href="/hospital-advisory" class="text-black hover:text-gold-ochre transition-colors duration-fast font-montserrat">Hospital Advisory</a></li>
-          <!-- HIDDEN UNTIL COMPLETE - Uncomment to show -->
-          <!-- <li><a href="/our-approach" class="text-black hover:text-gold-ochre transition-colors duration-fast font-montserrat">Our Approach</a></li> -->
-          <!-- <li><a href="/case-studies" class="text-black hover:text-gold-ochre transition-colors duration-fast font-montserrat">Case Studies</a></li> -->
-          <!-- <li><a href="/team" class="text-black hover:text-gold-ochre transition-colors duration-fast font-montserrat">Team</a></li> -->
-          <!-- <li><a href="/why-profit-matters" class="text-black hover:text-gold-ochre transition-colors duration-fast font-montserrat">Why Profit Matters</a></li> -->
-          <!-- <li><a href="/physicians" class="text-black hover:text-gold-ochre transition-colors duration-fast font-montserrat">Physicians</a></li> -->
-          <li><a href="/contact" class="btn btn-primary text-sm">Contact</a></li>
+          <li><a href="/hospital-advisory" style="color: #000; text-decoration: none; font-family: 'Montserrat', sans-serif; transition: color 0.2s;">Hospital Advisory</a></li>
+          <li><a href="/our-approach" style="color: #000; text-decoration: none; font-family: 'Montserrat', sans-serif; transition: color 0.2s;">Our Approach</a></li>
+          <li><a href="/case-studies" style="color: #000; text-decoration: none; font-family: 'Montserrat', sans-serif; transition: color 0.2s;">Case Studies</a></li>
+          <li><a href="/team" style="color: #000; text-decoration: none; font-family: 'Montserrat', sans-serif; transition: color 0.2s;">Team</a></li>
+          <li><a href="/why-profit-matters" style="color: #000; text-decoration: none; font-family: 'Montserrat', sans-serif; transition: color 0.2s;">Why Profit Matters</a></li>
+          <li><a href="/contact" style="display: inline-block; padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #CBA85C 0%, #EDBD56 100%); color: #fff; text-decoration: none; font-weight: 700; border-radius: 2px; font-size: 0.875rem;">Contact</a></li>
         </ul>
 
         <button id="menu-toggle" class="lg:hidden p-2 text-black hover:text-gold-ochre transition-colors" aria-expanded="false" aria-controls="mobile-menu" aria-label="Toggle navigation menu">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <svg style="width: 24px; height: 24px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
           </svg>
         </button>
       </div>
     </nav>
 
-    <div id="mobile-menu" class="hidden fixed inset-0 bg-white lg:hidden" role="dialog" aria-modal="true" aria-label="Mobile navigation" style="background-color: white; z-index: 9999;">
-      <div class="container-custom py-6">
-        <div class="flex items-center justify-between mb-8">
-          <img src="/assets/logos/SRH Logo Light Background.svg" alt="St Raphael Health" class="h-14" width="200" height="64">
-          <button id="menu-close" class="p-2 text-black hover:text-gold-ochre transition-colors" aria-label="Close navigation menu">
-            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <div id="mobile-menu" class="hidden fixed inset-0 bg-white lg:hidden" role="dialog" aria-modal="true" aria-label="Mobile navigation" style="display: none; position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: #fff; z-index: 9999;">
+      <div style="max-width: 1600px; margin: 0 auto; padding: 1.5rem 5%;">
+        <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 2rem;">
+          <img src="/assets/logos/SRH Logo Light Background.svg" alt="St Raphael Health" class="h-10" width="200" height="48">
+          <button id="menu-close" style="padding: 0.5rem; background: none; border: none; cursor: pointer;" aria-label="Close navigation menu">
+            <svg style="width: 24px; height: 24px;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
             </svg>
           </button>
         </div>
-        <ul class="flex flex-col gap-6">
-          <li><a href="/hospital-advisory" class="text-2xl text-black hover:text-gold-ochre transition-colors font-montserrat">Hospital Advisory</a></li>
-          <!-- HIDDEN UNTIL COMPLETE - Uncomment to show -->
-          <!-- <li><a href="/our-approach" class="text-2xl text-black hover:text-gold-ochre transition-colors font-montserrat">Our Approach</a></li> -->
-          <!-- <li><a href="/case-studies" class="text-2xl text-black hover:text-gold-ochre transition-colors font-montserrat">Case Studies</a></li> -->
-          <!-- <li><a href="/team" class="text-2xl text-black hover:text-gold-ochre transition-colors font-montserrat">Team</a></li> -->
-          <!-- <li><a href="/why-profit-matters" class="text-2xl text-black hover:text-gold-ochre transition-colors font-montserrat">Why Profit Matters</a></li> -->
-          <!-- <li><a href="/physicians" class="text-2xl text-black hover:text-gold-ochre transition-colors font-montserrat">Physicians</a></li> -->
-          <li class="pt-4"><a href="/contact" class="btn btn-primary inline-block">Contact</a></li>
+        <ul style="display: flex; flex-direction: column; gap: 1.5rem; list-style: none;">
+          <li><a href="/hospital-advisory" style="font-size: 1.5rem; color: #000; text-decoration: none; font-family: 'Montserrat', sans-serif;">Hospital Advisory</a></li>
+          <li><a href="/our-approach" style="font-size: 1.5rem; color: #000; text-decoration: none; font-family: 'Montserrat', sans-serif;">Our Approach</a></li>
+          <li><a href="/case-studies" style="font-size: 1.5rem; color: #000; text-decoration: none; font-family: 'Montserrat', sans-serif;">Case Studies</a></li>
+          <li><a href="/team" style="font-size: 1.5rem; color: #000; text-decoration: none; font-family: 'Montserrat', sans-serif;">Team</a></li>
+          <li><a href="/why-profit-matters" style="font-size: 1.5rem; color: #000; text-decoration: none; font-family: 'Montserrat', sans-serif;">Why Profit Matters</a></li>
+          <li style="padding-top: 1rem;"><a href="/contact" style="display: inline-block; padding: 0.75rem 1.5rem; background: linear-gradient(135deg, #CBA85C 0%, #EDBD56 100%); color: #fff; text-decoration: none; font-weight: 700; border-radius: 2px;">Contact</a></li>
         </ul>
       </div>
     </div>

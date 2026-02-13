@@ -12,7 +12,9 @@
       "Bash(start \"\" \"public/our-approach/index.html\")",
       "Bash(npm run dev:*)",
       "mcp__playwright__browser_navigate",
-      "Bash(python -m http.server:*)"
+      "Bash(python -m http.server:*)",
+      "Bash(npx serve:*)",
+      "mcp__playwright__browser_wait_for"
     ]
   }
 }
